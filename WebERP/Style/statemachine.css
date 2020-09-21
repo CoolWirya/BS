@@ -1,0 +1,307 @@
+.statemachine {
+    /* for IE10+ touch devices */
+    touch-action:none;
+}
+
+.w {
+    /*padding: 16px;*/
+    max-width: 70px;
+    padding: 16px 8px 16px 20px;
+    border: 1px solid #2e6f9a;
+    position: absolute;
+    z-index: 4;
+    box-shadow: 2px 2px 19px #e0e0e0;
+    -o-box-shadow: 2px 2px 19px #e0e0e0;
+    -webkit-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    cursor: move;
+    background-color: white;
+    font-size: 11px;
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+}
+
+.w:hover {
+    background-color: #5c96bc;
+    color: white;
+}
+
+.w.HighLighted {
+    -webkit-animation: color_change 1.5s infinite ease-in-out;
+    animation: color_change 1.5s infinite ease-in-out;
+}
+
+@-webkit-keyframes color_change {
+    0%   {
+    background-color: white;
+    color: black;
+
+    }
+    50%  {
+    background-color: rgba(215, 66, 66, 0.67);
+    color: white;
+    }
+}
+
+@keyframes color_change {
+    0%   {
+    background-color: white;
+    color: black;
+
+    }
+    50%  {
+    background-color: rgba(215, 66, 66, 0.67);
+    color: white;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.aLabel {
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+}
+
+.aLabel._jsPlumb_hover, ._jsPlumb_source_hover, ._jsPlumb_target_hover {
+    background-color: #1e8151;
+    color: white;
+}
+
+.aLabel {
+    background-color: white;
+    opacity: 0.8;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    border: 1px solid #346789;
+    cursor: pointer;
+}
+
+.ep {
+    position: absolute;
+    bottom: 37%;
+    /*right: 5px;*/
+    left: 5px;/*new*/
+    width: 1em;
+    height: 1em;
+    background-color: orange;
+    cursor: pointer;
+    box-shadow: 0 0 2px black;
+    -webkit-transition: -webkit-box-shadow 0.25s ease-in;
+    -moz-transition: -moz-box-shadow 0.25s ease-in;
+    transition: box-shadow 0.25s ease-in;
+}
+
+.ep:hover {
+    box-shadow: 0px 0px 6px black;
+}
+
+.dv_nodes ._jsPlumb_endpoint {
+    z-index: 3;
+}
+
+/*#opened {
+    left: 10em;
+    top: 5em;
+}
+
+#phone1 {
+    left: 35em;
+    top: 12em;
+    width: 7em;
+}
+
+#inperson {
+    left: 12em;
+    top: 23em;
+}
+
+#phone2 {
+    left: 28em;
+    top: 24em;
+}
+
+#rejected {
+    left: 10em;
+    top: 35em;
+}*/
+
+.dragHover {
+    border: 2px solid orange;
+}
+
+
+path, ._jsPlumb_endpoint { cursor:pointer; }
+
+textarea {
+    height: 100px;
+    direction:ltr;
+    font-size: 9pt;
+}
+
+input[type="text"], textarea {
+    width: 98%;
+}
+
+
+select {
+    width: 100%;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#btnAddPostCode {
+    float:left;
+    margin: 10px;
+}
+
+#dv_condition_help { 
+    position: fixed; 
+    -webkit-transition: all 0.4s;  
+    transition: all 0.4s;
+    overflow:hidden;
+    z-index:201;
+    width:40%; 
+    height: 240px;
+    right: 30%; 
+    margin-top: 100px; 
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(34, 25, 25, 0.4);  
+    background-color: rgba(190, 190, 190, 0.84);
+}
+
+#dv_PersonSearch {
+       position: fixed;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    width: 36%;
+    height: 61px;
+    padding: 10px -2px;
+    right: 26%;
+    top: -98px;
+    z-index: 73;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(34, 25, 25, 0.4);
+    background-color: rgba(255, 255, 255, 0.78);
+}
+
+#dv_PersonSearch table{
+    width: 97%;
+    margin-left: 3%;
+}
+
+#dv_properties {
+    position: fixed;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    width:0%;
+    height: 0px;
+    padding: 0px 15px;
+    right: 50%;
+    margin-top: 220px;
+    z-index:101;
+    overflow:hidden;
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(34, 25, 25, 0.4);
+    background-color:rgba(255, 255, 255, 0.78);
+}
+
+#dv_properties table{
+    width: 97%;
+    margin-left: 3%;
+}
+
+.a_close {
+    float:left;
+    margin: 10px 10px 10px -5px;
+    color: rgba(170, 170, 170, 0.7);
+    font-size: 1.4rem;
+    line-height: 10px;
+    font-weight: 600;
+}
+
+.rfloat-half{
+    float:right; 
+    width:50%;
+}
+
+#dv_basic_properties {
+
+}
+
+#cmbConditions {
+    width: 85%;
+}
+
+#btnAddCondition {
+    padding: 0; 
+    width: 10%; 
+    float:left;
+    text-align: center;
+}
+
+#btnConditionHelp {
+    border-radius: 6px;
+}
+
+#txtPostCodes {
+    height: 50px;
+}
+
+#btnSaveProperties {
+    position: absolute; 
+    left: 20px; 
+    bottom: 20px;
+}
+
+#dv_temp {
+    float: right;
+    margin-right:1%
+}
+
+      .ContextItem
+        {
+            background-color:White;
+            color:Black;
+            font-weight:normal;
+            text-align:right;
+            
+            }
+     .ContextItem:hover
+       {
+            background-color:#0066FF;
+            color:White;
+            font-weight:bold;            
+        }
+       .detailItem
+       {
+           background:transparent;
+           
+       }
+       .detailItem:hover
+       {
+           background-color:#FEE378;
+           border: 1px outset #222222;
+           font-weight:bold;
+           cursor:default;
+       }

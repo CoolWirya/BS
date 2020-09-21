@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{222CE73C-DA38-4C9B-8C01-F940F71EA17E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebProjectManagement</RootNamespace>
+    <AssemblyName>WebProjectManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments, Version=2.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeveloperStuffs\TSSDK\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextSharp">
+      <HintPath>..\..\..\..\..\..\DeveloperStuffs\iTextSharp-LGPL.4.1.6\lib\iTextSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\..\..\..\..\DeveloperStuffs\TSSDK\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateControls 2.0, Version=2.0.3505.24227, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeveloperStuffs\TSSDK\PersianDateControls 2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeveloperStuffs\TSSDK\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\..\..\..\DeveloperStuffs\TSSDK\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeveloperStuffs\TSSDK\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2015.2.623.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\DeveloperStuffs\TSSDK\TelerikCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\AskUser.ascx" />
+    <Content Include="Forms\CustomGrid.ascx" />
+    <Content Include="Forms\DeleteForm.ascx" />
+    <Content Include="Forms\DetailedProjectImprovementReport.ascx" />
+    <Content Include="Forms\EnterDataHistory.ascx" />
+    <Content Include="Forms\EnterDataTreeview.ascx" />
+    <Content Include="Forms\ItemReports.ascx" />
+    <Content Include="Forms\ItemReportUpdate.ascx" />
+    <Content Include="Forms\ItemUpdate.ascx" />
+    <Content Include="Forms\ItemWeightEditor.ascx" />
+    <Content Include="Forms\MainPage.ascx" />
+    <Content Include="Forms\ProjectItemList.ascx" />
+    <Content Include="Forms\ProjectItemListTreeMap.ascx" />
+    <Content Include="Forms\ProjectUpdate.ascx" />
+    <Content Include="Forms\Services.aspx" />
+    <Content Include="Forms\TemplateItemList.ascx" />
+    <Content Include="Forms\TemplateItemUpdate.ascx" />
+    <Content Include="Forms\TemplateUpdate.ascx" />
+    <Content Include="Forms\TotalReportProjectsChart.ascx" />
+    <Content Include="Forms\TotalReportsProjects.ascx" />
+    <Content Include="ElahieLogin.aspx" />
+    <Content Include="Images\checked.png" />
+    <Content Include="Images\left_arrow_blue.png" />
+    <Content Include="Images\double-left-arrow_red.png" />
+    <Content Include="Images\double-left-arrow_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AskUser.ascx.cs">
+      <DependentUpon>AskUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AskUser.ascx.designer.cs">
+      <DependentUpon>AskUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomGrid.ascx.cs">
+      <DependentUpon>CustomGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomGrid.ascx.designer.cs">
+      <DependentUpon>CustomGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeleteForm.ascx.cs">
+      <DependentUpon>DeleteForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteForm.ascx.designer.cs">
+      <DependentUpon>DeleteForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DetailedProjectImprovementReport.ascx.cs">
+      <DependentUpon>DetailedProjectImprovementReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DetailedProjectImprovementReport.ascx.designer.cs">
+      <DependentUpon>DetailedProjectImprovementReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EnterDataHistory.ascx.cs">
+      <DependentUpon>EnterDataHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EnterDataHistory.ascx.designer.cs">
+      <DependentUpon>EnterDataHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EnterDataTreeview.ascx.cs">
+      <DependentUpon>EnterDataTreeview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EnterDataTreeview.ascx.designer.cs">
+      <DependentUpon>EnterDataTreeview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ItemReports.ascx.cs">
+      <DependentUpon>ItemReports.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemReports.ascx.designer.cs">
+      <DependentUpon>ItemReports.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ItemReportUpdate.ascx.cs">
+      <DependentUpon>ItemReportUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemReportUpdate.ascx.designer.cs">
+      <DependentUpon>ItemReportUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ItemUpdate.ascx.cs">
+      <DependentUpon>ItemUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemUpdate.ascx.designer.cs">
+      <DependentUpon>ItemUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ItemWeightEditor.ascx.cs">
+      <DependentUpon>ItemWeightEditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ItemWeightEditor.ascx.designer.cs">
+      <DependentUpon>ItemWeightEditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainPage.ascx.cs">
+      <DependentUpon>MainPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MainPage.ascx.designer.cs">
+      <DependentUpon>MainPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectItemList.ascx.cs">
+      <DependentUpon>ProjectItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectItemList.ascx.designer.cs">
+      <DependentUpon>ProjectItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectItemListTreeMap.ascx.cs">
+      <DependentUpon>ProjectItemListTreeMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectItemListTreeMap.ascx.designer.cs">
+      <DependentUpon>ProjectItemListTreeMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectUpdate.ascx.cs">
+      <DependentUpon>ProjectUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectUpdate.ascx.designer.cs">
+      <DependentUpon>ProjectUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TemplateItemList.ascx.cs">
+      <DependentUpon>TemplateItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TemplateItemList.ascx.designer.cs">
+      <DependentUpon>TemplateItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TemplateItemUpdate.ascx.cs">
+      <DependentUpon>TemplateItemUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TemplateItemUpdate.ascx.designer.cs">
+      <DependentUpon>TemplateItemUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TemplateUpdate.ascx.cs">
+      <DependentUpon>TemplateUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TemplateUpdate.ascx.designer.cs">
+      <DependentUpon>TemplateUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TotalReportProjectsChart.ascx.cs">
+      <DependentUpon>TotalReportProjectsChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TotalReportProjectsChart.ascx.designer.cs">
+      <DependentUpon>TotalReportProjectsChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TotalReportsProjects.ascx.cs">
+      <DependentUpon>TotalReportsProjects.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TotalReportsProjects.ascx.designer.cs">
+      <DependentUpon>TotalReportsProjects.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="JReports.cs" />
+    <Compile Include="JWebProjectManagement.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ElahieLogin.aspx.cs">
+      <DependentUpon>ElahieLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElahieLogin.aspx.designer.cs">
+      <DependentUpon>ElahieLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectManagement\ProjectManagement.csproj">
+      <Project>{ed1be36e-f93d-4ca8-b0d2-b04e39395db1}</Project>
+      <Name>ProjectManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebClassLibrary\WebClassLibrary.csproj">
+      <Project>{3b0b293d-40f5-49ad-b44b-5914873d5028}</Project>
+      <Name>WebClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebControllers\WebControllers.csproj">
+      <Project>{e4dec70e-7841-4fd2-a5ed-c59837cad549}</Project>
+      <Name>WebControllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\WebProjectManagement.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2182</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5024/WebProjectManagement</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

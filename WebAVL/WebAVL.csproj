@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EAB58C69-7BB6-4202-B8E2-883E66A3283E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebAVL</RootNamespace>
+    <AssemblyName>WebAVL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Callback.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Controls\Search\JDeviceListControl.ascx" />
+    <Content Include="Controls\Search\JSearchDevice.ascx" />
+    <Content Include="Forms\AreaUpdate.ascx" />
+    <Content Include="Forms\DeviceModelList.ascx" />
+    <Content Include="Forms\DeviceModelSearch.ascx" />
+    <Content Include="Forms\DeviceUpdate.ascx" />
+    <Content Include="Forms\GoogleMap.ascx" />
+    <Content Include="Forms\GoogleMapDirection.ascx" />
+    <Content Include="Forms\JLinePathMap.ascx" />
+    <Content Include="Forms\JObjectListItemList.ascx" />
+    <Content Include="Forms\JObjectListItemSearch.ascx" />
+    <Content Include="Forms\MainPage.ascx" />
+    <Content Include="Forms\NewMap.ascx" />
+    <Content Include="Forms\ObjectState.ascx" />
+    <Content Include="Forms\ObjectUpdate.ascx" />
+    <Content Include="Forms\Purchase.ascx" />
+    <Content Include="Forms\registerInvoice.ascx" />
+    <Content Include="Forms\RegisterUser.ascx" />
+    <Content Include="Forms\ReisterSubuserUpdate.ascx" />
+    <Content Include="Forms\SubUserObjectsUpdate.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="Icons\Close.png" />
+    <Content Include="Icons\current_location.png" />
+    <Content Include="Icons\geotagMarker.png" />
+    <Content Include="Icons\last_location.png" />
+    <Content Include="Icons\PersonMarker.png" />
+    <Content Include="Icons\simpleMarker.png" />
+    <Content Include="Icons\Arrow.ICO" />
+    <Content Include="Icons\bus.png" />
+    <Content Include="Icons\bus1.png" />
+    <Content Include="Icons\car-Icon.png" />
+    <Content Include="Icons\car.png" />
+    <Content Include="Icons\cash.jpg" />
+    <Content Include="Icons\default.png" />
+    <Content Include="Icons\device.png" />
+    <Content Include="Icons\map-icon.png" />
+    <Content Include="Icons\person.png" />
+    <Content Include="Icons\point.png" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\splashScreen.jpg" />
+    <Content Include="Images\webAVLImages\menu.png" />
+    <Content Include="Images\webAVLImages\OneMarker.png" />
+    <Content Include="Images\webAVLImages\purpleMarker.png" />
+    <Content Include="Images\webAVLImages\severalMarkers.png" />
+    <Content Include="Image\back.png" />
+    <Content Include="Image\CloseControlPanel.png" />
+    <Content Include="Image\CloseControlPanel2.png" />
+    <Content Include="Image\Logo.png" />
+    <Content Include="Image\OpenControlPanel.png" />
+    <Content Include="Image\OpenControlPanel2.png" />
+    <Content Include="Image\pinlayer1.png" />
+    <Content Include="Image\pinlayer2.png" />
+    <Content Include="Receiver.aspx" />
+    <Content Include="Fonts\BMitra.ttf" />
+    <Content Include="Fonts\BMitra.woff" />
+    <Content Include="Fonts\BMitraBold.eot" />
+    <Content Include="Fonts\BMitraBold.ttf" />
+    <Content Include="Fonts\BMitraBold.woff" />
+    <Content Include="Fonts\BNasim.eot" />
+    <Content Include="Fonts\BNasim.ttf" />
+    <Content Include="Fonts\BNasim.woff" />
+    <Content Include="Fonts\BRoya.eot" />
+    <Content Include="Fonts\BRoya.ttf" />
+    <Content Include="Fonts\BRoya.woff" />
+    <Content Include="Fonts\BTabassom.eot" />
+    <Content Include="Fonts\BTabassom.ttf" />
+    <Content Include="Fonts\BTabassom.woff" />
+    <Content Include="Fonts\BTitr.eot" />
+    <Content Include="Fonts\BTitr.ttf" />
+    <Content Include="Fonts\BTitr.woff" />
+    <Content Include="Fonts\BTitrTGE.eot" />
+    <Content Include="Fonts\BTitrTGE.ttf" />
+    <Content Include="Fonts\BTitrTGE.woff" />
+    <Content Include="Fonts\BTraffic.eot" />
+    <Content Include="Fonts\BTraffic.ttf" />
+    <Content Include="Fonts\BTraffic.woff" />
+    <Content Include="Fonts\BYekan.eot" />
+    <Content Include="Fonts\BYekan.ttf" />
+    <Content Include="Fonts\BYekan.woff" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Script\m.js" />
+    <Content Include="Script\markerwithlabel.js" />
+    <Content Include="Script\TweenLite.min.js" />
+    <Content Include="sql\binaryExtractorTarahanControl.txt" />
+    <Content Include="sql\binaryExtractorTarahanControl3.txt" />
+    <Content Include="sql\binaryExtractorTarahnControl2.txt" />
+    <Content Include="Style\bootstrap.min.css" />
+    <None Include="Web References\BpService\IPaymentGateway.wsdl" />
+    <None Include="Web References\BpService\PaymentGatewayImplService.wsdl" />
+    <Content Include="Web References\BpService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Callback.aspx.cs">
+      <DependentUpon>Callback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Callback.aspx.designer.cs">
+      <DependentUpon>Callback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\JDeviceList.cs" />
+    <Compile Include="Controls\Search\JDeviceListControl.ascx.cs">
+      <DependentUpon>JDeviceListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Search\JDeviceListControl.ascx.designer.cs">
+      <DependentUpon>JDeviceListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\JSearchDevice.ascx.cs">
+      <DependentUpon>JSearchDevice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Search\JSearchDevice.ascx.designer.cs">
+      <DependentUpon>JSearchDevice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AreaUpdate.ascx.cs">
+      <DependentUpon>AreaUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AreaUpdate.ascx.designer.cs">
+      <DependentUpon>AreaUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeviceModelList.ascx.cs">
+      <DependentUpon>DeviceModelList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DeviceModelList.ascx.designer.cs">
+      <DependentUpon>DeviceModelList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeviceModelSearch.ascx.cs">
+      <DependentUpon>DeviceModelSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DeviceModelSearch.ascx.designer.cs">
+      <DependentUpon>DeviceModelSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeviceUpdate.ascx.cs">
+      <DependentUpon>DeviceUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DeviceUpdate.ascx.designer.cs">
+      <DependentUpon>DeviceUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GoogleMap.ascx.cs">
+      <DependentUpon>GoogleMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GoogleMap.ascx.designer.cs">
+      <DependentUpon>GoogleMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GoogleMapDirection.ascx.cs">
+      <DependentUpon>GoogleMapDirection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\GoogleMapDirection.ascx.designer.cs">
+      <DependentUpon>GoogleMapDirection.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JLinePathMap.ascx.cs">
+      <DependentUpon>JLinePathMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JLinePathMap.ascx.designer.cs">
+      <DependentUpon>JLinePathMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JObjectListItemList.ascx.cs">
+      <DependentUpon>JObjectListItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JObjectListItemList.ascx.designer.cs">
+      <DependentUpon>JObjectListItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JObjectListItemSearch.ascx.cs">
+      <DependentUpon>JObjectListItemSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JObjectListItemSearch.ascx.designer.cs">
+      <DependentUpon>JObjectListItemSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainPage.ascx.cs">
+      <DependentUpon>MainPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MainPage.ascx.designer.cs">
+      <DependentUpon>MainPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewMap.ascx.cs">
+      <DependentUpon>NewMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\NewMap.ascx.designer.cs">
+      <DependentUpon>NewMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ObjectState.ascx.cs">
+      <DependentUpon>ObjectState.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ObjectState.ascx.designer.cs">
+      <DependentUpon>ObjectState.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ObjectUpdate.ascx.cs">
+      <DependentUpon>ObjectUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ObjectUpdate.ascx.designer.cs">
+      <DependentUpon>ObjectUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase.ascx.cs">
+      <DependentUpon>Purchase.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase.ascx.designer.cs">
+      <DependentUpon>Purchase.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\registerInvoice.ascx.cs">
+      <DependentUpon>registerInvoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\registerInvoice.ascx.designer.cs">
+      <DependentUpon>registerInvoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterUser.ascx.cs">
+      <DependentUpon>RegisterUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterUser.ascx.designer.cs">
+      <DependentUpon>RegisterUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReisterSubuserUpdate.ascx.cs">
+      <DependentUpon>ReisterSubuserUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ReisterSubuserUpdate.ascx.designer.cs">
+      <DependentUpon>ReisterSubuserUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SubUserObjectsUpdate.ascx.cs">
+      <DependentUpon>SubUserObjectsUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\SubUserObjectsUpdate.ascx.designer.cs">
+      <DependentUpon>SubUserObjectsUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="JAvlManagement.cs" />
+    <Compile Include="JAvlProfile.cs" />
+    <Compile Include="JWebAVL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Receiver.aspx.cs">
+      <DependentUpon>Receiver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receiver.aspx.designer.cs">
+      <DependentUpon>Receiver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\BpService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GoogleMap\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accounting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Accounting.dll</HintPath>
+    </Reference>
+    <Reference Include="AVL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\AVL.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment, Version=2.0.2.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="JJson">
+      <HintPath>..\WebERP\bin\JJson.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\WebERP\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TimePicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d25e9f59e49c4d2f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\TimePicker.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bus\BusManagment.csproj">
+      <Project>{79d33258-a0f7-4bcb-a362-510197f1668a}</Project>
+      <Name>BusManagment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Globals\Globals.csproj">
+      <Project>{e7cc3df6-4222-41dc-8f78-ace6e997573b}</Project>
+      <Name>Globals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebClassLibrary\WebClassLibrary.csproj">
+      <Project>{3b0b293d-40f5-49ad-b44b-5914873d5028}</Project>
+      <Name>WebClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebControllers\WebControllers.csproj">
+      <Project>{e4dec70e-7841-4fd2-a5ed-c59837cad549}</Project>
+      <Name>WebControllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\WebAVL.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://bpm.shaparak.ir/pgwchannel/services/pgw%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\BpService\</RelPath>
+      <UpdateFromURL>https://bpm.shaparak.ir/pgwchannel/services/pgw%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebAVL_BpService_PaymentGatewayImplService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1652</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5024/WebAVL</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

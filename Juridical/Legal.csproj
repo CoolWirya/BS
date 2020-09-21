@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{506FC068-9557-4A3A-8C2E-8E5BC4374530}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Legal</RootNamespace>
+    <AssemblyName>Legal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\dlls\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Estates">
+      <HintPath>..\..\..\Rajaei - copy\WebERP\bin\Estates.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\dlls\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.FilterEditor.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.FilterEditor.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.Schedule.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.TimeLine.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\..\..\Rajaei - copy\WebERP\bin\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstate">
+      <HintPath>..\..\..\Rajaei - copy\WebERP\bin\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreComplex">
+      <HintPath>..\..\..\Rajaei - copy\WebERP\bin\StoreComplex.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Advocacy\Advocacy.cs" />
+    <Compile Include="Advocacy\AdvocacyFinance.cs" />
+    <Compile Include="Advocacy\AdvocacyFinanceTable.cs" />
+    <Compile Include="Advocacy\AdvocacySubject.cs" />
+    <Compile Include="Advocacy\AdvocacyTable.cs" />
+    <Compile Include="Advocacy\Advocate.cs" />
+    <Compile Include="Advocacy\AdvocateTable.cs" />
+    <Compile Include="Assertion\AssertionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assertion\AssertionForm.Designer.cs">
+      <DependentUpon>AssertionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assertion\PersonAssertion.cs" />
+    <Compile Include="Assertion\PersonAssertionTable.cs" />
+    <Compile Include="Assertion\Assertion.cs" />
+    <Compile Include="Assertion\AssertionTable.cs" />
+    <Compile Include="BaseDefine\BaseDefine.cs" />
+    <Compile Include="BaseDefine\ContractDefines\ContractLocations.cs" />
+    <Compile Include="BaseDefine\ContractDefines\EnviromentDefineClasses.cs" />
+    <Compile Include="BaseDefine\JTableNameLegal.cs" />
+    <Compile Include="breakupOrganization\breakupOrg.cs" />
+    <Compile Include="breakupOrganization\breakupOrgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="breakupOrganization\breakupOrgForm.Designer.cs">
+      <DependentUpon>breakupOrgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="breakupOrganization\breakupOrgTable.cs" />
+    <Compile Include="Contract\BaseDefines\BaseDefines.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractDynamicTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractDynamicTypes\ContractDynamicTypeForm.designer.cs">
+      <DependentUpon>ContractDynamicTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractDynamicTypes\ContractDynamicTypes.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractFormsOrder.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractFormsOrderTable.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractPropertiesForm.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractTypeGroup.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractTypeGroupTable.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractTypeSettings.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractTypeSettingsTable.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractPropertiesFormTable.cs" />
+    <Compile Include="Contract\ContractNodes.cs" />
+    <Compile Include="Contract\BaseContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\BaseContractForm.Designer.cs">
+      <DependentUpon>BaseContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractDynamicTypes\ContractDynamicTypeTable.cs" />
+    <Compile Include="Contract\ContractSearch\FrmContractPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractSearch\FrmContractPerson.designer.cs">
+      <DependentUpon>FrmContractPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractSearch\jcontractpersonsearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\CancelContract\CancelContract.cs" />
+    <Compile Include="Contract\Forms\ContractEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\ContractEmployeeForm.Designer.cs">
+      <DependentUpon>ContractEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\ContractFormsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\ContractFormsList.Designer.cs">
+      <DependentUpon>ContractFormsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Documents\CancellDocumentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Documents\CancellDocumentForm.Designer.cs">
+      <DependentUpon>CancellDocumentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Documents\ChangeDocumentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Documents\ChangeDocumentsForm.Designer.cs">
+      <DependentUpon>ChangeDocumentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Enviroment\EnviromentContract.cs" />
+    <Compile Include="Contract\Forms\Enviroment\EnviromentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Enviroment\EnviromentForm.Designer.cs">
+      <DependentUpon>EnviromentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Fanni\FanniSubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Fanni\FanniSubjectForm.Designer.cs">
+      <DependentUpon>FanniSubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\GoodwillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\GoodwillForm.designer.cs">
+      <DependentUpon>GoodwillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Parties\PersonContractTable.cs" />
+    <Compile Include="Contract\Forms\Property\PropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Property\PropertiesForm.Designer.cs">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Refer\ContractReferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Refer\ContractReferForm.Designer.cs">
+      <DependentUpon>ContractReferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\StoreComplex\SCContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\StoreComplex\SCContractForm.designer.cs">
+      <DependentUpon>SCContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\TarefeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\TarefeForm.Designer.cs">
+      <DependentUpon>TarefeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\TransferShare\TransferShareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\TransferShare\TransferShareForm.Designer.cs">
+      <DependentUpon>TransferShareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\WarehouseComplexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\WarehouseComplexForm.Designer.cs">
+      <DependentUpon>WarehouseComplexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RegistryOfficeLetters\RegistryOfficeLetter.cs" />
+    <Compile Include="Contract\RegistryOfficeLetters\RegistryOfficeLetterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\RegistryOfficeLetters\RegistryOfficeLetterForm.Designer.cs">
+      <DependentUpon>RegistryOfficeLetterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RegistryOfficeLetters\RegistryOfficeLetterListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\RegistryOfficeLetters\RegistryOfficeLetterListForm.Designer.cs">
+      <DependentUpon>RegistryOfficeLetterListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RegistryOfficeLetters\RegistryOfficeLetterTable.cs" />
+    <Compile Include="Contract\RepairContract\InsertRenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\RepairContract\InsertRenter.Designer.cs">
+      <DependentUpon>InsertRenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\RepairContract\RepairContract.cs" />
+    <Compile Include="Contract\RepairContract\RepairContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\RepairContract\RepairContractForm.Designer.cs">
+      <DependentUpon>RepairContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\TextOfContract\AmendmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\TextOfContract\AmendmentForm.Designer.cs">
+      <DependentUpon>AmendmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractDynamicTypes\ContractType\Contractdefine.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractType\ContractdefineTable.cs" />
+    <Compile Include="Contract\ContractDynamicTypes\ContractType\Documentdefine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractDynamicTypes\ContractType\Documentdefine.Designer.cs">
+      <DependentUpon>Documentdefine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Documents\DocumentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Documents\DocumentsForm.Designer.cs">
+      <DependentUpon>DocumentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Documents\DocumentType.cs" />
+    <Compile Include="Contract\Forms\Documents\DocumentContract.cs" />
+    <Compile Include="Contract\Forms\Documents\DocumentContractTable.cs" />
+    <Compile Include="Contract\Forms\FinishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\FinishForm.Designer.cs">
+      <DependentUpon>FinishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Pony\Pony.cs" />
+    <Compile Include="Contract\Forms\Pony\PonyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Pony\PonyForm.Designer.cs">
+      <DependentUpon>PonyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Pony\PonyTable.cs" />
+    <Compile Include="Contract\GeneralContract\GeneralContract.cs" />
+    <Compile Include="Contract\Forms\Parties\PartiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Parties\PartiesForm.Designer.cs">
+      <DependentUpon>PartiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Parties\PersonContract.cs" />
+    <Compile Include="Contract\Forms\CommitmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\CommitmentsForm.Designer.cs">
+      <DependentUpon>CommitmentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractForms.cs">
+    </Compile>
+    <Compile Include="Contract\Forms\DecisionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\DecisionForm.Designer.cs">
+      <DependentUpon>DecisionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\CancelContract\CancelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\CancelContract\CancelForm.Designer.cs">
+      <DependentUpon>CancelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\LegalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\LegalForm.Designer.cs">
+      <DependentUpon>LegalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\RentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\RentForm.Designer.cs">
+      <DependentUpon>RentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\Confirm\ConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\Confirm\ConfirmForm.Designer.cs">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\ContractPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\ContractPrice.Designer.cs">
+      <DependentUpon>ContractPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\SubjectContract\SubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\Forms\SubjectContract\SubjectForm.Designer.cs">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\Forms\SubjectContract\SubjectContract.cs" />
+    <Compile Include="Contract\Forms\SubjectContract\SubjectContractTable.cs" />
+    <Compile Include="Contract\TransferAsset\TransferAsset.cs" />
+    <Compile Include="Decision\DecisionSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decision\DecisionSearch.Designer.cs">
+      <DependentUpon>DecisionSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decision\DecisionTable.cs" />
+    <Compile Include="Decision\DecisionType.cs" />
+    <Compile Include="Decision\DecisionTypeTable.cs" />
+    <Compile Include="Distraint\Distraint.cs" />
+    <Compile Include="Distraint\DistraintAssetShare.cs" />
+    <Compile Include="Distraint\DistraintAssetShareTable.cs" />
+    <Compile Include="Distraint\DistraintTable.cs" />
+    <Compile Include="Decision\ExecutiveSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decision\ExecutiveSearch.Designer.cs">
+      <DependentUpon>ExecutiveSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decision\ExecutiveTable.cs" />
+    <Compile Include="DocumentAccounting\DocumentAccounting.cs" />
+    <Compile Include="Expertise\Expertise.cs" />
+    <Compile Include="Expertise\ExpertiseTable.cs" />
+    <Compile Include="Expertise\JExpertiseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Expertise\JExpertiseForm.Designer.cs">
+      <DependentUpon>JExpertiseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decision\FinanceDecision.cs" />
+    <Compile Include="Decision\FinanceDecisionTable.cs" />
+    <Compile Include="Decision\FinanceExecute.cs" />
+    <Compile Include="Decision\FinanceExecuteTable.cs" />
+    <Compile Include="Decision\JDecisionType.cs" />
+    <Compile Include="Decision\JExecutive.cs" />
+    <Compile Include="Decision\PersonExecutive.cs" />
+    <Compile Include="Decision\PersonExecutiveTable.cs" />
+    <Compile Include="Probate\CalculateShare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Probate\CalculateShare.Designer.cs">
+      <DependentUpon>CalculateShare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotaryLetter\frmNotaryLetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaryLetter\frmNotaryLetter.Designer.cs">
+      <DependentUpon>frmNotaryLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotaryLetter\frmNotaryLetterSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotaryLetter\frmNotaryLetterSearch.Designer.cs">
+      <DependentUpon>frmNotaryLetterSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advocacy\JAdvocacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advocacy\JAdvocacy.Designer.cs">
+      <DependentUpon>JAdvocacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotaryLetter\NotaryLetter.cs" />
+    <Compile Include="NotaryLetter\NotaryLetterSubject.cs" />
+    <Compile Include="NotaryLetter\NotaryLetterTable.cs" />
+    <Compile Include="Advocacy\SubjectAdvocacy.cs" />
+    <Compile Include="Advocacy\SubjectAdvocacyTable.cs" />
+    <Compile Include="Advocacy\Vicarious.cs" />
+    <Compile Include="Advocacy\VicariousTable.cs" />
+    <Compile Include="Decision\Executive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decision\Executive.Designer.cs">
+      <DependentUpon>Executive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decision\JAssignmentJudical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decision\JAssignmentJudical.Designer.cs">
+      <DependentUpon>JAssignmentJudical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decision\JDecision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decision\JDecision.Designer.cs">
+      <DependentUpon>JDecision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distraint\DistraintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distraint\DistraintForm.Designer.cs">
+      <DependentUpon>DistraintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Probate\InheritForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Probate\InheritForm.Designer.cs">
+      <DependentUpon>InheritForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Probate\ProbateInheritance.cs" />
+    <Compile Include="Probate\ProbateInheritanceTable.cs" />
+    <Compile Include="Probate\Probate.cs" />
+    <Compile Include="Probate\ProbateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Probate\ProbateForm.Designer.cs">
+      <DependentUpon>ProbateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Probate\ProbateTable.cs" />
+    <Compile Include="Judicial\JudicalBranch\JJudicialBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\JudicalBranch\JJudicialBranch.Designer.cs">
+      <DependentUpon>JJudicialBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\JudicalBranch\JudicialBranchTable.cs" />
+    <Compile Include="Judicial\JudicalComplex\JudicalComplexTable.cs" />
+    <Compile Include="Judicial\JudicalComplex\JudicialComplex.cs" />
+    <Compile Include="Judicial\JudicalComplex\JudicialComplexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Judicial\JudicalComplex\JudicialComplexForm.Designer.cs">
+      <DependentUpon>JudicialComplexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Judicial\JudicalBranch\JudicialBranch.cs" />
+    <Compile Include="Legal.cs" />
+    <Compile Include="Contract\BaseContract.cs" />
+    <Compile Include="Decision\Decision.cs" />
+    <Compile Include="Gravamen\Gravamen.cs" />
+    <Compile Include="Nodes\BaseDefine.cs" />
+    <Compile Include="Nodes\StaticNodes.cs" />
+    <Compile Include="Notary\JNotary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notary\JNotary.Designer.cs">
+      <DependentUpon>JNotary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notary\JNotaryTable.cs" />
+    <Compile Include="Notary\Notary.cs">
+    </Compile>
+    <Compile Include="Notice\JNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notice\JNotice.Designer.cs">
+      <DependentUpon>JNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notice\JNoticeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notice\JNoticeSearch.Designer.cs">
+      <DependentUpon>JNoticeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notice\Notice.cs">
+    </Compile>
+    <Compile Include="Notice\NoticeTable.cs" />
+    <Compile Include="Person\Dead\DeadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Dead\DeadForm.Designer.cs">
+      <DependentUpon>DeadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Dead\DeadPerson.cs" />
+    <Compile Include="Person\Dead\DeadPersonTable.cs" />
+    <Compile Include="Person\Person.cs" />
+    <Compile Include="petition\FinancePetition.cs" />
+    <Compile Include="petition\FinancePetitionTable.cs" />
+    <Compile Include="petition\JPetition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="petition\JPetition.Designer.cs">
+      <DependentUpon>JPetition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="petition\PersonPetition.cs" />
+    <Compile Include="petition\PersonPetitionTable.cs" />
+    <Compile Include="petition\Petition.cs" />
+    <Compile Include="petition\PetitionSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="petition\PetitionSearch.Designer.cs">
+      <DependentUpon>PetitionSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="petition\PetitionTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="petition\SubjectTypes.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TableNames.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assertion\AssertionForm.resx">
+      <DependentUpon>AssertionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="breakupOrganization\breakupOrgForm.resx">
+      <DependentUpon>breakupOrgForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ContractDynamicTypes\ContractDynamicTypeForm.resx">
+      <DependentUpon>ContractDynamicTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ContractSearch\FrmContractPerson.resx">
+      <DependentUpon>FrmContractPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\ContractEmployeeForm.resx">
+      <DependentUpon>ContractEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\ContractFormsList.resx">
+      <DependentUpon>ContractFormsList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\Documents\CancellDocumentForm.resx">
+      <DependentUpon>CancellDocumentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\Documents\ChangeDocumentsForm.resx">
+      <DependentUpon>ChangeDocumentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\Enviroment\EnviromentForm.resx">
+      <DependentUpon>EnviromentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\Fanni\FanniSubjectForm.resx">
+      <DependentUpon>FanniSubjectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\GoodwillForm.resx">
+      <DependentUpon>GoodwillForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\Property\PropertiesForm.resx">
+      <DependentUpon>PropertiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\StoreComplex\SCContractForm.resx">
+      <DependentUpon>SCContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\TarefeForm.resx">
+      <DependentUpon>TarefeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\TransferShare\TransferShareForm.resx">
+      <DependentUpon>TransferShareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\RegistryOfficeLetters\RegistryOfficeLetterForm.resx">
+      <DependentUpon>RegistryOfficeLetterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\RegistryOfficeLetters\RegistryOfficeLetterListForm.resx">
+      <DependentUpon>RegistryOfficeLetterListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\RepairContract\InsertRenter.resx">
+      <DependentUpon>InsertRenter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\RepairContract\RepairContractForm.resx">
+      <DependentUpon>RepairContractForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\TextOfContract\AmendmentForm.resx">
+      <DependentUpon>AmendmentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\BaseContractForm.resx">
+      <DependentUpon>BaseContractForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ContractDynamicTypes\ContractType\Documentdefine.resx">
+      <DependentUpon>Documentdefine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\Documents\DocumentsForm.resx">
+      <DependentUpon>DocumentsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\FinishForm.resx">
+      <DependentUpon>FinishForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\Pony\PonyForm.resx">
+      <DependentUpon>PonyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\Parties\PartiesForm.resx">
+      <DependentUpon>PartiesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\CommitmentsForm.resx">
+      <DependentUpon>CommitmentsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\DecisionForm.resx">
+      <DependentUpon>DecisionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\CancelContract\CancelForm.resx">
+      <DependentUpon>CancelForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\LegalForm.resx">
+      <DependentUpon>LegalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\RentForm.resx">
+      <DependentUpon>RentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\Confirm\ConfirmForm.resx">
+      <DependentUpon>ConfirmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\ContractPrice.resx">
+      <DependentUpon>ContractPrice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\Forms\SubjectContract\SubjectForm.resx">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Decision\DecisionSearch.resx">
+      <DependentUpon>DecisionSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Decision\ExecutiveSearch.resx">
+      <DependentUpon>ExecutiveSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Expertise\JExpertiseForm.resx">
+      <DependentUpon>JExpertiseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Probate\CalculateShare.resx">
+      <DependentUpon>CalculateShare.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaryLetter\frmNotaryLetter.resx">
+      <DependentUpon>frmNotaryLetter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotaryLetter\frmNotaryLetterSearch.resx">
+      <DependentUpon>frmNotaryLetterSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advocacy\JAdvocacy.resx">
+      <DependentUpon>JAdvocacy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Decision\Executive.resx">
+      <DependentUpon>Executive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Decision\JAssignmentJudical.resx">
+      <DependentUpon>JAssignmentJudical.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Decision\JDecision.resx">
+      <DependentUpon>JDecision.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distraint\DistraintForm.resx">
+      <DependentUpon>DistraintForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Probate\InheritForm.resx">
+      <DependentUpon>InheritForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Probate\ProbateForm.resx">
+      <DependentUpon>ProbateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\JudicalBranch\JJudicialBranch.resx">
+      <DependentUpon>JJudicialBranch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Judicial\JudicalComplex\JudicialComplexForm.resx">
+      <DependentUpon>JudicialComplexForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notary\JNotary.resx">
+      <DependentUpon>JNotary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notice\JNotice.resx">
+      <DependentUpon>JNotice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notice\JNoticeSearch.resx">
+      <DependentUpon>JNoticeSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Dead\DeadForm.resx">
+      <DependentUpon>DeadForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="petition\JPetition.resx">
+      <DependentUpon>JPetition.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="petition\PetitionSearch.resx">
+      <DependentUpon>PetitionSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Employment\Employment.csproj">
+      <Project>{573782b8-c27c-44f6-aa6b-479aa83eae48}</Project>
+      <Name>Employment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance\Finance.csproj">
+      <Project>{b53afbc9-db58-401d-b559-a683704c4e87}</Project>
+      <Name>Finance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Globals\Globals.csproj">
+      <Project>{e7cc3df6-4222-41dc-8f78-ace6e997573b}</Project>
+      <Name>Globals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Managementshares\ManagementShares.csproj">
+      <Project>{b9dfbad5-ad6f-4478-81c6-73fbbb102295}</Project>
+      <Name>ManagementShares</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

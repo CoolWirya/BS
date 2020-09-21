@@ -1,0 +1,117 @@
+﻿USE [AVLDB]
+GO
+/****** Object:  StoredProcedure [dbo].[Sp_ParserBinary]    Script Date: 7/1/2015 4:55:33 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[Sp_ParserBinary]
+ @b BINARY(1000)
+
+as
+ begin
+
+DECLARE @i INT=0
+DECLARE @GPSDateStr VARCHAR(10)
+DECLARE @GPSDateTimeStr VARCHAR(20)
+DECLARE @GSMSerial BIGINT , @CarId bigint
+
+DECLARE @ReceiveDate DATETIME
+DECLARE @Version VARCHAR(10)
+DECLARE	@Charge INT,	@Battery	INT,	@GPSAnt TINYINT,	@GSMAnt TINYINT,	
+		@Longitude FLOAT,	@Latitude FLOAT,	@Altitude FLOAT,	@Speed INT,	@Degree TINYINT,
+		@Direction TINYINT
+DECLARE @offset INT
+
+DECLARE @SendLogID INT
+DECLARE @maxErrorSendLogId INT
+--select @maxErrorSendLogId=ISNULL(MAX(SendLogId) ,0) from ErrorPricesTemp
+
+DECLARE @TransactionsTable AS TABLE 
+(
+	TID INT IDENTITY(1,1),
+	CarId BIGINT,
+	[Version] VARCHAR(10),
+	Charge INT,
+	Battery	INT,
+	GPSAnt TINYINT,
+	GSMAnt TINYINT,
+	Longitude FLOAT,
+	Latitude FLOAT,
+	Altitude FLOAT,
+	Speed INT,
+	Degree TINYINT,
+	Direction TINYINT,
+	ReceiveDate DATETIME,
+	GPSDateTimeStr VARCHAR(20)
+)
+
+
+	SET @i=0
+	SET @offset=0
+	IF SUBSTRING(@b,1,1)=66
+		SET @offset=1
+	WHILE @i<1000
+	BEGIN
+		IF @i=0
+		BEGIN
+			
+			SET @GSMSerial = CAST(CAST(REVERSE(SUBSTRING(@b,1+@offset,8)) AS BINARY(8)) AS BIGINT)
+			Select @CarId = CarId from Cars where DeviceSerialNumber = @GSMSerial
+			SET @Version = RIGHT('00'+CAST(SUBSTRING(@b ,9+@offset ,1)+0 AS VARCHAR(2)) ,2) 
+							+RIGHT('00'+CAST(SUBSTRING(@b ,10+@offset ,1)+0 AS VARCHAR(2)) ,2) 
+							+RIGHT('00'+CAST(SUBSTRING(@b ,11+@offset ,1)+0 AS VARCHAR(2)) ,2)
+			SET @i=@i+12
+			
+		END
+		ELSE 
+		IF SUBSTRING(@b,@i+@offset,1)=101
+		BEGIN
+			SET @GPSDateTimeStr=@GPSDateStr+' ' + cast(SUBSTRING(@b,@i+1+@offset,1)+0 AS VARCHAR(2))
+						+':'+cast(SUBSTRING(@b,2+@i+@offset,1)+0 AS VARCHAR(2))
+						+':'+cast(SUBSTRING(@b,3+@i+@offset,1)+0 AS VARCHAR(2))
+
+            declare @GPSDateTime datetime
+            SET @GPSDateTime= cast(@GPSDateTimeStr as datetime)
+			SET @GPSDateTime= DATEADD(n,270,@GPSDateTimeStr)
+
+			SET @Longitude=dbo.BinaryToFloat(CAST(REVERSE(SUBSTRING(@b,4+@i+@offset,4)) AS VARBINARY(max)))
+			SET @Latitude=dbo.BinaryToFloat(CAST(REVERSE(SUBSTRING(@b,8+@i+@offset,4)) AS VARBINARY(max)))
+			SET @Altitude=CAST(CAST(REVERSE(SUBSTRING(@b,12+@i+@offset,2)) AS BINARY(2)) AS int)
+			SET @Speed=CAST(CAST(REVERSE(SUBSTRING(@b,14+@i+@offset,2)) AS BINARY(2)) AS int)
+			SET @Degree= CAST((SUBSTRING(@b,16+@i+@offset,1)) AS TINYINT) 
+			SET @Direction  = CAST((SUBSTRING(@b,17+@i+@offset,1)) AS TINYINT)
+
+			select @Speed = @Speed * 1.85200
+			exec SP_InsertTransactionCars @CarId,0,@Longitude, @Latitude, @Altitude,@GPSDateTime, @Speed,@Charge,
+			                              0, @Battery,@GPSAnt, @GSMAnt, @Degree,@Version
+	
+			SET @i=@i+18
+		END
+		ELSE IF SUBSTRING(@b,@i+@offset,1)=100
+		BEGIN
+			SET @GPSDateStr= cast(SUBSTRING(@b,@i+1+@offset,1)+2000 AS VARCHAR(4))+'/'+cast(SUBSTRING(@b,2+@i+@offset,1)+0 AS VARCHAR(2))+'/'+cast(SUBSTRING(@b,3+@i+@offset,1)+0 AS VARCHAR(2))
+			SET @Charge = CAST(CAST(REVERSE(SUBSTRING(@b,4+@i+@offset,2)) AS BINARY(2)) AS int)
+			SET @Battery = CAST(CAST(REVERSE(SUBSTRING(@b,6+@i+@offset,2)) AS BINARY(2)) AS int)
+			SET @GPSAnt= CAST((SUBSTRING(@b,8+@i+@offset,1)) AS TINYINT) 
+			SET @GSMAnt  = CAST((SUBSTRING(@b,9+@i+@offset,1)) AS TINYINT)
+			--SELECT @GPSDateStr ,@Charge,@Battery ,@GPSAnt,@GSMAnt
+			SET @i=@i+10
+		END
+		ELSE IF SUBSTRING(@b,12+@i+@offset,1)=0
+			BREAK
+		ELSE
+			SET @i=@i+1
+	END
+
+--	FETCH NEXT FROM SendLogs_Cursor
+--	INTO  @SendLogID,@b,@ReceiveDate
+--END
+--CLOSE SendLogs_Cursor
+--DEALLOCATE SendLogs_Cursor
+--ORDER BY tt.PreviousPrice DESC --desc--tt.GPSDateTimeStr desc
+RETURN
+--SELECT dbo.BinaryToFloat( 0x3C5D9745 )
+end
+-- 

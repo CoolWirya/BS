@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Communication.JLetterAttachment">
+    <Position X="2.75" Y="0.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="Communication.JLetterAttachment.Letter_Attachment_File" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Letters\AttachmentManager\LetterAttachment.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAABAAAAAAAgAAAIMAgEAAEAAAEAAwAQAgA=</HashCode>
+      <FileName>Letters\AttachmentManager\LetterAttachment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

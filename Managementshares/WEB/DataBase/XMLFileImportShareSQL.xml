@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<start>
+  <node type="delete">
+    <database>remote</database>
+    <comment>DELETE #__saham_persons FROM  WHERE  edited = 0</comment>
+  </node>
+  <node type="insert">
+    <database>local</database>
+    <comment>
+      Select CAST(Code as varchar(10))
+      +'","'+   Case Name When '' then '0' else Name end
+      +'","'+   Case Fam When '' then '0' else Fam end
+      +'","'+   Case FatherName When '' then '0' else FatherName end
+      +'","'+   Case ShSh When '' then '0' else ShSh end
+      +'","'+   Case ShMeli When '' then '0' else ShMeli end
+      +'","'+ CAST( Sader as varchar(10))
+      +'","'+ Case BthDate  When '' then '0' else BthDate  end
+      +'","'+ CAST( Sex as varchar(10))
+      +'","'+  CAST( Maried  as varchar(10))
+      +'","'+ CAST( Child as varchar(10))
+      +'","'+ CAST( Suport as varchar(10))
+      +'","'+ Case MAddress  When '' then '0' else MAddress  end
+      +'","'+ Case MTell  When '' then '0' else MTell  end
+      +'","'+ CAST( MCity as varchar(10))
+      +'","'+   Case PostCode  When '' then '0' else PostCode  end
+      +'","'+   Case OAddress  When '' then '0' else OAddress  end
+      +'","'+   Case OTell  When '' then '0' else OTell  end
+      +'","'+ CAST( OCity as varchar(10))
+      +'","'+   Case Mobile  When '' then '0' else Mobile  end
+      +'","'+  CAST(  Block as varchar(10))
+      +'","'+  CAST(  Die as varchar(10)) from Sepad.OtherPerson
+    </comment>
+  </node>
+</start>

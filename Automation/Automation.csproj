@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F931E93A-22C2-400B-9FFF-CBDFD5DA7184}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Automation</RootNamespace>
+    <AssemblyName>Automation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\..\DLLs\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication, Version=2.0.3.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Communication\bin\Debug\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\DLLs\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\..\DLLs\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\StaticAction.cs" />
+    <Compile Include="Automation.cs" />
+    <Compile Include="BaseInformation\BaseInformation.cs" />
+    <Compile Include="BaseInformation\Subsidiaries\frmSubsidiaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseInformation\Subsidiaries\frmSubsidiaries.Designer.cs">
+      <DependentUpon>frmSubsidiaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataTypeClass.cs" />
+    <Compile Include="Defined\Attachment\AttachmentDefine.cs" />
+    <Compile Include="Defined\BaseDefine.cs" />
+    <Compile Include="Defined\Privacy\Privacy.cs" />
+    <Compile Include="Defined\PursueResaultType\PursueTypeDefine.cs" />
+    <Compile Include="Defined\ReferType\SendTypeDefine.cs" />
+    <Compile Include="Defined\EmpriseType\EmpriseTypeDefine.cs" />
+    <Compile Include="Defined\ReciveType\ReciveTypeDefine.cs" />
+    <Compile Include="Defined\SendType\SendTypeDefine.cs" />
+    <Compile Include="Defined\Urgency\Urgency.cs" />
+    <Compile Include="ExternalRefer\ExternalReferTable.cs" />
+    <Compile Include="ExternalRefer\frmExternalRefer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalRefer\frmExternalRefer.Designer.cs">
+      <DependentUpon>frmExternalRefer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalRefer\frmSendType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExternalRefer\frmSendType.Designer.cs">
+      <DependentUpon>frmSendType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kartabl\FolderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kartabl\FolderList.Designer.cs">
+      <DependentUpon>FolderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kartabl\Folders.cs" />
+    <Compile Include="Kartabl\FoldersTable.cs" />
+    <Compile Include="Kartabl\Kartable.cs" />
+    <Compile Include="Kartabl\ReferFolders.cs" />
+    <Compile Include="Object\ObjectTable.cs" />
+    <Compile Include="Object\Object.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Kartabl\DefineKartabl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kartabl\DefineKartabl.Designer.cs">
+      <DependentUpon>DefineKartabl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalRefer\ExternalRefer.cs" />
+    <Compile Include="Refer\Emprise\Emprise.cs" />
+    <Compile Include="Refer\Emprise\EmpriseTable.cs" />
+    <Compile Include="Refer\Emprise\frmEmpriseRefer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\Emprise\frmEmpriseRefer.Designer.cs">
+      <DependentUpon>frmEmpriseRefer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\frmRecieverSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\frmRecieverSelector.designer.cs">
+      <DependentUpon>frmRecieverSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\GroupName.cs" />
+    <Compile Include="Refer\GroupNameTable.cs" />
+    <Compile Include="Refer\JRefersTextRTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Refer\JRefersTextRTB.designer.cs">
+      <DependentUpon>JRefersTextRTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\ReferDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\ReferDetailsForm.Designer.cs">
+      <DependentUpon>ReferDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\ReferGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Refer\ReferGroupForm.Designer.cs">
+      <DependentUpon>ReferGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\ReferHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Refer\ReferHistory.Designer.cs">
+      <DependentUpon>ReferHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\ReferOrderUser\JReferOrderUser.cs" />
+    <Compile Include="Refer\RefersText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Refer\RefersText.Designer.cs">
+      <DependentUpon>RefersText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\Refer.cs" />
+    <Compile Include="Refer\ReferTable.cs" />
+    <Compile Include="Refer\SLA\SLADefine.cs" />
+    <Compile Include="Refer\SLA\SLADefineTable.cs" />
+    <Compile Include="Refer\SLA\SLAObject.cs" />
+    <Compile Include="Refer\SLA\SLAObjectTable.cs" />
+    <Compile Include="Subscription\Subscription.cs" />
+    <Compile Include="BaseInformation\Subsidiaries\Subsidiaries.cs" />
+    <Compile Include="BaseInformation\Subsidiaries\SubsidiariesTable.cs" />
+    <Compile Include="WorkFlow\WorkFlow.cs" />
+    <Compile Include="WorkFlow\WorkFlowNodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkFlow\WorkFlowNodeForm.Designer.cs">
+      <DependentUpon>WorkFlowNodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkFlow\WorkFlowTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseInformation\Subsidiaries\frmSubsidiaries.resx">
+      <DependentUpon>frmSubsidiaries.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalRefer\frmExternalRefer.resx">
+      <DependentUpon>frmExternalRefer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExternalRefer\frmSendType.resx">
+      <DependentUpon>frmSendType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kartabl\FolderList.resx">
+      <DependentUpon>FolderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kartabl\DefineKartabl.resx">
+      <DependentUpon>DefineKartabl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\Emprise\frmEmpriseRefer.resx">
+      <DependentUpon>frmEmpriseRefer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\frmRecieverSelector.resx">
+      <DependentUpon>frmRecieverSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\JRefersTextRTB.resx">
+      <DependentUpon>JRefersTextRTB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\ReferDetailsForm.resx">
+      <DependentUpon>ReferDetailsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\ReferGroupForm.resx">
+      <DependentUpon>ReferGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\ReferHistory.resx">
+      <DependentUpon>ReferHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Refer\RefersText.resx">
+      <DependentUpon>RefersText.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkFlow\WorkFlowNodeForm.resx">
+      <DependentUpon>WorkFlowNodeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_locked.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eb_file_transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round exit - gel32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round exit - gel27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-save11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_del25.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Employment\Employment.csproj">
+      <Project>{573782b8-c27c-44f6-aa6b-479aa83eae48}</Project>
+      <Name>Employment</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Down1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Up1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

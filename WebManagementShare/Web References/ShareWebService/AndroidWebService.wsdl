@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPersonInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePersonInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomeTel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkTel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomeAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePersonInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePersonInfoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLawyers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLawyersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLawyersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSharePrice">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSharePriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSharePriceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShareCount">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetShareCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShareCountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancialInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancialInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancialInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SellRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ShareCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SellRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SellRequestResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuyRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ShareCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuyRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BuyRequestResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelSellRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RequestCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelSellRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelSellRequestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelBuyRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RequestCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelBuyRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelBuyRequestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBuyRequests">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBuyRequestsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBuyRequestsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSellRequests">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSellRequestsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSellRequestsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNews">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessagesInbox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessagesInboxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMessagesInboxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessageByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MessageCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessageByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMessageByCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessagesOutbox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PersonCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMessagesOutboxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMessagesOutboxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMessageInbox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMessageInboxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteMessageInboxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMessageOutbox">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMessageOutboxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteMessageOutboxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePersonInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePersonInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePersonInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePersonInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLawyersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLawyers" />
+  </wsdl:message>
+  <wsdl:message name="GetLawyersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLawyersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSharePriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSharePrice" />
+  </wsdl:message>
+  <wsdl:message name="GetSharePriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSharePriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShareCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShareCount" />
+  </wsdl:message>
+  <wsdl:message name="GetShareCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShareCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancialInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancialInfo" />
+  </wsdl:message>
+  <wsdl:message name="FinancialInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancialInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SellRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:SellRequest" />
+  </wsdl:message>
+  <wsdl:message name="SellRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:SellRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="BuyRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:BuyRequest" />
+  </wsdl:message>
+  <wsdl:message name="BuyRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:BuyRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelSellRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelSellRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelSellRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelSellRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelBuyRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelBuyRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelBuyRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelBuyRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyRequestsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBuyRequests" />
+  </wsdl:message>
+  <wsdl:message name="GetBuyRequestsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBuyRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSellRequestsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSellRequests" />
+  </wsdl:message>
+  <wsdl:message name="GetSellRequestsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSellRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNews" />
+  </wsdl:message>
+  <wsdl:message name="GetNewsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMessagesInboxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMessagesInbox" />
+  </wsdl:message>
+  <wsdl:message name="GetMessagesInboxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMessagesInboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMessageByCode" />
+  </wsdl:message>
+  <wsdl:message name="GetMessageByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMessageByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMessagesOutboxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMessagesOutbox" />
+  </wsdl:message>
+  <wsdl:message name="GetMessagesOutboxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMessagesOutboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMessageInboxSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMessageInbox" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMessageInboxSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMessageInboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMessageOutboxSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMessageOutbox" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMessageOutboxSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMessageOutboxResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AndroidWebServiceSoap">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonInfo">
+      <wsdl:input message="tns:GetPersonInfoSoapIn" />
+      <wsdl:output message="tns:GetPersonInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersonInfo">
+      <wsdl:input message="tns:UpdatePersonInfoSoapIn" />
+      <wsdl:output message="tns:UpdatePersonInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLawyers">
+      <wsdl:input message="tns:GetLawyersSoapIn" />
+      <wsdl:output message="tns:GetLawyersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSharePrice">
+      <wsdl:input message="tns:GetSharePriceSoapIn" />
+      <wsdl:output message="tns:GetSharePriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShareCount">
+      <wsdl:input message="tns:GetShareCountSoapIn" />
+      <wsdl:output message="tns:GetShareCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancialInfo">
+      <wsdl:input message="tns:FinancialInfoSoapIn" />
+      <wsdl:output message="tns:FinancialInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SellRequest">
+      <wsdl:input message="tns:SellRequestSoapIn" />
+      <wsdl:output message="tns:SellRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BuyRequest">
+      <wsdl:input message="tns:BuyRequestSoapIn" />
+      <wsdl:output message="tns:BuyRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelSellRequest">
+      <wsdl:input message="tns:CancelSellRequestSoapIn" />
+      <wsdl:output message="tns:CancelSellRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelBuyRequest">
+      <wsdl:input message="tns:CancelBuyRequestSoapIn" />
+      <wsdl:output message="tns:CancelBuyRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyRequests">
+      <wsdl:input message="tns:GetBuyRequestsSoapIn" />
+      <wsdl:output message="tns:GetBuyRequestsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSellRequests">
+      <wsdl:input message="tns:GetSellRequestsSoapIn" />
+      <wsdl:output message="tns:GetSellRequestsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <wsdl:input message="tns:GetNewsSoapIn" />
+      <wsdl:output message="tns:GetNewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesInbox">
+      <wsdl:input message="tns:GetMessagesInboxSoapIn" />
+      <wsdl:output message="tns:GetMessagesInboxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageByCode">
+      <wsdl:input message="tns:GetMessageByCodeSoapIn" />
+      <wsdl:output message="tns:GetMessageByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesOutbox">
+      <wsdl:input message="tns:GetMessagesOutboxSoapIn" />
+      <wsdl:output message="tns:GetMessagesOutboxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageInbox">
+      <wsdl:input message="tns:DeleteMessageInboxSoapIn" />
+      <wsdl:output message="tns:DeleteMessageInboxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageOutbox">
+      <wsdl:input message="tns:DeleteMessageOutboxSoapIn" />
+      <wsdl:output message="tns:DeleteMessageOutboxSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AndroidWebServiceSoap" type="tns:AndroidWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPersonInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersonInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdatePersonInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLawyers">
+      <soap:operation soapAction="http://tempuri.org/GetLawyers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSharePrice">
+      <soap:operation soapAction="http://tempuri.org/GetSharePrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShareCount">
+      <soap:operation soapAction="http://tempuri.org/GetShareCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancialInfo">
+      <soap:operation soapAction="http://tempuri.org/FinancialInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SellRequest">
+      <soap:operation soapAction="http://tempuri.org/SellRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuyRequest">
+      <soap:operation soapAction="http://tempuri.org/BuyRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelSellRequest">
+      <soap:operation soapAction="http://tempuri.org/CancelSellRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBuyRequest">
+      <soap:operation soapAction="http://tempuri.org/CancelBuyRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyRequests">
+      <soap:operation soapAction="http://tempuri.org/GetBuyRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellRequests">
+      <soap:operation soapAction="http://tempuri.org/GetSellRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <soap:operation soapAction="http://tempuri.org/GetNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesInbox">
+      <soap:operation soapAction="http://tempuri.org/GetMessagesInbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageByCode">
+      <soap:operation soapAction="http://tempuri.org/GetMessageByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesOutbox">
+      <soap:operation soapAction="http://tempuri.org/GetMessagesOutbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageInbox">
+      <soap:operation soapAction="http://tempuri.org/DeleteMessageInbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageOutbox">
+      <soap:operation soapAction="http://tempuri.org/DeleteMessageOutbox" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AndroidWebServiceSoap12" type="tns:AndroidWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPersonInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePersonInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePersonInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLawyers">
+      <soap12:operation soapAction="http://tempuri.org/GetLawyers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSharePrice">
+      <soap12:operation soapAction="http://tempuri.org/GetSharePrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShareCount">
+      <soap12:operation soapAction="http://tempuri.org/GetShareCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancialInfo">
+      <soap12:operation soapAction="http://tempuri.org/FinancialInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SellRequest">
+      <soap12:operation soapAction="http://tempuri.org/SellRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuyRequest">
+      <soap12:operation soapAction="http://tempuri.org/BuyRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelSellRequest">
+      <soap12:operation soapAction="http://tempuri.org/CancelSellRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBuyRequest">
+      <soap12:operation soapAction="http://tempuri.org/CancelBuyRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBuyRequests">
+      <soap12:operation soapAction="http://tempuri.org/GetBuyRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSellRequests">
+      <soap12:operation soapAction="http://tempuri.org/GetSellRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNews">
+      <soap12:operation soapAction="http://tempuri.org/GetNews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesInbox">
+      <soap12:operation soapAction="http://tempuri.org/GetMessagesInbox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessageByCode">
+      <soap12:operation soapAction="http://tempuri.org/GetMessageByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMessagesOutbox">
+      <soap12:operation soapAction="http://tempuri.org/GetMessagesOutbox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageInbox">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMessageInbox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMessageOutbox">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMessageOutbox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AndroidWebService">
+    <wsdl:port name="AndroidWebServiceSoap" binding="tns:AndroidWebServiceSoap">
+      <soap:address location="http://192.168.3.4:90/WebManagementShare/WebServices/AndroidWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AndroidWebServiceSoap12" binding="tns:AndroidWebServiceSoap12">
+      <soap12:address location="http://192.168.3.4:90/WebManagementShare/WebServices/AndroidWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

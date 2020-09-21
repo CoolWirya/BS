@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="Communication.JCLetterCopy">
+    <Position X="2.75" Y="1" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>BAAAgEQAAAAAAEAAAAAgAgAJAAAAAIAAAAAAAgEAAAA=</HashCode>
+      <FileName>Letters\Copy\Copy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CAED304-A31B-4CD8-90EA-5C67D5DF4F6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebBaseNet</RootNamespace>
+    <AssemblyName>WebBaseNet</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accounting">
+      <HintPath>..\..\..\bin\Accounting.dll</HintPath>
+    </Reference>
+    <Reference Include="AndroidWebManagement">
+      <HintPath>..\..\..\bin\AndroidWebManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\bin\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation">
+      <HintPath>..\..\..\bin\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="AUTOMOBILE">
+      <HintPath>..\..\..\bin\AUTOMOBILE.dll</HintPath>
+    </Reference>
+    <Reference Include="AVL">
+      <HintPath>..\..\..\bin\AVL.dll</HintPath>
+    </Reference>
+    <Reference Include="Chat">
+      <HintPath>..\..\..\bin\Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>..\..\..\bin\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\WebERP\bin\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment">
+      <HintPath>..\..\..\bin\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Entertainment">
+      <HintPath>..\..\..\bin\Entertainment.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\bin\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="Estates">
+      <HintPath>..\..\..\bin\Estates.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\..\..\bin\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals">
+      <HintPath>..\..\..\bin\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>..\..\..\bin\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>..\..\..\bin\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ActiveDs">
+      <HintPath>..\..\..\bin\Interop.ActiveDs.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\bin\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.FilterEditor.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.FilterEditor.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.Schedule.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.TimeLine.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\..\bin\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="JComponents">
+      <HintPath>..\..\..\bin\JComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="JJson">
+      <HintPath>..\..\..\bin\JJson.dll</HintPath>
+    </Reference>
+    <Reference Include="JJsonService">
+      <HintPath>..\..\..\bin\JJsonService.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\..\..\bin\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net">
+      <HintPath>..\..\..\bin\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagementShares">
+      <HintPath>..\..\..\bin\ManagementShares.dll</HintPath>
+    </Reference>
+    <Reference Include="mCoreLib">
+      <HintPath>..\..\..\bin\mCoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Meeting">
+      <HintPath>..\..\..\bin\Meeting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Microsoft.QualityTools.Testing.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCaptcha">
+      <HintPath>..\..\..\bin\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\..\..\bin\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateControls 2.0">
+      <HintPath>..\..\..\bin\PersianDateControls 2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectManagement">
+      <HintPath>..\..\..\bin\ProjectManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstate">
+      <HintPath>..\..\..\bin\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="Restaurant">
+      <HintPath>..\..\..\bin\Restaurant.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\..\bin\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="ShareProfit">
+      <HintPath>..\..\..\bin\ShareProfit.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartCard">
+      <HintPath>..\..\..\bin\SmartCard.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\bin\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base">
+      <HintPath>..\..\..\bin\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls">
+      <HintPath>..\..\..\bin\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win">
+      <HintPath>..\..\..\bin\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design">
+      <HintPath>..\..\..\bin\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor">
+      <HintPath>..\..\..\bin\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report">
+      <HintPath>..\..\..\bin\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check">
+      <HintPath>..\..\..\bin\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design">
+      <HintPath>..\..\..\bin\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper">
+      <HintPath>..\..\..\bin\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.MobileDesign">
+      <HintPath>..\..\..\bin\Stimulsoft.Report.MobileDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web">
+      <HintPath>..\..\..\bin\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WebDesign">
+      <HintPath>..\..\..\bin\Stimulsoft.Report.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreComplex">
+      <HintPath>..\..\..\bin\StoreComplex.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreManagement">
+      <HintPath>..\..\..\bin\StoreManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\WebControllers\bin\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.Design">
+      <HintPath>..\..\..\bin\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection">
+      <HintPath>..\..\..\bin\Telerik.Web.Device.Detection.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\..\bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls">
+      <HintPath>..\..\..\bin\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor">
+      <HintPath>..\..\..\bin\Telerik.WinControls.RichTextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI">
+      <HintPath>..\..\..\bin\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon">
+      <HintPath>..\..\..\bin\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="TimePicker">
+      <HintPath>..\..\..\bin\TimePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Touchless.Vision">
+      <HintPath>..\..\..\bin\Touchless.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAccounting">
+      <HintPath>..\..\..\bin\WebAccounting.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAutomation">
+      <HintPath>..\..\..\bin\WebAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAVL">
+      <HintPath>..\..\..\bin\WebAVL.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAVL.XmlSerializers">
+      <HintPath>..\..\..\bin\WebAVL.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="WebBaseDefine">
+      <HintPath>..\..\..\bin\WebBaseDefine.dll</HintPath>
+    </Reference>
+    <Reference Include="WebBaseNet">
+      <HintPath>..\..\..\bin\WebBaseNet.dll</HintPath>
+    </Reference>
+    <Reference Include="WebBusManagement">
+      <HintPath>..\..\..\bin\WebBusManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="WebCam_Capture">
+      <HintPath>..\..\..\bin\WebCam_Capture.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DefineNet\DefineNetTable.cs" />
+    <Compile Include="DefineNet\DefineNet.cs" />
+    <Compile Include="GroupNet\GroupNet.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EventNet\EventNetTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EventNet\EventNet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bus\BusManagment.csproj">
+      <Project>{79d33258-a0f7-4bcb-a362-510197f1668a}</Project>
+      <Name>BusManagment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebClassLibrary\WebClassLibrary.csproj">
+      <Project>{3b0b293d-40f5-49ad-b44b-5914873d5028}</Project>
+      <Name>WebClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebControllers\WebControllers.csproj">
+      <Project>{e4dec70e-7841-4fd2-a5ed-c59837cad549}</Project>
+      <Name>WebControllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

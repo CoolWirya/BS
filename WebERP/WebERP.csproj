@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1FF3131B-1936-4B48-9227-9D6751553B45}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebERP</RootNamespace>
+    <AssemblyName>WebERP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+    <PublishDatabases>false</PublishDatabases>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Controls.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="EmailVarification.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="getIcon.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\circle.jpg" />
+    <Content Include="Images\circle_thumb.jpg" />
+    <Content Include="Images\config.png" />
+    <Content Include="Images\Controls\arrow_down.png" />
+    <Content Include="Images\Controls\arrow_up.png" />
+    <Content Include="Images\Controls\back.png" />
+    <Content Include="Images\Controls\Calendar.gif" />
+    <Content Include="Images\Controls\checked_s16.png" />
+    <Content Include="Images\Controls\checked_s24.png" />
+    <Content Include="Images\Controls\checked_s32.png" />
+    <Content Include="Images\Controls\checked_s64.png" />
+    <Content Include="Images\Controls\delete_blue.png" />
+    <Content Include="Images\Controls\gridview_csv.png" />
+    <Content Include="Images\Controls\gridview_excel.png" />
+    <Content Include="Images\Controls\gridview_formmanagers.png" />
+    <Content Include="Images\Controls\gridview_forms.png" />
+    <Content Include="Images\Controls\gridview_help.png" />
+    <Content Include="Images\Controls\inbox.png" />
+    <Content Include="Images\Controls\menu_add.png" />
+    <Content Include="Images\Controls\menu_delete.png" />
+    <Content Include="Images\Controls\menu_edit.png" />
+    <Content Include="Images\Controls\new_unread.png" />
+    <Content Include="Images\Controls\nopersonimage.png" />
+    <Content Include="Images\Controls\NoStation.png" />
+    <Content Include="Images\Controls\ok.png" />
+    <Content Include="Images\Controls\ok_blue.png" />
+    <Content Include="Images\Controls\outbox.png" />
+    <Content Include="Images\Controls\gridview_pdf.png" />
+    <Content Include="Images\Controls\gridview_print.png" />
+    <Content Include="Images\Controls\read.png" />
+    <Content Include="Images\Controls\gridview_refresh.png" />
+    <Content Include="Images\Controls\return_blue.png" />
+    <Content Include="Images\Controls\save_blue.png" />
+    <Content Include="Images\Controls\toolbar_add.png" />
+    <Content Include="Images\Controls\toolbar_delete.png" />
+    <Content Include="Images\Controls\toolbar_edit.png" />
+    <Content Include="Images\Controls\free_button.png" />
+    <Content Include="Images\Controls\toolbar_report.png" />
+    <Content Include="Images\Controls\unchecked_s16.png" />
+    <Content Include="Images\Controls\unchecked_s24.png" />
+    <Content Include="Images\Controls\unchecked_s32.png" />
+    <Content Include="Images\Controls\unchecked_s64.png" />
+    <Content Include="Images\Controls\unread.png" />
+    <Content Include="Images\Controls\gridview_word.png" />
+    <Content Include="Images\Controls\NoCar.png" />
+    <Content Include="Images\FileTypes\bmp.png" />
+    <Content Include="Images\FileTypes\doc.png" />
+    <Content Include="Images\FileTypes\docx.png" />
+    <Content Include="Images\FileTypes\gif.png" />
+    <Content Include="Images\FileTypes\jpeg.png" />
+    <Content Include="Images\FileTypes\jpg.png" />
+    <Content Include="Images\FileTypes\mdb.png" />
+    <Content Include="Images\FileTypes\pdf.png" />
+    <Content Include="Images\FileTypes\png.png" />
+    <Content Include="Images\FileTypes\ppt.png" />
+    <Content Include="Images\FileTypes\pptx.png" />
+    <Content Include="Images\FileTypes\rar.png" />
+    <Content Include="Images\FileTypes\tif.png" />
+    <Content Include="Images\FileTypes\txt.png" />
+    <Content Include="Images\FileTypes\xls.png" />
+    <Content Include="Images\FileTypes\xlsx.png" />
+    <Content Include="Images\FileTypes\zip.png" />
+    <Content Include="Images\icons\app-map-icon.png" />
+    <Content Include="Images\icons\Car-icon-256.png" />
+    <Content Include="Images\icons\Car-icon.png" />
+    <Content Include="Images\icons\Cash-register-icon-512.png" />
+    <Content Include="Images\icons\Cash-register-icon.png" />
+    <Content Include="Images\icons\gps-icon.png" />
+    <Content Include="Images\icons\Home-icon.png" />
+    <Content Include="Images\icons\Map-Marker-Marker-Outside-Pink-icon-256.png" />
+    <Content Include="Images\icons\Map-Marker-Marker-Outside-Pink-icon.png" />
+    <Content Include="Images\icons\Maps-icon-512.png" />
+    <Content Include="Images\icons\Maps-icon.png" />
+    <Content Include="Images\icons\modify-key-icon-256.png" />
+    <Content Include="Images\icons\modify-key-icon.png" />
+    <Content Include="Images\icons\Person-Male-Light-icon-256.png" />
+    <Content Include="Images\icons\Person-Male-Light-icon.png" />
+    <Content Include="Images\icons\Sales-report-icon-512.png" />
+    <Content Include="Images\icons\Sales-report-icon.png" />
+    <Content Include="Images\loading_s128.png" />
+    <Content Include="Images\loading_s32.png" />
+    <Content Include="Images\loading_s48.png" />
+    <Content Include="Images\Logos\BPMLogo\BPMLogo.jpg" />
+    <Content Include="Images\Logos\BPMLogo\BPMLogo.png" />
+    <Content Include="Images\Logos\Logo.png" />
+    <Content Include="Images\Logos\Naft.png" />
+    <Content Include="Images\Logos\tabriz_bus.png" />
+    <Content Include="Images\Logos\tabriz_bus2.png" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\MainMenu\bus-icon.png" />
+    <Content Include="Images\MainMenu\BusLine-icon.png" />
+    <Content Include="Images\MainMenu\BusStation-icon.png" />
+    <Content Include="Images\MainMenu\define-icon.png" />
+    <Content Include="Images\MainMenu\fleet-icon.png" />
+    <Content Include="Images\MainMenu\logout.png" />
+    <Content Include="Images\MainMenu\Map-icon.png" />
+    <Content Include="Images\MainMenu\menu_item.png" />
+    <Content Include="Images\MainMenu\menu_folder.png" />
+    <Content Include="Images\MainMenu\Person-icon.png" />
+    <Content Include="Images\MainMenu\portal.png" />
+    <Content Include="Images\MainMenu\report-icon.png" />
+    <Content Include="Images\MainMenu\Tarrif-icon.png" />
+    <Content Include="Images\MainMenu\ticket-icon.png" />
+    <Content Include="Images\MainMenu\zone-icon.png" />
+    <Content Include="Images\Patterns\p1.jpg" />
+    <Content Include="Images\Patterns\p1_small.jpg" />
+    <Content Include="Images\Patterns\p4.jpg" />
+    <Content Include="Images\Patterns\p2.jpg" />
+    <Content Include="Images\Patterns\p3.jpg" />
+    <Content Include="Images\ui-icons_222222_256x240.png" />
+    <Content Include="Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Images\ui-icons_454545_256x240.png" />
+    <Content Include="Images\ui-icons_888888_256x240.png" />
+    <Content Include="Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Images\WhiteLoading_s128.png" />
+    <Content Include="index.aspx" />
+    <Content Include="JReportViewer.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Script\ajaxupload.3.5.js" />
+    <Content Include="Script\ASPSnippets_Pager.min.js" />
+    <Content Include="Script\C630N.js" />
+    <Content Include="Script\ckeditor.js" />
+    <Content Include="Script\Common.js" />
+    <Content Include="Script\create.js" />
+    <Content Include="Script\elRTE\elrte.full.js" />
+    <Content Include="Script\elRTE\elrte.min.js" />
+    <Content Include="Script\elRTE\jquery-1.6.1.min.js" />
+    <Content Include="Script\elRTE\jquery-ui-1.8.13.custom.min.js" />
+    <Content Include="Script\froala_editor.min.js" />
+    <Content Include="Script\jquery-1.10.1.min.js" />
+    <Content Include="Script\jquery-1.10.2.js" />
+    <Content Include="Script\jquery-1.11.0.min.js" />
+    <Content Include="Script\jquery-1.2.6.min.js" />
+    <Content Include="Script\jquery-1.6.4.js" />
+    <Content Include="Script\jquery-1.7.1.min.js" />
+    <Content Include="Script\jquery-1.8.2.js" />
+    <Content Include="Script\jquery-1.8.2.min.js" />
+    <Content Include="Script\jquery-2.0.0.js" />
+    <Content Include="Script\jquery-asyncUpload-0.1.js" />
+    <Content Include="Script\jquery-ui-1.8.24.js" />
+    <Content Include="Script\jquery-ui-1.8.24.min.js" />
+    <Content Include="Script\jquery.js" />
+    <Content Include="Script\jquery.jsPlumb-1.7.5-min.js" />
+    <Content Include="Script\jquery.signalR-2.2.2.js" />
+    <Content Include="Script\jquery1.js" />
+    <Content Include="Script\JQueryUploader.js" />
+    <Content Include="Script\JSlider.js" />
+    <Content Include="Script\JUploader.js" />
+    <Content Include="Script\markerwithlabel.js" />
+    <Content Include="Script\persianDatepicker.js" />
+    <Content Include="Script\persianDatepicker.min.js" />
+    <Content Include="Script\statemachine.js" />
+    <Content Include="Script\swfupload.js" />
+    <Content Include="Script\swfupload.swf" />
+    <Content Include="send.aspx" />
+    <Content Include="Services\Dashboard\ChartsWebServices.asmx" />
+    <Content Include="Services\FileUploader\UploaderService.asmx" />
+    <Content Include="Services\Grid\CSVHandler.ashx" />
+    <Content Include="Services\Grid\ExcelHandler.ashx" />
+    <Content Include="Services\Grid\GridService.asmx" />
+    <Content Include="Services\Grid\WordHandler.ashx" />
+    <Content Include="Services\WebAutomationService.asmx" />
+    <Content Include="Services\WebBaseDefineService.asmx" />
+    <Content Include="Style\DataGridView.css" />
+    <Content Include="Style\elRTE\elrte-inner.css" />
+    <Content Include="Style\elRTE\elrte.full.css" />
+    <Content Include="Style\elRTE\elrte.min.css" />
+    <Content Include="Style\elRTE\jquery-ui-1.8.13.custom.css" />
+    <Content Include="Style\font-awesome.min.css" />
+    <Content Include="Style\froala_editor.min.css" />
+    <Content Include="Style\jquery-ui.css" />
+    <Content Include="Style\jquery.ui.all.css" />
+    <Content Include="Style\jquery.ui.dialog.css" />
+    <Content Include="Style\jquery.ui.theme.css" />
+    <Content Include="Style\jsplumb.css" />
+    <Content Include="Style\Letter.css" />
+    <Content Include="Style\LoginStyleSheet.css" />
+    <Content Include="Style\MainStyleSheet.css" />
+    <Content Include="Style\persianDatePicker-dark.css" />
+    <Content Include="Style\persianDatepicker-default.css" />
+    <Content Include="Style\PersianDateStyle.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls.aspx.cs">
+      <DependentUpon>Controls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls.aspx.designer.cs">
+      <DependentUpon>Controls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailVarification.aspx.cs">
+      <DependentUpon>EmailVarification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailVarification.aspx.designer.cs">
+      <DependentUpon>EmailVarification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="getIcon.aspx.cs">
+      <DependentUpon>getIcon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JReportViewer.aspx.cs">
+      <DependentUpon>JReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JReportViewer.aspx.designer.cs">
+      <DependentUpon>JReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="send.aspx.cs">
+      <DependentUpon>send.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="send.aspx.designer.cs">
+      <DependentUpon>send.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Dashboard\ChartsWebServices.asmx.cs">
+      <DependentUpon>ChartsWebServices.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\FileUploader\C630N_RemoveHandler.ashx.cs">
+      <DependentUpon>C630N_RemoveHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FileUploader\C630N_UploadHandler.ashx.cs">
+      <DependentUpon>C630N_UploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FileUploader\UploaderService.asmx.cs">
+      <DependentUpon>UploaderService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\Grid\CSVHandler.ashx.cs">
+      <DependentUpon>CSVHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Grid\ExcelHandler.ashx.cs">
+      <DependentUpon>ExcelHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\Grid\GridService.asmx.cs">
+      <DependentUpon>GridService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\Grid\WordHandler.ashx.cs">
+      <DependentUpon>WordHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\KeepSessionAlive.ashx.cs">
+      <DependentUpon>KeepSessionAlive.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Services\WebAutomationService.asmx.cs">
+      <DependentUpon>WebAutomationService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\WebBaseDefineService.asmx.cs">
+      <DependentUpon>WebBaseDefineService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage\Main.Master" />
+    <Content Include="Fonts\BLotusBd.ttf" />
+    <Content Include="Fonts\BLotus_0.ttf" />
+    <Content Include="Fonts\BMitraBd_0.ttf" />
+    <Content Include="Fonts\BMitra_0.ttf" />
+    <Content Include="Fonts\BRoyaBd_0.ttf" />
+    <Content Include="Fonts\BRoya_0.ttf" />
+    <Content Include="Fonts\BYekan_0.ttf" />
+    <Content Include="Fonts\BMitra.eot" />
+    <Content Include="Fonts\BMitra.ttf" />
+    <Content Include="Fonts\BMitra.woff" />
+    <Content Include="Fonts\BTrafcBd_1.ttf" />
+    <Content Include="Fonts\BTRAFCBD_2.TTF" />
+    <Content Include="Fonts\BTraffic.eot" />
+    <Content Include="Fonts\BTraffic.ttf" />
+    <Content Include="Fonts\BTraffic.woff" />
+    <Content Include="Fonts\BTraffic_2.ttf" />
+    <Content Include="Fonts\BTRAFFIC_3.TTF" />
+    <Content Include="Fonts\BNazanin.ttf" />
+    <Content Include="Fonts\BNazanin.woff" />
+    <Content Include="Fonts\BYekan.eot" />
+    <Content Include="Fonts\BYekan.ttf" />
+    <Content Include="Fonts\BYekan.woff" />
+    <Content Include="Handler\Handler1.ashx" />
+    <None Include="Properties\PublishProfiles\HERP.pubxml" />
+    <None Include="Properties\PublishProfiles\WebERP.pubxml" />
+    <Content Include="Style\sample.css" />
+    <Content Include="Style\Slider.css" />
+    <Content Include="Style\statemachine.css" />
+    <Content Include="Style\WebAVLstyle.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Services\FileUploader\C630N_RemoveHandler.ashx" />
+    <Content Include="Services\FileUploader\C630N_UploadHandler.ashx" />
+    <Content Include="Services\KeepSessionAlive.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accounting">
+      <HintPath>..\..\..\..\Dlls\bin\Accounting.dll</HintPath>
+    </Reference>
+    <Reference Include="AndroidWebManagement">
+      <HintPath>..\..\..\..\Dlls\bin\AndroidWebManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\..\Dlls\bin\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation">
+      <HintPath>..\..\..\..\Dlls\bin\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="AUTOMOBILE">
+      <HintPath>..\..\..\..\Dlls\bin\AUTOMOBILE.dll</HintPath>
+    </Reference>
+    <Reference Include="Chat">
+      <HintPath>..\..\..\..\Dlls\bin\Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>..\..\..\..\Dlls\bin\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment">
+      <HintPath>..\..\..\..\Dlls\bin\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Entertainment">
+      <HintPath>..\..\..\..\Dlls\bin\Entertainment.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\bin\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="Estates">
+      <HintPath>..\..\..\..\Dlls\bin\Estates.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\..\..\..\Dlls\bin\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals">
+      <HintPath>..\..\..\..\Dlls\bin\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>..\..\..\..\Dlls\bin\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>..\..\..\..\Dlls\bin\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ActiveDs">
+      <HintPath>..\..\..\..\Dlls\bin\Interop.ActiveDs.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.FilterEditor.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.FilterEditor.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Schedule.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.TimeLine.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="JComponents">
+      <HintPath>..\..\..\..\Dlls\bin\JComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="JJson">
+      <HintPath>..\..\..\..\Dlls\bin\JJson.dll</HintPath>
+    </Reference>
+    <Reference Include="JJsonService">
+      <HintPath>..\..\..\..\Dlls\bin\JJsonService.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\..\..\..\Dlls\bin\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net">
+      <HintPath>..\..\..\..\Dlls\bin\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagementShares">
+      <HintPath>..\..\..\..\Dlls\bin\ManagementShares.dll</HintPath>
+    </Reference>
+    <Reference Include="mCoreLib">
+      <HintPath>..\..\..\..\Dlls\bin\mCoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Meeting">
+      <HintPath>..\..\..\..\Dlls\bin\Meeting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Rajaei\WebERP\bin\Microsoft.QualityTools.Testing.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCaptcha">
+      <HintPath>..\..\..\..\Dlls\bin\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Dlls\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\..\..\..\Dlls\bin\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateControls 2.0">
+      <HintPath>..\..\..\..\Dlls\bin\PersianDateControls 2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectManagement">
+      <HintPath>..\..\..\..\Dlls\bin\ProjectManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstate">
+      <HintPath>..\..\..\..\Dlls\bin\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="Restaurant">
+      <HintPath>..\..\..\..\Dlls\bin\Restaurant.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\..\..\Dlls\bin\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="ShareProfit">
+      <HintPath>..\..\..\..\Dlls\bin\ShareProfit.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartCard">
+      <HintPath>..\..\..\..\Dlls\bin\SmartCard.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\bin\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.MobileDesign">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.MobileDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WebDesign">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreComplex">
+      <HintPath>..\..\..\..\Dlls\bin\StoreComplex.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreManagement">
+      <HintPath>..\..\..\..\Dlls\bin\StoreManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\..\..\Rajaei\WebERP\bin\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\Dlls\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.Design">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.Device.Detection.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.WinControls.RichTextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon">
+      <HintPath>..\..\..\..\Dlls\bin\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="TimePicker">
+      <HintPath>..\..\..\..\Dlls\bin\TimePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Touchless.Vision">
+      <HintPath>..\..\..\..\Dlls\bin\Touchless.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAccounting">
+      <HintPath>..\..\..\..\Dlls\bin\WebAccounting.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAVL">
+      <HintPath>..\..\..\..\Dlls\bin\WebAVL.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAVL.XmlSerializers">
+      <HintPath>..\..\..\..\Dlls\bin\WebAVL.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="WebBaseNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\WebBaseNet.dll</HintPath>
+    </Reference>
+    <Reference Include="WebEstate">
+      <HintPath>..\..\..\..\Dlls\bin\WebEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="WebLegal">
+      <HintPath>..\..\..\..\Dlls\bin\WebLegal.dll</HintPath>
+    </Reference>
+    <Reference Include="WebManagementShare">
+      <HintPath>..\..\..\..\Dlls\bin\WebManagementShare.dll</HintPath>
+    </Reference>
+    <Reference Include="WebProjectManagement">
+      <HintPath>..\..\..\..\Dlls\bin\WebProjectManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="WebRealEstate">
+      <HintPath>..\..\..\..\Dlls\bin\WebRealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="WebReport">
+      <HintPath>..\..\..\..\Dlls\bin\WebReport.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AVL\AVL.csproj">
+      <Project>{9ee5f8a2-00c2-48eb-b46e-8d83d14fdc39}</Project>
+      <Name>AVL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bus\BusManagment.csproj">
+      <Project>{79d33258-a0f7-4bcb-a362-510197f1668a}</Project>
+      <Name>BusManagment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAutomation\WebAutomation.csproj">
+      <Project>{4bf5ce54-82b8-42f9-9e9a-b2b409d667ca}</Project>
+      <Name>WebAutomation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebBaseDefine\WebBaseDefine.csproj">
+      <Project>{6fb2e793-f67b-4bfa-9780-ffa946c41075}</Project>
+      <Name>WebBaseDefine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebBusManagement\WebBusManagement.csproj">
+      <Project>{a3d2bbee-1aed-4f5b-83f2-9e68a4047850}</Project>
+      <Name>WebBusManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebClassLibrary\WebClassLibrary.csproj">
+      <Project>{3b0b293d-40f5-49ad-b44b-5914873d5028}</Project>
+      <Name>WebClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebControllers\WebControllers.csproj">
+      <Project>{e4dec70e-7841-4fd2-a5ed-c59837cad549}</Project>
+      <Name>WebControllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5781</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5024/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

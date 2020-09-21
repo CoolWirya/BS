@@ -1,0 +1,147 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrivateBusTabrizServices", "PrivateBusTabrizServices.csproj", "{7C573D10-F68A-480A-9988-0804B9BFEAFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusManagment", "..\Bus\BusManagment.csproj", "{79D33258-A0F7-4BCB-A362-510197F1668A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "..\ClassLibrary\ClassLibrary.csproj", "{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "..\test\test.csproj", "{45642618-AB7A-4C6D-816B-A5920B9E0381}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		DebugNativeOnly|Any CPU = DebugNativeOnly|Any CPU
+		DebugNativeOnly|x64 = DebugNativeOnly|x64
+		DebugNativeOnly|x86 = DebugNativeOnly|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		ReleaseNativeOnly|Any CPU = ReleaseNativeOnly|Any CPU
+		ReleaseNativeOnly|x64 = ReleaseNativeOnly|x64
+		ReleaseNativeOnly|x86 = ReleaseNativeOnly|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Debug|x64.Build.0 = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Debug|x86.Build.0 = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.DebugNativeOnly|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.DebugNativeOnly|Any CPU.Build.0 = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.DebugNativeOnly|x64.ActiveCfg = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.DebugNativeOnly|x64.Build.0 = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.DebugNativeOnly|x86.ActiveCfg = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.DebugNativeOnly|x86.Build.0 = Debug|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Release|x64.ActiveCfg = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Release|x64.Build.0 = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Release|x86.ActiveCfg = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.Release|x86.Build.0 = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.ReleaseNativeOnly|Any CPU.ActiveCfg = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.ReleaseNativeOnly|Any CPU.Build.0 = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.ReleaseNativeOnly|x64.ActiveCfg = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.ReleaseNativeOnly|x64.Build.0 = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.ReleaseNativeOnly|x86.ActiveCfg = Release|Any CPU
+		{7C573D10-F68A-480A-9988-0804B9BFEAFD}.ReleaseNativeOnly|x86.Build.0 = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Debug|x64.Build.0 = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Debug|x86.Build.0 = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.DebugNativeOnly|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.DebugNativeOnly|Any CPU.Build.0 = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.DebugNativeOnly|x64.ActiveCfg = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.DebugNativeOnly|x64.Build.0 = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.DebugNativeOnly|x86.ActiveCfg = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.DebugNativeOnly|x86.Build.0 = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Release|x64.ActiveCfg = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Release|x64.Build.0 = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Release|x86.ActiveCfg = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Release|x86.Build.0 = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.ReleaseNativeOnly|Any CPU.ActiveCfg = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.ReleaseNativeOnly|Any CPU.Build.0 = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.ReleaseNativeOnly|x64.ActiveCfg = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.ReleaseNativeOnly|x64.Build.0 = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.ReleaseNativeOnly|x86.ActiveCfg = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.ReleaseNativeOnly|x86.Build.0 = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|x64.Build.0 = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|x86.Build.0 = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.DebugNativeOnly|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.DebugNativeOnly|Any CPU.Build.0 = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.DebugNativeOnly|x64.ActiveCfg = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.DebugNativeOnly|x64.Build.0 = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.DebugNativeOnly|x86.ActiveCfg = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.DebugNativeOnly|x86.Build.0 = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|x64.ActiveCfg = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|x64.Build.0 = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|x86.ActiveCfg = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|x86.Build.0 = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.ReleaseNativeOnly|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.ReleaseNativeOnly|Any CPU.Build.0 = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.ReleaseNativeOnly|x64.ActiveCfg = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.ReleaseNativeOnly|x64.Build.0 = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.ReleaseNativeOnly|x86.ActiveCfg = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.ReleaseNativeOnly|x86.Build.0 = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Debug|x64.Build.0 = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Debug|x86.Build.0 = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.DebugNativeOnly|Any CPU.ActiveCfg = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.DebugNativeOnly|Any CPU.Build.0 = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.DebugNativeOnly|x64.ActiveCfg = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.DebugNativeOnly|x64.Build.0 = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.DebugNativeOnly|x86.ActiveCfg = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.DebugNativeOnly|x86.Build.0 = Debug|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Release|x64.ActiveCfg = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Release|x64.Build.0 = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Release|x86.ActiveCfg = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.Release|x86.Build.0 = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.ReleaseNativeOnly|Any CPU.ActiveCfg = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.ReleaseNativeOnly|Any CPU.Build.0 = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.ReleaseNativeOnly|x64.ActiveCfg = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.ReleaseNativeOnly|x64.Build.0 = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.ReleaseNativeOnly|x86.ActiveCfg = Release|Any CPU
+		{45642618-AB7A-4C6D-816B-A5920B9E0381}.ReleaseNativeOnly|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://erpzarrinderafshtoos.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\ClassLibrary\\ClassLibrary.csproj
+		SccProjectName1 = ../ClassLibrary
+		SccLocalPath1 = ..\\ClassLibrary
+		SccProjectUniqueName2 = ..\\Bus\\BusManagment.csproj
+		SccProjectName2 = ../Bus
+		SccLocalPath2 = ..\\Bus
+		SccProjectUniqueName3 = PrivateBusTabrizServices.csproj
+		SccLocalPath3 = .
+		SccProjectUniqueName4 = ..\\test\\test.csproj
+		SccProjectName4 = ../test
+		SccLocalPath4 = ..\\test
+	EndGlobalSection
+EndGlobal

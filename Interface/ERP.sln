@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP", "ERP.csproj", "{86417C95-BBEB-4592-9584-78016389F1CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "..\ClassLibrary\ClassLibrary.csproj", "{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusManagment", "..\Bus\BusManagment.csproj", "{79D33258-A0F7-4BCB-A362-510197F1668A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicBusTabrizService", "..\PublicBusTabrizService\PublicBusTabrizService.csproj", "{CFE8EDF7-107B-4636-A70B-4D0B60D150F5}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://erpzarrinderafshtoos.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = ERP.csproj
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\ClassLibrary\\ClassLibrary.csproj
+		SccProjectName1 = ../ClassLibrary
+		SccLocalPath1 = ..\\ClassLibrary
+		SccProjectUniqueName2 = ..\\Bus\\BusManagment.csproj
+		SccProjectName2 = ../Bus
+		SccLocalPath2 = ..\\Bus
+		SccLocalPath3 = .
+		SccProjectUniqueName4 = ..\\PublicBusTabrizService\\PublicBusTabrizService.csproj
+		SccProjectName4 = ../PublicBusTabrizService
+		SccLocalPath4 = ..\\PublicBusTabrizService
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86417C95-BBEB-4592-9584-78016389F1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86417C95-BBEB-4592-9584-78016389F1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86417C95-BBEB-4592-9584-78016389F1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86417C95-BBEB-4592-9584-78016389F1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D33258-A0F7-4BCB-A362-510197F1668A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE8EDF7-107B-4636-A70B-4D0B60D150F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE8EDF7-107B-4636-A70B-4D0B60D150F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE8EDF7-107B-4636-A70B-4D0B60D150F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE8EDF7-107B-4636-A70B-4D0B60D150F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

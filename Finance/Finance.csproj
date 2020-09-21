@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B53AFBC9-DB58-401D-B559-A683704C4E87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Finance</RootNamespace>
+    <AssemblyName>Finance</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments, Version=2.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DLLs\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLibrary, Version=2.0.5.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\ClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment, Version=2.0.2.6, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Legal, Version=2.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebClassLibrary, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankAccount\BankAccount.cs" />
+    <Compile Include="Action\StaticAction.cs" />
+    <Compile Include="Asset\Asset.cs" />
+    <Compile Include="Asset\AssetGroup\AssetGroup.cs" />
+    <Compile Include="Asset\AssetGroup\AssetGroupTable.cs" />
+    <Compile Include="Asset\AssetList.cs" />
+    <Compile Include="Asset\AssetLog\AssetLog.cs" />
+    <Compile Include="Asset\AssetLog\AssetLogTable.cs" />
+    <Compile Include="Asset\AssetSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asset\AssetSearchForm.Designer.cs">
+      <DependentUpon>AssetSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\AssetShare.cs" />
+    <Compile Include="Asset\AssetShareTable.cs" />
+    <Compile Include="Asset\AssetTable.cs" />
+    <Compile Include="Asset\AssetTransfer.cs" />
+    <Compile Include="Asset\AssetTransferTable.cs" />
+    <Compile Include="BankAccount\BankAccountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BankAccount\BankAccountControl.Designer.cs">
+      <DependentUpon>BankAccountControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankAccount\BankAccountTable.cs" />
+    <Compile Include="BaseDefine\BankTypes.cs" />
+    <Compile Include="BaseDefine\BranchType.cs" />
+    <Compile Include="BaseDefine\ConcernType.cs" />
+    <Compile Include="ComparativeCode\ComparativeCode.cs" />
+    <Compile Include="ComparativeCode\ComparativeCodeTable.cs" />
+    <Compile Include="define\DetailsAccount\DetailsAccount.cs" />
+    <Compile Include="define\GroupAccounts\GroupAccounts.cs" />
+    <Compile Include="define\GroupAccounts\GroupAccountsTable.cs" />
+    <Compile Include="define\LedgerAccount\JLedgerAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="define\LedgerAccount\JLedgerAccountForm.Designer.cs">
+      <DependentUpon>JLedgerAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="define\LedgerAccount\LedgerAccount.cs" />
+    <Compile Include="define\LedgerAccount\LedgerAccountTable.cs" />
+    <Compile Include="define\TotalAccounts\JTotalAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="define\TotalAccounts\JTotalAccounts.Designer.cs">
+      <DependentUpon>JTotalAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="define\TotalAccounts\TotalAccounts.cs" />
+    <Compile Include="define\TotalAccounts\TotalAccountTable.cs" />
+    <Compile Include="DocumentAccounting\DocumentAccounting.cs" />
+    <Compile Include="DocumentDetailes\DocumentDetailes.cs" />
+    <Compile Include="DocumentDetailes\DocumentDetailesTable.cs" />
+    <Compile Include="Document\Document.cs" />
+    <Compile Include="Document\DocumentTable.cs" />
+    <Compile Include="Finance.cs" />
+    <Compile Include="FinanceDocuments\Cheques\Cheques.cs" />
+    <Compile Include="FinanceDocuments\Cheques\ChequesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceDocuments\Cheques\ChequesForm.Designer.cs">
+      <DependentUpon>ChequesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceDocuments\Cheques\ChequesReformForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceDocuments\Cheques\ChequesReformForm.Designer.cs">
+      <DependentUpon>ChequesReformForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceDocuments\Cheques\ChequesTable.cs" />
+    <Compile Include="FinanceDocuments\Cheques\SelectAccForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceDocuments\Cheques\SelectAccForm.Designer.cs">
+      <DependentUpon>SelectAccForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceDocuments\Cheques\SeriChequesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceDocuments\Cheques\SeriChequesForm.Designer.cs">
+      <DependentUpon>SeriChequesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceDocuments\Fish\Fish.cs" />
+    <Compile Include="FinanceDocuments\Fish\FishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceDocuments\Fish\FishForm.Designer.cs">
+      <DependentUpon>FishForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceDocuments\Fish\FishTable.cs" />
+    <Compile Include="FinanceDocuments\Promissory\PromissoryNote.cs" />
+    <Compile Include="FinanceDocuments\Promissory\PromissoryNoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceDocuments\Promissory\PromissoryNoteForm.Designer.cs">
+      <DependentUpon>PromissoryNoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceDocuments\Promissory\PromissoryNoteTable.cs" />
+    <Compile Include="FinanceDocuments\RealPrice\RealPrice.cs" />
+    <Compile Include="FinanceDocuments\RealPrice\RealPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceDocuments\RealPrice\RealPriceForm.Designer.cs">
+      <DependentUpon>RealPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceDocuments\RealPrice\RealPriceTable.cs" />
+    <Compile Include="Namaad\NamaadForm.cs" />
+    <Compile Include="Node\BaseDefine.cs" />
+    <Compile Include="Node\StaticNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TableNames.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Asset\AssetSearchForm.resx">
+      <DependentUpon>AssetSearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankAccount\BankAccountControl.resx">
+      <DependentUpon>BankAccountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="define\LedgerAccount\JLedgerAccountForm.resx">
+      <DependentUpon>JLedgerAccountForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="define\TotalAccounts\JTotalAccounts.resx">
+      <DependentUpon>JTotalAccounts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceDocuments\Cheques\ChequesForm.resx">
+      <DependentUpon>ChequesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceDocuments\Cheques\ChequesReformForm.resx">
+      <DependentUpon>ChequesReformForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceDocuments\Cheques\SelectAccForm.resx">
+      <DependentUpon>SelectAccForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceDocuments\Cheques\SeriChequesForm.resx">
+      <DependentUpon>SeriChequesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceDocuments\Fish\FishForm.resx">
+      <DependentUpon>FishForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceDocuments\Promissory\PromissoryNoteForm.resx">
+      <DependentUpon>PromissoryNoteForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceDocuments\RealPrice\RealPriceForm.resx">
+      <DependentUpon>RealPriceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payments.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01 Excel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_temporary40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Files-dll40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Asset\ClassDiagram1.cd" />
+    <None Include="Resources\Panel de control28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Acc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Globals\Globals.csproj">
+      <Project>{E7CC3DF6-4222-41DC-8F78-ACE6E997573B}</Project>
+      <Name>Globals</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

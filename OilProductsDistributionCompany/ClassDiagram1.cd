@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OilProductsDistributionCompany.JDefine" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAIAAAAABA=</HashCode>
+      <FileName>Define\Define.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.JOil" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Oil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.JSupplier" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIAAEA=</HashCode>
+      <FileName>Supplier\Supplier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.JSupplierDetails" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Supplier\Supplier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Define.JPlaceOfSupply" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Define\PlaceOfSupply.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Define.JPlaceOfSupplies" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Define\PlaceOfSupply.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Define.JTypeOfFuelTank" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Define\TypeOfFuelTank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Define.JTypeOfProduct" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Define\TypeOfProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Define.JTypeOfSupply" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Define\TypeOfSupply.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Define.JTypeOfSupplies" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Define\TypeOfSupply.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Define.JTypesOfPump" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Define\TypesOfPumps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Define.JTypesOfPumps" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Define\TypesOfPumps.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Failure.JAfterReviewing" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAABAAAgQAAgAgAAAAAkAAAAAAIAIAA=</HashCode>
+      <FileName>Failure\AfterReviewing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Failure.JHardwareRepair" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAAAAAAABACAgAIAIAAEAAAIAAACAAAAAAAI=</HashCode>
+      <FileName>Failure\HardwareRepair.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Failure.JMalfunction" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAIEAAAgAAAUAAAgAAAAQAAAAAAAAAAAAAgAAEg=</HashCode>
+      <FileName>Failure\Malfunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Failure.JSoftwareRepair" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIAAAAAAABABAgBAAAAQAAAAAogAACAAAAACQ=</HashCode>
+      <FileName>Failure\SoftwareRepair.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Failure.JTableDamages" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAgAAQAAAAAAAAAAACAAAACAAA=</HashCode>
+      <FileName>Failure\TableDamages.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.FuelTank.JFuelTank" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhBAAAAAAAAIAAAAEQgAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FuelTank\FuelTank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.GasStation.JGasStation">
+    <Position X="9.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAIAAAAIACAAAAAAAEAgAAQAAAgAAAAAAIAQARAEABA=</HashCode>
+      <FileName>GasStation\GasStation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.GasStation.JStationPersonnel" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEEAAAAAAAAAAAgAAAAQAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>GasStation\StationPersonnel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Nozzle.JNozzle" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAACAAAAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Nozzle\Nozzle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.OEMProducts.JOEMProducts" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAEAgAAAAQAAAAAAAQACAAAAAAAA=</HashCode>
+      <FileName>OEMProducts\OEMProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Pump.JPump" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAEAgAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pump\Pump.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.RPM.JRPM" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IBACAAAMAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAAAAAQ=</HashCode>
+      <FileName>RPM\RPM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Seal.JFormSeal" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAABAgQAAAQBAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Seal\FormSeal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Seal.JFormSealDetails" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAgAAAIAAAQAAAACAAAAAAAABA=</HashCode>
+      <FileName>Seal\FormSeal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Seal.JSeal">
+    <Position X="11.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAgAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Seal\Seal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Zone.JOilDistrict">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zone\JOilDistrict.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Zone.OilArea">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Zone\OilArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OilProductsDistributionCompany.Zone.JOilZone" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zone\OilZone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="OilProductsDistributionCompany.Failure.JStatusMalfunction" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Failure\Malfunction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OilProductsDistributionCompany.Failure.JInitialReasons" Collapsed="true">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAEAAABAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Failure\SoftwareRepair.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OilProductsDistributionCompany.Failure.JInitialAgain" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAA=</HashCode>
+      <FileName>Failure\SoftwareRepair.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OilProductsDistributionCompany.Failure.JDontFixDefects" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAABAAIAAAAAAAABAAABAAAAACIAAAAAAAAAAAA=</HashCode>
+      <FileName>Failure\SoftwareRepair.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OilProductsDistributionCompany.Failure.JUrgencies" Collapsed="true">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Failure\TableDamages.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OilProductsDistributionCompany.Failure.JFailureType" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAAA=</HashCode>
+      <FileName>Failure\TableDamages.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OilProductsDistributionCompany.GasStation.JStationPersonnelStatus" Collapsed="true">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>GasStation\StationPersonnel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OilProductsDistributionCompany.Seal.JPlaceSealed">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAIAAAAAAA=</HashCode>
+      <FileName>Seal\FormSeal.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OilProductsDistributionCompany.Seal.JStatusSeal" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAIAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Seal\Seal.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

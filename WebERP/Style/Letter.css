@@ -1,0 +1,108 @@
+﻿.header_footer {
+    font:normal 13px 'B Zar';
+}
+.parent, .year, .urgency {
+    display: none;
+}
+
+.subject {
+    font-size: 15px; 
+    color:green;
+}
+
+.to, .from, .number {
+    font-size: 15px; 
+    color:blue;
+    margin-bottom: 2px;
+}
+
+.content{
+    font:normal 13px 'Tahoma';
+      margin-top: 15px;
+
+}
+
+.references {
+    font-size: 15px;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.reference_tree ul, .copies ul{
+    line-height: 15px; 
+    padding-right: 25px;
+}
+
+.square_list_style{
+    list-style-type:square; 
+}
+
+.no_list_style{
+    list-style-type:none; 
+}
+
+.reference_tree li {
+    font: 13px Tahoma;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.reference_tree .bold {
+    font-weight: bold;
+}
+
+.refer_date {
+    color:blue;
+}
+
+.refer_description {
+    color: DarkGreen;
+}
+
+.view_date {
+    color: DarkBlue;
+}
+
+.copies {
+    font-size: 15px;
+    color: red;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.copies .copy {
+    font: 13px Tahoma;
+    color: black;
+    text-indent:-5px;
+}
+
+.copies li:before { 
+    content:"-"; 
+    position:relative; 
+    right:-5px;
+}
+
+
+.ltr
+{
+
+    margin-right:30px;
+    overflow-y:scroll;
+}
+
+.page
+{
+   bottom:auto;
+   margin-bottom:150px;
+}
+
+
+
+.scroll{
+    bottom:150px;
+   overflow-y:scroll;
+   scrollbar-arrow-color:darkturquoise;
+   
+   margin-bottom:100px;
+}

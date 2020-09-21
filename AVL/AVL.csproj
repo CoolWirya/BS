@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EE5F8A2-00C2-48EB-B46E-8D83D14FDC39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AVL</RootNamespace>
+    <AssemblyName>AVL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accounting">
+      <HintPath>..\..\..\..\Dlls\bin\Accounting.dll</HintPath>
+    </Reference>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\..\Dlls\bin\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation">
+      <HintPath>..\..\..\..\Dlls\bin\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>..\..\..\..\Dlls\bin\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment">
+      <HintPath>..\..\..\..\Dlls\bin\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Estates">
+      <HintPath>..\..\..\..\Dlls\bin\Estates.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport">
+      <HintPath>..\..\..\..\Dlls\bin\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars">
+      <HintPath>..\..\..\..\Dlls\bin\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor">
+      <HintPath>..\..\..\..\Dlls\bin\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\..\..\..\Dlls\bin\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals">
+      <HintPath>..\..\..\..\Dlls\bin\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.FilterEditor.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.FilterEditor.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Schedule.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.TimeLine.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="JComponents">
+      <HintPath>..\..\..\..\Dlls\bin\JComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="JJson">
+      <HintPath>..\..\..\..\Dlls\bin\JJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\..\..\..\Dlls\bin\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net">
+      <HintPath>..\..\..\..\Dlls\bin\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagementShares">
+      <HintPath>..\..\..\..\Dlls\bin\ManagementShares.dll</HintPath>
+    </Reference>
+    <Reference Include="mCoreLib">
+      <HintPath>..\..\..\..\Dlls\bin\mCoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Meeting">
+      <HintPath>..\..\..\..\Dlls\bin\Meeting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Rajaei\AVL\bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Rajaei\AVL\bin\Debug\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Dlls\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Rajaei\AVL\bin\Debug\office.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\..\..\..\Dlls\bin\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateControls 2.0">
+      <HintPath>..\..\..\..\Dlls\bin\PersianDateControls 2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstate">
+      <HintPath>..\..\..\..\Dlls\bin\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="Restaurant">
+      <HintPath>..\..\..\..\Dlls\bin\Restaurant.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\..\..\Dlls\bin\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreComplex">
+      <HintPath>..\..\..\..\Dlls\bin\StoreComplex.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreManagement">
+      <HintPath>..\..\..\..\Dlls\bin\StoreManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\..\..\Rajaei\AVL\bin\Debug\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\Dlls\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.XML" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Touchless.Vision">
+      <HintPath>..\..\..\..\Dlls\bin\Touchless.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAutomation">
+      <HintPath>..\..\..\..\Dlls\bin\WebAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebControllers">
+      <HintPath>..\..\..\..\Dlls\bin\WebControllers.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AndroidBazarPurchaseJson\BazaarPurchaseVarifyData.cs" />
+    <Compile Include="AndroidBazarPurchaseJson\BazarTokenData.cs" />
+    <Compile Include="AndroidBazarPurchaseJson\JAndroidBazarPurchaseJson.cs" />
+    <Compile Include="AndroidKeys\JAndroidKey.cs" />
+    <Compile Include="AndroidKeys\JAndroidKeys.cs" />
+    <Compile Include="AndroidKeys\JAndroidKeyTable.cs" />
+    <Compile Include="Area\JArea.cs" />
+    <Compile Include="Area\JAreas.cs" />
+    <Compile Include="Area\JAreaTable.cs" />
+    <Compile Include="Controls\Map\BoundsObject.cs" />
+    <Compile Include="Controls\Map\GCommunicateObject.cs" />
+    <Compile Include="Controls\Map\Line.cs" />
+    <Compile Include="Controls\Map\Marker.cs" />
+    <Compile Include="Controls\Map\Map.cs" />
+    <Compile Include="Controls\Map\NewMapControl\NewGoogleMap.cs" />
+    <Compile Include="Controls\Map\Point.cs" />
+    <Compile Include="Controls\Map\PointD.cs" />
+    <Compile Include="Controls\SquareList\Square.cs" />
+    <Compile Include="Controls\SquareList\SquaresList.cs" />
+    <Compile Include="Controls\ToggleSlide\TogglePanel.cs" />
+    <Compile Include="Coordinate\JCoordinates.cs" />
+    <Compile Include="Coordinate\JCoordinateTable.cs" />
+    <Compile Include="Coordinate\Traditional\JTransactionCars.cs" />
+    <Compile Include="Coordinate\Traditional\JTransactionCarss.cs" />
+    <Compile Include="Coordinate\Traditional\JTransactionCarsTable.cs" />
+    <Compile Include="DeviceType.cs" />
+    <Compile Include="Device\DataProtocol\HexEncoding.cs" />
+    <Compile Include="Device\DataProtocol\JProtocolBase.cs" />
+    <Compile Include="Device\DataProtocol\JTeltonikaProtocolV1.cs" />
+    <Compile Include="Device\DataProtocol\JTSIPAndroidProtocol.cs" />
+    <Compile Include="Device\DeviceModelSeason.cs" />
+    <Compile Include="Device\JDataExtractor.cs" />
+    <Compile Include="Device\JDeviceModel.cs" />
+    <Compile Include="Device\JDeviceModels.cs" />
+    <Compile Include="Device\JDeviceModelTable.cs" />
+    <Compile Include="Coordinate\JCoordinate.cs" />
+    <Compile Include="FormatIDAttribute[deprecated].cs" />
+    <Compile Include="Geofence\GeoData\JGeofenceData.cs" />
+    <Compile Include="Geofence\GeoData\JGeofenceDatas.cs" />
+    <Compile Include="Geofence\GeoData\JGeofeneceDataTable.cs" />
+    <Compile Include="Geofence\JGeofence.cs" />
+    <Compile Include="Geofence\JGeofences.cs" />
+    <Compile Include="Geofence\JGeofenceTable.cs" />
+    <Compile Include="GPSData\JDataKeeper.cs" />
+    <Compile Include="GPSData\JDataKeepers.cs" />
+    <Compile Include="GPSData\JDataKeeperTable.cs" />
+    <Compile Include="GPSData\JSocketManager.cs" />
+    <Compile Include="GPSData\JSocketManagers.cs" />
+    <Compile Include="GPSData\JSocketManagerTable.cs" />
+    <Compile Include="GPSData\TSIPAndroid\JTSIPAndroid.cs" />
+    <Compile Include="GPSData\TSIPAndroid\JTSIPAndroids.cs" />
+    <Compile Include="GPSData\TSIPAndroid\JTSIPAndroidTable.cs" />
+    <Compile Include="JDataFormat[deprecated].cs" />
+    <Compile Include="JDevice.cs" />
+    <Compile Include="JObjectBase.cs" />
+    <Compile Include="JoinDevice\JJoinDevice.cs" />
+    <Compile Include="ObjectList\JObjectList.cs" />
+    <Compile Include="ObjectList\JObjectLists.cs" />
+    <Compile Include="ObjectList\JObjectListTable.cs" />
+    <Compile Include="ObjectList\Object[deprecated]\DefaultObject.cs" />
+    <Compile Include="Purchase\JPurchasePlan.cs" />
+    <Compile Include="Purchase\JPurchasePlans.cs" />
+    <Compile Include="Purchase\JPurchasePlanTable.cs" />
+    <Compile Include="Purchase\JUserPurchase.cs" />
+    <Compile Include="Purchase\JUserPurchases.cs" />
+    <Compile Include="Purchase\JUserPurchaseTable.cs" />
+    <Compile Include="RegisterDevice\DeviceObjectHistory\JDeviceObjectHistories.cs" />
+    <Compile Include="RegisterDevice\DeviceObjectHistory\JDeviceObjectHistory.cs" />
+    <Compile Include="RegisterDevice\DeviceObjectHistory\JDeviceObjectTable.cs" />
+    <Compile Include="RegisterDevice\JDeviceObjectSeason.cs" />
+    <Compile Include="RegisterDevice\JRegisterDevice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterDevice\JRegisterDevices.cs" />
+    <Compile Include="RegisterDevice\JRegisterDeviceTable.cs" />
+    <Compile Include="RegistrationKey.cs" />
+    <Compile Include="Reseller\JResellerDomain.cs" />
+    <Compile Include="Reseller\JResellerDomains.cs" />
+    <Compile Include="Reseller\JResellerDomainTable.cs" />
+    <Compile Include="SendType.cs" />
+    <Compile Include="SpeedFault\JSpeedFaultData.cs" />
+    <Compile Include="SpeedFault\JSpeedFaultDatas.cs" />
+    <Compile Include="SpeedFault\JSpeedFaultDataTable.cs" />
+    <Compile Include="SubUserObjects\JAVLSubUserObjectsTable.cs" />
+    <Compile Include="SubUserObjects\jSubUserObjects.cs" />
+    <Compile Include="SubUserObjects\JSubUserObjectss.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="UserObjects[deprecated]\JUserObject.cs" />
+    <Compile Include="UserObjects[deprecated]\JUserObjects.cs" />
+    <Compile Include="UserObjects[deprecated]\JUserObjectTable.cs" />
+    <Compile Include="UserVerify\JUserVarifies.cs" />
+    <Compile Include="UserVerify\JUserVarify.cs" />
+    <Compile Include="UserVerify\JUserVarifyTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Map\Map.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Map\NewMapControl\NewGoogleMap.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Map\NewMapControl\NewGoogleMapOffline.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebClassLibrary\WebClassLibrary.csproj">
+      <Project>{3b0b293d-40f5-49ad-b44b-5914873d5028}</Project>
+      <Name>WebClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

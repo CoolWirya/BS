@@ -1,0 +1,119 @@
+﻿.Pager span {
+	text-align: center;
+	color: #fff;
+	display: inline-block;
+	width: 25px;
+	background-color: #1288a8;
+	margin-right: 3px;
+	line-height: 150%;
+	border: 1px solid #3AC0F2;
+	font-size: small;
+}
+
+.Pager a {
+	text-align: center;
+	display: inline-block;
+	width: 25px;
+	background-color: #3AC0F2;
+	color: #333;
+	border: 1px solid #3AC0F2;
+	margin-right: 3px;
+	line-height: 150%;
+	text-decoration: none;
+	font-size: small;
+}
+
+.Pager .pageInfo {
+	text-align: start;
+	color: #333;
+	border: none;
+	text-decoration: none;
+	font-size: small;
+	background-color: transparent;/*white;*/
+	width: 300px;
+}
+
+table[id*=_GV_] tr {
+	border: 1px solid #828282;
+	height: 20px;
+	font-size: small;
+}
+/*background: #eee url("WebResource.axd?d=vGgnKrt9lou0y6daYzagd9AMmT7mXOmp1ltR5SUBrDO6jKGQ4XupOqIUrdGa-X48_zBROUf7j5Z_AvQ17JSXXyioztYe1q_Rbf7vDvAJJ6oC5qQZ8rtNeJ2ER1YAFAX3CBlcWuJNsWNmkevx-PYf29z6GaLp6Lm-wzQt9SvxcVs1&t=635005039420000000") repeat-x scroll 0 -7550px;*/
+
+table[id*=_GV_] tbody tr th {
+	font-weight: bolder;
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background: #e2e2e2 url("WebResource.axd?d=vGgnKrt9lou0y6daYzagd9AMmT7mXOmp1ltR5SUBrDO6jKGQ4XupOqIUrdGa-X48_zBROUf7j5Z_AvQ17JSXXyioztYe1q_Rbf7vDvAJJ6oC5qQZ8rtNeJ2ER1YAFAX3CBlcWuJNsWNmkevx-PYf29z6GaLp6Lm-wzQt9SvxcVs1&t=635005039420000000") repeat-x scroll 0 -2300px;
+	border-color: -moz-use-text-color -moz-use-text-color #828282;
+	border-image: none;
+	border-style: none none solid;
+	border-width: 0 0 1px;
+	border-left: 1px solid #828282;
+	color: #333;
+}
+
+table[id*=_GV_] tbody tr th, table[id*=_GV_] tbody tr td {
+	text-align: center;
+	padding-bottom: 1px;
+	padding-top: 2px;
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	vertical-align: middle;
+	min-width: 50px;
+    max-width: 250px;
+    white-space: nowrap;
+	color: #000;
+	border-style: solid;
+	border-width: 0 0 1px;
+	font-weight: normal;
+}
+
+table[id*=_GV_] tbody tr th:first-child, table[id*=_GV_] tbody tr td:first-child {
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: initial;
+}
+
+table[id*=_GV_] tbody tr.filterRow td {
+	background: #fff none repeat scroll 0 0;
+}
+
+table[id*=_GV_] tbody tr.filterRow td input {
+	border-radius:5px;
+	background-color:#b7e2f2;
+}
+
+table[id*=_GV_] tbody tr.evenRow td {
+	background: #f2f2f2 none repeat scroll 0 0;
+	border-color: #fff;
+	background-color: #f2f2f2;
+	border-bottom-color: #f2f2f2;
+}
+
+table[id*=_GV_] tbody tr.oddRow td {
+	background: #f2f2f2 none repeat scroll 0 0;
+	border-color: #f2f2f2;
+	background-color: #e6e6e6;
+	border-bottom-color: #e6e6e6;
+}
+
+table[id*=_GV_] tbody tr.selectedRow td {
+	background-color: #3AC0F2;
+	border-bottom-color: #3AC0F2;
+	font-weight: bold;
+	color: white;
+}
+
+div[id*=ContextMenuDiv] {
+	border-radius: 5px;
+	margin: 1px 31px 1px 2px;
+}
+
+	div[id*=ContextMenuDiv] ul li a {
+		text-decoration: none;
+		cursor: hand;
+	}

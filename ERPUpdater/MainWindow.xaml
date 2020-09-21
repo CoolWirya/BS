@@ -1,0 +1,87 @@
+﻿<Window x:Class="ERPUpdater.MainWindow" x:Name="mainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ERPUpdater" Height="300" Width="550" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" FlowDirection="RightToLeft" FontFamily="Segoe UI" Loaded="Window_Loaded" Unloaded="mainWindow_Unloaded" BorderThickness="5" BorderBrush="White">
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="5" Color="Black" Opacity="0.5" />
+    </Window.Effect>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard Name="FormFade">
+                    <DoubleAnimation Name="FormFadeAnimation"
+                                     Storyboard.TargetProperty="(Window.Opacity)"
+                                     From="0.0" To="1.0" Duration="0:0:1"
+                                     AutoReverse="False" RepeatBehavior="1x" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Window.Unloaded">
+            <BeginStoryboard>
+                <Storyboard Name="FormFadeOut" Completed="FormFadeOut_Completed">
+                    <DoubleAnimation Name="FormFadeOutAnimation"
+                                     Storyboard.TargetName="FormFadeOut"
+                                     Storyboard.TargetProperty="(Window.Opacity)"
+                                     From="1.0" To="0.0" SpeedRatio="20" Duration="00:00:01"
+                                     AutoReverse="False" RepeatBehavior="1x" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid Background="#004c9c">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.RowSpan="3" x:Name="imgBG" Source="Images/background.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill" />
+        <Label x:Name="lblTitle" Grid.Row="0" FontFamily="IranNastaliq,B Zar,Tahoma" FontSize="20" FontWeight="Bold" Foreground="White"  HorizontalContentAlignment="Center" VerticalAlignment="Bottom" Content="سامانه اتوماسیون و مکانیزاسیون فرآیندهای سازمان&#xD;&#xA;تحلیلگران" Height="80" HorizontalAlignment="Center">
+            <Label.Effect>
+                <BlurEffect x:Name="lblTitleBlur"/>
+            </Label.Effect>
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation From="10" To="1" SpeedRatio="5" Duration="00:00:10" 
+                             Storyboard.TargetName="lblTitleBlur" 
+                             Storyboard.TargetProperty="Radius">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="71*"/>
+                <ColumnDefinition Width="52*"/>
+                <ColumnDefinition Width="48"/>
+                <ColumnDefinition Width="123*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="48"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image Grid.Column="2" Grid.Row="1" x:Name="imgLoading" Source="Images/loading2.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill" Width="48" Height="48">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="0" CenterX="24" CenterY="24" />
+                </Image.RenderTransform>
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation From="0" To="360" Duration="00:00:02" 
+                             Storyboard.TargetName="imgLoading" 
+                             Storyboard.TargetProperty="(RenderTransform).(RotateTransform.Angle)" AutoReverse="False" RepeatBehavior="Forever">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
+        </Grid>
+        <Label Margin="92,0,93,0" Name="label1" Grid.Row="1" FontFamily="IranNastaliq,B Zar,Tahoma" FontSize="28" FontWeight="Bold" Height="71" Grid.RowSpan="2" VerticalAlignment="Bottom" Foreground="White">در حال بروز رسانی لطفا صبر کنید ...</Label>
+    </Grid>
+</Window>

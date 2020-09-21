@@ -1,0 +1,317 @@
+﻿/* *************** Font definition ***************** */
+@font-face {
+    font-family: 'MyBMitra';
+    src: url('../Fonts/BMitra.eot?#') format('eot'), /* IE6–8 */ url('../Fonts/BMitra.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../Fonts/BMitra.TTF') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+@font-face {
+    font-family: 'MyBTraffic';
+    src: url('../Fonts/BTrafcBd_1.eot?#') format('eot'), /* IE6–8 */ url('../Fonts/BTraffic.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../Fonts/BTRAFFIC_3.TTF') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+@font-face {
+    font-family: 'MyBYekan';
+    src: url('../Fonts/BYekan.eot?#') format('eot'), /* IE6–8 */ url('../Fonts/BYekan.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../Fonts/BYekan.TTF') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+@font-face {
+    font-family: 'MyBNazanin';
+    src: url('../Fonts/BNazanin.eot?#') format('eot'), /* IE6–8 */ url('../Fonts/BNazanin.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../Fonts/BNazanin.TTF') format('truetype'); /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+}
+
+html, body, form {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+* {
+    font-family: Tahoma;
+    /*font-size:;*/
+}
+
+form {
+    overflow: hidden;
+}
+
+body {
+    margin: 0px;
+    font-family: Tahoma;
+    font-size: 13px;
+    direction: rtl;
+    height: 100%;
+    background-image: url('../Images/bg.jpg');
+    overflow: hidden;
+}
+
+.noScroll {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+.MainLogo {
+    height: 200px;
+    font-family: IranNastaliq;
+    font-size: 24px;
+    vertical-align: bottom;
+}
+
+.modalDiv {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 300;
+    background-color: rgba(0,0,0,0.2);
+    display: table-cell;
+    padding-top: 5%;
+    text-align: center;
+    display: none;
+}
+
+.trvMain {
+    background-color: #EFEFEF;
+}
+
+.Table_RowA {
+    background-color: #FFF;
+}
+
+.Table_RowB {
+    background-color: #EEE;
+}
+
+.Table_RowC {
+    background-color: #DDD;
+}
+
+.Table_RowD {
+    background-color: #AAA;
+}
+
+.FormContent {
+    overflow-y: auto;
+    position: fixed;
+    top: 1px;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+}
+
+.FormContentSearchLetterForm {
+    overflow-y:initial;
+    position:fixed;
+    top: 10px;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+}
+
+.FormButtons {
+    background-color: #AAA;
+    position: fixed;
+    bottom: 0px;
+    height: 45px;
+    width: 100%;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.BigTitle {
+    font-size: 24px;
+    font-family: MyBYekan;
+    border-bottom: 3px solid #808080;
+    margin-bottom: 10px;
+    padding-right: 5px;
+    background-color: #EEE;
+    text-shadow: 5px 5px 5px #777;
+}
+.content1{
+    font:normal 15px 'Tahoma';
+      margin-top: 15px;
+      float:right;
+ 
+
+}
+.noGridRecords {
+    direction: rtl;
+    text-align:right;
+    width: 100%;
+}
+
+.OverFlowScrollX {
+    overflow-x: scroll;
+}
+
+.OverFlowScrollY {
+    overflow-y: scroll;
+}
+
+.floatLeft {
+    float: left;
+    margin-left: 15px;
+}
+
+.website_footer {
+    font-size: 12px;
+    font-style: italic;
+    width: 100%;
+    text-align: center;
+    color: #AAA;
+}
+
+.siteHeader {
+    font-family: MyBYekan;
+    font-size: 26px;
+    padding-right: 45px;
+}
+
+    .siteHeader span {
+        font-family: MyBMitra;
+        color: #fff;
+        padding-left: 50px;
+        padding-bottom: 0px;
+        margin: 0px;
+        padding-top: 0px;
+        text-align: left;
+    }
+
+.erpPanelBar {
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+.topMenuBar {
+    background-color: #0094ff;
+    color: #FFF;
+    text-align: left;
+    padding-left: 10px;
+    height: 25px;
+    width: 100%;
+}
+
+    .topMenuBar tr {
+        vertical-align: middle;
+    }
+
+    .topMenuBar a {
+        color: yellow;
+        text-decoration: none;
+    }
+
+.NormalFont {
+    font-family: Tahoma;
+}
+
+.freeSpace {
+    padding: 0px;
+    margin: 0px;
+}
+
+.lbl_upper {
+    top: -5px; position: relative;font-style: italic;right: 15px;
+}
+
+/* ***************    Font Types   ***************** */
+.MediumTitle {
+    font-size: 24px;
+    font-family: BYekan;
+}
+
+/* ***************   Font Effects  ***************** */
+.Shaddow {
+    text-shadow: 5px 5px 5px #CCC;
+}
+
+/* ***************     Telerik     *************** */
+.RadWindow_Black td.rwWindowContent.rwLoading {
+    background-image: url("../Images/loading_s32.png") !important;
+}
+
+/* ***************     ajax start massage     *************** */
+
+.dv-warining {
+    background-color: #FFFFCC;
+    border: 1px solid khaki;
+    border-radius: 3px;
+    font-size: 11px;
+    padding: 5px;
+    text-indent: 20px;
+    margin: 0px 0px 7px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.36);
+}
+.master-msg-ico {
+    cursor: pointer;
+    font-size: 11px;
+    height: 30px;
+    line-height: 0.5;
+    position: absolute;
+    right: 4px;
+    top: -2px;
+    width: 30px;
+}
+
+.warning-ico { 
+    background : url("../Images/warning.png") no-repeat 0 5px transparent ;
+}
+
+.error-ico { 
+    background : url("../Images/error.png") no-repeat 0 5px  transparent ;
+}
+
+.loading-ico {
+    background: url('../Images/loading.gif') no-repeat 0 0 transparent;
+}
+
+.success-ico { 
+    background : url("../Images/success.gif") no-repeat 0 5px transparent ;
+}
+
+#dv-MessageWarningText {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#dv-MasterMessage {
+    right: 25%;
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    top: 10px;
+    white-space: nowrap;
+    width: 480px;
+    max-width: 580px;
+    z-index: 400;
+    min-height: 25px;
+}
+
+#sp-global-txt {
+    display: block;
+    margin-right: 28px;
+    padding-top: 3px;
+}
+
+.a-remove-warning {
+    font-size: 17px;
+    line-height: .5;
+    position: absolute;
+    top: 8px;
+    left: 4px;
+    color: #aaa;
+    text-shadow: 0 -1px 1px rgba(0,0,0,.6);
+    font-weight: bold;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}

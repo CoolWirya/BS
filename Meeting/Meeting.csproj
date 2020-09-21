@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F6E3D96-F393-4E22-A766-6575C4D1508F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Meeting</RootNamespace>
+    <AssemblyName>Meeting</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\DLLs\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\DLLs\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\DLLs\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\DLLs\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\DLLs\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commission\Commission.cs" />
+    <Compile Include="Commission\CommissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commission\CommissionForm.Designer.cs">
+      <DependentUpon>CommissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commission\CommissionPersons.cs" />
+    <Compile Include="Commission\CommissionPersonsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Commission\CommissionPersonsForm.Designer.cs">
+      <DependentUpon>CommissionPersonsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Commission\CommissionPersonsTable.cs" />
+    <Compile Include="Commission\CommissionTable.cs" />
+    <Compile Include="Commission\LegCommission.cs" />
+    <Compile Include="Commission\LegCommissionTable.cs" />
+    <Compile Include="Legislation\Legislation.cs" />
+    <Compile Include="Legislation\LegislationGroup.cs" />
+    <Compile Include="Legislation\LegislationTable.cs" />
+    <Compile Include="Meeting.cs" />
+    <Compile Include="Legislation\LegislationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Legislation\LegislationForm.Designer.cs">
+      <DependentUpon>LegislationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Legislation\LegMeetingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Legislation\LegMeetingForm.Designer.cs">
+      <DependentUpon>LegMeetingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meeting\Meeting.cs" />
+    <Compile Include="Meeting\MeetingPersons.cs" />
+    <Compile Include="Meeting\MeetingPersonsTable.cs" />
+    <Compile Include="Meeting\MeetingsTable.cs" />
+    <Compile Include="Nodes\BaseDefine.cs" />
+    <Compile Include="Nodes\StaticNodes.cs" />
+    <Compile Include="Program\Program.cs" />
+    <Compile Include="Program\ProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program\ProgramForm.Designer.cs">
+      <DependentUpon>ProgramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ProgramTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Search\frmSearchMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\frmSearchMeeting.Designer.cs">
+      <DependentUpon>frmSearchMeeting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Search.cs" />
+    <Compile Include="TableNames.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Commission\CommissionForm.resx">
+      <DependentUpon>CommissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commission\CommissionPersonsForm.resx">
+      <DependentUpon>CommissionPersonsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Legislation\LegislationForm.resx">
+      <DependentUpon>LegislationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Legislation\LegMeetingForm.resx">
+      <DependentUpon>LegMeetingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Program\ProgramForm.resx">
+      <DependentUpon>ProgramForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\frmSearchMeeting.resx">
+      <DependentUpon>frmSearchMeeting.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

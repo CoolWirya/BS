@@ -1,0 +1,7 @@
+﻿<nodes>
+  <node type="usual" name="BaseDefine" action="ClassLibrary.JBaseDefine.ListView" listview="true" treeview="false" />
+  <node type="usual" name="BaseDefine" action="ClassLibrary.JBaseDefine.ListView" listview="true" treeview="false" />
+  <node type="dynamic" name="Automation" action="Automation.JAutomation.ListView" listview="true" treeview="true">
+      <node type="usual" name="BaseDefine" action="Automation.JABaseDefine.ListView" listview="true" treeview="false" />
+    </node>
+</nodes>

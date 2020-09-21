@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F5056D0-BC4E-4471-A0A7-6B0E98C130B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Communication</RootNamespace>
+    <AssemblyName>Communication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\dlls\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation, Version=2.0.3.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment, Version=2.0.2.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\dlls\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.FilterEditor.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.FilterEditor.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.Schedule.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.TimeLine.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\..\dlls\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net, Version=2.0.4825.14019, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClassLibrary\bin\Debug\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="mCoreLib">
+      <HintPath>..\ClassLibrary\bin\Debug\mCoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Meeting">
+      <HintPath>..\ClassLibrary\bin\Debug\Meeting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\Nezami1\ERP\ERP\Communication\bin\Debug\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.Data">
+      <HintPath>..\ClassLibrary\bin\Debug\MySQL.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClassLibrary\bin\Debug\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstate">
+      <HintPath>..\ClassLibrary\bin\Debug\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="Restaurant">
+      <HintPath>..\ClassLibrary\bin\Debug\Restaurant.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Touchless.Vision, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClassLibrary\bin\Debug\Touchless.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAutomation">
+      <HintPath>..\..\..\dlls\WebAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebClassLibrary, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\WebClassLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Communication.cs" />
+    <Compile Include="Letter\ExportedLetterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Letter\ExportedLetterForm.Designer.cs">
+      <DependentUpon>ExportedLetterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letter\ImportedLetterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Letter\ImportedLetterForm.Designer.cs">
+      <DependentUpon>ImportedLetterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letter\LetterCopy.cs" />
+    <Compile Include="Letter\LetterCopyTable.cs" />
+    <Compile Include="Letter\Letter.cs" />
+    <Compile Include="Letter\LetterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Letter\LetterForm.Designer.cs">
+      <DependentUpon>LetterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letter\LetterSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Letter\LetterSearch.Designer.cs">
+      <DependentUpon>LetterSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Letter\LetterTable.cs" />
+    <Compile Include="NoStorage\NoStorage.cs" />
+    <Compile Include="NoStorage\NoStorageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoStorage\NoStorageForm.Designer.cs">
+      <DependentUpon>NoStorageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoStorage\NoStorageReserved.cs" />
+    <Compile Include="NoStorage\NoStorageReservedTable.cs" />
+    <Compile Include="NoStorage\NoStorageTable.cs" />
+    <Compile Include="Pattern\jLetterPattern.cs" />
+    <Compile Include="Pattern\JLetterPatternTable.cs" />
+    <Compile Include="Pattern\PatterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pattern\PatterForm.Designer.cs">
+      <DependentUpon>PatterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Secretariat\frmSecretariat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretariat\frmSecretariat.designer.cs">
+      <DependentUpon>frmSecretariat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretariat\Secretariat.cs" />
+    <Compile Include="Secretariat\SecretariatLettersTable.cs" />
+    <Compile Include="Secretariat\SecretariatTable.cs" />
+    <Compile Include="Secretariat\secretariatUser.cs" />
+    <Compile Include="Secretariat\secretariatUserTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Letter\ExportedLetterForm.resx">
+      <DependentUpon>ExportedLetterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letter\ImportedLetterForm.resx">
+      <DependentUpon>ImportedLetterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letter\LetterForm.resx">
+      <DependentUpon>LetterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Letter\LetterSearch.resx">
+      <DependentUpon>LetterSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoStorage\NoStorageForm.resx">
+      <DependentUpon>NoStorageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pattern\PatterForm.resx">
+      <DependentUpon>PatterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretariat\frmSecretariat.resx">
+      <DependentUpon>frmSecretariat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance\Finance.csproj">
+      <Project>{b53afbc9-db58-401d-b559-a683704c4e87}</Project>
+      <Name>Finance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Globals\Globals.csproj">
+      <Project>{e7cc3df6-4222-41dc-8f78-ace6e997573b}</Project>
+      <Name>Globals</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FD04ECB-6DEF-4E44-BCC3-24F76B72BC08}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Estates</RootNamespace>
+    <AssemblyName>Estates</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/ERP/ERP/Estates</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://erpzarrinderafshtoos.visualstudio.com</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\DLLs\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="BusManagment">
+      <HintPath>..\..\DLLs\BusManagment.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment">
+      <HintPath>..\..\DLLs\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\..\DLLs\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\DLLs\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\DLLs\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\DLLs\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\DLLs\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\..\DLLs\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClassLibrary\bin\Debug\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstate, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDefine\BaseDefine.cs" />
+    <Compile Include="BaseDefine\JTableNamesEstates.cs" />
+    <Compile Include="Land\DocumentType.cs" />
+    <Compile Include="Land\Ground\About\JAbout1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\About\JAbout1.Designer.cs">
+      <DependentUpon>JAbout1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\About\JAboutTable.cs" />
+    <Compile Include="Land\Ground\Aggregate\AggregateGround.cs" />
+    <Compile Include="Land\Ground\Aggregate\AggregateGrounds.cs" />
+    <Compile Include="Land\Ground\Aggregate\AggregateGroundTable.cs" />
+    <Compile Include="Land\Ground\Aggregate\AggregateGroundsTable.cs" />
+    <Compile Include="Land\Ground\Breakdown\JGroundBreakDown.cs" />
+    <Compile Include="Land\Ground\Breakdown\JGroundBreakDownTable.cs" />
+    <Compile Include="Land\Ground\Breakdown\JGroundsBreakDown.cs" />
+    <Compile Include="Land\Ground\Breakdown\JGroundsBreakDownTable.cs" />
+    <Compile Include="Land\Ground\Ground\GroundSheet\SheetLog\SheetLog.cs" />
+    <Compile Include="Land\Ground\Ground\GroundSheet\SheetLog\AggregateSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\GroundSheet\SheetLog\AggregateSheetForm.Designer.cs">
+      <DependentUpon>AggregateSheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\GroundSheet\SheetLog\SheetLogDetails.cs" />
+    <Compile Include="Land\Ground\Ground\GroundSheet\SheetLog\SheetLogTable.cs" />
+    <Compile Include="Land\Ground\Ground\GroundSheet\SheetLog\ChangeSahmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\GroundSheet\SheetLog\ChangeSahmForm.Designer.cs">
+      <DependentUpon>ChangeSahmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\GroundSheet\GroundSheet.cs" />
+    <Compile Include="Land\Ground\Ground\GroundSheet\GroundSheetTable.cs" />
+    <Compile Include="Land\Ground\Ground\frmSearchGround.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\frmSearchGround.Designer.cs">
+      <DependentUpon>frmSearchGround.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\Ground.cs" />
+    <Compile Include="Land\Ground\About\JAbout.cs" />
+    <Compile Include="Land\Ground\Ground\GroundSheet\PropertySheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\GroundSheet\PropertySheetForm.Designer.cs">
+      <DependentUpon>PropertySheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\GroundSheet\TransferRequest\RequestTransferSheet.cs" />
+    <Compile Include="Land\Ground\Ground\GroundSheet\TransferRequest\RequestTransferSheetTable.cs" />
+    <Compile Include="Land\Ground\Ground\GroundSheet\TransferRequest\TransferRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\GroundSheet\TransferRequest\TransferRequestForm.Designer.cs">
+      <DependentUpon>TransferRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\GroundType.cs" />
+    <Compile Include="Land\Ground\Ground\HistoryOwner\FormHistoryOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\HistoryOwner\FormHistoryOwner.Designer.cs">
+      <DependentUpon>FormHistoryOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\HistoryOwner\HistoryOwner.cs" />
+    <Compile Include="Land\Ground\Ground\Primary owner\PrimaryOwner.cs" />
+    <Compile Include="Land\Ground\Ground\Primary owner\PrimaryOwnerTable.cs" />
+    <Compile Include="Land\Ground\Ground\GroundSheet\SheetGroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\GroundSheet\SheetGroundForm.Designer.cs">
+      <DependentUpon>SheetGroundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\ReportSheet\ReportSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\ReportSheet\ReportSheetForm.Designer.cs">
+      <DependentUpon>ReportSheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\ToPartition\JGroundPartition.cs" />
+    <Compile Include="Land\Ground\ToPartition\JGroundPartitions.cs" />
+    <Compile Include="Land\Ground\ToPartition\JGroundPartitionsTable.cs" />
+    <Compile Include="Land\Ground\ToPartition\JGroundPartitionTable.cs" />
+    <Compile Include="Land\Ground\Usage\JAddUsage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Usage\JAddUsage.Designer.cs">
+      <DependentUpon>JAddUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Aggregate\JAggregate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Aggregate\JAggregate.Designer.cs">
+      <DependentUpon>JAggregate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Breakdown\JBreakDown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Breakdown\JBreakDown.Designer.cs">
+      <DependentUpon>JBreakDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\JGroundTable.cs" />
+    <Compile Include="Land\Ground\ToPartition\JGroundPartitionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\ToPartition\JGroundPartitionForm.Designer.cs">
+      <DependentUpon>JGroundPartitionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\Message Ground\MessageUpdateGround.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\Message Ground\MessageUpdateGround.Designer.cs">
+      <DependentUpon>MessageUpdateGround.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Usage\UsageGround.cs" />
+    <Compile Include="Land\Ground\Ground\JGround.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Ground\Ground\JGround.Designer.cs">
+      <DependentUpon>JGround.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Ground\Usage\UsageGroundTable.cs" />
+    <Compile Include="Land\Land\JNewLands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Land\Land\JNewLands.Designer.cs">
+      <DependentUpon>JNewLands.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Land\Land\Land.cs" />
+    <Compile Include="Land\Land\LandTable.cs" />
+    <Compile Include="Nodes\BaseDefine.cs" />
+    <Compile Include="Nodes\StaticNodes.cs" />
+    <Compile Include="Person\Person.cs" />
+    <Compile Include="Estate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Land\Ground\About\JAbout1.resx">
+      <DependentUpon>JAbout1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\frmSearchGround.resx">
+      <DependentUpon>frmSearchGround.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\GroundSheet\SheetLog\AggregateSheetForm.resx">
+      <DependentUpon>AggregateSheetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\GroundSheet\SheetLog\ChangeSahmForm.resx">
+      <DependentUpon>ChangeSahmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\GroundSheet\PropertySheetForm.resx">
+      <DependentUpon>PropertySheetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\GroundSheet\SheetGroundForm.resx">
+      <DependentUpon>SheetGroundForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\GroundSheet\TransferRequest\TransferRequestForm.resx">
+      <DependentUpon>TransferRequestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\HistoryOwner\FormHistoryOwner.resx">
+      <DependentUpon>FormHistoryOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\ReportSheet\ReportSheetForm.resx">
+      <DependentUpon>ReportSheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Usage\JAddUsage.resx">
+      <DependentUpon>JAddUsage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Aggregate\JAggregate.resx">
+      <DependentUpon>JAggregate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Breakdown\JBreakDown.resx">
+      <DependentUpon>JBreakDown.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\JGround.resx">
+      <DependentUpon>JGround.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\ToPartition\JGroundPartitionForm.resx">
+      <DependentUpon>JGroundPartitionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Ground\Ground\Message Ground\MessageUpdateGround.resx">
+      <DependentUpon>MessageUpdateGround.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Land\Land\JNewLands.resx">
+      <DependentUpon>JNewLands.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Request\JRequestAggregate.cs.resx">
+      <DependentUpon>JRequestAggregate.cs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Request\JRequestAggregate.cs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Request\JRequestAggregate.cs.Designer.cs">
+      <DependentUpon>JRequestAggregate.cs.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Globals\Globals.csproj">
+      <Project>{e7cc3df6-4222-41dc-8f78-ace6e997573b}</Project>
+      <Name>Globals</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

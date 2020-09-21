@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{573782B8-C27C-44F6-AA6B-479AA83EAE48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Employment</RootNamespace>
+    <AssemblyName>Employment</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\WebERP\bin\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation">
+      <HintPath>..\WebERP\bin\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>..\WebERP\bin\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\WebERP\bin\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\WebERP\bin\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\WebERP\bin\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Globals\bin\Debug\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\WebERP\bin\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Touchless.Vision, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClassLibrary\bin\Debug\Touchless.Vision.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\StaticAction.cs" />
+    <Compile Include="BaseDefine\CalcType.cs" />
+    <Compile Include="BaseDefine\ContractEmployeeType.cs" />
+    <Compile Include="BaseDefine\DegreeType.cs" />
+    <Compile Include="BaseDefine\FamilyRelation.cs" />
+    <Compile Include="BaseDefine\JFieldType.cs" />
+    <Compile Include="BaseDefine\JHouseStateType.cs" />
+    <Compile Include="BaseDefine\militaryType.cs" />
+    <Compile Include="BaseDefine\PersonelContractType.cs" />
+    <Compile Include="BaseDefine\SeparationType.cs" />
+    <Compile Include="BaseDefine\TableNameEmployment.cs" />
+    <Compile Include="BaseDefine\VacationType.cs" />
+    <Compile Include="BaseDefine\workPlaceType.cs" />
+    <Compile Include="BaseDefine\WorkTimeType.cs" />
+    <Compile Include="BaseDefine\CompanyEmployee.cs" />
+    <Compile Include="chart\Chart\Chart.cs" />
+    <Compile Include="chart\Chart\ChartTable.cs" />
+    <Compile Include="chart\Chart\frmChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chart\Chart\frmChart.Designer.cs">
+      <DependentUpon>frmChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContractEmployee\ContractEmployee.cs" />
+    <Compile Include="ContractEmployee\ContractEmployeeTable.cs" />
+    <Compile Include="Contract\Contract.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractForm.Designer.cs">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\ContractTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="chart\OrganizationChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chart\OrganizationChartForm.Designer.cs">
+      <DependentUpon>OrganizationChartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDefine\JActivityType.cs" />
+    <Compile Include="BaseDefine\JShiftType.cs" />
+    <Compile Include="chart\EBaseDefine.cs" />
+    <Compile Include="chart\Metiertopic.cs" />
+    <Compile Include="chart\OrganizationChart\frmOrganizatinChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chart\OrganizationChart\frmOrganizatinChart.Designer.cs">
+      <DependentUpon>frmOrganizatinChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chart\OrganizationChart\frmOrganizationChartAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chart\OrganizationChart\frmOrganizationChartAddEdit.Designer.cs">
+      <DependentUpon>frmOrganizationChartAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chart\OrganizationChart\frmOrganizationChartMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chart\OrganizationChart\frmOrganizationChartMove.designer.cs">
+      <DependentUpon>frmOrganizationChartMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chart\OrganizationChart\OrganizationChart.cs" />
+    <Compile Include="Employee\EmployeeInfo.cs" />
+    <Compile Include="Employee\EmployeeInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployeeInfoForm.Designer.cs">
+      <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeInfoTable.cs" />
+    <Compile Include="Employee\FamilyInfo.cs" />
+    <Compile Include="DefinePostJob\JobTitle.cs" />
+    <Compile Include="DefinePostJob\JobTitleTable.cs" />
+    <Compile Include="DefinePostJob\PostTitle.cs" />
+    <Compile Include="DefinePostJob\PostTitleTable.cs" />
+    <Compile Include="DefinePostJob\TitleJobForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefinePostJob\TitleJobForm.Designer.cs">
+      <DependentUpon>TitleJobForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefinePostJob\TitlePostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefinePostJob\TitlePostForm.Designer.cs">
+      <DependentUpon>TitlePostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\PropertyEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\PropertyEmployeeForm.Designer.cs">
+      <DependentUpon>PropertyEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\SearchEmpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\SearchEmpForm.Designer.cs">
+      <DependentUpon>SearchEmpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formula\Formula.cs" />
+    <Compile Include="Formula\FormulaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formula\FormulaForm.Designer.cs">
+      <DependentUpon>FormulaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Karaneh\Karaneh.cs" />
+    <Compile Include="Karaneh\KaranehRange.cs" />
+    <Compile Include="Karaneh\KaranehRangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Karaneh\KaranehRangeForm.Designer.cs">
+      <DependentUpon>KaranehRangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login\Login.cs" />
+    <Compile Include="login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chart\StaticNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDetailForm.Designer.cs">
+      <DependentUpon>ReportDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seperation\Separation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="chart\Chart\frmChart.resx">
+      <DependentUpon>frmChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ContractForm.resx">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chart\OrganizationChartForm.resx">
+      <DependentUpon>OrganizationChartForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chart\OrganizationChart\frmOrganizatinChart.resx">
+      <DependentUpon>frmOrganizatinChart.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chart\OrganizationChart\frmOrganizationChartAddEdit.resx">
+      <DependentUpon>frmOrganizationChartAddEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chart\OrganizationChart\frmOrganizationChartMove.resx">
+      <DependentUpon>frmOrganizationChartMove.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefinePostJob\TitlePostForm.resx">
+      <DependentUpon>TitlePostForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EmployeeInfoForm.resx">
+      <DependentUpon>EmployeeInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefinePostJob\TitleJobForm.resx">
+      <DependentUpon>TitleJobForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\PropertyEmployeeForm.resx">
+      <DependentUpon>PropertyEmployeeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\SearchEmpForm.resx">
+      <DependentUpon>SearchEmpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formula\FormulaForm.resx">
+      <DependentUpon>FormulaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Karaneh\KaranehRangeForm.resx">
+      <DependentUpon>KaranehRangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDetailForm.resx">
+      <DependentUpon>ReportDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\communitylogin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SentenceRecruiter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

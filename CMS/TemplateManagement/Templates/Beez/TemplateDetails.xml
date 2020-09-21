@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<extension>
+  <name></name>
+  <creationDate></creationDate>
+  <author></author>
+  <files></files>
+
+  <positions>
+    <position>Top</position>
+    <position>Header</position>
+    <position>Content</position>
+    <position>position-0</position>
+    <position>position-1</position>
+    <position>position-2</position>
+    <position>position-3</position>
+  </positions>
+</extension>

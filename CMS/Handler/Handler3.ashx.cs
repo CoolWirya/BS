@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WebEstate.Land.Ground.Usage.Handler
+{
+    /// <summary>
+    /// Summary description for Handler3
+    /// </summary>
+    public class Handler3 : IHttpHandler
+    {
+
+        public void ProcessRequest(HttpContext context)
+        {
+           // context.Response.ContentType = "text/plain";
+            //context.Response.Write("Hello World");
+            string dir;
+            if (context.Request.Form["dir"] == null || context.Request.Form["dir"].Length <= 0)
+                dir = "/";
+            else
+                dir = context.Server.UrlDecode(context.Request.Form["dir"]);
+            System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(dir);
+            context.Response.Write("<ul class=\"jqueryFileTree\" style=\"display: none;\">\n");
+            foreach (System.IO.DirectoryInfo di_child in di.GetDirectories())
+                context.Response.Write("\t<li class=\"directory collapsed\"><a href=\"#\" rel=\"" + dir + di_child.Name + "/\">" + di_child.Name + "</a></li>\n");
+            foreach (System.IO.FileInfo fi in di.GetFiles())
+            {
+                string ext = "";
+                if (fi.Extension.Length > 1)
+                    ext = fi.Extension.Substring(1).ToLower();
+
+                context.Response.Write("\t<li class=\"file ext_" + ext + "\"><a href=\"#\" rel=\"" + dir + fi.Name + "\">" + fi.Name + "</a></li>\n");
+            }
+           // context.Response.ContentType = "application/json";
+            context.Response.Write("</ul>");
+        }
+
+        public bool IsReusable
+        {
+            get
+            {
+                return false;
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>JJsonLC</Title>
+			<Shortcut>JJsonLC</Shortcut>
+			<Description>Code snippet for 'JJson Components'</Description>
+			<Author>Mohseni</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<!--<SnippetType>SurroundsWith</SnippetType>-->
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>control</ID>
+					<Default>control</Default>
+					<ToolTip>control</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>res_par_control</ID>
+					<Default>dialogDiv</Default>
+					<ToolTip>Control To Set With Response</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>res_par_action</ID>
+					<Default>DataBind</Default>
+					<ToolTip>Action For Set On Response</ToolTip>
+				</Literal>
+				<!--<Literal>
+					<ID>res_par_returnfield</ID>
+					<Default>Return_Field_Name_On_Response</Default>
+					<ToolTip>Field Name On Response</ToolTip>
+				</Literal>-->
+				<Literal>
+					<ID>url</ID>
+					<Default>WebControllers/JJsonServices/JJsonService.asmx/Run</Default>
+					<ToolTip>URL</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>SQL</ID>
+					<Default>SQL</Default>
+					<ToolTip>Request Type</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>namefield</ID>
+					<Default>NameField</Default>
+					<ToolTip>NameField</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>valuefield</ID>
+					<Default>ValueField</Default>
+					<ToolTip>ValueField</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>tablename</ID>
+					<Default>TableName</Default>
+					<ToolTip>TableName</ToolTip>
+				</Literal>
+				<!--<Literal>
+					<ID>res_par_returnfield</ID>
+					--><!--<ID>req_par_name</ID>--><!--
+					<Default>Parameter_Name_of_Data</Default>
+					<ToolTip>Parameter Name of Data</ToolTip>
+				</Literal>-->
+				<Literal>
+					<ID>req_par_action</ID>
+					<Default>Value</Default>
+					<ToolTip>Action For Get Data of Control On Request</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>req_par_value</ID>
+					<Default>Value_for_send_request_on_constant_action</Default>
+					<ToolTip>Value for send request on constant action</ToolTip>
+				</Literal>
+			<Literal>
+					<ID>req_par_control</ID>
+					<Default>UserControl</Default>
+					<ToolTip>UserControl</ToolTip>
+				</Literal>
+				<Literal>
+					<ID>err_par_action</ID>
+					<Default>Message</Default>
+					<ToolTip>Action on error occurance</ToolTip>
+				</Literal>
+        <!--<Literal>
+          <ID>control_to_validate</ID>
+          <Default>Control</Default>
+          <ToolTip>Control to validate</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>validation_msg</ID>
+          <Default>Validation message</Default>
+          <ToolTip>Validation message</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>RegexType</ID>
+          <Default>Alphanumeric</Default>
+          <ToolTip>Regular expression type</ToolTip>
+        </Literal>-->
+			</Declarations>
+			<Code Language="csharp">
+				<![CDATA[#region $control$_Settings
+			JJson.JsonResponse $control$_res = new JJson.JsonResponse();
+			$control$_res.Type = JJson.JsonResponseType.Table;
+			$control$_res.Params = new List<JJson.JsonResponseParam>();
+			$control$_res.Params.Add(new JJson.JsonResponseParam() { ControlToSet = "dialogDiv", Action = JJson.JsonAction.Html });
+			$control$.OnSuccessControlsAction = $control$_res;
+			JJson.JsonRequest $control$_req = new JJson.JsonRequest();
+			$control$_req.URL = "$url$";
+			$control$_req.Type = JJson.JsonRequestType.LoadControl;
+			$control$_req.Params = new List<JJson.JsonRequestParam>();
+			$control$_req.Params.Add(new JJson.JsonRequestParam() { Name = "uc", Type = JJson.JsonAction.Constant, Value = "path/$req_par_control$.ascx" });
+			$control$.Request = $control$_req;
+			JJson.JsonResponse $control$_error = new JJson.JsonResponse();
+			$control$_error.Params = new List<JJson.JsonResponseParam>();
+			$control$_error.Params.Add(new JJson.JsonResponseParam() { Action = JJson.JsonAction.$err_par_action$ });
+			$control$.OnErrorControlsAction = $control$_error;
+			#endregion]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

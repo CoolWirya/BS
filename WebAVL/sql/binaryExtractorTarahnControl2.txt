@@ -1,0 +1,285 @@
+﻿USE [AVLDB]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_InsertTransactionCars]    Script Date: 7/2/2015 9:23:27 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+ Create PROCEDURE [dbo].[SP_InsertTransactionCars](
+ 	@CarID INT 
+ 	,@LayerID INT 
+ 	,@lon FLOAT
+ 	,@lat FLOAT
+ 	,@Alt FLOAT
+	,@DateSend DATETIME 
+	,@Speed FLOAT
+	,@ChargeSIMCard bigint
+	,@MsgType TINYINT
+	,@BattryCharge int
+	,@GpsAnt tinyint
+	,@GsmAnt TINYINT 
+	,@Course TINYINT
+	,@Version int = 0
+ )
+
+AS 
+BEGIN
+
+if(@DateSend>getdate())
+set @DateSend = getdate()
+
+	DECLARE @LogFlag bit
+	DECLARE @LogID INT
+	
+	DECLARE @PID BINARY(16)
+	SET @LogFlag=0
+	SET @PID = CAST(NEWID() AS BINARY(16))
+	
+	DECLARE @DateSend1 DATETIME
+	DECLARE @DateSend2 datetime
+	
+	DECLARE @StopTime int
+	
+
+	DECLARE @Speed1 float
+	DECLARE @AvgSpeed INT 
+		
+	DECLARE @TID bigint
+	DECLARE @TID1 bigint
+	DECLARE @TID2 bigint
+	
+	DECLARE @id INT
+	DECLARE @IsDel bit
+	DECLARE @count int
+	DECLARE @lon1 float
+	DECLARE @lon2 float
+	DECLARE @lat1 float
+	DECLARE @lat2 float
+
+	DECLARE @distance float
+	DECLARE @query nvarchar(1000)
+
+	DECLARE @MaxSpeed int
+
+	SET @TID =0
+	
+--**************************************************************
+	IF @LogFlag=1
+	BEGIN
+		INSERT INTO EnterExiteToSPs ([ActionName],PID)
+		VALUES ('FindRepetitive', @PID)
+		SET @LogID =@@IDENTITY
+	END
+--**************************************************************
+
+	SET @distance=0
+
+	SELECT @MaxSpeed = Speed 
+	FROM Cars
+	WHERE  CarID=@CarID
+	
+	SELECT @count=Count(*) 
+	FROM TransactionCars
+	WHERE  CarID=@CarID and DateSend=@DateSend
+--**************************************************************
+	IF @LogFlag=1
+		UPDATE EnterExiteToSPs SET ExitDate = GETDATE()
+		WHERE LogID=@LogID 
+--**************************************************************
+	 
+	IF (@count>=1)
+	BEGIN
+		RETURN 
+	END 
+	 
+	--SET @DateSend_Solar = '1389/09/24'
+	--SET @TimeSend_Solar = '33:17:54'
+	--SET @CarID = 15
+	--SET @dt=GETDATE()
+	SET @StopTime=0
+	SET @TID1=NULL
+	
+--**************************************************************
+	IF @LogFlag=1
+	BEGIN
+		INSERT INTO EnterExiteToSPs (ActionName,PID)
+		VALUES ('FindPreviousTransaction', @PID)
+		SET @LogID =@@IDENTITY
+	END
+--**************************************************************
+
+	SELECT TOP(1)@TID1=TransactionID, @lon1=Longitude,@lat1=Latitude,@Speed1=Speed, @DateSend1=DateSend 
+	FROM TransactionCars 
+	WHERE CarID = @CarID AND cast(DateSend as date)= cast(@DateSend as date) AND cast(DateSend AS TIME)<cast(@DateSend AS TIME)
+	ORDER BY DateSend desc
+	
+			
+--**************************************************************
+	IF @LogFlag=1
+		UPDATE EnterExiteToSPs SET ExitDate = GETDATE()
+		WHERE LogID=@LogID 
+--**************************************************************
+
+	IF  NOT @TID1 IS NULL --if a point is exist previous of this point
+	begin
+		SET @distance = dbo.GetDistance2Points(@lon, @lat, @lon1, @lat1)
+		IF @distance>  DATEDIFF("SECOND", @DateSend1, @DateSend)*2000/36
+		BEGIN
+			RETURN
+		END
+		
+		SET @AvgSpeed=(@distance*36)/(DATEDIFF("second", @DateSend1, @DateSend)*10)
+		IF @Speed1<5 OR @AvgSpeed<5
+			SET @StopTime= DATEDIFF("second", @DateSend1, @DateSend)
+		UPDATE TransactionCars SET StopTime=@StopTime
+		WHERE TransactionID = @TID1 
+	END
+	
+	SET @StopTime=0
+--**************************************************************
+	IF @LogFlag=1
+	BEGIN
+		INSERT INTO EnterExiteToSPs (ActionName,PID)
+		VALUES ('FindNextTransaction', @PID)
+		SET @LogID =@@IDENTITY
+	END
+--**************************************************************
+
+	
+	SET @TID2=NULL
+	SELECT TOP(1)@TID2=TransactionID, @lon2=Longitude,@lat2=Latitude,@DateSend2=DateSend
+	FROM TransactionCars 
+	WHERE CarID = @CarID AND cast(DateSend as date)= cast(@DateSend as date) AND cast(DateSend AS TIME)>cast(@DateSend AS TIME)
+	ORDER BY DateSend 
+	
+--**************************************************************
+	IF @LogFlag=1
+		UPDATE EnterExiteToSPs SET ExitDate = GETDATE()
+		WHERE LogID=@LogID 
+--**************************************************************
+	
+	
+	IF   @TID2  IS NOT NULL --if a point is exist after of this point
+	BEGIN
+		DECLARE @dist FLOAT
+		SET @dist=dbo.GetDistance2Points(@lon, @lat, @lon2, @lat2)
+		UPDATE TransactionCars SET DistancePerDay=@dist
+		WHERE TransactionID=@TID2
+		SET @AvgSpeed=(dbo.GetDistance2Points(@lon, @lat, @lon2, @lat2)*36)/(DATEDIFF("second", @DateSend, @DateSend2)*10)
+		IF @Speed<5 OR @AvgSpeed<5
+			SET @StopTime=DATEDIFF("second", @DateSend, @DateSend2)
+	END
+	 
+--**************************************************************
+	IF @LogFlag=1
+	BEGIN
+		INSERT INTO EnterExiteToSPs (ActionName,PID)
+		VALUES ('InsertTransactionCars', @PID)
+		SET @LogID =@@IDENTITY
+	END
+--**************************************************************
+
+	INSERT INTO TransactionCars	( CarID, LayerID, Longitude, Latitude, Altitude, Speed, 
+			ChargeSIMCard, IsDel, DistancePerDay, StopTime, DateSend, DateReceive, 	MsgType, 
+			BattryCharge, GpsAnt, GsmAnt, Course,[Version],MaxSpeed,Deleted)
+	VALUES(	@CarID, @LayerID, @lon, @lat, @alt, @Speed, 
+			@ChargeSIMCard , 0, @distance, @StopTime, @DateSend, GETDATE(), 	@MsgType, 
+			@BattryCharge, @GpsAnt, @GsmAnt, @Course,@Version,@MaxSpeed,0)
+	SET @TID=@@identity 
+	
+
+--**************************************************************
+	IF @LogFlag=1
+		UPDATE EnterExiteToSPs SET ExitDate = GETDATE()
+		WHERE LogID=@LogID 
+--**************************************************************
+	
+	
+--**************************************************************
+	IF @LogFlag=1
+	BEGIN
+		INSERT INTO EnterExiteToSPs (ActionName,PID)
+		VALUES ('UpdateCarTable', @PID)
+		SET @LogID =@@IDENTITY
+	END
+--**************************************************************
+	
+	
+	DECLARE @LastDateSend datetime
+	
+	
+	DECLARE @UserID	bigint
+	DECLARE @NameUser	nvarchar(50)
+	DECLARE @PicUser	nvarchar(500)
+	DECLARE @TransactionsCount INT
+	declare @carType int
+
+	
+	SELECT @UserID=UserID,@TransactionsCount=TransactionsCount,@LastDateSend=LastDate,@carType = model
+	FROM  Cars 
+	where CarID=@CarID
+	
+	
+
+	IF EXISTS(SELECT carid FROM CarsForRahnegar cfr WHERE cfr.CarID=@CarID)
+		INSERT INTO TransactionCarsRahnegar(TransactionID)
+		VALUES(@TID) 
+	
+	SELECT @NameUser=FName+' '+LName,@PicUser=Pic from Users where UserID=@UserID
+
+	if @LastDateSend is null or CAST(@DateSend AS date  )>cast(@LastDateSend AS date) 
+		SET @TransactionsCount=1
+	ELSE
+		IF CAST(@DateSend AS date  )=cast(@LastDateSend AS date)
+			SET @TransactionsCount+=1	
+
+	-------New-------------
+	update Cars set LastChargeSIMCard=@ChargeSIMCard
+	where CarId=@CarID
+	-------New-------------
+
+	if @LastDateSend is null or @DateSend >@LastDateSend 
+		update Cars set LastChargeSIMCard=@ChargeSIMCard,LastDate=@DateSend,
+		LastMsgType=@MsgType,LastTransactionID=@TID,LastLongitude=@lon,LastLatitude=@lat,
+	    LastAltitude=@Alt,LastSpeed=@Speed,LastBattryCharge=@BattryCharge,LastGpsAnt=@GpsAnt,LastGsmAnt=@GsmAnt,
+	    LastUserID=@UserID,LastNameUser=@NameUser,LastPicUser=@PicUser, TransactionsCount=@TransactionsCount , Lastdistance = lastdistance + @distance	
+	    where CarId=@CarID
+	    
+	--**************************************************************
+	IF @LogFlag=1
+		UPDATE EnterExiteToSPs SET ExitDate = GETDATE()
+		WHERE LogID=@LogID 
+--**************************************************************
+	
+	if(@Speed>@MaxSpeed)
+	  INSERT INTO [dbo].[CarsInfraction]
+	       (LayerId,CarID,InfractionDetail,Speed,InfractionTimePause,IsDel,InfractionDateEntry)
+            VALUES(Null,@CarID,'SpeedInfraction',@Speed,'',0,@DateSend)
+    
+	if(@carType > 3)
+	   exec dbo.Sp_CheckLayer @CarId,@Lat,@lon,@DateSend
+    
+	--IF cast(@DateSend as date) = cast(GETDATE()AS date)
+	--BEGIN
+		--DELETE TransactionCarsToday 
+		--WHERE CarID = @CarID AND cast(DateSend AS date) <> cast(GETDATE()AS date)
+		--INSERT INTO TransactionCarsToday
+		--SELECT * FROM Inserted 
+		/*(
+			TransactionID, CarID, LayerID, Longitude, Latitude, Altitude, Speed,
+			ChargeSIMCard, IsDel, DistancePerDay, StopTime, DateSend,DateReceive,
+			MsgType,BattryCharge,GpsAnt,GsmAnt, Course
+		)
+		VALUES
+		(
+			 @TID, @CarID, @LayerID, @lon, @lat ,@Alt, @Speed,
+			 @ChargeSIMCard, @IsDel, @DateSend,@TimeSend=dbo.ExtractTime(DateSend), ,
+			,@MsgType=MsgType,@BattryCharge=BattryCharge,@GpsAnt=GpsAnt,@GsmAnt=GsmAnt
+		) */
+		 
+	--END
+	
+END
+--exec SP_InsertTransactionCars 10781,0,59.5944921,36.3003048,991,'2015/06/06 17:52:56',18,0,0,0,0,0,0

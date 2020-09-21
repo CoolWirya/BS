@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D576620-47AC-4241-A07D-C31BBC41B62E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bascol</RootNamespace>
+    <AssemblyName>Bascol</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClassLibrary">
+      <HintPath>..\..\DLLs\ClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals">
+      <HintPath>..\..\DLLs\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\DLLs\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\DLLs\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\DLLs\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\DLLs\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bascol.cs" />
+    <Compile Include="Bascol\ConfigBascolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bascol\ConfigBascolForm.Designer.cs">
+      <DependentUpon>ConfigBascolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bascol\ConfigTaxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bascol\ConfigTaxForm.Designer.cs">
+      <DependentUpon>ConfigTaxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bascol\EmptyWeight.cs" />
+    <Compile Include="Bascol\EmptyWeightTable.cs" />
+    <Compile Include="Bascol\KhalesWeightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bascol\KhalesWeightForm.Designer.cs">
+      <DependentUpon>KhalesWeightForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bascol\Transfer.cs" />
+    <Compile Include="Bascol\Weight.cs" />
+    <Compile Include="Bascol\WeightForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bascol\WeightForm.Designer.cs">
+      <DependentUpon>WeightForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bascol\WeightTable.cs" />
+    <Compile Include="Node\BaseDefine.cs" />
+    <Compile Include="Node\StaticNodes.cs" />
+    <Compile Include="Product\Products.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Report.cs" />
+    <Compile Include="Report\ReportManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportManager.Designer.cs">
+      <DependentUpon>ReportManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportUserForm.Designer.cs">
+      <DependentUpon>ReportUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Truck\BlackListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Truck\BlackListForm.Designer.cs">
+      <DependentUpon>BlackListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Truck\ChangePlokForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Truck\ChangePlokForm.Designer.cs">
+      <DependentUpon>ChangePlokForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Truck\Truck.cs" />
+    <Compile Include="Truck\TruckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Truck\TruckForm.Designer.cs">
+      <DependentUpon>TruckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Truck\TruckTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Bascol\ConfigBascolForm.resx">
+      <DependentUpon>ConfigBascolForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bascol\ConfigTaxForm.resx">
+      <DependentUpon>ConfigTaxForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bascol\KhalesWeightForm.resx">
+      <DependentUpon>KhalesWeightForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bascol\WeightForm.resx">
+      <DependentUpon>WeightForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportManager.resx">
+      <DependentUpon>ReportManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportUserForm.resx">
+      <DependentUpon>ReportUserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Truck\BlackListForm.resx">
+      <DependentUpon>BlackListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Truck\ChangePlokForm.resx">
+      <DependentUpon>ChangePlokForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Truck\TruckForm.resx">
+      <DependentUpon>TruckForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Impresora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

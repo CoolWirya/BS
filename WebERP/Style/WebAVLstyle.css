@@ -1,0 +1,111 @@
+﻿@font-face {
+    font-family: 'BMitra';
+    src: url('../WebAVL/Fonts/BMitra.eot');
+    src: url('../WebAVL/Fonts/BMitra.eot?#iefix') format('embedded-opentype'),
+         url('../WebAVL/Fonts/BMitra.woff') format('woff'),
+         url('../WebAVL/Fonts/BMitra.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMitraBold';
+    src: url('../WebAVL/Fonts/BMitraBold.eot');
+    src: url('../WebAVL/Fonts/BMitraBold.eot?#iefix') format('embedded-opentype'),
+         url('../WebAVL/Fonts/BMitraBold.woff') format('woff'),
+         url('../WebAVL/Fonts/BMitraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'B Roya';
+    src: url('../WebAVL/Fonts/BRoya.eot');
+    src: url('../WebAVL/Fonts/BRoya.eot?#iefix') format('embedded-opentype'),
+         url('../WebAVL/Fonts/BRoya.woff') format('woff'),
+         url('../WebAVL/Fonts/BRoya.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BTabassom';
+    src: url('../WebAVL/Fonts/BTabassom.eot');
+    src: url('../WebAVL/Fonts/BTabassom.eot?#iefix') format('embedded-opentype'),
+         url('../WebAVL/Fonts/BTabassom.woff') format('woff'),
+         url('../WebAVL/Fonts/BTabassom.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'BTitr';
+    src: url('../WebAVL/Fonts/BTitr.eot');
+    src: url('../WebAVL/Fonts/BTitr.eot?#iefix') format('embedded-opentype'),
+         url('../WebAVL/Fonts/BTitr.woff') format('woff'),
+         url('../WebAVL/Fonts/BTitr.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BTitrTGE';
+    src: url('../WebAVL/Fonts/BTitrTGE.eot');
+    src: url('../WebAVL/Fonts/BTitrTGE.eot?#iefix') format('embedded-opentype'),
+         url('../WebAVL/Fonts/BTitrTGE.woff') format('woff'), 
+         url('../WebAVL/Fonts/BTitrTGE.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'BYekan';
+    src: url('../WebAVL/Fonts/BYekan.eot');
+    src: url('../WebAVL/Fonts/BYekan.eot?#iefix') format('embedded-opentype'),
+         url('../WebAVL/Fonts/BYekan.woff') format('woff'),
+         url('../WebAVL/Fonts/BYekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'BTraffic';
+    src: url('../WebAVL/Fonts/BTraffic.eot');
+    src: url('../WebAVL/Fonts/BTraffic.eot?#iefix') format('embedded-opentype'),
+         url('../WebAVL/Fonts/BTraffic.woff') format('woff'),
+         url('../WebAVL/Fonts/BTraffic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+ @font-face {
+    font-family: 'BNasim';
+    src: url('../WebAVL/Fonts/BNasim.eot');
+    src: url('../WebAVL/Fonts/BNasim.eot?#iefix') format('embedded-opentype'),
+         url('../WebAVL/Fonts/BNasim.woff') format('woff'),
+         url('../WebAVL/Fonts/BNasim.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+ ul{
+    list-style:none;
+}
+
+/*.RadPanelBar_Default .rpOut {
+    border-color: #EBEBEB;
+    background-color: red;
+    padding: 10px;
+    font-family: "B Roya";
+}
+.RadPanelBar_Default .rpOut:hover{
+    padding: 10px;
+}*/
+
+.registerField{
+    color:red;
+}

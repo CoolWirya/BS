@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagement", "ProjectManagement.csproj", "{ED1BE36E-F93D-4CA8-B0D2-B04E39395DB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebProjectManagement", "..\WebProjectManagement\WebProjectManagement.csproj", "{222CE73C-DA38-4C9B-8C01-F940F71EA17E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebERP", "..\WebERP\WebERP.csproj", "{1FF3131B-1936-4B48-9227-9D6751553B45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "..\ClassLibrary\ClassLibrary.csproj", "{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebControllers", "..\WebControllers\WebControllers.csproj", "{E4DEC70E-7841-4FD2-A5ED-C59837CAD549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBaseDefine", "..\WebBaseDefine\WebBaseDefine.csproj", "{6FB2E793-F67B-4BFA-9780-FFA946C41075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClassLibrary", "..\WebClassLibrary\WebClassLibrary.csproj", "{3B0B293D-40F5-49AD-B44B-5914873D5028}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED1BE36E-F93D-4CA8-B0D2-B04E39395DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1BE36E-F93D-4CA8-B0D2-B04E39395DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1BE36E-F93D-4CA8-B0D2-B04E39395DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1BE36E-F93D-4CA8-B0D2-B04E39395DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{222CE73C-DA38-4C9B-8C01-F940F71EA17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{222CE73C-DA38-4C9B-8C01-F940F71EA17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{222CE73C-DA38-4C9B-8C01-F940F71EA17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{222CE73C-DA38-4C9B-8C01-F940F71EA17E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FF3131B-1936-4B48-9227-9D6751553B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF3131B-1936-4B48-9227-9D6751553B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF3131B-1936-4B48-9227-9D6751553B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF3131B-1936-4B48-9227-9D6751553B45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAC4FC5-D801-4D81-84D0-08C5BAAD81E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4DEC70E-7841-4FD2-A5ED-C59837CAD549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4DEC70E-7841-4FD2-A5ED-C59837CAD549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4DEC70E-7841-4FD2-A5ED-C59837CAD549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4DEC70E-7841-4FD2-A5ED-C59837CAD549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FB2E793-F67B-4BFA-9780-FFA946C41075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FB2E793-F67B-4BFA-9780-FFA946C41075}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FB2E793-F67B-4BFA-9780-FFA946C41075}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FB2E793-F67B-4BFA-9780-FFA946C41075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B0B293D-40F5-49AD-B44B-5914873D5028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0B293D-40F5-49AD-B44B-5914873D5028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0B293D-40F5-49AD-B44B-5914873D5028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0B293D-40F5-49AD-B44B-5914873D5028}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://erpzarrinderafshtoos.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ProjectManagement.csproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ..\\WebProjectManagement\\WebProjectManagement.csproj
+		SccProjectName2 = ../WebProjectManagement
+		SccLocalPath2 = ..\\WebProjectManagement
+		SccProjectUniqueName3 = ..\\WebERP\\WebERP.csproj
+		SccProjectName3 = ../WebERP
+		SccLocalPath3 = ..\\WebERP
+		SccProjectUniqueName4 = ..\\ClassLibrary\\ClassLibrary.csproj
+		SccProjectName4 = ../ClassLibrary
+		SccLocalPath4 = ..\\ClassLibrary
+		SccProjectUniqueName5 = ..\\WebControllers\\WebControllers.csproj
+		SccProjectName5 = ../WebControllers
+		SccLocalPath5 = ..\\WebControllers
+		SccProjectUniqueName6 = ..\\WebBaseDefine\\WebBaseDefine.csproj
+		SccProjectName6 = ../WebBaseDefine
+		SccLocalPath6 = ..\\WebBaseDefine
+		SccProjectUniqueName7 = ..\\WebClassLibrary\\WebClassLibrary.csproj
+		SccProjectName7 = ../WebClassLibrary
+		SccLocalPath7 = ..\\WebClassLibrary
+	EndGlobalSection
+EndGlobal

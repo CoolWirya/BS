@@ -1,0 +1,472 @@
+/*ul .jqueryFileTree*/ 
+.gs_dir_list ul
+{
+	font-family: Verdana, sans-serif;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*ul .jqueryFileTree*/ 
+.gs_dir_list ul
+li {
+	list-style: none;
+	padding: 0px;
+	padding-left: 20px;
+	margin: 0px;
+	white-space: nowrap;
+    text-align:left;
+}
+
+.gs_dir_list ul a {
+	color: #333;
+	text-decoration: none;
+}
+
+.gs_dir_list ul a:hover {
+	background: #BDF;
+}
+
+.gs_dir_list {
+ float: left;
+ padding: 5px;
+ height: 100%;
+ border: 1px solid #BBBBBB;
+ width: 17%;
+ overflow: scroll;
+ background-color: white;
+}
+
+.gs_dir_content {
+ float: left;
+ padding-left: 10px;
+ height: 100%;
+ width: 80%;
+ overflow: scroll;
+}
+
+.gs_dir_content_menu {
+ padding: 0 0 10px 10px;	
+ border: 1px solid #BBBBBB;
+ background-color: white;
+ direction:ltr;
+}
+
+.gs_dir_content_button {
+    background: url("data:image/gif;base64,R0lGODlhKAAVAJEAAPn5+e7u7uPj4////yH5BAEAAAMALAAAAAAoABUAAAIxhI+py+0Po5y02ouz3rz7FoTiSJbmiabqGgruC8fyTNf2jef6zvf+DwwKh8Si8SgsAAA7") repeat-x scroll 0 0 transparent;
+    border: 1px outset #BBBBBB;
+    cursor: pointer;
+    margin-right: 7px;
+    font-weight: bold;
+    padding: 1px;
+    background-position: 0, 50;
+    text-decoration: none;
+    color: black;
+}
+
+.gs_dir_content_button:hover {
+	color: #EF7929;
+	border: 1px inset #BBBBBB;
+}
+
+.gs_dir_content_files {
+	height: 100%;
+	background-color: white;
+}
+
+#curDir {
+ height: 30px;
+ line-height: 30px;
+}
+
+.directory_info {
+ padding-left: 20px;	
+}
+
+.directory_info a {
+ text-decoration: none;	
+ font-weight: bold;
+}
+
+#rootLink {
+  display: none;
+}
+
+.loadingDiv {
+  width: 100%;
+  height: 100%;	
+  background: url(../../Images/Controls/gsfilemanager/loading.gif) center center no-repeat;
+}
+
+.demoto {
+	width: 100%; 
+	height: 100%;
+}
+
+.dir_index {
+  cursor: pointer;	
+}
+
+.toggleplus {
+	background: url(../../Images/Controls/gsfilemanager/toggle_plus.png) left top no-repeat;
+    float:left;
+}
+.toggleminus {
+	background: url(../../Images/Controls/gsfilemanager/toggle_minus.png) left top no-repeat;
+    float:left;
+}
+
+.dirs_files_table {
+ width: 100%;
+ direction:ltr;
+}
+.dirs_files_table th {
+	border: 1px solid #ccc;
+    text-align:center;
+
+	background: url("data:image/gif;base64,R0lGODlhKAAVAJEAAPn5+e7u7uPj4////yH5BAEAAAMALAAAAAAoABUAAAIxhI+py+0Po5y02ouz3rz7FoTiSJbmiabqGgruC8fyTNf2jef6zvf+DwwKh8Si8SgsAAA7") repeat-x scroll 0 0 transparent;
+}
+.dirs_files_table td {
+    text-align:center;
+}
+.file_ext_name {
+  font-weight: bold;	
+}
+
+.gsHeadTable {
+ width :100%;	
+}
+
+.gsHeadText {
+    background: url("data:image/gif;base64,R0lGODlhKAAVAJEAAPn5+e7u7uPj4////yH5BAEAAAMALAAAAAAoABUAAAIxhI+py+0Po5y02ouz3rz7FoTiSJbmiabqGgruC8fyTNf2jef6zvf+DwwKh8Si8SgsAAA7") repeat-x scroll 0 0 transparent;
+    border: 1px outset #BBBBBB;
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 1px;
+    background-position: 0, 50;
+}
+
+.rowSelected {
+	color: #FFF;
+	background-color: #c2c2c2;
+}
+
+.rowSelected a { 
+	color: #FFF;
+}
+
+.gs_delimiter {
+    height: 16px;
+    line-height: 16px;	
+}
+/* Core Styles */
+.directory { 
+ background-image:url(../../Images/Controls/gsfilemanager/directory.png);
+ background-repeat:no-repeat;
+ text-align:left;
+}
+
+.directoryMeny a { background: url(../../Images/Controls/gsfilemanager/directory.png) left top no-repeat; padding-left: 20px}
+/*.jqueryFileTree LI.expanded { background: url(../../Images/Controls/gsfilemanager/folder_open.png) 20px top no-repeat; }*/
+.file {  
+  background-image:url(../../Images/Controls/gsfilemanager/file.png);
+  background-repeat:no-repeat;
+  cursor: pointer;
+  }
+.jqueryFileTree LI.wait { background: url(../../Images/Controls/gsfilemanager/spinner.gif) left top no-repeat; }
+
+/* File Extensions*/
+.ext_3gp { 
+   background-image: url(../../Images/Controls/gsfilemanager/film.png) left top no-repeat;
+}
+.ext_afp { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png);  }
+.ext_afpa { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png);  }
+.ext_asp { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png);  }
+.ext_aspx { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png);  }
+.ext_avi { 
+	background-image: url(../../Images/Controls/gsfilemanager/film.png);  }
+.ext_bat { 
+	background-image: url(../../Images/Controls/gsfilemanager/application.png);  }
+.ext_bmp { 
+	background-image: url(../../Images/Controls/gsfilemanager/picture.png); 
+     text-align:left;
+}
+.ext_c { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png);  }
+.ext_cfm { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png); }
+.ext_cgi {
+	 background-image: url(../../Images/Controls/gsfilemanager/code.png); 
+      text-align:left;
+}
+.ext_com { 
+	background-image: url(../../Images/Controls/gsfilemanager/application.png);
+     text-align:left;
+}
+.ext_cpp { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png); 
+     text-align:left;
+}
+.ext_css { 
+	background-image: url(../../Images/Controls/gsfilemanager/css.png);  
+     text-align:left;
+}
+.ext_doc { 
+	background-image: url(../../Images/Controls/gsfilemanager/doc.png);
+     text-align:left;
+}
+.ext_exe { 
+	background-image: url(../../Images/Controls/gsfilemanager/application.png); 
+     text-align:left;
+}
+.ext_gif { 
+   background-image: url(../../Images/Controls/gsfilemanager/picture.png); 
+    text-align:left;
+}
+.ext_fla { 
+	background-image: url(../../Images/Controls/gsfilemanager/flash.png); }
+.ext_h { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png); 
+     text-align:left;
+}
+.ext_htm { 
+	background-image: url(../../Images/Controls/gsfilemanager/html.png); 
+     text-align:left;
+}
+.ext_html {
+	 background-image: url(../../Images/Controls/gsfilemanager/html.png); 
+      text-align:left;
+}
+.ext_jar { 
+	background-image: url(../../Images/Controls/gsfilemanager/java.png); 
+     text-align:left;
+}
+.ext_jpg { 
+	background-image: url(../../Images/Controls/gsfilemanager/picture.png);
+    text-align:left;
+}
+.ext_jpeg { 
+	background-image: url(../../Images/Controls/gsfilemanager/picture.png);  
+     text-align:left;
+}
+.ext_js { 
+	background-image: url(../../Images/Controls/gsfilemanager/script.png) ; 
+     text-align:left;
+}
+.ext_lasso { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png) ; 
+     text-align:left;
+}
+.ext_log { 
+	background-image: url(../../Images/Controls/gsfilemanager/txt.png) ;
+     text-align:left;
+}
+.ext_m4p { 
+	background-image: url(../../Images/Controls/gsfilemanager/music.png); 
+     text-align:left;
+}
+.ext_mov { 
+	background-image: url(../../Images/Controls/gsfilemanager/film.png); 
+     text-align:left;
+}
+.ext_mp3 {
+	 background-image: url(../../Images/Controls/gsfilemanager/music.png);
+      text-align:left;
+}
+.ext_mp4 { 
+	background-image: url(../../Images/Controls/gsfilemanager/film.png); 
+     text-align:left;
+}
+.ext_mpg { 
+	background-image: url(../../Images/Controls/gsfilemanager/film.png); 
+     text-align:left;
+}
+.ext_mpeg {
+	 background-image: url(../../Images/Controls/gsfilemanager/film.png); 
+      text-align:left;
+}
+.ext_ogg { 
+	background-image: url(../../Images/Controls/gsfilemanager/music.png); 
+     text-align:left;
+}
+.ext_pcx { 
+	background-image: url(../../Images/Controls/gsfilemanager/picture.png);  
+     text-align:left;
+}
+.ext_pdf {
+	 background-image: url(../../Images/Controls/gsfilemanager/pdf.png);
+      text-align:left;
+}
+.ext_php { 
+	background-image: url(../../Images/Controls/gsfilemanager/php.png); 
+     text-align:left;
+}
+.ext_png { 
+	background-image: url(../../Images/Controls/gsfilemanager/picture.png);
+     text-align:left;
+}
+.ext_ppt { 
+	background-image: url(../../Images/Controls/gsfilemanager/ppt.png); 
+     text-align:left;
+}
+.ext_psd { 
+	background-image: url(../../Images/Controls/gsfilemanager/psd.png);  
+     text-align:left;
+}
+.ext_pl { 
+	background-image: url(../../Images/Controls/gsfilemanager/script.png);
+     text-align:left;
+}
+.ext_py { 
+	background-image: url(../../Images/Controls/gsfilemanager/script.png) ;
+     text-align:left;
+}
+.ext_rb { 
+	background-image: url(../../Images/Controls/gsfilemanager/ruby.png);
+     text-align:left;
+}
+.ext_rbx { 
+	background-image: url(../../Images/Controls/gsfilemanager/ruby.png);  
+     text-align:left;
+}
+.ext_rhtml {
+	 background-image: url(../../Images/Controls/gsfilemanager/ruby.png);
+      text-align:left;
+}
+.ext_rpm { 
+	background-image: url(../../Images/Controls/gsfilemanager/linux.png);  
+     text-align:left;
+}
+.ext_ruby { 
+	background-image: url(../../Images/Controls/gsfilemanager/ruby.png);  
+     text-align:left;
+}
+.ext_sql { 
+	background-image: url(../../Images/Controls/gsfilemanager/db.png) ;
+     text-align:left;
+}
+.ext_swf { 
+	background-image: url(../../Images/Controls/gsfilemanager/flash.png);  
+     text-align:left;
+}
+.ext_tif { 
+	background-image: url(../../Images/Controls/gsfilemanager/picture.png); 
+     text-align:left;
+}
+.ext_tiff { 
+	background-image: url(../../Images/Controls/gsfilemanager/picture.png); 
+     text-align:left;
+
+}
+.ext_txt { 
+	background-image: url(../../Images/Controls/gsfilemanager/txt.png) ; 
+     text-align:left;
+}
+.ext_vb { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png) ; 
+     text-align:left;
+}
+.ext_wav { 
+	background-image: url(../../Images/Controls/gsfilemanager/music.png) ; 
+     text-align:left;
+}
+.ext_wmv { 
+	background-image: url(../../Images/Controls/gsfilemanager/film.png); 
+     text-align:left;
+}
+.ext_xls { 
+	background-image: url(../../Images/Controls/gsfilemanager/xls.png) ; 
+     text-align:left;
+}
+.ext_xml { 
+	background-image: url(../../Images/Controls/gsfilemanager/code.png) ;
+     text-align:left;
+}
+.ext_zip { 
+	background-image: url(../../Images/Controls/gsfilemanager/zip.png) ; 
+     text-align:left;
+}
+
+
+/* Generic context menu styles */
+#gsuploadfiles {
+    height:200px !important;
+    text-align:left;
+}
+.contextMenu {
+	position: absolute;
+	width: 160px;
+	z-index: 99999;
+	border: solid 1px #CCC;
+	background: #EEE;
+	padding: 0px;
+	margin: 0px;
+	display: none;
+    text-align:left;
+}
+
+.contextMenu LI {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.contextMenu A {
+	color: #333;
+	text-decoration: none;
+	display: block;
+	line-height: 20px;
+	height: 20px;
+	background-position: 6px center;
+	background-repeat: no-repeat;
+	outline: none;
+	padding: 1px 5px;
+	padding-left: 28px;
+}
+
+.contextMenu LI.hover A {
+	color: #FFF;
+	background-color: #3399FF;
+}
+
+.contextMenu LI.disabled A {
+	color: #AAA;
+	cursor: default;
+}
+
+.contextMenu LI.hover.disabled A {
+	background-color: transparent;
+}
+
+.contextMenu LI.separator {
+	border-top: solid 1px #CCC;
+}
+
+/*
+	Adding Icons
+	
+	You can add icons to the context menu by adding
+	classes to the respective LI element(s)
+*/
+
+.contextMenu LI.edit A { background-image: url(../../Images/Controls/gsfilemanager/page_white_edit.png); }
+.contextMenu LI.cut A { background-image: url(../../Images/Controls/gsfilemanager/cut.png); }
+.contextMenu LI.copy A { background-image: url(../../Images/Controls/gsfilemanager/page_white_copy.png); }
+.contextMenu LI.paste A { background-image: url(../../Images/Controls/gsfilemanager/page_white_paste.png); }
+.contextMenu LI.delete A { background-image: url(../../Images/Controls/gsfilemanager/cross.png); }
+.contextMenu LI.quit A { background-image: url(../../Images/Controls/gsfilemanager/door.png); }
+.contextMenu LI.directorymenu A { background-image: url(../../Images/Controls/gsfilemanager/folder_open.png); }
+.contextMenu LI.rename A { background-image: url(../../Images/Controls/gsfilemanager/file.png); }
+.contextMenu LI.download A { background-image: url(../../Images/Controls/gsfilemanager/disk.png); }
+.contextMenu LI.notepad A { background-image: url(../../Images/Controls/gsfilemanager/kwrite.png); }
+.contextMenu LI.picture A { background-image: url(../../Images/Controls/gsfilemanager/picture.png); }
+.contextMenu LI.newfile A { background-image: url(../../Images/Controls/gsfilemanager/new_file.png); }
+.contextMenu LI.newdir A { background-image: url(../../Images/Controls/gsfilemanager/new_dir.png); }
+.contextMenu LI.uploadfolder A { background-image: url(../../Images/Controls/gsfilemanager/upload_folder.png); }
+.contextMenu LI.selection A { background-image: url(../../Images/Controls/gsfilemanager/selection-select.png); }
+.contextMenu LI.zip A { background-image: url(../../Images/Controls/gsfilemanager/zip.png); }

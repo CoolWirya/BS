@@ -1,0 +1,2518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A3D2BBEE-1AED-4F5B-83F2-9E68A4047850}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebBusManagement</RootNamespace>
+    <AssemblyName>WebBusManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accounting">
+      <HintPath>..\..\..\..\Dlls\bin\Accounting.dll</HintPath>
+    </Reference>
+    <Reference Include="AndroidWebManagement">
+      <HintPath>..\..\..\..\Dlls\bin\AndroidWebManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\..\Dlls\bin\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation">
+      <HintPath>..\..\..\..\Dlls\bin\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="AUTOMOBILE">
+      <HintPath>..\..\..\..\Dlls\bin\AUTOMOBILE.dll</HintPath>
+    </Reference>
+    <Reference Include="AVL">
+      <HintPath>..\..\..\..\Dlls\bin\AVL.dll</HintPath>
+    </Reference>
+    <Reference Include="Chat">
+      <HintPath>..\..\..\..\Dlls\bin\Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>..\..\..\..\Dlls\bin\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment">
+      <HintPath>..\..\..\..\Dlls\bin\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Entertainment">
+      <HintPath>..\..\..\..\Dlls\bin\Entertainment.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\bin\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="Estates">
+      <HintPath>..\..\..\..\Dlls\bin\Estates.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=1.8.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars, Version=1.8.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor, Version=1.8.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\..\..\..\Dlls\bin\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals">
+      <HintPath>..\..\..\..\Dlls\bin\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>..\..\..\..\Dlls\bin\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>..\..\..\..\Dlls\bin\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ActiveDs">
+      <HintPath>..\..\..\..\Dlls\bin\Interop.ActiveDs.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.FilterEditor.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.FilterEditor.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Schedule.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.TimeLine.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="JComponents">
+      <HintPath>..\..\..\..\Dlls\bin\JComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="JJson">
+      <HintPath>..\..\..\..\Dlls\bin\JJson.dll</HintPath>
+    </Reference>
+    <Reference Include="JJsonService">
+      <HintPath>..\..\..\..\Dlls\bin\JJsonService.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\..\..\..\Dlls\bin\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net">
+      <HintPath>..\..\..\..\Dlls\bin\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagementShares">
+      <HintPath>..\..\..\..\Dlls\bin\ManagementShares.dll</HintPath>
+    </Reference>
+    <Reference Include="mCoreLib">
+      <HintPath>..\..\..\..\Dlls\bin\mCoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Meeting">
+      <HintPath>..\..\..\..\Dlls\bin\Meeting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Rajaei\WebBusManagement\bin\Microsoft.QualityTools.Testing.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCaptcha">
+      <HintPath>..\..\..\..\Dlls\bin\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Dlls\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\..\..\..\Dlls\bin\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateControls 2.0">
+      <HintPath>..\..\..\..\Dlls\bin\PersianDateControls 2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectManagement">
+      <HintPath>..\..\..\..\Dlls\bin\ProjectManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstate">
+      <HintPath>..\..\..\..\Dlls\bin\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="Restaurant">
+      <HintPath>..\..\..\..\Dlls\bin\Restaurant.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\..\..\Dlls\bin\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="ShareProfit">
+      <HintPath>..\..\..\..\Dlls\bin\ShareProfit.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartCard">
+      <HintPath>..\..\..\..\Dlls\bin\SmartCard.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\bin\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.MobileDesign">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.MobileDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WebDesign">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreComplex">
+      <HintPath>..\..\..\..\Dlls\bin\StoreComplex.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreManagement">
+      <HintPath>..\..\..\..\Dlls\bin\StoreManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\..\..\Rajaei\WebBusManagement\bin\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\Dlls\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.Device.Detection.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="TimePicker">
+      <HintPath>..\..\..\..\Dlls\bin\TimePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Touchless.Vision">
+      <HintPath>..\..\..\..\Dlls\bin\Touchless.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAccounting">
+      <HintPath>..\..\..\..\Dlls\bin\WebAccounting.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAutomation">
+      <HintPath>..\..\..\..\Dlls\bin\WebAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAVL">
+      <HintPath>..\..\..\..\Dlls\bin\WebAVL.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAVL.XmlSerializers">
+      <HintPath>..\..\..\..\Dlls\bin\WebAVL.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="WebBusManagement">
+      <HintPath>..\..\..\..\Dlls\bin\WebBusManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="WebCam_Capture">
+      <HintPath>..\..\..\..\Dlls\bin\WebCam_Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="WebERP">
+      <HintPath>..\..\..\..\Dlls\bin\WebERP.dll</HintPath>
+    </Reference>
+    <Reference Include="WebEstate">
+      <HintPath>..\..\..\..\Dlls\bin\WebEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="WebFinance">
+      <HintPath>..\..\..\..\Dlls\bin\WebFinance.dll</HintPath>
+    </Reference>
+    <Reference Include="WebLegal">
+      <HintPath>..\..\..\..\Dlls\bin\WebLegal.dll</HintPath>
+    </Reference>
+    <Reference Include="WebManagementShare">
+      <HintPath>..\..\..\..\Dlls\bin\WebManagementShare.dll</HintPath>
+    </Reference>
+    <Reference Include="WebProjectManagement">
+      <HintPath>..\..\..\..\Dlls\bin\WebProjectManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="WebRealEstate">
+      <HintPath>..\..\..\..\Dlls\bin\WebRealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="WebReport">
+      <HintPath>..\..\..\..\Dlls\bin\WebReport.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormsBaseNet\JBaseNetDefineUpdateControl.ascx.cs">
+      <DependentUpon>JBaseNetDefineUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsBaseNet\JBaseNetDefineUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBaseNetDefineUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsBaseNet\JBusNetGroup.ascx.cs">
+      <DependentUpon>JBusNetGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsBaseNet\JBusNetGroup.ascx.designer.cs">
+      <DependentUpon>JBusNetGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsBaseNet\JBusNetStateReportControl.ascx.cs">
+      <DependentUpon>JBusNetStateReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsBaseNet\JBusNetStateReportControl.ascx.designer.cs">
+      <DependentUpon>JBusNetStateReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsBaseNet\JDefineNetDefineUpdateControl.ascx.cs">
+      <DependentUpon>JDefineNetDefineUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsBaseNet\JDefineNetDefineUpdateControl.ascx.designer.cs">
+      <DependentUpon>JDefineNetDefineUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JApplyInvalidBusUpdateControl.ascx.cs">
+      <DependentUpon>JApplyInvalidBusUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JApplyInvalidBusUpdateControl.ascx.designer.cs">
+      <DependentUpon>JApplyInvalidBusUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusAvlFailureTransactionSendReportControl.ascx.cs">
+      <DependentUpon>JBusAvlFailureTransactionSendReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusAvlFailureTransactionSendReportControl.ascx.designer.cs">
+      <DependentUpon>JBusAvlFailureTransactionSendReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusBatteryChargeReportControl.ascx.cs">
+      <DependentUpon>JBusBatteryChargeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusBatteryChargeReportControl.ascx.designer.cs">
+      <DependentUpon>JBusBatteryChargeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusDetailsReportControl.ascx.cs">
+      <DependentUpon>JBusDetailsReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusDetailsReportControl.ascx.designer.cs">
+      <DependentUpon>JBusDetailsReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusDontSendPrintReportControl.ascx.cs">
+      <DependentUpon>JBusDontSendPrintReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusDontSendPrintReportControl.ascx.designer.cs">
+      <DependentUpon>JBusDontSendPrintReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusDontSendTicketDataReportControl.ascx.cs">
+      <DependentUpon>JBusDontSendTicketDataReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusDontSendTicketDataReportControl.ascx.designer.cs">
+      <DependentUpon>JBusDontSendTicketDataReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusDontSendTicketInTimeframeReportControl.ascx.cs">
+      <DependentUpon>JBusDontSendTicketInTimeframeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusDontSendTicketInTimeframeReportControl.ascx.designer.cs">
+      <DependentUpon>JBusDontSendTicketInTimeframeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusErrorDateTransactionReportControl.ascx.cs">
+      <DependentUpon>JBusErrorDateTransactionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusErrorDateTransactionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusErrorDateTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusErrorSendTransactionReportControl.ascx.cs">
+      <DependentUpon>JBusErrorSendTransactionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusErrorSendTransactionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusErrorSendTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusFailureDeviceIMEIReportControl.ascx.cs">
+      <DependentUpon>JBusFailureDeviceIMEIReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusFailureDeviceIMEIReportControl.ascx.designer.cs">
+      <DependentUpon>JBusFailureDeviceIMEIReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusFailureDoorsReportControl.ascx.cs">
+      <DependentUpon>JBusFailureDoorsReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusFailureDoorsReportControl.ascx.designer.cs">
+      <DependentUpon>JBusFailureDoorsReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusFailureIMEIReportControl.ascx.cs">
+      <DependentUpon>JBusFailureIMEIReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusFailureIMEIReportControl.ascx.designer.cs">
+      <DependentUpon>JBusFailureIMEIReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusGetReportFromConsoleUpdateControl.ascx.cs">
+      <DependentUpon>JBusGetReportFromConsoleUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusGetReportFromConsoleUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusGetReportFromConsoleUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusInstallAndUinstallDeviceReportControl.ascx.cs">
+      <DependentUpon>JBusInstallAndUinstallDeviceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusInstallAndUinstallDeviceReportControl.ascx.designer.cs">
+      <DependentUpon>JBusInstallAndUinstallDeviceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusInstallAndUinstallDeviceUpdateControl.ascx.cs">
+      <DependentUpon>JBusInstallAndUinstallDeviceUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusInstallAndUinstallDeviceUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusInstallAndUinstallDeviceUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusLastDataReportControl.ascx.cs">
+      <DependentUpon>JBusLastDataReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusLastDataReportControl.ascx.designer.cs">
+      <DependentUpon>JBusLastDataReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusNotActiveReportControl.ascx.cs">
+      <DependentUpon>JBusNotActiveReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusNotActiveReportControl.ascx.designer.cs">
+      <DependentUpon>JBusNotActiveReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusOwnerReportControl.ascx.cs">
+      <DependentUpon>JBusOwnerReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusOwnerReportControl.ascx.designer.cs">
+      <DependentUpon>JBusOwnerReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusQuerySendUpdateControl.ascx.cs">
+      <DependentUpon>JBusQuerySendUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusQuerySendUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusQuerySendUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSendAvlTransenctionReportControl.ascx.cs">
+      <DependentUpon>JBusSendAvlTransenctionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSendAvlTransenctionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSendAvlTransenctionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSendDataReportControl.ascx.cs">
+      <DependentUpon>JBusSendDataReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSendDataReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSendDataReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSendTicketCountRateReportControl.ascx.cs">
+      <DependentUpon>JBusSendTicketCountRateReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSendTicketCountRateReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSendTicketCountRateReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSendTicketTransenctionReportControl.ascx.cs">
+      <DependentUpon>JBusSendTicketTransenctionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSendTicketTransenctionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSendTicketTransenctionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSimCardChargeReportControl.ascx.cs">
+      <DependentUpon>JBusSimCardChargeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSimCardChargeReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSimCardChargeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSimChargedReportControl.ascx.cs">
+      <DependentUpon>JBusSimChargedReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSimChargedReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSimChargedReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusStatusCurrentlyReportControl.ascx.cs">
+      <DependentUpon>JBusStatusCurrentlyReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusStatusCurrentlyReportControl.ascx.designer.cs">
+      <DependentUpon>JBusStatusCurrentlyReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusStatusMonthlyReportControl.ascx.cs">
+      <DependentUpon>JBusStatusMonthlyReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusStatusMonthlyReportControl.ascx.designer.cs">
+      <DependentUpon>JBusStatusMonthlyReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSummaryPerformanceReportControl.ascx.cs">
+      <DependentUpon>JBusSummaryPerformanceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSummaryPerformanceReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSummaryPerformanceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSummaryTransactionReportControl.ascx.cs">
+      <DependentUpon>JBusSummaryTransactionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusSummaryTransactionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSummaryTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusTicketFailureBusNumberReportControl.ascx.cs">
+      <DependentUpon>JBusTicketFailureBusNumberReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusTicketFailureBusNumberReportControl.ascx.designer.cs">
+      <DependentUpon>JBusTicketFailureBusNumberReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusTicketFailureTransactionSendReportControl.ascx.cs">
+      <DependentUpon>JBusTicketFailureTransactionSendReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusTicketFailureTransactionSendReportControl.ascx.designer.cs">
+      <DependentUpon>JBusTicketFailureTransactionSendReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusUsedSimCardChargeReportControl.ascx.cs">
+      <DependentUpon>JBusUsedSimCardChargeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JBusUsedSimCardChargeReportControl.ascx.designer.cs">
+      <DependentUpon>JBusUsedSimCardChargeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JComparisonTicketTableAndExtractTableReportControl.ascx.cs">
+      <DependentUpon>JComparisonTicketTableAndExtractTableReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JComparisonTicketTableAndExtractTableReportControl.ascx.designer.cs">
+      <DependentUpon>JComparisonTicketTableAndExtractTableReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JComparisonTicketTExtractTAndDailyTReportControl.ascx.cs">
+      <DependentUpon>JComparisonTicketTExtractTAndDailyTReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JComparisonTicketTExtractTAndDailyTReportControl.ascx.designer.cs">
+      <DependentUpon>JComparisonTicketTExtractTAndDailyTReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JConsulHistoryReportControl.ascx.cs">
+      <DependentUpon>JConsulHistoryReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JConsulHistoryReportControl.ascx.designer.cs">
+      <DependentUpon>JConsulHistoryReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JDailyAndPrintComparisonReportControl.ascx.cs">
+      <DependentUpon>JDailyAndPrintComparisonReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JDailyAndPrintComparisonReportControl.ascx.designer.cs">
+      <DependentUpon>JDailyAndPrintComparisonReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JDefineQueryUpdateControl.ascx.cs">
+      <DependentUpon>JDefineQueryUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JDefineQueryUpdateControl.ascx.designer.cs">
+      <DependentUpon>JDefineQueryUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JDictionaryUpdateControl.ascx.cs">
+      <DependentUpon>JDictionaryUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JDictionaryUpdateControl.ascx.designer.cs">
+      <DependentUpon>JDictionaryUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JDuplicateRecordInDailyReportControl.ascx.cs">
+      <DependentUpon>JDuplicateRecordInDailyReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JDuplicateRecordInDailyReportControl.ascx.designer.cs">
+      <DependentUpon>JDuplicateRecordInDailyReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JGetQueryUpdateControl.ascx.cs">
+      <DependentUpon>JGetQueryUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JGetQueryUpdateControl.ascx.designer.cs">
+      <DependentUpon>JGetQueryUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusFailureUpdateControl.ascx.cs">
+      <DependentUpon>JInsertBusFailureUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusFailureUpdateControl.ascx.designer.cs">
+      <DependentUpon>JInsertBusFailureUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusOfflineFileGetDetaileReportControl.ascx.cs">
+      <DependentUpon>JInsertBusOfflineFileGetDetaileReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusOfflineFileGetDetaileReportControl.ascx.designer.cs">
+      <DependentUpon>JInsertBusOfflineFileGetDetaileReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusOfflineFileUpdateControl.ascx.cs">
+      <DependentUpon>JInsertBusOfflineFileUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusOfflineFileUpdateControl.ascx.designer.cs">
+      <DependentUpon>JInsertBusOfflineFileUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusTicketFailure.ascx.cs">
+      <DependentUpon>JInsertBusTicketFailure.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusTicketFailure.ascx.designer.cs">
+      <DependentUpon>JInsertBusTicketFailure.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusTicketTransactionUpdateControl.ascx.cs">
+      <DependentUpon>JInsertBusTicketTransactionUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInsertBusTicketTransactionUpdateControl.ascx.designer.cs">
+      <DependentUpon>JInsertBusTicketTransactionUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInvalidLinePriceReportControl.ascx.cs">
+      <DependentUpon>JInvalidLinePriceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JInvalidLinePriceReportControl.ascx.designer.cs">
+      <DependentUpon>JInvalidLinePriceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JPortalLastDataReportControl.ascx.cs">
+      <DependentUpon>JPortalLastDataReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JPortalLastDataReportControl.ascx.designer.cs">
+      <DependentUpon>JPortalLastDataReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMaintenance\JTotalPerformanceReportControl.ascx.cs">
+      <DependentUpon>JTotalPerformanceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsMaintenance\JTotalPerformanceReportControl.ascx.designer.cs">
+      <DependentUpon>JTotalPerformanceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JAccPaymentEditCommentUpdateControl.ascx.cs">
+      <DependentUpon>JAccPaymentEditCommentUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JAccPaymentEditCommentUpdateControl.ascx.designer.cs">
+      <DependentUpon>JAccPaymentEditCommentUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JAccDocumentsEditCommentUpdateControl.ascx.cs">
+      <DependentUpon>JAccDocumentsEditCommentUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JAccDocumentsEditCommentUpdateControl.ascx.designer.cs">
+      <DependentUpon>JAccDocumentsEditCommentUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JAccDocumentsEditUpdateControl.ascx.cs">
+      <DependentUpon>JAccDocumentsEditUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JAccDocumentsEditUpdateControl.ascx.designer.cs">
+      <DependentUpon>JAccDocumentsEditUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JAccDocumentsGetDetailReportControl.ascx.cs">
+      <DependentUpon>JAccDocumentsGetDetailReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JAccDocumentsGetDetailReportControl.ascx.designer.cs">
+      <DependentUpon>JAccDocumentsGetDetailReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JAccDocumentsTransferUpdateControl.ascx.cs">
+      <DependentUpon>JAccDocumentsTransferUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JAccDocumentsTransferUpdateControl.ascx.designer.cs">
+      <DependentUpon>JAccDocumentsTransferUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JAccountingBaseDefineReportControl.ascx.cs">
+      <DependentUpon>JAccountingBaseDefineReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JAccountingBaseDefineReportControl.ascx.designer.cs">
+      <DependentUpon>JAccountingBaseDefineReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JAccountingReview.ascx.cs">
+      <DependentUpon>JAccountingReview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JAccountingReview.ascx.designer.cs">
+      <DependentUpon>JAccountingReview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JAccountReviewReportControl.ascx.cs">
+      <DependentUpon>JAccountReviewReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JAccountReviewReportControl.ascx.designer.cs">
+      <DependentUpon>JAccountReviewReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JActivityandEventPairingControl.ascx.cs">
+      <DependentUpon>JActivityandEventPairingControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JActivityandEventPairingControl.ascx.designer.cs">
+      <DependentUpon>JActivityandEventPairingControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBazrasServiceUpdateControl.ascx.cs">
+      <DependentUpon>JBazrasServiceUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBazrasServiceUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBazrasServiceUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBusEventDetailesUpdateControl.ascx.cs">
+      <DependentUpon>JBusEventDetailesUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusEventDetailesUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusEventDetailesUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBusEventPlaceUpdateControl.ascx.cs">
+      <DependentUpon>JBusEventPlaceUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusEventPlaceUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusEventPlaceUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBusEventRegisterUpdateControl.ascx.cs">
+      <DependentUpon>JBusEventRegisterUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusEventRegisterUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusEventRegisterUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBusEventUpdateControl.ascx.cs">
+      <DependentUpon>JBusEventUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusEventUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusEventUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBusPayOffUpdateControl.ascx.cs">
+      <DependentUpon>JBusPayOffUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusPayOffUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusPayOffUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBusSendEventUpdateControl.ascx.cs">
+      <DependentUpon>JBusSendEventUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusSendEventUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusSendEventUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBusSendLineUpdateControl.ascx.cs">
+      <DependentUpon>JBusSendLineUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusSendLineUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusSendLineUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JCardBlackListUpdateControl.ascx.cs">
+      <DependentUpon>JCardBlackListUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JCardBlackListUpdateControl.ascx.designer.cs">
+      <DependentUpon>JCardBlackListUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JCityBankAccDocumentsGetDetailReportControl.ascx.cs">
+      <DependentUpon>JCityBankAccDocumentsGetDetailReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JCityBankAccDocumentsGetDetailReportControl.ascx.designer.cs">
+      <DependentUpon>JCityBankAccDocumentsGetDetailReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JCityBankPaymentsGetFile.ascx.cs">
+      <DependentUpon>JCityBankPaymentsGetFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JCityBankPaymentsGetFile.ascx.designer.cs">
+      <DependentUpon>JCityBankPaymentsGetFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JContractorAccountUpdateControl.ascx.cs">
+      <DependentUpon>JContractorAccountUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JContractorAccountUpdateControl.ascx.designer.cs">
+      <DependentUpon>JContractorAccountUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JCopyHolidaysToNextYearUpdateControl.ascx.cs">
+      <DependentUpon>JCopyHolidaysToNextYearUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JCopyHolidaysToNextYearUpdateControl.ascx.designer.cs">
+      <DependentUpon>JCopyHolidaysToNextYearUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JDeleteApplyControl.ascx.cs">
+      <DependentUpon>JDeleteApplyControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JDeleteApplyControl.ascx.designer.cs">
+      <DependentUpon>JDeleteApplyControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JDocumentsGetDetailReportControl.ascx.cs">
+      <DependentUpon>JDocumentsGetDetailReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JDocumentsGetDetailReportControl.ascx.designer.cs">
+      <DependentUpon>JDocumentsGetDetailReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JDocumentsGetDocumentZoneFile.ascx.cs">
+      <DependentUpon>JDocumentsGetDocumentZoneFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JDocumentsGetDocumentZoneFile.ascx.designer.cs">
+      <DependentUpon>JDocumentsGetDocumentZoneFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JDriversLoginLogoutUpdateControl.ascx.cs">
+      <DependentUpon>JDriversLoginLogoutUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JDriversLoginLogoutUpdateControl.ascx.designer.cs">
+      <DependentUpon>JDriversLoginLogoutUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JDriversUpdateControl.ascx.cs">
+      <DependentUpon>JDriversUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JDriversUpdateControl.ascx.designer.cs">
+      <DependentUpon>JDriversUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JEzamBeUpdateControl.ascx.cs">
+      <DependentUpon>JEzamBeUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JEzamBeUpdateControl.ascx.designer.cs">
+      <DependentUpon>JEzamBeUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JHokmeKarUpdateControl.ascx.cs">
+      <DependentUpon>JHokmeKarUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JHokmeKarUpdateControl.ascx.designer.cs">
+      <DependentUpon>JHokmeKarUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JHolidaysUpdateControl.ascx.cs">
+      <DependentUpon>JHolidaysUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JHolidaysUpdateControl.ascx.designer.cs">
+      <DependentUpon>JHolidaysUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JInstallmentUpdateControl.ascx.cs">
+      <DependentUpon>JInstallmentUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JInstallmentUpdateControl.ascx.designer.cs">
+      <DependentUpon>JInstallmentUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JLineInsertTransactionCountUpdateControl.ascx.cs">
+      <DependentUpon>JLineInsertTransactionCountUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JLineInsertTransactionCountUpdateControl.ascx.designer.cs">
+      <DependentUpon>JLineInsertTransactionCountUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JLinePathBackUpdateControl.ascx.cs">
+      <DependentUpon>JLinePathBackUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JLinePathBackUpdateControl.ascx.designer.cs">
+      <DependentUpon>JLinePathBackUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JLinePathCircularUpdateControl.ascx.cs">
+      <DependentUpon>JLinePathCircularUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JLinePathCircularUpdateControl.ascx.designer.cs">
+      <DependentUpon>JLinePathCircularUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JLinePathUpdateControl.ascx.cs">
+      <DependentUpon>JLinePathUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JLinePathUpdateControl.ascx.designer.cs">
+      <DependentUpon>JLinePathUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JLinesServicesUpdateControl.ascx.cs">
+      <DependentUpon>JLinesServicesUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JLinesServicesUpdateControl.ascx.designer.cs">
+      <DependentUpon>JLinesServicesUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JMapSetting.ascx.cs">
+      <DependentUpon>JMapSetting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JMapSetting.ascx.designer.cs">
+      <DependentUpon>JMapSetting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JNotPayingBusBlackListUpdatecontrol.ascx.cs">
+      <DependentUpon>JNotPayingBusBlackListUpdatecontrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JNotPayingBusBlackListUpdatecontrol.ascx.designer.cs">
+      <DependentUpon>JNotPayingBusBlackListUpdatecontrol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JOnAccountFormUpdateControl.ascx.cs">
+      <DependentUpon>JOnAccountFormUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JOnAccountFormUpdateControl.ascx.designer.cs">
+      <DependentUpon>JOnAccountFormUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JOnlineMapNew.ascx.cs">
+      <DependentUpon>JOnlineMapNew.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JOnlineMapNew.ascx.designer.cs">
+      <DependentUpon>JOnlineMapNew.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JOnlinePath.ascx.cs">
+      <DependentUpon>JOnlinePath.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JOnlinePath.ascx.designer.cs">
+      <DependentUpon>JOnlinePath.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JOwnerChangeUpdateControl.ascx.cs">
+      <DependentUpon>JOwnerChangeUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JOwnerChangeUpdateControl.ascx.designer.cs">
+      <DependentUpon>JOwnerChangeUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JOwnersFinancialTransferUpdateControl.ascx.cs">
+      <DependentUpon>JOwnersFinancialTransferUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JOwnersFinancialTransferUpdateControl.ascx.designer.cs">
+      <DependentUpon>JOwnersFinancialTransferUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentGetDetailReportControl.ascx.cs">
+      <DependentUpon>JPaymentGetDetailReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentGetDetailReportControl.ascx.designer.cs">
+      <DependentUpon>JPaymentGetDetailReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentMadehUpdateControl.ascx.cs">
+      <DependentUpon>JPaymentMadehUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentMadehUpdateControl.ascx.designer.cs">
+      <DependentUpon>JPaymentMadehUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsGetAccountingFile.ascx.cs">
+      <DependentUpon>JPaymentsGetAccountingFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsGetAccountingFile.ascx.designer.cs">
+      <DependentUpon>JPaymentsGetAccountingFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsGetFile.ascx.cs">
+      <DependentUpon>JPaymentsGetFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsGetFile.ascx.designer.cs">
+      <DependentUpon>JPaymentsGetFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsGetZoneFile.ascx.cs">
+      <DependentUpon>JPaymentsGetZoneFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsGetZoneFile.ascx.designer.cs">
+      <DependentUpon>JPaymentsGetZoneFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JRTPISFileDownloadUpdateControl.ascx.cs">
+      <DependentUpon>JRTPISFileDownloadUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JRTPISFileDownloadUpdateControl.ascx.designer.cs">
+      <DependentUpon>JRTPISFileDownloadUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JRTPISTextUpdateControl.ascx.cs">
+      <DependentUpon>JRTPISTextUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JRTPISTextUpdateControl.ascx.designer.cs">
+      <DependentUpon>JRTPISTextUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JSendMessageToConsoleUpdateControl.ascx.cs">
+      <DependentUpon>JSendMessageToConsoleUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JSendMessageToConsoleUpdateControl.ascx.designer.cs">
+      <DependentUpon>JSendMessageToConsoleUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JSendSmsUpdateControl.ascx.cs">
+      <DependentUpon>JSendSmsUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JSendSmsUpdateControl.ascx.designer.cs">
+      <DependentUpon>JSendSmsUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JServiceTurnUpdateControl.ascx.cs">
+      <DependentUpon>JServiceTurnUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JServiceTurnUpdateControl.ascx.designer.cs">
+      <DependentUpon>JServiceTurnUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JShiftsUpdateControl.ascx.cs">
+      <DependentUpon>JShiftsUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JShiftsUpdateControl.ascx.designer.cs">
+      <DependentUpon>JShiftsUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JTaghsitMandehHesabUpdateControl.ascx.cs">
+      <DependentUpon>JTaghsitMandehHesabUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JTaghsitMandehHesabUpdateControl.ascx.designer.cs">
+      <DependentUpon>JTaghsitMandehHesabUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JTariffHokmeKarBaseDefineUpdateControl.ascx.cs">
+      <DependentUpon>JTariffHokmeKarBaseDefineUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JTariffHokmeKarBaseDefineUpdateControl.ascx.designer.cs">
+      <DependentUpon>JTariffHokmeKarBaseDefineUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JTarrifEmptyPrintUpdateControl.ascx.cs">
+      <DependentUpon>JTarrifEmptyPrintUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JTarrifEmptyPrintUpdateControl.ascx.designer.cs">
+      <DependentUpon>JTarrifEmptyPrintUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JTarrifHokmeKarUpdateControl.ascx.cs">
+      <DependentUpon>JTarrifHokmeKarUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JTarrifHokmeKarUpdateControl.ascx.designer.cs">
+      <DependentUpon>JTarrifHokmeKarUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JTicketCardUpdateControl.ascx.cs">
+      <DependentUpon>JTicketCardUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JTicketCardUpdateControl.ascx.designer.cs">
+      <DependentUpon>JTicketCardUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JUnpaidBlackListReportControl.ascx.cs">
+      <DependentUpon>JUnpaidBlackListReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JUnpaidBlackListReportControl.ascx.designer.cs">
+      <DependentUpon>JUnpaidBlackListReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JTarahanAccountUpdateControl.ascx.cs">
+      <DependentUpon>JTarahanAccountUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JTarahanAccountUpdateControl.ascx.designer.cs">
+      <DependentUpon>JTarahanAccountUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsGetAccountingFileexcel.ascx.cs">
+      <DependentUpon>JPaymentsGetAccountingFileexcel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsGetAccountingFileexcel.ascx.designer.cs">
+      <DependentUpon>JPaymentsGetAccountingFileexcel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\GettheEqualizationFile.ascx.cs">
+      <DependentUpon>GettheEqualizationFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\GettheEqualizationFile.ascx.designer.cs">
+      <DependentUpon>GettheEqualizationFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JAllBusPerformanceCalenderReportControl.ascx.cs">
+      <DependentUpon>JAllBusPerformanceCalenderReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JAllBusPerformanceCalenderReportControl.ascx.designer.cs">
+      <DependentUpon>JAllBusPerformanceCalenderReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBazrasServiceReportControl.ascx.cs">
+      <DependentUpon>JBazrasServiceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBazrasServiceReportControl.ascx.designer.cs">
+      <DependentUpon>JBazrasServiceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusAVLCutReportControl.ascx.cs">
+      <DependentUpon>JBusAVLCutReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusAVLCutReportControl.ascx.designer.cs">
+      <DependentUpon>JBusAVLCutReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusAvlTransenctionReportControl.ascx.cs">
+      <DependentUpon>JBusAvlTransenctionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusAvlTransenctionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusAvlTransenctionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusConsoleAndPortalTransactionReportControl.ascx.cs">
+      <DependentUpon>JBusConsoleAndPortalTransactionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusConsoleAndPortalTransactionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusConsoleAndPortalTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusDailyPrintPaymentReportControl.ascx.cs">
+      <DependentUpon>JBusDailyPrintPaymentReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusDailyPrintPaymentReportControl.ascx.designer.cs">
+      <DependentUpon>JBusDailyPrintPaymentReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusDontLoginReportControl.ascx.cs">
+      <DependentUpon>JBusDontLoginReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusDontLoginReportControl.ascx.designer.cs">
+      <DependentUpon>JBusDontLoginReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusFirstLastStationReportControl.ascx.cs">
+      <DependentUpon>JBusFirstLastStationReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusFirstLastStationReportControl.ascx.designer.cs">
+      <DependentUpon>JBusFirstLastStationReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusGetEqualizationFile.ascx.cs">
+      <DependentUpon>JBusGetEqualizationFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusGetEqualizationFile.ascx.designer.cs">
+      <DependentUpon>JBusGetEqualizationFile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusHokmeKarTarrifDifReportControl.ascx.cs">
+      <DependentUpon>JBusHokmeKarTarrifDifReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusHokmeKarTarrifDifReportControl.ascx.designer.cs">
+      <DependentUpon>JBusHokmeKarTarrifDifReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusInfractionShowMapUpdateControl.ascx.cs">
+      <DependentUpon>JBusInfractionShowMapUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusInfractionShowMapUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusInfractionShowMapUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusPerformanceYearlyReportControl.ascx.cs">
+      <DependentUpon>JBusPerformanceYearlyReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusPerformanceYearlyReportControl.ascx.designer.cs">
+      <DependentUpon>JBusPerformanceYearlyReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusServiceWithoutTransactionReportControl.ascx.cs">
+      <DependentUpon>JBusServiceWithoutTransactionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusServiceWithoutTransactionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusServiceWithoutTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JComparativeServiceReportControl.ascx.cs">
+      <DependentUpon>JComparativeServiceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JComparativeServiceReportControl.ascx.designer.cs">
+      <DependentUpon>JComparativeServiceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDailyAccReviewReportControl.ascx.cs">
+      <DependentUpon>JDailyAccReviewReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDailyAccReviewReportControl.ascx.designer.cs">
+      <DependentUpon>JDailyAccReviewReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDocumentGardeshReportControl.ascx.cs">
+      <DependentUpon>JDocumentGardeshReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDocumentGardeshReportControl.ascx.designer.cs">
+      <DependentUpon>JDocumentGardeshReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDocumentMoeinReportControl.ascx.cs">
+      <DependentUpon>JDocumentMoeinReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDocumentMoeinReportControl.ascx.designer.cs">
+      <DependentUpon>JDocumentMoeinReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDriverInfractionReportControl.ascx.cs">
+      <DependentUpon>JDriverInfractionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDriverInfractionReportControl.ascx.designer.cs">
+      <DependentUpon>JDriverInfractionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusInputOutputLine.ascx.cs">
+      <DependentUpon>JBusInputOutputLine.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusInputOutputLine.ascx.designer.cs">
+      <DependentUpon>JBusInputOutputLine.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusLineStationPositionReportControl.ascx.cs">
+      <DependentUpon>JBusLineStationPositionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusLineStationPositionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusLineStationPositionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusNotWorkInHokmeKarReportControl.ascx.cs">
+      <DependentUpon>JBusNotWorkInHokmeKarReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusNotWorkInHokmeKarReportControl.ascx.designer.cs">
+      <DependentUpon>JBusNotWorkInHokmeKarReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusPassingStationReportControl.ascx.cs">
+      <DependentUpon>JBusPassingStationReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusPassingStationReportControl.ascx.designer.cs">
+      <DependentUpon>JBusPassingStationReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusPassingStationShowPointUpdateControl.ascx.cs">
+      <DependentUpon>JBusPassingStationShowPointUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusPassingStationShowPointUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusPassingStationShowPointUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusPassingStationTicketReportControl.ascx.cs">
+      <DependentUpon>JBusPassingStationTicketReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusPassingStationTicketReportControl.ascx.designer.cs">
+      <DependentUpon>JBusPassingStationTicketReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusPerformanceAccountingReportControl.ascx.cs">
+      <DependentUpon>JBusPerformanceAccountingReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusPerformanceAccountingReportControl.ascx.designer.cs">
+      <DependentUpon>JBusPerformanceAccountingReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusPerformanceCalenderReportControl.ascx.cs">
+      <DependentUpon>JBusPerformanceCalenderReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusPerformanceCalenderReportControl.ascx.designer.cs">
+      <DependentUpon>JBusPerformanceCalenderReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusPerformanceReportControl.ascx.cs">
+      <DependentUpon>JBusPerformanceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusPerformanceReportControl.ascx.designer.cs">
+      <DependentUpon>JBusPerformanceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusRetardationReportControl.ascx.cs">
+      <DependentUpon>JBusRetardationReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusRetardationReportControl.ascx.designer.cs">
+      <DependentUpon>JBusRetardationReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusServiceReportControl.ascx.cs">
+      <DependentUpon>JBusServiceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusServiceReportControl.ascx.designer.cs">
+      <DependentUpon>JBusServiceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusServiceShowMapUpdateControl.ascx.cs">
+      <DependentUpon>JBusServiceShowMapUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusServiceShowMapUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusServiceShowMapUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusSpeedAverageReportControl.ascx.cs">
+      <DependentUpon>JBusSpeedAverageReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusSpeedAverageReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSpeedAverageReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusTimeStopsAtTheStation.ascx.cs">
+      <DependentUpon>JBusTimeStopsAtTheStation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusTimeStopsAtTheStation.ascx.designer.cs">
+      <DependentUpon>JBusTimeStopsAtTheStation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusTransactionLowerReportControl.ascx.cs">
+      <DependentUpon>JBusTransactionLowerReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusTransactionLowerReportControl.ascx.designer.cs">
+      <DependentUpon>JBusTransactionLowerReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusTransactionReportControl.ascx.cs">
+      <DependentUpon>JBusTransactionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusTransactionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JBusWorkSheetReportControl.ascx.cs">
+      <DependentUpon>JBusWorkSheetReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JBusWorkSheetReportControl.ascx.designer.cs">
+      <DependentUpon>JBusWorkSheetReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDailyFleetPerformanceCalenderReportControl.ascx.cs">
+      <DependentUpon>JDailyFleetPerformanceCalenderReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDailyFleetPerformanceCalenderReportControl.ascx.designer.cs">
+      <DependentUpon>JDailyFleetPerformanceCalenderReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDailyReport.ascx.cs">
+      <DependentUpon>JDailyReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDailyReport.ascx.designer.cs">
+      <DependentUpon>JDailyReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDistanceMesureReportControl.ascx.cs">
+      <DependentUpon>JDistanceMesureReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDistanceMesureReportControl.ascx.designer.cs">
+      <DependentUpon>JDistanceMesureReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDocumentAndPaymentReportControl.ascx.cs">
+      <DependentUpon>JDocumentAndPaymentReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDocumentAndPaymentReportControl.ascx.designer.cs">
+      <DependentUpon>JDocumentAndPaymentReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDriverCrossingFromStopReportControl.ascx.cs">
+      <DependentUpon>JDriverCrossingFromStopReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDriverCrossingFromStopReportControl.ascx.designer.cs">
+      <DependentUpon>JDriverCrossingFromStopReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDriverKarkardTariffSheetReportControl.ascx.cs">
+      <DependentUpon>JDriverKarkardTariffSheetReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDriverKarkardTariffSheetReportControl.ascx.designer.cs">
+      <DependentUpon>JDriverKarkardTariffSheetReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDriverMonthlyKarkardReportControl.ascx.cs">
+      <DependentUpon>JDriverMonthlyKarkardReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDriverMonthlyKarkardReportControl.ascx.designer.cs">
+      <DependentUpon>JDriverMonthlyKarkardReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDriverPaymentReportControl.ascx.cs">
+      <DependentUpon>JDriverPaymentReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDriverPaymentReportControl.ascx.designer.cs">
+      <DependentUpon>JDriverPaymentReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDriverPerformanceReportControl.ascx.cs">
+      <DependentUpon>JDriverPerformanceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDriverPerformanceReportControl.ascx.designer.cs">
+      <DependentUpon>JDriverPerformanceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDriverServicesReportControl.ascx.cs">
+      <DependentUpon>JDriverServicesReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDriverServicesReportControl.ascx.designer.cs">
+      <DependentUpon>JDriverServicesReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDriversLoginLogoutReportControl.ascx.cs">
+      <DependentUpon>JDriversLoginLogoutReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDriversLoginLogoutReportControl.ascx.designer.cs">
+      <DependentUpon>JDriversLoginLogoutReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JDriverTrepassFromLineReportControl.ascx.cs">
+      <DependentUpon>JDriverTrepassFromLineReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JDriverTrepassFromLineReportControl.ascx.designer.cs">
+      <DependentUpon>JDriverTrepassFromLineReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JEzamBeReportControl.ascx.cs">
+      <DependentUpon>JEzamBeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JEzamBeReportControl.ascx.designer.cs">
+      <DependentUpon>JEzamBeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JGardeshReportControl.ascx.cs">
+      <DependentUpon>JGardeshReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JGardeshReportControl.ascx.designer.cs">
+      <DependentUpon>JGardeshReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JGroundDeviceTicketReportShowDataReportControl.ascx.cs">
+      <DependentUpon>JGroundDeviceTicketReportShowDataReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JGroundDeviceTicketReportShowDataReportControl.ascx.designer.cs">
+      <DependentUpon>JGroundDeviceTicketReportShowDataReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JHokmeKarReportControl.ascx.cs">
+      <DependentUpon>JHokmeKarReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JHokmeKarReportControl.ascx.designer.cs">
+      <DependentUpon>JHokmeKarReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JInsertAutLineStationUpdateControl.ascx.cs">
+      <DependentUpon>JInsertAutLineStationUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JInsertAutLineStationUpdateControl.ascx.designer.cs">
+      <DependentUpon>JInsertAutLineStationUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JLinePerformanceAverageReportControl.ascx.cs">
+      <DependentUpon>JLinePerformanceAverageReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JLinePerformanceAverageReportControl.ascx.designer.cs">
+      <DependentUpon>JLinePerformanceAverageReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JLinePeriodPaymentReportControl.ascx.cs">
+      <DependentUpon>JLinePeriodPaymentReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JLinePeriodPaymentReportControl.ascx.designer.cs">
+      <DependentUpon>JLinePeriodPaymentReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JLineSpeedAverageReportControl.ascx.cs">
+      <DependentUpon>JLineSpeedAverageReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JLineSpeedAverageReportControl.ascx.designer.cs">
+      <DependentUpon>JLineSpeedAverageReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JLinesTransactionAndIncomeReportControl.ascx.cs">
+      <DependentUpon>JLinesTransactionAndIncomeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JLinesTransactionAndIncomeReportControl.ascx.designer.cs">
+      <DependentUpon>JLinesTransactionAndIncomeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JMoeinReportControl.ascx.cs">
+      <DependentUpon>JMoeinReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JMoeinReportControl.ascx.designer.cs">
+      <DependentUpon>JMoeinReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JMonthlyAccReviewReportControl.ascx.cs">
+      <DependentUpon>JMonthlyAccReviewReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JMonthlyAccReviewReportControl.ascx.designer.cs">
+      <DependentUpon>JMonthlyAccReviewReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JNoAVLBusesReportControl.ascx.cs">
+      <DependentUpon>JNoAVLBusesReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JNoAVLBusesReportControl.ascx.designer.cs">
+      <DependentUpon>JNoAVLBusesReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JNumOfPerformanceDayDetailsReportControl.ascx.cs">
+      <DependentUpon>JNumOfPerformanceDayDetailsReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JNumOfPerformanceDayDetailsReportControl.ascx.designer.cs">
+      <DependentUpon>JNumOfPerformanceDayDetailsReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JNumOfPerformanceDayReportControl.ascx.cs">
+      <DependentUpon>JNumOfPerformanceDayReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JNumOfPerformanceDayReportControl.ascx.designer.cs">
+      <DependentUpon>JNumOfPerformanceDayReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JOnlineMapPanel.ascx.cs">
+      <DependentUpon>JOnlineMapPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JOnlineMapPanel.ascx.designer.cs">
+      <DependentUpon>JOnlineMapPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JOverPayReportControl.ascx.cs">
+      <DependentUpon>JOverPayReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JOverPayReportControl.ascx.designer.cs">
+      <DependentUpon>JOverPayReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JOvertimeTariffReportControl.ascx.cs">
+      <DependentUpon>JOvertimeTariffReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JOvertimeTariffReportControl.ascx.designer.cs">
+      <DependentUpon>JOvertimeTariffReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JOwnerBusReportControl.ascx.cs">
+      <DependentUpon>JOwnerBusReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JOwnerBusReportControl.ascx.designer.cs">
+      <DependentUpon>JOwnerBusReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JOwnerPaymentReportControl.ascx.cs">
+      <DependentUpon>JOwnerPaymentReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JOwnerPaymentReportControl.ascx.designer.cs">
+      <DependentUpon>JOwnerPaymentReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JPassengerCardRemainChargeReportControl.ascx.cs">
+      <DependentUpon>JPassengerCardRemainChargeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JPassengerCardRemainChargeReportControl.ascx.designer.cs">
+      <DependentUpon>JPassengerCardRemainChargeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JPassengerCardReportControl.ascx.cs">
+      <DependentUpon>JPassengerCardReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JPassengerCardReportControl.ascx.designer.cs">
+      <DependentUpon>JPassengerCardReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JPaymentDetaileReportControl.ascx.cs">
+      <DependentUpon>JPaymentDetaileReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JPaymentDetaileReportControl.ascx.designer.cs">
+      <DependentUpon>JPaymentDetaileReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JPaymentedDocumentReportControl.ascx.cs">
+      <DependentUpon>JPaymentedDocumentReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JPaymentedDocumentReportControl.ascx.designer.cs">
+      <DependentUpon>JPaymentedDocumentReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JPeriodPaymentReportControl.ascx.cs">
+      <DependentUpon>JPeriodPaymentReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JPeriodPaymentReportControl.ascx.designer.cs">
+      <DependentUpon>JPeriodPaymentReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JRTPISReportControl.ascx.cs">
+      <DependentUpon>JRTPISReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JRTPISReportControl.ascx.designer.cs">
+      <DependentUpon>JRTPISReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JRTPISUpdateBoardReportControl.ascx.cs">
+      <DependentUpon>JRTPISUpdateBoardReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JRTPISUpdateBoardReportControl.ascx.designer.cs">
+      <DependentUpon>JRTPISUpdateBoardReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JServicingStatusReportControl.ascx.cs">
+      <DependentUpon>JServicingStatusReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JServicingStatusReportControl.ascx.designer.cs">
+      <DependentUpon>JServicingStatusReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JSmsSendReportControl.ascx.cs">
+      <DependentUpon>JSmsSendReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JSmsSendReportControl.ascx.designer.cs">
+      <DependentUpon>JSmsSendReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JStationAndPathConflictReportControl.ascx.cs">
+      <DependentUpon>JStationAndPathConflictReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JStationAndPathConflictReportControl.ascx.designer.cs">
+      <DependentUpon>JStationAndPathConflictReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JStationPassCalenderReportControl.ascx.cs">
+      <DependentUpon>JStationPassCalenderReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JStationPassCalenderReportControl.ascx.designer.cs">
+      <DependentUpon>JStationPassCalenderReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JStationTicketReportControl.ascx.cs">
+      <DependentUpon>JStationTicketReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JStationTicketReportControl.ascx.designer.cs">
+      <DependentUpon>JStationTicketReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JTafziliReportControl.ascx.cs">
+      <DependentUpon>JTafziliReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JTafziliReportControl.ascx.designer.cs">
+      <DependentUpon>JTafziliReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JTariffReportControl.ascx.cs">
+      <DependentUpon>JTariffReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JTariffReportControl.ascx.designer.cs">
+      <DependentUpon>JTariffReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JTariffServiceConflictReportControl.ascx.cs">
+      <DependentUpon>JTariffServiceConflictReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JTariffServiceConflictReportControl.ascx.designer.cs">
+      <DependentUpon>JTariffServiceConflictReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JTarrifCalenderReportControl.ascx.cs">
+      <DependentUpon>JTarrifCalenderReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JTarrifCalenderReportControl.ascx.designer.cs">
+      <DependentUpon>JTarrifCalenderReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JTasfieMandehHesabReportControl.ascx.cs">
+      <DependentUpon>JTasfieMandehHesabReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JTasfieMandehHesabReportControl.ascx.designer.cs">
+      <DependentUpon>JTasfieMandehHesabReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JTasfieMethodReportControl.ascx.cs">
+      <DependentUpon>JTasfieMethodReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JTasfieMethodReportControl.ascx.designer.cs">
+      <DependentUpon>JTasfieMethodReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JTransactionsDetailsReportControl.ascx.cs">
+      <DependentUpon>JTransactionsDetailsReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JTransactionsDetailsReportControl.ascx.designer.cs">
+      <DependentUpon>JTransactionsDetailsReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JUndefinedDriversBusReportControl.ascx.cs">
+      <DependentUpon>JUndefinedDriversBusReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JUndefinedDriversBusReportControl.ascx.designer.cs">
+      <DependentUpon>JUndefinedDriversBusReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JUnpaidBlackListReportControl.ascx.cs">
+      <DependentUpon>JUnpaidBlackListReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JUnpaidBlackListReportControl.ascx.designer.cs">
+      <DependentUpon>JUnpaidBlackListReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JZonesTransactionAndIncomeReportControl.ascx.cs">
+      <DependentUpon>JZonesTransactionAndIncomeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JZonesTransactionAndIncomeReportControl.ascx.designer.cs">
+      <DependentUpon>JZonesTransactionAndIncomeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JCompareBusPerformance.ascx.cs">
+      <DependentUpon>JCompareBusPerformance.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JCompareBusPerformance.ascx.designer.cs">
+      <DependentUpon>JCompareBusPerformance.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsReports\JConsoleOffloadReport.ascx.cs">
+      <DependentUpon>JConsoleOffloadReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsReports\JConsoleOffloadReport.ascx.designer.cs">
+      <DependentUpon>JConsoleOffloadReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JAvlTransactionStatisticalReportControl.ascx.cs">
+      <DependentUpon>JAvlTransactionStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JAvlTransactionStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JAvlTransactionStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusMinMaxServiceStatisticalReportControl.ascx.cs">
+      <DependentUpon>JBusMinMaxServiceStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusMinMaxServiceStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JBusMinMaxServiceStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusServicesBusStatisticalReportControl.ascx.cs">
+      <DependentUpon>JBusServicesBusStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusServicesBusStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JBusServicesBusStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusServicesLineStatisticalReportControl.ascx.cs">
+      <DependentUpon>JBusServicesLineStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusServicesLineStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JBusServicesLineStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusServicesStatisticalReportControl.ascx.cs">
+      <DependentUpon>JBusServicesStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusServicesStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JBusServicesStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusServicesZoneStatisticalReportControl.ascx.cs">
+      <DependentUpon>JBusServicesZoneStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusServicesZoneStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JBusServicesZoneStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusStatisticalReportControl.ascx.cs">
+      <DependentUpon>JBusStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JBusStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JBusStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JDailyStatisticalReportControl.ascx.cs">
+      <DependentUpon>JDailyStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JDailyStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JDailyStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JDriverStatisticalReportControl.ascx.cs">
+      <DependentUpon>JDriverStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JDriverStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JDriverStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JHourStatisticalReportControl.ascx.cs">
+      <DependentUpon>JHourStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JHourStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JHourStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JLinesStatisticalReportControl.ascx.cs">
+      <DependentUpon>JLinesStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JLinesStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JLinesStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JMultiYearMonthsStatisticalReportControl.ascx.cs">
+      <DependentUpon>JMultiYearMonthsStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JMultiYearMonthsStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JMultiYearMonthsStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JTicketTransactionStatisticalReportControl.ascx.cs">
+      <DependentUpon>JTicketTransactionStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JTicketTransactionStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JTicketTransactionStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JYearMonthsStatisticalReportControl.ascx.cs">
+      <DependentUpon>JYearMonthsStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JYearMonthsStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JYearMonthsStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JYearStatisticalReportControl.ascx.cs">
+      <DependentUpon>JYearStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JYearStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JYearStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JZonesStatisticalReportControl.ascx.cs">
+      <DependentUpon>JZonesStatisticalReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsStatisticalReports\JZonesStatisticalReportControl.ascx.designer.cs">
+      <DependentUpon>JZonesStatisticalReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="JBusBaseNet.cs" />
+    <Compile Include="JBusMaintenance.cs" />
+    <Compile Include="JBusReports.cs" />
+    <Compile Include="JBusStatisticalReports.cs" />
+    <Compile Include="JBusRTPIS.cs" />
+    <Compile Include="JBusTicketCard.cs" />
+    <Compile Include="JBusTariff.cs" />
+    <Compile Include="FormsManagement\JLinePathMap.ascx.cs">
+      <DependentUpon>JLinePathMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JLinePathMap.ascx.designer.cs">
+      <DependentUpon>JLinePathMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="JBusAVL.cs" />
+    <Compile Include="JBusAccounting.cs" />
+    <Compile Include="FormsManagement\JBusDeviceSettingsUpdateControl.ascx.cs">
+      <DependentUpon>JBusDeviceSettingsUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusDeviceSettingsUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusDeviceSettingsUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBusesUpdateControl.ascx.cs">
+      <DependentUpon>JBusesUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusesUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusesUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JBusSettingsUpdateControl.ascx.cs">
+      <DependentUpon>JBusSettingsUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JBusSettingsUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBusSettingsUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JCountersUpdateControl.ascx.cs">
+      <DependentUpon>JCountersUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JCountersUpdateControl.ascx.designer.cs">
+      <DependentUpon>JCountersUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JDocumentsUpdateControl.ascx.cs">
+      <DependentUpon>JDocumentsUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JDocumentsUpdateControl.ascx.designer.cs">
+      <DependentUpon>JDocumentsUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JFleetUpdateControl.ascx.cs">
+      <DependentUpon>JFleetUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JFleetUpdateControl.ascx.designer.cs">
+      <DependentUpon>JFleetUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JLineUpdateControl.ascx.cs">
+      <DependentUpon>JLineUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JLineUpdateControl.ascx.designer.cs">
+      <DependentUpon>JLineUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JOnlineMap.ascx.cs">
+      <DependentUpon>JOnlineMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JOnlineMap.ascx.designer.cs">
+      <DependentUpon>JOnlineMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsUpdateControl.ascx.cs">
+      <DependentUpon>JPaymentsUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JPaymentsUpdateControl.ascx.designer.cs">
+      <DependentUpon>JPaymentsUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JStationsUpdateControl.ascx.cs">
+      <DependentUpon>JStationsUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JStationsUpdateControl.ascx.designer.cs">
+      <DependentUpon>JStationsUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JTariffUpdateControl.ascx.cs">
+      <DependentUpon>JTariffUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JTariffUpdateControl.ascx.designer.cs">
+      <DependentUpon>JTariffUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JViewMap.ascx.cs">
+      <DependentUpon>JViewMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JViewMap.ascx.designer.cs">
+      <DependentUpon>JViewMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormsManagement\JZoneUpdateControl.ascx.cs">
+      <DependentUpon>JZoneUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormsManagement\JZoneUpdateControl.ascx.designer.cs">
+      <DependentUpon>JZoneUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="JBusManagement.cs" />
+    <Compile Include="JPrivateBusManager.cs" />
+    <Compile Include="OnlineMap\JOnlineMap.ascx.cs">
+      <DependentUpon>JOnlineMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OnlineMap\JOnlineMap.ascx.designer.cs">
+      <DependentUpon>JOnlineMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\GetData\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\Action.asmx.cs">
+      <DependentUpon>Action.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebService\AvlWebService.asmx.cs">
+      <DependentUpon>AvlWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FormsBaseNet\JBaseNetDefineUpdateControl.ascx" />
+    <Content Include="FormsBaseNet\JBusNetGroup.ascx" />
+    <Content Include="FormsBaseNet\JBusNetStateReportControl.ascx" />
+    <Content Include="FormsBaseNet\JDefineNetDefineUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JBusQuerySendUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JDefineQueryUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JDictionaryUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JGetQueryUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JInsertBusTicketFailure.ascx" />
+    <Content Include="FormsManagement\JAccPaymentEditCommentUpdateControl.ascx" />
+    <Content Include="FormsManagement\JAccDocumentsEditCommentUpdateControl.ascx" />
+    <Content Include="FormsManagement\JAccDocumentsTransferUpdateControl.ascx" />
+    <Content Include="FormsManagement\JAccountingReview.ascx" />
+    <Content Include="FormsManagement\JAccountReviewReportControl.ascx" />
+    <Content Include="FormsManagement\JActivityandEventPairingControl.ascx" />
+    <Content Include="FormsManagement\JBazrasServiceUpdateControl.ascx" />
+    <Content Include="FormsManagement\JBusEventDetailesUpdateControl.ascx" />
+    <Content Include="FormsManagement\JBusEventPlaceUpdateControl.ascx" />
+    <Content Include="FormsManagement\JBusEventRegisterUpdateControl.ascx" />
+    <Content Include="FormsManagement\JBusEventUpdateControl.ascx" />
+    <Content Include="FormsManagement\JBusPayOffUpdateControl.ascx" />
+    <Content Include="FormsManagement\JBusSendEventUpdateControl.ascx" />
+    <Content Include="FormsManagement\JBusSendLineUpdateControl.ascx" />
+    <Content Include="FormsManagement\JCardBlackListUpdateControl.ascx" />
+    <Content Include="FormsManagement\JCityBankAccDocumentsGetDetailReportControl.ascx" />
+    <Content Include="FormsManagement\JCityBankPaymentsGetFile.ascx" />
+    <Content Include="FormsManagement\JCopyHolidaysToNextYearUpdateControl.ascx" />
+    <Content Include="FormsManagement\JDriversUpdateControl.ascx" />
+    <Content Include="FormsManagement\JEzamBeUpdateControl.ascx" />
+    <Content Include="FormsManagement\JHokmeKarUpdateControl.ascx" />
+    <Content Include="FormsManagement\JHolidaysUpdateControl.ascx" />
+    <Content Include="FormsManagement\JInstallmentUpdateControl.ascx" />
+    <Content Include="FormsManagement\JLinesServicesUpdateControl.ascx" />
+    <Content Include="FormsManagement\JMapSetting.ascx" />
+    <Content Include="FormsManagement\JNotPayingBusBlackListUpdatecontrol.ascx" />
+    <Content Include="FormsManagement\JOnlineMapNew.ascx" />
+    <Content Include="FormsManagement\JOnlinePath.ascx" />
+    <Content Include="FormsManagement\JOwnerChangeUpdateControl.ascx" />
+    <Content Include="FormsManagement\JOwnersFinancialTransferUpdateControl.ascx" />
+    <Content Include="FormsManagement\JPaymentMadehUpdateControl.ascx" />
+    <Content Include="FormsManagement\JRTPISFileDownloadUpdateControl.ascx" />
+    <Content Include="FormsManagement\JServiceTurnUpdateControl.ascx" />
+    <Content Include="FormsManagement\JShiftsUpdateControl.ascx" />
+    <Content Include="FormsManagement\JTaghsitMandehHesabUpdateControl.ascx" />
+    <Content Include="FormsManagement\JTariffHokmeKarBaseDefineUpdateControl.ascx" />
+    <Content Include="FormsManagement\JTarrifEmptyPrintUpdateControl.ascx" />
+    <Content Include="FormsManagement\JTarrifHokmeKarUpdateControl.ascx" />
+    <Content Include="FormsManagement\JUnpaidBlackListReportControl.ascx" />
+    <Content Include="FormsManagement\JTarahanAccountUpdateControl.ascx" />
+    <Content Include="FormsManagement\JPaymentsGetAccountingFileexcel.ascx" />
+    <Content Include="FormsReports\GettheEqualizationFile.ascx" />
+    <Content Include="FormsReports\JBazrasServiceReportControl.ascx" />
+    <Content Include="FormsReports\JBusAVLCutReportControl.ascx" />
+    <Content Include="FormsReports\JBusDontLoginReportControl.ascx" />
+    <Content Include="FormsReports\JBusGetEqualizationFile.ascx" />
+    <Content Include="FormsReports\JBusHokmeKarTarrifDifReportControl.ascx" />
+    <Content Include="FormsReports\JBusInfractionShowMapUpdateControl.ascx" />
+    <Content Include="FormsReports\JBusPerformanceYearlyReportControl.ascx" />
+    <Content Include="FormsReports\JBusServiceWithoutTransactionReportControl.ascx" />
+    <Content Include="FormsReports\JComparativeServiceReportControl.ascx" />
+    <Content Include="FormsReports\JDailyAccReviewReportControl.ascx" />
+    <Content Include="FormsReports\JDocumentGardeshReportControl.ascx" />
+    <Content Include="FormsReports\JDocumentMoeinReportControl.ascx" />
+    <Content Include="FormsReports\JDriverInfractionReportControl.ascx" />
+    <Content Include="FormsReports\JBusInputOutputLine.ascx" />
+    <Content Include="FormsReports\JBusLineStationPositionReportControl.ascx" />
+    <Content Include="FormsReports\JBusNotWorkInHokmeKarReportControl.ascx" />
+    <Content Include="FormsReports\JBusPerformanceAccountingReportControl.ascx" />
+    <Content Include="FormsReports\JBusServiceShowMapUpdateControl.ascx" />
+    <Content Include="FormsReports\JBusTimeStopsAtTheStation.ascx" />
+    <Content Include="FormsReports\JBusTransactionLowerReportControl.ascx" />
+    <Content Include="FormsReports\JBusWorkSheetReportControl.ascx" />
+    <Content Include="FormsReports\JDriverKarkardTariffSheetReportControl.ascx" />
+    <Content Include="FormsReports\JDriverMonthlyKarkardReportControl.ascx" />
+    <Content Include="FormsReports\JEzamBeReportControl.ascx" />
+    <Content Include="FormsReports\JGardeshReportControl.ascx" />
+    <Content Include="FormsReports\JHokmeKarReportControl.ascx" />
+    <Content Include="FormsReports\JLinePerformanceAverageReportControl.ascx" />
+    <Content Include="FormsReports\JMoeinReportControl.ascx" />
+    <Content Include="FormsReports\JMonthlyAccReviewReportControl.ascx" />
+    <Content Include="FormsReports\JNoAVLBusesReportControl.ascx" />
+    <Content Include="FormsReports\JNumOfPerformanceDayDetailsReportControl.ascx" />
+    <Content Include="FormsReports\JOnlineMapPanel.ascx" />
+    <Content Include="FormsReports\JOverPayReportControl.ascx" />
+    <Content Include="FormsReports\JOvertimeTariffReportControl.ascx" />
+    <Content Include="FormsReports\JOwnerBusReportControl.ascx" />
+    <Content Include="FormsReports\JPassengerCardReportControl.ascx" />
+    <Content Include="FormsReports\JRTPISReportControl.ascx" />
+    <Content Include="FormsReports\JRTPISUpdateBoardReportControl.ascx" />
+    <Content Include="FormsReports\JServicingStatusReportControl.ascx" />
+    <Content Include="FormsReports\JSmsSendReportControl.ascx" />
+    <Content Include="FormsReports\JStationAndPathConflictReportControl.ascx" />
+    <Content Include="FormsReports\JStationPassCalenderReportControl.ascx" />
+    <Content Include="FormsReports\JStationTicketReportControl.ascx" />
+    <Content Include="FormsReports\JTafziliReportControl.ascx" />
+    <Content Include="FormsReports\JTariffReportControl.ascx" />
+    <Content Include="FormsReports\JTariffServiceConflictReportControl.ascx" />
+    <Content Include="FormsReports\JTarrifCalenderReportControl.ascx" />
+    <Content Include="FormsReports\JTasfieMandehHesabReportControl.ascx" />
+    <Content Include="FormsReports\JTasfieMethodReportControl.ascx" />
+    <Content Include="FormsReports\JTransactionsDetailsReportControl.ascx" />
+    <Content Include="FormsReports\JUndefinedDriversBusReportControl.ascx" />
+    <Content Include="FormsReports\JUnpaidBlackListReportControl.ascx" />
+    <Content Include="FormsReports\JCompareBusPerformance.ascx" />
+    <Content Include="FormsReports\JConsoleOffloadReport.ascx" />
+    <Content Include="FormsStatisticalReports\JBusMinMaxServiceStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JBusServicesBusStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JBusServicesLineStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JBusServicesStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JBusServicesZoneStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JMultiYearMonthsStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JYearMonthsStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JYearStatisticalReportControl.ascx" />
+    <Content Include="Images\arrow.png" />
+    <Content Include="Images\bus-top.png" />
+    <Content Include="Images\bus-top\bus-stop.png" />
+    <Content Include="Images\bus-top\bus-top_1.png" />
+    <Content Include="Images\bus-top\bus-top_10.png" />
+    <Content Include="Images\bus-top\bus-top_11.png" />
+    <Content Include="Images\bus-top\bus-top_12.png" />
+    <Content Include="Images\bus-top\bus-top_13.png" />
+    <Content Include="Images\bus-top\bus-top_14.png" />
+    <Content Include="Images\bus-top\bus-top_15.png" />
+    <Content Include="Images\bus-top\bus-top_16.png" />
+    <Content Include="Images\bus-top\bus-top_2.png" />
+    <Content Include="Images\bus-top\bus-top_3.png" />
+    <Content Include="Images\bus-top\bus-top_4.png" />
+    <Content Include="Images\bus-top\bus-top_5.png" />
+    <Content Include="Images\bus-top\bus-top_6.png" />
+    <Content Include="Images\bus-top\bus-top_7.png" />
+    <Content Include="Images\bus-top\bus-top_8.png" />
+    <Content Include="Images\bus-top\bus-top_9.png" />
+    <Content Include="Images\BusTerminal.png" />
+    <Content Include="Images\bus_s42.png" />
+    <Content Include="Images\DefaultMarker_s64.png" />
+    <Content Include="Images\road-back-h.png" />
+    <Content Include="Images\road-back-v.png" />
+    <Content Include="Images\road-go-h.png" />
+    <Content Include="Images\road-go-v.png" />
+    <Content Include="Images\road-h.png" />
+    <Content Include="Images\road-v.png" />
+    <Content Include="Images\station.png" />
+    <Content Include="Images\station_s32.png" />
+    <Content Include="Images\terminal.png" />
+    <Content Include="Images\ViewMapArrow\arrow_downleft_green.png" />
+    <Content Include="Images\ViewMapArrow\arrow_downleft_grey.png" />
+    <Content Include="Images\ViewMapArrow\arrow_downleft_red.png" />
+    <Content Include="Images\ViewMapArrow\arrow_downright_green.png" />
+    <Content Include="Images\ViewMapArrow\arrow_downright_grey.png" />
+    <Content Include="Images\ViewMapArrow\arrow_downright_red.png" />
+    <Content Include="Images\ViewMapArrow\arrow_down_green.png" />
+    <Content Include="Images\ViewMapArrow\arrow_down_grey.png" />
+    <Content Include="Images\ViewMapArrow\arrow_down_red.png" />
+    <Content Include="Images\ViewMapArrow\arrow_left_green.png" />
+    <Content Include="Images\ViewMapArrow\arrow_left_grey.png" />
+    <Content Include="Images\ViewMapArrow\arrow_left_red.png" />
+    <Content Include="Images\ViewMapArrow\arrow_right_green.png" />
+    <Content Include="Images\ViewMapArrow\arrow_right_grey.png" />
+    <Content Include="Images\ViewMapArrow\arrow_right_red.png" />
+    <Content Include="Images\ViewMapArrow\arrow_up.png" />
+    <Content Include="Images\ViewMapArrow\arrow_upleft_green.png" />
+    <Content Include="Images\ViewMapArrow\arrow_upleft_grey.png" />
+    <Content Include="Images\ViewMapArrow\arrow_upleft_red.png" />
+    <Content Include="Images\ViewMapArrow\arrow_upright_green.png" />
+    <Content Include="Images\ViewMapArrow\arrow_upright_grey.png" />
+    <Content Include="Images\ViewMapArrow\arrow_upright_red.png" />
+    <Content Include="Images\ViewMapArrow\arrow_up_green.png" />
+    <Content Include="Images\ViewMapArrow\arrow_up_grey.png" />
+    <Content Include="Images\ViewMapArrow\arrow_up_red.png" />
+    <Content Include="OnlineMap\JOnlineMap.ascx" />
+    <Content Include="WebService\Action.asmx" />
+    <Content Include="WebService\AvlWebService.asmx" />
+    <Content Include="ClassDiagram1.cd" />
+    <None Include="Service References\GetData\getdata.disco" />
+    <None Include="Service References\GetData\configuration91.svcinfo" />
+    <None Include="Service References\GetData\configuration.svcinfo" />
+    <None Include="Service References\GetData\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="FormsReports\JBusPassingStationShowPointUpdateControl.ascx" />
+    <Content Include="FormsReports\JBusPassingStationTicketReportControl.ascx" />
+    <Content Include="FormsReports\JBusSpeedAverageReportControl.ascx" />
+    <Content Include="FormsReports\JDistanceMesureReportControl.ascx" />
+    <Content Include="FormsReports\JLineSpeedAverageReportControl.ascx" />
+    <Content Include="FormsReports\JNumOfPerformanceDayReportControl.ascx" />
+    <Content Include="FormsReports\JPassengerCardRemainChargeReportControl.ascx" />
+    <Content Include="Images\tarifbg.jpg" />
+    <None Include="Properties\PublishProfiles\webbusm.pubxml" />
+    <None Include="Properties\PublishProfiles\WebBusManagement.pubxml" />
+    <Content Include="FormsMaintenance\JApplyInvalidBusUpdateControl.ascx" />
+    <Content Include="FormsManagement\JContractorAccountUpdateControl.ascx" />
+    <Content Include="FormsManagement\JDriversLoginLogoutUpdateControl.ascx" />
+    <Content Include="FormsManagement\JLineInsertTransactionCountUpdateControl.ascx" />
+    <Content Include="FormsManagement\JSendMessageToConsoleUpdateControl.ascx" />
+    <Content Include="FormsReports\JBusFirstLastStationReportControl.ascx" />
+    <Content Include="FormsReports\JBusPassingStationReportControl.ascx" />
+    <Content Include="FormsReports\JBusServiceReportControl.ascx" />
+    <Content Include="FormsReports\JDailyFleetPerformanceCalenderReportControl.ascx" />
+    <Content Include="FormsReports\JDriversLoginLogoutReportControl.ascx" />
+    <None Include="Service References\GetData\getdata.wsdl" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FormsMaintenance\JBusAvlFailureTransactionSendReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusBatteryChargeReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusDetailsReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusDontSendPrintReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusDontSendTicketDataReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusDontSendTicketInTimeframeReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusErrorDateTransactionReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusErrorSendTransactionReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusFailureDeviceIMEIReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusFailureDoorsReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusFailureIMEIReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusGetReportFromConsoleUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JBusInstallAndUinstallDeviceReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusInstallAndUinstallDeviceUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JBusLastDataReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusNotActiveReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusOwnerReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusSendAvlTransenctionReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusSendDataReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusSendTicketCountRateReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusSendTicketTransenctionReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusSimCardChargeReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusSimChargedReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusStatusCurrentlyReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusStatusMonthlyReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusSummaryPerformanceReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusSummaryTransactionReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusTicketFailureBusNumberReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusTicketFailureTransactionSendReportControl.ascx" />
+    <Content Include="FormsMaintenance\JBusUsedSimCardChargeReportControl.ascx" />
+    <Content Include="FormsMaintenance\JComparisonTicketTableAndExtractTableReportControl.ascx" />
+    <Content Include="FormsMaintenance\JComparisonTicketTExtractTAndDailyTReportControl.ascx" />
+    <Content Include="FormsMaintenance\JConsulHistoryReportControl.ascx" />
+    <Content Include="FormsMaintenance\JDailyAndPrintComparisonReportControl.ascx" />
+    <Content Include="FormsMaintenance\JDuplicateRecordInDailyReportControl.ascx" />
+    <Content Include="FormsMaintenance\JInsertBusFailureUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JInsertBusOfflineFileGetDetaileReportControl.ascx" />
+    <Content Include="FormsMaintenance\JInsertBusOfflineFileUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JInsertBusTicketTransactionUpdateControl.ascx" />
+    <Content Include="FormsMaintenance\JInvalidLinePriceReportControl.ascx" />
+    <Content Include="FormsMaintenance\JPortalLastDataReportControl.ascx" />
+    <Content Include="FormsMaintenance\JTotalPerformanceReportControl.ascx" />
+    <Content Include="FormsManagement\JAccDocumentsEditUpdateControl.ascx" />
+    <Content Include="FormsManagement\JAccDocumentsGetDetailReportControl.ascx" />
+    <Content Include="FormsManagement\JAccountingBaseDefineReportControl.ascx" />
+    <Content Include="FormsManagement\JBusDeviceSettingsUpdateControl.ascx" />
+    <Content Include="FormsManagement\JBusesUpdateControl.ascx" />
+    <Content Include="FormsManagement\JBusSettingsUpdateControl.ascx" />
+    <Content Include="FormsManagement\JCountersUpdateControl.ascx" />
+    <Content Include="FormsManagement\JDeleteApplyControl.ascx" />
+    <Content Include="FormsManagement\JDocumentsGetDetailReportControl.ascx" />
+    <Content Include="FormsManagement\JDocumentsGetDocumentZoneFile.ascx" />
+    <Content Include="FormsManagement\JDocumentsUpdateControl.ascx" />
+    <Content Include="FormsManagement\JFleetUpdateControl.ascx" />
+    <Content Include="FormsManagement\JLinePathBackUpdateControl.ascx" />
+    <Content Include="FormsManagement\JLinePathCircularUpdateControl.ascx" />
+    <Content Include="FormsManagement\JLinePathMap.ascx" />
+    <Content Include="FormsManagement\JLinePathUpdateControl.ascx" />
+    <Content Include="FormsManagement\JLineUpdateControl.ascx" />
+    <Content Include="FormsManagement\JOnAccountFormUpdateControl.ascx" />
+    <Content Include="FormsManagement\JOnlineMap.ascx" />
+    <Content Include="FormsManagement\JPaymentGetDetailReportControl.ascx" />
+    <Content Include="FormsManagement\JPaymentsGetAccountingFile.ascx" />
+    <Content Include="FormsManagement\JPaymentsGetFile.ascx" />
+    <Content Include="FormsManagement\JPaymentsGetZoneFile.ascx" />
+    <Content Include="FormsManagement\JPaymentsUpdateControl.ascx" />
+    <Content Include="FormsManagement\JRTPISTextUpdateControl.ascx" />
+    <Content Include="FormsManagement\JSendSmsUpdateControl.ascx" />
+    <Content Include="FormsManagement\JStationsUpdateControl.ascx" />
+    <Content Include="FormsManagement\JTariffUpdateControl.ascx" />
+    <Content Include="FormsManagement\JTicketCardUpdateControl.ascx" />
+    <Content Include="FormsManagement\JViewMap.ascx" />
+    <Content Include="FormsManagement\JZoneUpdateControl.ascx" />
+    <Content Include="FormsReports\JAllBusPerformanceCalenderReportControl.ascx" />
+    <Content Include="FormsReports\JBusAvlTransenctionReportControl.ascx" />
+    <Content Include="FormsReports\JBusConsoleAndPortalTransactionReportControl.ascx" />
+    <Content Include="FormsReports\JBusDailyPrintPaymentReportControl.ascx" />
+    <Content Include="FormsReports\JBusPerformanceCalenderReportControl.ascx" />
+    <Content Include="FormsReports\JBusPerformanceReportControl.ascx" />
+    <Content Include="FormsReports\JBusRetardationReportControl.ascx" />
+    <Content Include="FormsReports\JBusTransactionReportControl.ascx" />
+    <Content Include="FormsReports\JDailyReport.ascx" />
+    <Content Include="FormsReports\JDocumentAndPaymentReportControl.ascx" />
+    <Content Include="FormsReports\JDriverCrossingFromStopReportControl.ascx" />
+    <Content Include="FormsReports\JDriverPaymentReportControl.ascx" />
+    <Content Include="FormsReports\JDriverPerformanceReportControl.ascx" />
+    <Content Include="FormsReports\JDriverServicesReportControl.ascx" />
+    <Content Include="FormsReports\JDriverTrepassFromLineReportControl.ascx" />
+    <Content Include="FormsReports\JGroundDeviceTicketReportShowDataReportControl.ascx" />
+    <Content Include="FormsReports\JInsertAutLineStationUpdateControl.ascx" />
+    <Content Include="FormsReports\JLinePeriodPaymentReportControl.ascx" />
+    <Content Include="FormsReports\JLinesTransactionAndIncomeReportControl.ascx" />
+    <Content Include="FormsReports\JOwnerPaymentReportControl.ascx" />
+    <Content Include="FormsReports\JPaymentDetaileReportControl.ascx" />
+    <Content Include="FormsReports\JPaymentedDocumentReportControl.ascx" />
+    <Content Include="FormsReports\JPeriodPaymentReportControl.ascx" />
+    <Content Include="FormsReports\JZonesTransactionAndIncomeReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JAvlTransactionStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JBusStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JDailyStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JDriverStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JHourStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JLinesStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JTicketTransactionStatisticalReportControl.ascx" />
+    <Content Include="FormsStatisticalReports\JZonesStatisticalReportControl.ascx" />
+    <Content Include="Images\Anten\anten_1.png" />
+    <Content Include="Images\Anten\anten_2.png" />
+    <Content Include="Images\Anten\anten_3.png" />
+    <Content Include="Images\Anten\anten_4.png" />
+    <Content Include="Images\Arrow\arrow_down.png" />
+    <Content Include="Images\Arrow\arrow_downleft.png" />
+    <Content Include="Images\Arrow\arrow_downright.png" />
+    <Content Include="Images\Arrow\arrow_left.png" />
+    <Content Include="Images\Arrow\arrow_right.png" />
+    <Content Include="Images\Arrow\arrow_up.png" />
+    <Content Include="Images\Arrow\arrow_upleft.png" />
+    <Content Include="Images\Arrow\arrow_upright.png" />
+    <Content Include="Images\Battery\battery_1.png" />
+    <Content Include="Images\Battery\battery_2.png" />
+    <Content Include="Images\Battery\battery_3.png" />
+    <Content Include="Images\Battery\battery_4.png" />
+    <Content Include="Images\Battery\battery_5.png" />
+    <Content Include="Images\Battery\battery_direct.png" />
+    <Content Include="Images\battery_low.gif" />
+    <Content Include="Images\bus_s64.png" />
+    <Content Include="Images\bus_s64_right.png" />
+    <Content Include="Images\close.png" />
+    <Content Include="Images\CloseControlPanel.png" />
+    <Content Include="Images\download-icon.gif" />
+    <Content Include="Images\gif.gif" />
+    <Content Include="Images\MenuIcon\akharin-tarakonesh-blit.png" />
+    <Content Include="Images\MenuIcon\anva-baje.png" />
+    <Content Include="Images\MenuIcon\anva-istgah.png" />
+    <Content Include="Images\MenuIcon\anva-khotot.png" />
+    <Content Include="Images\MenuIcon\asnad.png" />
+    <Content Include="Images\MenuIcon\card-blit.png" />
+    <Content Include="Images\MenuIcon\darj-fail-otobos.png" />
+    <Content Include="Images\MenuIcon\gozarehs-khataye-ersali.png" />
+    <Content Include="Images\MenuIcon\gozaresh-aamry-saati.png" />
+    <Content Include="Images\MenuIcon\gozaresh-adam-ersal-2-darb.png" />
+    <Content Include="Images\MenuIcon\gozaresh-adam-ersal-avl.png" />
+    <Content Include="Images\MenuIcon\gozaresh-adam-ersal-blit.png" />
+    <Content Include="Images\MenuIcon\gozaresh-adam-faal-sazi-otobos.png" />
+    <Content Include="Images\MenuIcon\gozaresh-akharyn-etelaat-daryafty-otobos.png" />
+    <Content Include="Images\MenuIcon\gozaresh-akharyn-etelaat-daryafty.png" />
+    <Content Include="Images\MenuIcon\gozaresh-amari-manategh.png" />
+    <Content Include="Images\MenuIcon\gozaresh-amari-ranandegan.png" />
+    <Content Include="Images\MenuIcon\gozaresh-amary-avl.png" />
+    <Content Include="Images\MenuIcon\gozaresh-amary-blit.png" />
+    <Content Include="Images\MenuIcon\gozaresh-amary-khotot.png" />
+    <Content Include="Images\MenuIcon\gozaresh-amary-otobosha.png" />
+    <Content Include="Images\MenuIcon\gozaresh-amary-rozane.png" />
+    <Content Include="Images\MenuIcon\gozaresh-asnad-va-pardakhtha.png" />
+    <Content Include="Images\MenuIcon\gozaresh-ersal-tarakonesh-avl.png" />
+    <Content Include="Images\MenuIcon\gozaresh-ersal-tarakonesh-blit.png" />
+    <Content Include="Images\MenuIcon\gozaresh-imei-nadorost.png" />
+    <Content Include="Images\MenuIcon\gozaresh-imei-namotabar.png" />
+    <Content Include="Images\MenuIcon\gozaresh-joziate-pardakhtha.png" />
+    <Content Include="Images\MenuIcon\gozaresh-khataye-tarikh.png" />
+    <Content Include="Images\MenuIcon\gozaresh-kholase-karkard.png" />
+    <Content Include="Images\MenuIcon\gozaresh-kholase-tarakonesh-otobos.png" />
+    <Content Include="Images\MenuIcon\gozaresh-moghaiese-jadval-blit.png" />
+    <Content Include="Images\MenuIcon\gozaresh-moghayese-3-jadval.png" />
+    <Content Include="Images\MenuIcon\gozaresh-nasb-dastgah.png" />
+    <Content Include="Images\MenuIcon\gozaresh-pardakhty-dar-dore-zamani.png" />
+    <Content Include="Images\MenuIcon\gozaresh-pardakhty-khotot-dar-baze-zamani.png" />
+    <Content Include="Images\MenuIcon\gozaresh-sharj-battry.png" />
+    <Content Include="Images\MenuIcon\gozaresh-sharj-sim-card.png" />
+    <Content Include="Images\MenuIcon\gozaresh-sim-card-sharj.png" />
+    <Content Include="Images\MenuIcon\gozaresh-sim-card.png" />
+    <Content Include="Images\MenuIcon\gozaresh-somare-otobos-namotabar.png" />
+    <Content Include="Images\MenuIcon\gozaresh-takhalofate-otobos.png" />
+    <Content Include="Images\MenuIcon\gozaresh-tarakonesh-avl.png" />
+    <Content Include="Images\MenuIcon\gozaresh-tarikhche-consol.png" />
+    <Content Include="Images\MenuIcon\gozaresh-va-karkerd-koli.png" />
+    <Content Include="Images\MenuIcon\hesab-banki-ashkhas.png" />
+    <Content Include="Images\MenuIcon\karkerd-otobos.png" />
+    <Content Include="Images\MenuIcon\karkerd-ranandegan.png" />
+    <Content Include="Images\MenuIcon\naghshe-masir-khotot.png" />
+    <Content Include="Images\MenuIcon\naghshe-masir-otobos.png" />
+    <Content Include="Images\MenuIcon\naghshe-onlin.png" />
+    <Content Include="Images\MenuIcon\pardaskhtha.png" />
+    <Content Include="Images\MenuIcon\sabt-nab-va-fak-dastgah.png" />
+    <Content Include="Images\MenuIcon\sabt-print.png" />
+    <Content Include="Images\MenuIcon\taarif-parametrhaye-contoroli.png" />
+    <Content Include="Images\MenuIcon\tarakonesh otobos.png" />
+    <Content Include="Images\MenuIcon\tarakonesh-va-dar-amad-khotot.png" />
+    <Content Include="Images\MenuIcon\tarakonesh-va-dar-amad-manategh.png" />
+    <Content Include="Images\MenuIcon\tarefe.png" />
+    <Content Include="Images\MenuIcon\tarif-dastgah.png" />
+    <Content Include="Images\MenuIcon\tarif-navgan.png" />
+    <Content Include="Images\MenuIcon\vorod-etelaat-istgah.png" />
+    <Content Include="Images\MenuIcon\vorod-etelaat-konsol.png" />
+    <Content Include="Images\MenuIcon\vorod-etelaat-manategh.png" />
+    <Content Include="Images\MenuIcon\vorod-etelaat-mbajehaye-forosh-belit.png" />
+    <Content Include="Images\MenuIcon\vorod-etelaat-navgan.png" />
+    <Content Include="Images\MenuIcon\vorod-etelaat-otobos.png" />
+    <Content Include="Images\nopersonimage.png" />
+    <Content Include="Images\OpenControlPanel.png" />
+    <Content Include="Images\Pause_Icon.png" />
+    <Content Include="Images\Play_AfterPause.png" />
+    <Content Include="Images\Play_Icon.png" />
+    <Content Include="Images\red_circle.png" />
+    <Content Include="Images\silver_circle.png" />
+    <Content Include="Images\simcardcharge_low.gif" />
+    <Content Include="Images\station_s64.png" />
+    <Content Include="Images\stoptime_clock.gif" />
+    <Content Include="Images\Stop_Icon.png" />
+    <Content Include="Images\sync-icon-small.png" />
+    <Content Include="Images\ViewMapArrow\arrow_down.png" />
+    <Content Include="Images\ViewMapArrow\arrow_downleft.png" />
+    <Content Include="Images\ViewMapArrow\arrow_downright.png" />
+    <Content Include="Images\ViewMapArrow\arrow_left.png" />
+    <Content Include="Images\ViewMapArrow\arrow_right.png" />
+    <Content Include="Images\ViewMapArrow\arrow_upleft.png" />
+    <Content Include="Images\ViewMapArrow\arrow_upright.png" />
+    <Content Include="Images\ViewMapArrow\B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GetData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bus\BusManagment.csproj">
+      <Project>{79d33258-a0f7-4bcb-a362-510197f1668a}</Project>
+      <Name>BusManagment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebBaseDefine\WebBaseDefine.csproj">
+      <Project>{6fb2e793-f67b-4bfa-9780-ffa946c41075}</Project>
+      <Name>WebBaseDefine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebBaseNet\WebBaseNet.csproj">
+      <Project>{4caed304-a31b-4cd8-90ea-5c67d5df4f6c}</Project>
+      <Name>WebBaseNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebClassLibrary\WebClassLibrary.csproj">
+      <Project>{3b0b293d-40f5-49ad-b44b-5914873d5028}</Project>
+      <Name>WebClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebControllers\WebControllers.csproj">
+      <Project>{e4dec70e-7841-4fd2-a5ed-c59837cad549}</Project>
+      <Name>WebControllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5024/WebBusManagement</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your taSk inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

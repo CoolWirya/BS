@@ -1,0 +1,955 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4DEC70E-7841-4FD2-A5ED-C59837CAD549}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebControllers</RootNamespace>
+    <AssemblyName>WebControllers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accounting">
+      <HintPath>..\..\..\..\Dlls\bin\Accounting.dll</HintPath>
+    </Reference>
+    <Reference Include="AndroidWebManagement">
+      <HintPath>..\..\..\..\Dlls\bin\AndroidWebManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\..\Dlls\bin\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation">
+      <HintPath>..\..\..\..\Dlls\bin\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="AUTOMOBILE">
+      <HintPath>..\..\..\..\Dlls\bin\AUTOMOBILE.dll</HintPath>
+    </Reference>
+    <Reference Include="BusManagment">
+      <HintPath>..\..\..\..\Dlls\bin\BusManagment.dll</HintPath>
+    </Reference>
+    <Reference Include="Chat">
+      <HintPath>..\..\..\..\Dlls\bin\Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>..\..\..\..\Dlls\bin\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment">
+      <HintPath>..\..\..\..\Dlls\bin\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Entertainment">
+      <HintPath>..\..\..\..\Dlls\bin\Entertainment.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\bin\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="Estates">
+      <HintPath>..\..\..\..\Dlls\bin\Estates.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\..\..\..\Dlls\bin\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals">
+      <HintPath>..\..\..\..\Dlls\bin\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core">
+      <HintPath>..\..\..\..\Dlls\bin\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms">
+      <HintPath>..\..\..\..\Dlls\bin\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ActiveDs">
+      <HintPath>..\..\..\..\Dlls\bin\Interop.ActiveDs.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.FilterEditor.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.FilterEditor.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.Schedule.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.TimeLine.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\..\..\Dlls\bin\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="JComponents">
+      <HintPath>..\..\..\..\Dlls\bin\JComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="JJson">
+      <HintPath>..\..\..\..\Dlls\bin\JJson.dll</HintPath>
+    </Reference>
+    <Reference Include="JJsonService">
+      <HintPath>..\..\..\..\Dlls\bin\JJsonService.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\..\..\..\Dlls\bin\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net">
+      <HintPath>..\..\..\..\Dlls\bin\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagementShares">
+      <HintPath>..\..\..\..\Dlls\bin\ManagementShares.dll</HintPath>
+    </Reference>
+    <Reference Include="mCoreLib">
+      <HintPath>..\..\..\..\Dlls\bin\mCoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Meeting">
+      <HintPath>..\..\..\..\Dlls\bin\Meeting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Microsoft.QualityTools.Testing.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="MSCaptcha">
+      <HintPath>..\..\..\..\Dlls\bin\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Dlls\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\..\..\..\Dlls\bin\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateControls 2.0">
+      <HintPath>..\..\..\..\Dlls\bin\PersianDateControls 2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="ProjectManagement">
+      <HintPath>..\..\..\..\Dlls\bin\ProjectManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstate">
+      <HintPath>..\..\..\..\Dlls\bin\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="Restaurant">
+      <HintPath>..\..\..\..\Dlls\bin\Restaurant.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\..\..\Dlls\bin\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="ShareProfit">
+      <HintPath>..\..\..\..\Dlls\bin\ShareProfit.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartCard">
+      <HintPath>..\..\..\..\Dlls\bin\SmartCard.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\bin\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.MobileDesign">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.MobileDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Web">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WebDesign">
+      <HintPath>..\..\..\..\Dlls\bin\Stimulsoft.Report.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreComplex">
+      <HintPath>..\..\..\..\Dlls\bin\StoreComplex.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreManagement">
+      <HintPath>..\..\..\..\Dlls\bin\StoreManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\Dlls\bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.Device.Detection.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextEditor">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.WinControls.RichTextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon">
+      <HintPath>..\..\..\..\Dlls\bin\TelerikCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="TimePicker">
+      <HintPath>..\..\..\..\Dlls\bin\TimePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Touchless.Vision">
+      <HintPath>..\..\..\..\Dlls\bin\Touchless.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAccounting">
+      <HintPath>..\..\..\..\Dlls\bin\WebAccounting.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAutomation">
+      <HintPath>..\..\..\..\Dlls\bin\WebAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAVL">
+      <HintPath>..\..\..\..\Dlls\bin\WebAVL.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAVL.XmlSerializers">
+      <HintPath>..\..\..\..\Dlls\bin\WebAVL.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="WebBaseDefine">
+      <HintPath>..\..\..\..\Dlls\bin\WebBaseDefine.dll</HintPath>
+    </Reference>
+    <Reference Include="WebBaseNet">
+      <HintPath>..\..\..\..\Dlls\bin\WebBaseNet.dll</HintPath>
+    </Reference>
+    <Reference Include="WebBusManagement">
+      <HintPath>..\WebBusManagement\bin\WebBusManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="WebCam_Capture">
+      <HintPath>..\..\..\..\Dlls\bin\WebCam_Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="WebERP">
+      <HintPath>..\..\..\..\Dlls\bin\WebERP.dll</HintPath>
+    </Reference>
+    <Reference Include="WebEstate">
+      <HintPath>..\..\..\..\Dlls\bin\WebEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="WebFinance">
+      <HintPath>..\..\..\..\Dlls\bin\WebFinance.dll</HintPath>
+    </Reference>
+    <Reference Include="WebLegal">
+      <HintPath>..\..\..\..\Dlls\bin\WebLegal.dll</HintPath>
+    </Reference>
+    <Reference Include="WebManagementShare">
+      <HintPath>..\..\..\..\Dlls\bin\WebManagementShare.dll</HintPath>
+    </Reference>
+    <Reference Include="WebProjectManagement">
+      <HintPath>..\..\..\..\Dlls\bin\WebProjectManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="WebRealEstate">
+      <HintPath>..\..\..\..\Dlls\bin\WebRealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="WebReport">
+      <HintPath>..\..\..\..\Dlls\bin\WebReport.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArchiveDocument\JArchiveControl.ascx" />
+    <Content Include="FormManager\Css\jquery-ui.css" />
+    <Content Include="FormManager\Css\jquery.ui.all.css" />
+    <Content Include="FormManager\Css\jquery.ui.dialog.css" />
+    <Content Include="FormManager\JFormDefineControl.ascx" />
+    <Content Include="FormManager\JFormDefinePropertyControl.ascx" />
+    <Content Include="FormManager\JFormListControl.ascx" />
+    <Content Include="FormManager\JFormObjectControl.ascx" />
+    <Content Include="FormManager\JFormPropertyControl.ascx" />
+    <Content Include="FormManager\Js\jquery-1.8.2.js" />
+    <Content Include="FormManager\Js\jquery-1.8.2.min.js" />
+    <Content Include="FormManager\Js\jquery-ui-1.8.24.js" />
+    <Content Include="FormManager\Js\jquery-ui-1.8.24.min.js" />
+    <Content Include="FormManager\JWebForms.ascx" />
+    <Content Include="FormManager\Service.asmx" />
+    <Content Include="FormManager\testUC.ascx" />
+    <Content Include="ImageEditorDialogs\BaseDefine\JNewRealPerson.ascx" />
+    <Content Include="EditorDialogs\About.ascx" />
+    <Content Include="EditorDialogs\AccessibleTable.ascx" />
+    <Content Include="EditorDialogs\CellProperties.ascx" />
+    <Content Include="EditorDialogs\CSDialog.ascx" />
+    <Content Include="EditorDialogs\DocumentManager.ascx" />
+    <Content Include="EditorDialogs\FileBrowser.ascx" />
+    <Content Include="EditorDialogs\FindAndReplace.ascx" />
+    <Content Include="EditorDialogs\FlashManager.ascx" />
+    <Content Include="EditorDialogs\FormatCodeBlock.ascx" />
+    <Content Include="EditorDialogs\Help.ascx" />
+    <Content Include="EditorDialogs\ImageEditor.ascx" />
+    <Content Include="EditorDialogs\ImageManager.ascx" />
+    <Content Include="EditorDialogs\ImageMap.ascx" />
+    <Content Include="EditorDialogs\InsertExternalVideo.ascx" />
+    <Content Include="EditorDialogs\InsertImage.ascx" />
+    <Content Include="EditorDialogs\InsertLink.ascx" />
+    <Content Include="EditorDialogs\InsertSelectDialog.ascx" />
+    <Content Include="EditorDialogs\InsertTableLight.ascx" />
+    <Content Include="EditorDialogs\LinkManager.ascx" />
+    <Content Include="EditorDialogs\MediaManager.ascx" />
+    <Content Include="EditorDialogs\MozillaPasteHtmlDialog.ascx" />
+    <Content Include="EditorDialogs\MozillaPasteTextDialog.ascx" />
+    <Content Include="EditorDialogs\PageProperties.ascx" />
+    <Content Include="EditorDialogs\SetImageProperties.ascx" />
+    <Content Include="EditorDialogs\SilverlightManager.ascx" />
+    <Content Include="EditorDialogs\StyleBuilder.ascx" />
+    <Content Include="EditorDialogs\TableBorder.ascx" />
+    <Content Include="EditorDialogs\TableDesign.ascx" />
+    <Content Include="EditorDialogs\TableProperties.ascx" />
+    <Content Include="EditorDialogs\TableWizard.ascx" />
+    <Content Include="EditorDialogs\TemplateManager.ascx" />
+    <Content Include="EditorDialogs\TrackChangesDialog.ascx" />
+    <Content Include="EditorDialogs\XhtmlValidator.ascx" />
+    <Content Include="ImageEditorDialogs\AddText.ascx" />
+    <Content Include="ImageEditorDialogs\BrightnessContrast.ascx" />
+    <Content Include="ImageEditorDialogs\Crop.ascx" />
+    <Content Include="ImageEditorDialogs\DrawCircle.ascx" />
+    <Content Include="ImageEditorDialogs\DrawRectangle.ascx" />
+    <Content Include="ImageEditorDialogs\EmptyDialog.ascx" />
+    <Content Include="ImageEditorDialogs\Export.ascx" />
+    <Content Include="ImageEditorDialogs\Flip.ascx" />
+    <Content Include="ImageEditorDialogs\HueSaturation.ascx" />
+    <Content Include="ImageEditorDialogs\InsertImage.ascx" />
+    <Content Include="ImageEditorDialogs\Line.ascx" />
+    <Content Include="ImageEditorDialogs\Opacity.ascx" />
+    <Content Include="ImageEditorDialogs\Pencil.ascx" />
+    <Content Include="ImageEditorDialogs\Print.ascx" />
+    <Content Include="ImageEditorDialogs\Resize.ascx" />
+    <Content Include="ImageEditorDialogs\Rotate.ascx" />
+    <Content Include="ImageEditorDialogs\Save.ascx" />
+    <Content Include="ImageEditorDialogs\Zoom.ascx" />
+    <Content Include="JJsonServices\JJsonService.asmx" />
+    <Content Include="MainControls\Configuration\Images\ChangePassword.png" />
+    <Content Include="MainControls\Configuration\Images\Information.png" />
+    <Content Include="MainControls\Configuration\Images\Settings.png" />
+    <Content Include="MainControls\Configuration\JConfigControl.ascx" />
+    <Content Include="MainControls\Configuration\JMainConfigurationControl.ascx" />
+    <Content Include="MainControls\Configuration\JUserPasswordUpdateControl.ascx" />
+    <Content Include="MainControls\CustomListSelector\JCustomListSelectorControl.ascx" />
+    <Content Include="MainControls\CustomListSelector\JCustomListSelectorService.asmx" />
+    <Content Include="MainControls\CustomListSelector\JCustomListViewControl.ascx" />
+    <Content Include="MainControls\Date\JDateControl.ascx" />
+    <Content Include="MainControls\GoogleMapControl\GoogleMapAPIWrapper.js" />
+    <Content Include="MainControls\GoogleMapControl\GoogleMapControl.ascx" />
+    <Content Include="MainControls\GoogleMapControl\GService.asmx" />
+    <Content Include="MainControls\Grid\JGridQueryControl.ascx" />
+    <Content Include="MainControls\Grid\JGridViewControl.ascx" />
+    <Content Include="MainControls\Grid\JSubDefineUpdateControl.ascx" />
+    <Content Include="MainControls\JqueryChart\changes.txt" />
+    <Content Include="MainControls\JqueryChart\copyright.txt" />
+    <Content Include="MainControls\JqueryChart\excanvas.js" />
+    <Content Include="MainControls\JqueryChart\excanvas.min.js" />
+    <Content Include="MainControls\JqueryChart\gpl-2.0.txt" />
+    <Content Include="MainControls\JqueryChart\images\background.jpg" />
+    <Content Include="MainControls\JqueryChart\images\basicline.png" />
+    <Content Include="MainControls\JqueryChart\images\basiclogaxis.png" />
+    <Content Include="MainControls\JqueryChart\images\basiclogoptions.png" />
+    <Content Include="MainControls\JqueryChart\images\basicoptions.png" />
+    <Content Include="MainControls\JqueryChart\images\dualaxis.png" />
+    <Content Include="MainControls\JqueryChart\images\logo.jpg" />
+    <Content Include="MainControls\JqueryChart\images\navdocs.png" />
+    <Content Include="MainControls\JqueryChart\images\navdocsover.png" />
+    <Content Include="MainControls\JqueryChart\images\navdownload.png" />
+    <Content Include="MainControls\JqueryChart\images\navdownloadover.png" />
+    <Content Include="MainControls\JqueryChart\images\navexamples.png" />
+    <Content Include="MainControls\JqueryChart\images\navexamplesover.png" />
+    <Content Include="MainControls\JqueryChart\images\navhome.png" />
+    <Content Include="MainControls\JqueryChart\images\navhomeover.png" />
+    <Content Include="MainControls\JqueryChart\images\new.png" />
+    <Content Include="MainControls\JqueryChart\images\sample3.png" />
+    <Content Include="MainControls\JqueryChart\images\samplesm.png" />
+    <Content Include="MainControls\JqueryChart\jqplot.axisLabelRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.axisTickRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.canvasGridRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.core.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.divTitleRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.effects.blind.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.effects.core.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.linearAxisRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.linearTickGenerator.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.linePattern.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.lineRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.markerRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.shadowRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.shapeRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.sprintf.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.tableLegendRenderer.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.themeEngine.js" />
+    <Content Include="MainControls\JqueryChart\jqplot.toImage.js" />
+    <Content Include="MainControls\JqueryChart\jqPlotCssStyling.txt" />
+    <Content Include="MainControls\JqueryChart\jqPlotOptions.txt" />
+    <Content Include="MainControls\JqueryChart\jquery.jqplot.css" />
+    <Content Include="MainControls\JqueryChart\jquery.jqplot.js" />
+    <Content Include="MainControls\JqueryChart\jquery.jqplot.min.css" />
+    <Content Include="MainControls\JqueryChart\jquery.jqplot.min.js" />
+    <Content Include="MainControls\JqueryChart\jquery.js" />
+    <Content Include="MainControls\JqueryChart\jquery.min.js" />
+    <Content Include="MainControls\JqueryChart\jsdate.js" />
+    <Content Include="MainControls\JqueryChart\MIT-LICENSE.txt" />
+    <Content Include="MainControls\JqueryChart\optionsTutorial.txt" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.barRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.barRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.BezierCurveRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.BezierCurveRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.blockRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.blockRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.bubbleRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.bubbleRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.canvasAxisLabelRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.canvasAxisLabelRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.canvasAxisTickRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.canvasAxisTickRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.canvasOverlay.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.canvasOverlay.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.canvasTextRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.canvasTextRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.categoryAxisRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.categoryAxisRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.ciParser.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.ciParser.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.cursor.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.cursor.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.dateAxisRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.dateAxisRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.donutRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.donutRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.dragable.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.dragable.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.enhancedLegendRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.enhancedLegendRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.enhancedPieLegendRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.funnelRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.funnelRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.highlighter.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.highlighter.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.highlightingCursor.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.json2.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.json2.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.logAxisRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.logAxisRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.mekkoAxisRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.mekkoAxisRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.mekkoRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.mekkoRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.meterGaugeRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.meterGaugeRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.mobile.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.mobile.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.ohlcRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.ohlcRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pieRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pieRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pointLabels.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pointLabels.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pyramidAxisRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pyramidAxisRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pyramidGridRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pyramidGridRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pyramidRenderer.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.pyramidRenderer.min.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.trendline.js" />
+    <Content Include="MainControls\JqueryChart\plugins\jqplot.trendline.min.js" />
+    <Content Include="MainControls\JqueryChart\README.txt" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\scripts\shAutoloader.js" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\scripts\shAutoloader.min.js" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\scripts\shBrushJScript.js" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\scripts\shBrushJScript.min.js" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\scripts\shBrushXml.js" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\scripts\shBrushXml.min.js" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\scripts\shCore.js" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\scripts\shCore.min.js" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\styles\shCore.css" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\styles\shCore.min.css" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\styles\shCoreDefault.css" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\styles\shCoreDefault.min.css" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\styles\shThemeDefault.css" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\styles\shThemeDefault.min.css" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\styles\shThemejqPlot.css" />
+    <Content Include="MainControls\JqueryChart\syntaxhighlighter\styles\shThemejqPlot.min.css" />
+    <Content Include="MainControls\JqueryChart\usage.txt" />
+    <Content Include="MainControls\LOVControl\JLOVControl.ascx" />
+    <Content Include="MainControls\OpenLayersMap\DefaultMarker_s64.png" />
+    <Content Include="MainControls\OpenLayersMap\Images\delete_s16.png" />
+    <Content Include="MainControls\OpenLayersMap\Images\leftarrow_s16.png" />
+    <Content Include="MainControls\OpenLayersMap\Images\rightarrow_s16.png" />
+    <Content Include="MainControls\OpenLayersMap\img\add_point_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\add_point_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\blank.gif" />
+    <Content Include="MainControls\OpenLayersMap\img\close.gif" />
+    <Content Include="MainControls\OpenLayersMap\img\drag-rectangle-off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\drag-rectangle-on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\draw_line_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\draw_line_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\draw_point_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\draw_point_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\draw_polygon_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\draw_polygon_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\east-mini.png" />
+    <Content Include="MainControls\OpenLayersMap\img\editing_tool_bar.png" />
+    <Content Include="MainControls\OpenLayersMap\img\layer-switcher-maximize.png" />
+    <Content Include="MainControls\OpenLayersMap\img\measuring-stick-off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\measuring-stick-on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\move_feature_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\move_feature_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\navigation_history.png" />
+    <Content Include="MainControls\OpenLayersMap\img\north-mini.png" />
+    <Content Include="MainControls\OpenLayersMap\img\overview_replacement.gif" />
+    <Content Include="MainControls\OpenLayersMap\img\pan-panel-NOALPHA.png" />
+    <Content Include="MainControls\OpenLayersMap\img\pan-panel.png" />
+    <Content Include="MainControls\OpenLayersMap\img\panning-hand-off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\panning-hand-on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\pan_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\pan_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\remove_point_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\remove_point_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\ruler.png" />
+    <Content Include="MainControls\OpenLayersMap\img\save_features_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\save_features_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\slider.png" />
+    <Content Include="MainControls\OpenLayersMap\img\south-mini.png" />
+    <Content Include="MainControls\OpenLayersMap\img\view_next_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\view_next_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\view_previous_off.png" />
+    <Content Include="MainControls\OpenLayersMap\img\view_previous_on.png" />
+    <Content Include="MainControls\OpenLayersMap\img\west-mini.png" />
+    <Content Include="MainControls\OpenLayersMap\img\zoom-minus-mini.png" />
+    <Content Include="MainControls\OpenLayersMap\img\zoom-panel-NOALPHA.png" />
+    <Content Include="MainControls\OpenLayersMap\img\zoom-panel.png" />
+    <Content Include="MainControls\OpenLayersMap\img\zoom-plus-mini.png" />
+    <Content Include="MainControls\OpenLayersMap\img\zoom-world-mini.png" />
+    <Content Include="MainControls\OpenLayersMap\img\zoombar.png" />
+    <Content Include="MainControls\OpenLayersMap\Map.js" />
+    <Content Include="MainControls\OpenLayersMap\MapStyle.css" />
+    <Content Include="MainControls\OpenLayersMap\MapWS.asmx" />
+    <Content Include="MainControls\OpenLayersMap\OpenLayers.js" />
+    <Content Include="MainControls\OpenLayersMap\OpenLayersMap.ascx" />
+    <Content Include="MainControls\OpenLayersMap\MapLoad.js" />
+    <Content Include="MainControls\Persons\JclsPersonAddress.ascx" />
+    <Content Include="MainControls\Persons\JPersonListControl.ascx" />
+    <Content Include="MainControls\Persons\JSearchPersonControl.ascx" />
+    <Content Include="MainControls\Persons\JShareSearchPersonControl.ascx" />
+    <Content Include="MainControls\Persons\wmPerson.aspx" />
+    <Content Include="MainControls\Signup\SignupControl.ascx" />
+    <Content Include="Property\JPropertyViewControl.ascx" />
+    <Content Include="WebService\Action.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Automation\JAutomationRefer.cs" />
+    <Compile Include="FormManager\JFormDefineControl.ascx.cs">
+      <DependentUpon>JFormDefineControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormManager\JFormDefineControl.ascx.designer.cs">
+      <DependentUpon>JFormDefineControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\JFormDefinePropertyControl.ascx.cs">
+      <DependentUpon>JFormDefinePropertyControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormManager\JFormDefinePropertyControl.ascx.designer.cs">
+      <DependentUpon>JFormDefinePropertyControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\JFormEventManager.cs" />
+    <Compile Include="FormManager\JFormListControl.ascx.cs">
+      <DependentUpon>JFormListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormManager\JFormListControl.ascx.designer.cs">
+      <DependentUpon>JFormListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\JFormManager.cs" />
+    <Compile Include="FormManager\JFormObjectControl.ascx.cs">
+      <DependentUpon>JFormObjectControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormManager\JFormObjectControl.ascx.designer.cs">
+      <DependentUpon>JFormObjectControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\JFormPropertyControl.ascx.cs">
+      <DependentUpon>JFormPropertyControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormManager\JFormPropertyControl.ascx.designer.cs">
+      <DependentUpon>JFormPropertyControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\JWebForms.ascx.cs">
+      <DependentUpon>JWebForms.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormManager\JWebForms.ascx.designer.cs">
+      <DependentUpon>JWebForms.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\Service.asmx.cs">
+      <DependentUpon>Service.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormManager\testUC.ascx.cs">
+      <DependentUpon>testUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormManager\testUC.ascx.designer.cs">
+      <DependentUpon>testUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="JJsonServices\JJsonService.asmx.cs">
+      <DependentUpon>JJsonService.asmx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Configuration\JConfigControl.ascx.cs">
+      <DependentUpon>JConfigControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Configuration\JConfigControl.ascx.designer.cs">
+      <DependentUpon>JConfigControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Configuration\JConfiguration.cs" />
+    <Compile Include="MainControls\Configuration\JMainConfigurationControl.ascx.cs">
+      <DependentUpon>JMainConfigurationControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Configuration\JMainConfigurationControl.ascx.designer.cs">
+      <DependentUpon>JMainConfigurationControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Configuration\JUserPasswordUpdateControl.ascx.cs">
+      <DependentUpon>JUserPasswordUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Configuration\JUserPasswordUpdateControl.ascx.designer.cs">
+      <DependentUpon>JUserPasswordUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\CustomListSelector\JCustomListSelectorService.asmx.cs">
+      <DependentUpon>JCustomListSelectorService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainControls\Grid\JGridQueryControl.ascx.cs">
+      <DependentUpon>JGridQueryControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Grid\JGridQueryControl.ascx.designer.cs">
+      <DependentUpon>JGridQueryControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Grid\JNewGridView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainControls\LOVControl\JLOVControl.ascx.cs">
+      <DependentUpon>JLOVControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\LOVControl\JLOVControl.ascx.designer.cs">
+      <DependentUpon>JLOVControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Persons\JclsPersonAddress.ascx.cs">
+      <DependentUpon>JclsPersonAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Persons\JclsPersonAddress.ascx.designer.cs">
+      <DependentUpon>JclsPersonAddress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Persons\JShareSearchPersonControl.ascx.cs">
+      <DependentUpon>JShareSearchPersonControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Persons\JShareSearchPersonControl.ascx.designer.cs">
+      <DependentUpon>JShareSearchPersonControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Persons\wmPerson.aspx.cs">
+      <DependentUpon>wmPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Persons\wmPerson.aspx.designer.cs">
+      <DependentUpon>wmPerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Property\JPropertyViewControl.ascx.cs">
+      <DependentUpon>JPropertyViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Property\JPropertyViewControl.ascx.designer.cs">
+      <DependentUpon>JPropertyViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\Action.asmx.cs">
+      <DependentUpon>Action.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="MainControls\GoogleMapControl\GService.cs" />
+    <Compile Include="ArchiveDocument\JArchiveControl.ascx.cs">
+      <DependentUpon>JArchiveControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArchiveDocument\JArchiveControl.ascx.designer.cs">
+      <DependentUpon>JArchiveControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageEditorDialogs\BaseDefine\JNewRealPerson.ascx.cs">
+      <DependentUpon>JNewRealPerson.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageEditorDialogs\BaseDefine\JNewRealPerson.ascx.designer.cs">
+      <DependentUpon>JNewRealPerson.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\CustomListSelector\JCustomListSelector.cs" />
+    <Compile Include="MainControls\CustomListSelector\JCustomListSelectorControl.ascx.cs">
+      <DependentUpon>JCustomListSelectorControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\CustomListSelector\JCustomListSelectorControl.ascx.designer.cs">
+      <DependentUpon>JCustomListSelectorControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\CustomListSelector\JCustomListViewControl.ascx.cs">
+      <DependentUpon>JCustomListViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\CustomListSelector\JCustomListViewControl.ascx.designer.cs">
+      <DependentUpon>JCustomListViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Date\JDateControl.ascx.cs">
+      <DependentUpon>JDateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Date\JDateControl.ascx.designer.cs">
+      <DependentUpon>JDateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\GoogleMapControl\GoogleMapControl.ascx.cs">
+      <DependentUpon>GoogleMapControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\GoogleMapControl\GoogleMapControl.ascx.designer.cs">
+      <DependentUpon>GoogleMapControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\GoogleMapControl\GoogleObject.cs" />
+    <Compile Include="MainControls\Grid\JGridViewControl.ascx.cs">
+      <DependentUpon>JGridViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Grid\JGridViewControl.ascx.designer.cs">
+      <DependentUpon>JGridViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Grid\JSubDefine.cs" />
+    <Compile Include="MainControls\Grid\JSubDefineUpdateControl.ascx.cs">
+      <DependentUpon>JSubDefineUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Grid\JSubDefineUpdateControl.ascx.designer.cs">
+      <DependentUpon>JSubDefineUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\JAJAXPanel.cs" />
+    <Compile Include="MainControls\MainControls.cs" />
+    <Compile Include="MainControls\Menu\JMenu.cs" />
+    <Compile Include="MainControls\OpenLayersMap\JMapData.cs" />
+    <Compile Include="MainControls\OpenLayersMap\MapWS.asmx.cs">
+      <DependentUpon>MapWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainControls\OpenLayersMap\OpenLayersMap.ascx.cs">
+      <DependentUpon>OpenLayersMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\OpenLayersMap\OpenLayersMap.ascx.designer.cs">
+      <DependentUpon>OpenLayersMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Panel\JDockPanel.cs" />
+    <Compile Include="MainControls\Panel\JWindow.cs" />
+    <Compile Include="MainControls\Persons\JPersonList.cs" />
+    <Compile Include="MainControls\Persons\JPersonListControl.ascx.cs">
+      <DependentUpon>JPersonListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Persons\JPersonListControl.ascx.designer.cs">
+      <DependentUpon>JPersonListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Persons\JSearchPersonControl.ascx.cs">
+      <DependentUpon>JSearchPersonControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Persons\JSearchPersonControl.ascx.designer.cs">
+      <DependentUpon>JSearchPersonControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\Signup\SignupControl.ascx.cs">
+      <DependentUpon>SignupControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainControls\Signup\SignupControl.ascx.designer.cs">
+      <DependentUpon>SignupControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MainControls\ToolBar\JToolBar.cs" />
+    <Compile Include="MainControls\Tree\Tree.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClassDiagram1.cd" />
+    <None Include="Properties\PublishProfiles\WebControllers.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AVL\AVL.csproj">
+      <Project>{9ee5f8a2-00c2-48eb-b46e-8d83d14fdc39}</Project>
+      <Name>AVL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebClassLibrary\WebClassLibrary.csproj">
+      <Project>{3b0b293d-40f5-49ad-b44b-5914873d5028}</Project>
+      <Name>WebClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8088</DevelopmentServerPort>
+          <DevelopmentServerVPath>/erp/WebControllers</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5024/WebControllers</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

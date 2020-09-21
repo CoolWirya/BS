@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9DFBAD5-AD6F-4478-81C6-73FBBB102295}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ManagementShares</RootNamespace>
+    <AssemblyName>ManagementShares</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\WebERP\bin\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\WebERP\bin\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\WebERP\bin\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ExplorerBar.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.ExplorerBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.FilterEditor.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.FilterEditor.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Schedule.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.Schedule.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.TimeLine.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.TimeLine.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\WebERP\bin\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\WebERP\bin\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.Data, Version=1.0.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClassLibrary\bin\Debug\MySQL.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Affiliate\Affiliate.cs" />
+    <Compile Include="Assemblies\Assemblies.cs" />
+    <Compile Include="Assemblies\AssembliesTable.cs" />
+    <Compile Include="Assemblies\AssemblyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\AssemblyForm.Designer.cs">
+      <DependentUpon>AssemblyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies\CandidListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\CandidListForm.Designer.cs" />
+    <Compile Include="Assemblies\MainAssembliesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\MainAssembliesForm.Designer.cs">
+      <DependentUpon>MainAssembliesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\CandidasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\CandidasForm.Designer.cs">
+      <DependentUpon>CandidasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\CountPolling.cs" />
+    <Compile Include="Assemblies\Pollings\CountPollingChoice.cs" />
+    <Compile Include="Assemblies\Pollings\CountPollingChoiceTable.cs" />
+    <Compile Include="Assemblies\Pollings\CountPollingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\CountPollingForm.Designer.cs" />
+    <Compile Include="Assemblies\Pollings\CountPollingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\CountPollingList.Designer.cs" />
+    <Compile Include="Assemblies\Pollings\CountPollingResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\CountPollingResultForm.Designer.cs" />
+    <Compile Include="Assemblies\Pollings\CountPollingTable.cs" />
+    <Compile Include="Assemblies\Pollings\DataVisualization.cs" />
+    <Compile Include="Assemblies\Pollings\Polling.cs" />
+    <Compile Include="Assemblies\Pollings\PollingCandida.cs" />
+    <Compile Include="Assemblies\Pollings\PollingCandidaTable.cs" />
+    <Compile Include="Assemblies\Pollings\PollingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\PollingForm.Designer.cs">
+      <DependentUpon>PollingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\PollingsListFroms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\PollingsListFroms.Designer.cs">
+      <DependentUpon>PollingsListFroms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies\Pollings\PollingTable.cs" />
+    <Compile Include="Assemblies\Presence\AssemblyPresence.cs" />
+    <Compile Include="Assemblies\Presence\AssemblyPresenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\Presence\AssemblyPresenceForm.Designer.cs">
+      <DependentUpon>AssemblyPresenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies\Presence\AssemblyPresenceTable.cs" />
+    <Compile Include="Assemblies\Presence\RunAssemblyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\Presence\RunAssemblyForm.Designer.cs">
+      <DependentUpon>RunAssemblyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies\ShareAssemblies\ShareAssemblies.cs" />
+    <Compile Include="Assemblies\ShareAssemblies\ShareAssembliesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\ShareAssemblies\ShareAssembliesForm.Designer.cs">
+      <DependentUpon>ShareAssembliesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies\ShareholdersAssembly\PresentSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assemblies\ShareholdersAssembly\PresentSetForm.Designer.cs">
+      <DependentUpon>PresentSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies\ShareholdersAssembly\ShareholdersAssembly.cs" />
+    <Compile Include="Assemblies\ShareholdersAssembly\ShareholdersAssemblyTable.cs" />
+    <Compile Include="BaseDefine\Cities.cs" />
+    <Compile Include="DocumentOld\DocumentShareOld.cs" />
+    <Compile Include="DocumentOld\DocumentShareOldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentOld\DocumentShareOldForm.Designer.cs">
+      <DependentUpon>DocumentShareOldForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Managementshares.cs" />
+    <Compile Include="Nodes\StaticNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ReportSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportSheetForm.Designer.cs">
+      <DependentUpon>ReportSheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ShareHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ShareHistoryForm.Designer.cs">
+      <DependentUpon>ShareHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ShareReport.cs" />
+    <Compile Include="SahamMapping\SahamMapping.cs" />
+    <Compile Include="ShareAgent\NewAgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareAgent\NewAgentForm.Designer.cs">
+      <DependentUpon>NewAgentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareAgent\SelectAgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareAgent\SelectAgentForm.Designer.cs">
+      <DependentUpon>SelectAgentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareAgent\ShareAgent.cs" />
+    <Compile Include="ShareAgent\ShareAgentHistory.cs" />
+    <Compile Include="ShareAgent\ShareAgentHistoryTable.cs" />
+    <Compile Include="ShareAgent\ShareAgentTable.cs" />
+    <Compile Include="ShareCompany\BreakSheets\BreakSheetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\BreakSheets\BreakSheetsForm.designer.cs">
+      <DependentUpon>BreakSheetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareCompany\BreakSheets\NewBreakSheetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\BreakSheets\NewBreakSheetsForm.designer.cs">
+      <DependentUpon>NewBreakSheetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareCompany\DocumentSahamdarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\DocumentSahamdarForm.Designer.cs">
+      <DependentUpon>DocumentSahamdarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareCompany\IncreaseShare\IncreaseShare.cs" />
+    <Compile Include="ShareCompany\IncreaseShare\IncreaseShareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\IncreaseShare\IncreaseShareForm.Designer.cs">
+      <DependentUpon>IncreaseShareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareCompany\IncreaseShare\IncreaseShareTable.cs" />
+    <Compile Include="ShareCompany\IncreaseShare\NewIncreaseShareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\IncreaseShare\NewIncreaseShareForm.Designer.cs">
+      <DependentUpon>NewIncreaseShareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareCompany\JoinSheets\JoinSheetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\JoinSheets\JoinSheetsForm.Designer.cs">
+      <DependentUpon>JoinSheetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareCompany\JoinSheets\JoinSheetsNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\JoinSheets\JoinSheetsNewForm.Designer.cs">
+      <DependentUpon>JoinSheetsNewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareCompany\ShareCompany.cs" />
+    <Compile Include="ShareCompany\ShareCompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\ShareCompanyForm.Designer.cs">
+      <DependentUpon>ShareCompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareCompany\ShareCompanyTable.cs" />
+    <Compile Include="ShareCompany\SharepCode.cs" />
+    <Compile Include="ShareCompany\SharePCodeChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\SharePCodeChange.Designer.cs">
+      <DependentUpon>SharePCodeChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareCompany\SharePrice\SharePrice.cs" />
+    <Compile Include="ShareCompany\SharePrice\SharePriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareCompany\SharePrice\SharePriceForm.Designer.cs">
+      <DependentUpon>SharePriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareHolder\OtherPerson.cs" />
+    <Compile Include="ShareHolder\Properties.cs" />
+    <Compile Include="ShareHolder\SearchShareHolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareHolder\SearchShareHolder.Designer.cs">
+      <DependentUpon>SearchShareHolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShareHolder\ShareHolder.cs" />
+    <Compile Include="ShareLog\ShareLog.cs" />
+    <Compile Include="ShareLog\SheetLogTable.cs" />
+    <Compile Include="ShareMessage\ShareMessage.cs" />
+    <Compile Include="ShareMessage\ShareMessageTable.cs" />
+    <Compile Include="SharePersonLogger\PersonHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SharePersonLogger\PersonHistoryForm.Designer.cs">
+      <DependentUpon>PersonHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SharePersonLogger\SharePersonLogger.cs" />
+    <Compile Include="SharePersonLogger\SharePersonLoggerTable.cs" />
+    <Compile Include="ShareSheet\ShareSheet.cs" />
+    <Compile Include="ShareSheet\ShareSheetTable.cs" />
+    <Compile Include="ShareSheet\SheetHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShareSheet\SheetHistoryForm.Designer.cs">
+      <DependentUpon>SheetHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shares\Shares.cs" />
+    <Compile Include="SheetOperations\Divide\DivideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SheetOperations\Divide\DivideForm.Designer.cs">
+      <DependentUpon>DivideForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SheetOperations\Divide\DivideSheet.cs" />
+    <Compile Include="SheetOperations\Divide\DivideSheetTable.cs" />
+    <Compile Include="SheetOperations\Join\JoinSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SheetOperations\Join\JoinSheetForm.Designer.cs">
+      <DependentUpon>JoinSheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SheetOperations\Transfer\ReturnTransfer.cs" />
+    <Compile Include="SheetOperations\Transfer\ReturnTransferTable.cs" />
+    <Compile Include="SheetOperations\Transfer\TransferSheet.cs" />
+    <Compile Include="SheetOperations\Transfer\TransferSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SheetOperations\Transfer\TransferSheetForm.Designer.cs">
+      <DependentUpon>TransferSheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SheetOperations\Transfer\TransferSheetTable.cs" />
+    <Compile Include="Sheet\Sheet.cs" />
+    <Compile Include="SQLViews\SQLViews.cs" />
+    <Compile Include="TransferRequest\Request.cs" />
+    <Compile Include="TransferRequest\RequestBuy.cs" />
+    <Compile Include="TransferRequest\RequestBuyTable.cs" />
+    <Compile Include="TransferRequest\RequestSell.cs" />
+    <Compile Include="TransferRequest\RequestSellTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assemblies\AssemblyForm.resx">
+      <DependentUpon>AssemblyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assemblies\CandidListForm.resx" />
+    <EmbeddedResource Include="Assemblies\MainAssembliesForm.resx">
+      <DependentUpon>MainAssembliesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assemblies\Pollings\CandidasForm.resx">
+      <DependentUpon>CandidasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assemblies\Pollings\CountPollingForm.resx" />
+    <EmbeddedResource Include="Assemblies\Pollings\CountPollingList.resx" />
+    <EmbeddedResource Include="Assemblies\Pollings\CountPollingResultForm.resx" />
+    <EmbeddedResource Include="Assemblies\Pollings\PollingForm.resx">
+      <DependentUpon>PollingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assemblies\Pollings\PollingsListFroms.resx">
+      <DependentUpon>PollingsListFroms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assemblies\Presence\AssemblyPresenceForm.resx">
+      <DependentUpon>AssemblyPresenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assemblies\Presence\RunAssemblyForm.resx">
+      <DependentUpon>RunAssemblyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assemblies\ShareAssemblies\ShareAssembliesForm.resx">
+      <DependentUpon>ShareAssembliesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assemblies\ShareholdersAssembly\PresentSetForm.resx">
+      <DependentUpon>PresentSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentOld\DocumentShareOldForm.resx">
+      <DependentUpon>DocumentShareOldForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportSheetForm.resx">
+      <DependentUpon>ReportSheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ShareHistoryForm.resx">
+      <DependentUpon>ShareHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareAgent\NewAgentForm.resx">
+      <DependentUpon>NewAgentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareAgent\SelectAgentForm.resx">
+      <DependentUpon>SelectAgentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\BreakSheets\BreakSheetsForm.resx">
+      <DependentUpon>BreakSheetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\BreakSheets\NewBreakSheetsForm.resx">
+      <DependentUpon>NewBreakSheetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\DocumentSahamdarForm.resx">
+      <DependentUpon>DocumentSahamdarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\IncreaseShare\IncreaseShareForm.resx">
+      <DependentUpon>IncreaseShareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\IncreaseShare\NewIncreaseShareForm.resx">
+      <DependentUpon>NewIncreaseShareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\JoinSheets\JoinSheetsForm.resx">
+      <DependentUpon>JoinSheetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\JoinSheets\JoinSheetsNewForm.resx">
+      <DependentUpon>JoinSheetsNewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\ShareCompanyForm.resx">
+      <DependentUpon>ShareCompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\SharePCodeChange.resx">
+      <DependentUpon>SharePCodeChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareCompany\SharePrice\SharePriceForm.resx">
+      <DependentUpon>SharePriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareHolder\SearchShareHolder.resx">
+      <DependentUpon>SearchShareHolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SharePersonLogger\PersonHistoryForm.resx">
+      <DependentUpon>PersonHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShareSheet\SheetHistoryForm.resx">
+      <DependentUpon>SheetHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SheetOperations\Divide\DivideForm.resx">
+      <DependentUpon>DivideForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SheetOperations\Join\JoinSheetForm.resx">
+      <DependentUpon>JoinSheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SheetOperations\Transfer\TransferSheetForm.resx">
+      <DependentUpon>TransferSheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SheetOperations\Replica\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Globals\Globals.csproj">
+      <Project>{e7cc3df6-4222-41dc-8f78-ace6e997573b}</Project>
+      <Name>Globals</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

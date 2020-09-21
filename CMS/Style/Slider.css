@@ -1,0 +1,92 @@
+﻿#slideshow #slideshowWindow {
+            width: 660px;
+            height: 271px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+            #slideshow #slideshowWindow .slide {
+                margin: 0;
+                padding: 0;
+                width: 680px;
+                height: 271px;
+                position: relative;
+            }
+
+                #slideshow #slideshowWindow .slide .slideText {
+                    position: absolute;
+                    top: 150px;
+                    left: 100px;
+                    width: 500px;
+                    height: 90px;
+                    background-image: url(../Images/bg_flex_caption.png);
+                    background-repeat: repeat;
+                    margin: 0;
+                    padding: 0;
+                    color: #e67e22;
+                    font-family: Myriad Pro, Arial, Helvetica, sans-serif;
+                   
+                    text-align:center;
+                }
+
+                    #slideshow #slideshowWindow .slide .slideText a:link, #slideshow #slideshowWindow .slide .slideText a:visited {
+                        color: #ffffff;
+                        text-decoration: none;
+                    }
+
+                    #slideshow #slideshowWindow .slide .slideText h2, #slideshow #slideshowWindow .slide .slideText p {
+                        margin: 10px 0 0 10px;
+                        padding: 0;
+                        font-size:12pt !important;
+
+                    }
+
+        /*Navigation*/
+        .nav {
+            display: block;
+            text-indent: -10000px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #leftNav {
+            /*top: 240px;*/
+            left: 0px;
+            /*width: 94px;*/
+            /*height: 34px;*/
+            background-image: url(../Images/bg_direction_nav.png);
+            background-repeat: no-repeat;
+            z-index: 999;
+            cursor: pointer;
+    display: block;
+    height: 80px;
+    margin: -40px 0 0;
+    opacity: 1;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 40px;
+        }
+
+        #rightNav {
+            /*top: 240px;*/
+            left: 350px;
+            /*width: 53px;*/
+            /*height: 26px;*/
+            background-image: url(../Images/bg_direction_nav.png);
+            background-repeat: no-repeat;
+            z-index: 999;
+                  cursor: pointer;
+    display: block;
+    height: 80px;
+    margin: -40px 0 0;
+    opacity: 1;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 40px;
+     background-position: 100% 0;
+    right: 0;
+        }

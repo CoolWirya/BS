@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Finance.JAsset" Collapsed="true">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAEAAGAAAAAAAAgAAAAAIEIAAAAAAEAAACAAAA=</HashCode>
+      <FileName>Asset\Asset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Finance.JAssetShare" Collapsed="true">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQSAEAAUAABAAAAAAAgAAAAAAEIAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Asset\Asset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Finance.JAssetType">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Asset\Asset.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

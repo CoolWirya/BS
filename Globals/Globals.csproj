@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E7CC3DF6-4222-41DC-8F78-ACE6E997573B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Globals</RootNamespace>
+    <AssemblyName>Globals</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="AVL">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\AVL.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Estates">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Estates.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Bars">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\FastReport.Bars.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport.Editor">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\FastReport.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="JComponents">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\JComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="JJson">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\JJson.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ManagementShares">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\ManagementShares.dll</HintPath>
+    </Reference>
+    <Reference Include="mCoreLib">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\mCoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Meeting">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Meeting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\office.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDateControls 2.0">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\PersianDateControls 2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="RealEstate">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="Restaurant">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Restaurant.dll</HintPath>
+    </Reference>
+    <Reference Include="Security">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreComplex">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\StoreComplex.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreManagement">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\StoreManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Rajaei\dlls\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Touchless.Vision">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\Touchless.Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="WebClassLibrary, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dlls\WebClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="WebControllers">
+      <HintPath>..\..\..\Rajaei\Globals\bin\Debug\WebControllers.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseWizardForm.Designer.cs">
+      <DependentUpon>BaseWizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\TableNames.cs" />
+    <Compile Include="DynamicSearch\DQuickSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DynamicSearch\DQuickSearch.designer.cs">
+      <DependentUpon>DQuickSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicSearch\DynamicSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DynamicSearch\DynamicSearchForm.Designer.cs">
+      <DependentUpon>DynamicSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicSearch\DynamicSearchClasses.cs" />
+    <Compile Include="DynamicSearch\ReportNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DynamicSearch\ReportNameForm.Designer.cs">
+      <DependentUpon>ReportNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicSearch\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DynamicSearch\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events\DieEvents.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Property\DefinePropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\DefinePropertyForm.Designer.cs">
+      <DependentUpon>DefinePropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property\DefinePropertyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Property\DefinePropertyUserControl.Designer.cs">
+      <DependentUpon>DefinePropertyUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property\Property.cs" />
+    <Compile Include="Property\PropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\PropertyForm.Designer.cs">
+      <DependentUpon>PropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property\PropertyHistory\JPropertyHistory.cs" />
+    <Compile Include="Property\PropertyHistory\JPropertyHistoryTable.cs" />
+    <Compile Include="Property\PropertyHistory\JPropertyHistoryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Property\PropertyHistory\JPropertyHistoryView.designer.cs">
+      <DependentUpon>JPropertyHistoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property\PropertyHistory\JPropertyHistoryViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\PropertyHistory\JPropertyHistoryViewForm.designer.cs">
+      <DependentUpon>JPropertyHistoryViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property\PropertyTable.cs" />
+    <Compile Include="Property\PropertyValueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Property\PropertyValueForm.Designer.cs">
+      <DependentUpon>PropertyValueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property\PropertyValueGridControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Property\PropertyValueGridControl.Designer.cs">
+      <DependentUpon>PropertyValueGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Property\PropertyValueUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Property\PropertyValueUserControl.Designer.cs">
+      <DependentUpon>PropertyValueUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registry\Registry.cs" />
+    <Compile Include="ReportDataTable\ReportDataTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDataTable\ReportDataTableForm.Designer.cs">
+      <DependentUpon>ReportDataTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ActiveDirectory\GetInfoActiveDirectory.cs" />
+    <Compile Include="Users\ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ChangePass.Designer.cs">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Groups.cs" />
+    <Compile Include="Users\LoginUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\LoginUserForm.Designer.cs">
+      <DependentUpon>LoginUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\users.cs" />
+    <Compile Include="Users\UsersListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\UsersListForm.Designer.cs">
+      <DependentUpon>UsersListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UserTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForm\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseWizardForm.resx">
+      <DependentUpon>BaseWizardForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DynamicSearch\DQuickSearch.resx">
+      <DependentUpon>DQuickSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DynamicSearch\DynamicSearchForm.resx">
+      <DependentUpon>DynamicSearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DynamicSearch\ReportNameForm.resx">
+      <DependentUpon>ReportNameForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DynamicSearch\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\DefinePropertyForm.resx">
+      <DependentUpon>DefinePropertyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\DefinePropertyUserControl.resx">
+      <DependentUpon>DefinePropertyUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropertyForm.resx">
+      <DependentUpon>PropertyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropertyHistory\JPropertyHistoryView.resx">
+      <DependentUpon>JPropertyHistoryView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropertyHistory\JPropertyHistoryViewForm.resx">
+      <DependentUpon>JPropertyHistoryViewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropertyValueForm.resx">
+      <DependentUpon>PropertyValueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropertyValueGridControl.resx">
+      <DependentUpon>PropertyValueGridControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Property\PropertyValueUserControl.resx">
+      <DependentUpon>PropertyValueUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ChangePass.resx">
+      <DependentUpon>ChangePass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\LoginUserForm.resx">
+      <DependentUpon>LoginUserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\UsersListForm.resx">
+      <DependentUpon>UsersListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

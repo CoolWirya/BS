@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FB2E793-F67B-4BFA-9780-FFA946C41075}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebBaseDefine</RootNamespace>
+    <AssemblyName>WebBaseDefine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard\JDashboardControl.ascx.cs">
+      <DependentUpon>JDashboardControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\JDashboardControl.ascx.designer.cs">
+      <DependentUpon>JDashboardControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBankAccountUpdateControl.ascx.cs">
+      <DependentUpon>JBankAccountUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBankAccountUpdateControl.ascx.designer.cs">
+      <DependentUpon>JBankAccountUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JClassesControl.ascx.cs">
+      <DependentUpon>JClassesControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JClassesControl.ascx.designer.cs">
+      <DependentUpon>JClassesControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JClassListControl.ascx.cs">
+      <DependentUpon>JClassListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JClassListControl.ascx.designer.cs">
+      <DependentUpon>JClassListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JDecisionListControl.ascx.cs">
+      <DependentUpon>JDecisionListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JDecisionListControl.ascx.designer.cs">
+      <DependentUpon>JDecisionListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JDecisionsControl.ascx.cs">
+      <DependentUpon>JDecisionsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JDecisionsControl.ascx.designer.cs">
+      <DependentUpon>JDecisionsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JFormObjectControl.ascx.cs">
+      <DependentUpon>JFormObjectControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JFormObjectControl.ascx.designer.cs">
+      <DependentUpon>JFormObjectControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JGroupControl.ascx.cs">
+      <DependentUpon>JGroupControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JGroupControl.ascx.designer.cs">
+      <DependentUpon>JGroupControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JGroupUsersControl.ascx.cs">
+      <DependentUpon>JGroupUsersControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JGroupUsersControl.ascx.designer.cs">
+      <DependentUpon>JGroupUsersControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JJobTitleUpdateControl.ascx.cs">
+      <DependentUpon>JJobTitleUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JJobTitleUpdateControl.ascx.designer.cs">
+      <DependentUpon>JJobTitleUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JLegalPersonUpdateControl.ascx.cs">
+      <DependentUpon>JLegalPersonUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JLegalPersonUpdateControl.ascx.designer.cs">
+      <DependentUpon>JLegalPersonUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JLoadDLLControl.ascx.cs">
+      <DependentUpon>JLoadDLLControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JLoadDLLControl.ascx.designer.cs">
+      <DependentUpon>JLoadDLLControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JOrganizationChartControl.ascx.cs">
+      <DependentUpon>JOrganizationChartControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JOrganizationChartControl.ascx.designer.cs">
+      <DependentUpon>JOrganizationChartControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JOrganizationChartUpdateControl.ascx.cs">
+      <DependentUpon>JOrganizationChartUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JOrganizationChartUpdateControl.ascx.designer.cs">
+      <DependentUpon>JOrganizationChartUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JOtherPersonUpdateControl.ascx.cs">
+      <DependentUpon>JOtherPersonUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JOtherPersonUpdateControl.ascx.designer.cs">
+      <DependentUpon>JOtherPersonUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JPermissionSetGroupControl.ascx.cs">
+      <DependentUpon>JPermissionSetGroupControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JPermissionSetGroupControl.ascx.designer.cs">
+      <DependentUpon>JPermissionSetGroupControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JPermissionSetUserControl.ascx.cs">
+      <DependentUpon>JPermissionSetUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JPermissionSetUserControl.ascx.designer.cs">
+      <DependentUpon>JPermissionSetUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JPersonTafsiliCodeUpdateControl.ascx.cs">
+      <DependentUpon>JPersonTafsiliCodeUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JPersonTafsiliCodeUpdateControl.ascx.designer.cs">
+      <DependentUpon>JPersonTafsiliCodeUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JPostTitleUpdateControl.ascx.cs">
+      <DependentUpon>JPostTitleUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JPostTitleUpdateControl.ascx.designer.cs">
+      <DependentUpon>JPostTitleUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JProjectsUpdateControl.ascx.cs">
+      <DependentUpon>JProjectsUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JProjectsUpdateControl.ascx.designer.cs">
+      <DependentUpon>JProjectsUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JRealPersonUpdateControl.ascx.cs">
+      <DependentUpon>JRealPersonUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JRealPersonUpdateControl.ascx.designer.cs">
+      <DependentUpon>JRealPersonUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JSuccessorUpdateControl.ascx.cs">
+      <DependentUpon>JSuccessorUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JSuccessorUpdateControl.ascx.designer.cs">
+      <DependentUpon>JSuccessorUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JToolRealPersonUpdateControl.ascx.cs">
+      <DependentUpon>JToolRealPersonUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JToolRealPersonUpdateControl.ascx.designer.cs">
+      <DependentUpon>JToolRealPersonUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JUserUpdateControl.ascx.cs">
+      <DependentUpon>JUserUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JUserUpdateControl.ascx.designer.cs">
+      <DependentUpon>JUserUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrganizationChart.aspx.cs">
+      <DependentUpon>OrganizationChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\OrganizationChart.aspx.designer.cs">
+      <DependentUpon>OrganizationChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JPropertyForPerson.cs" />
+    <Compile Include="JWebBaseDefine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dashboard\JDashboardControl.ascx" />
+    <Content Include="Forms\JBankAccountUpdateControl.ascx" />
+    <Content Include="Forms\JClassesControl.ascx" />
+    <Content Include="Forms\JClassListControl.ascx" />
+    <Content Include="Forms\JDecisionListControl.ascx" />
+    <Content Include="Forms\JDecisionsControl.ascx" />
+    <Content Include="Forms\JFormObjectControl.ascx" />
+    <Content Include="Forms\JGroupControl.ascx" />
+    <Content Include="Forms\JGroupUsersControl.ascx" />
+    <Content Include="Forms\JJobTitleUpdateControl.ascx" />
+    <Content Include="Forms\JLegalPersonUpdateControl.ascx" />
+    <Content Include="Forms\JLoadDLLControl.ascx" />
+    <Content Include="Forms\JOrganizationChartControl.ascx" />
+    <Content Include="Forms\JOrganizationChartUpdateControl.ascx" />
+    <Content Include="Forms\JOtherPersonUpdateControl.ascx" />
+    <Content Include="Forms\JPermissionSetGroupControl.ascx" />
+    <Content Include="Forms\JPermissionSetUserControl.ascx" />
+    <Content Include="Forms\JPersonTafsiliCodeUpdateControl.ascx" />
+    <Content Include="Forms\JPostTitleUpdateControl.ascx" />
+    <Content Include="Forms\JProjectsUpdateControl.ascx" />
+    <Content Include="Forms\JRealPersonUpdateControl.ascx" />
+    <Content Include="Forms\JSuccessorUpdateControl.ascx" />
+    <Content Include="Forms\JToolRealPersonUpdateControl.ascx" />
+    <Content Include="Forms\JUserUpdateControl.ascx" />
+    <Content Include="Forms\OrganizationChart.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\HWebBaseDefine.pubxml" />
+    <None Include="Properties\PublishProfiles\WebBaseDefine.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Accounting">
+      <HintPath>..\..\..\..\Dlls\bin\Accounting.dll</HintPath>
+    </Reference>
+    <Reference Include="AndroidWebManagement">
+      <HintPath>..\..\..\..\Dlls\bin\AndroidWebManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\..\..\Dlls\bin\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation">
+      <HintPath>..\..\..\..\Dlls\bin\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="AUTOMOBILE">
+      <HintPath>..\..\..\..\Dlls\bin\AUTOMOBILE.dll</HintPath>
+    </Reference>
+    <Reference Include="AVL">
+      <HintPath>..\..\..\..\Dlls\bin\AVL.dll</HintPath>
+    </Reference>
+    <Reference Include="BusManagment">
+      <HintPath>..\..\..\..\Dlls\bin\BusManagment.dll</HintPath>
+    </Reference>
+    <Reference Include="Chat">
+      <HintPath>..\..\..\..\Dlls\bin\Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication">
+      <HintPath>..\..\..\..\Dlls\bin\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment">
+      <HintPath>..\..\..\..\Dlls\bin\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\..\..\..\Dlls\bin\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals">
+      <HintPath>..\..\..\..\Dlls\bin\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="JComponents">
+      <HintPath>..\..\..\..\Dlls\bin\JComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\..\..\..\Dlls\bin\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Rajaei\WebBaseDefine\bin\Microsoft.QualityTools.Testing.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>..\..\..\Rajaei\WebBaseDefine\bin\System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\..\Dlls\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="WebClassLibrary">
+      <HintPath>..\..\..\..\Dlls\bin\WebClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="WebControllers">
+      <HintPath>..\..\..\..\Dlls\bin\WebControllers.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>29761</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5024/WebBaseDefine/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31E6E262-735D-4936-8B77-59074EE9459B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CMSClassLibrary">
+      <HintPath>..\..\..\DLLs\CMSClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Users\amini\Desktop\references\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Users\amini\Desktop\references\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Users\amini\Desktop\references\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="WebClassLibrary">
+      <HintPath>..\..\..\..\Users\amini\Desktop\references\WebClassLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\ArchivedDocuments.dll" />
+    <Content Include="bin\Autofac.dll" />
+    <Content Include="bin\Automation.dll" />
+    <Content Include="bin\AUTOMOBILE.dll" />
+    <Content Include="bin\BusManagment.dll" />
+    <Content Include="bin\ClassLibrary.dll" />
+    <Content Include="bin\CMSClassLibrary.dll" />
+    <Content Include="bin\Communication.dll" />
+    <Content Include="bin\DevComponents.DotNetBar2.dll" />
+    <Content Include="bin\elFinder.Connector.dll" />
+    <Content Include="bin\Employment.dll" />
+    <Content Include="bin\Entertainment.dll" />
+    <Content Include="bin\Estates.dll" />
+    <Content Include="bin\FastReport.Bars.dll" />
+    <Content Include="bin\FastReport.dll" />
+    <Content Include="bin\FastReport.Editor.dll" />
+    <Content Include="bin\Finance.dll" />
+    <Content Include="bin\Globals.dll" />
+    <Content Include="bin\GMap.NET.Core.dll" />
+    <Content Include="bin\GMap.NET.WindowsForms.dll" />
+    <Content Include="bin\HtmlAgilityPack.dll" />
+    <Content Include="bin\Interop.ActiveDs.dll" />
+    <Content Include="bin\Interop.AxMmCtlLib.dll" />
+    <Content Include="bin\Janus.Data.v3.dll" />
+    <Content Include="bin\Janus.Windows.ButtonBar.v3.dll" />
+    <Content Include="bin\Janus.Windows.CalendarCombo.v3.dll" />
+    <Content Include="bin\Janus.Windows.Common.v3.dll" />
+    <Content Include="bin\Janus.Windows.ExplorerBar.v3.dll" />
+    <Content Include="bin\Janus.Windows.FilterEditor.v3.dll" />
+    <Content Include="bin\Janus.Windows.GridEX.v3.dll" />
+    <Content Include="bin\Janus.Windows.Ribbon.v3.dll" />
+    <Content Include="bin\Janus.Windows.Schedule.v3.dll" />
+    <Content Include="bin\Janus.Windows.TimeLine.v3.dll" />
+    <Content Include="bin\Janus.Windows.UI.v3.dll" />
+    <Content Include="bin\JJson.dll" />
+    <Content Include="bin\JJsonAdditionalLibrary.dll" />
+    <Content Include="bin\Legal.dll" />
+    <Content Include="bin\LumiSoft.Net.dll" />
+    <Content Include="bin\ManagementShares.dll" />
+    <Content Include="bin\mCoreLib.dll" />
+    <Content Include="bin\Meeting.dll" />
+    <Content Include="bin\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="bin\Microsoft.Office.Interop.Word.dll" />
+    <Content Include="bin\Microsoft.QualityTools.Testing.Fakes.dll" />
+    <Content Include="bin\Microsoft.Vbe.Interop.dll" />
+    <Content Include="bin\MySQL.Data.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\office.dll" />
+    <Content Include="bin\OfficeWord.dll" />
+    <Content Include="bin\PersianDateControls 2.0.dll" />
+    <Content Include="bin\RealEstate.dll" />
+    <Content Include="bin\Restaurant.dll" />
+    <Content Include="bin\Security.dll" />
+    <Content Include="bin\SmartCard.dll" />
+    <Content Include="bin\SmartCardSepad.dll" />
+    <Content Include="bin\StoreComplex.dll" />
+    <Content Include="bin\System.Data.SQLite.dll" />
+    <Content Include="bin\Telerik.Web.Design.dll" />
+    <Content Include="bin\Telerik.Web.UI.dll" />
+    <Content Include="bin\Telerik.Web.UI.Skins.dll" />
+    <Content Include="bin\Touchless.Vision.dll" />
+    <Content Include="bin\WebAutomation.dll" />
+    <Content Include="bin\WebBusManagement.dll" />
+    <Content Include="bin\WebClassLibrary.dll" />
+    <Content Include="bin\WebControllers.dll" />
+    <Content Include="bin\WebManagementShare.dll" />
+    <Content Include="bin\WebReport.dll" />
+    <Content Include="ContentManagement\JAddCategoryControl.ascx" />
+    <Content Include="ContentManagement\JAddContentControl.ascx" />
+    <Content Include="ContentManagement\test.ascx" />
+    <Content Include="ExtensionManagement\JAddExtensionControl.ascx" />
+    <Content Include="FileManagement\JFileManager.ascx" />
+    <Content Include="Handler\jqueryFileTree.aspx" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\bg.heading.jpg" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\bg_direction_nav.png" />
+    <Content Include="Images\bg_flex_caption.png" />
+    <Content Include="Images\config.png" />
+    <Content Include="Images\Controls\arrow_down.png" />
+    <Content Include="Images\Controls\arrow_up.png" />
+    <Content Include="Images\Controls\back.png" />
+    <Content Include="Images\Controls\Calendar.gif" />
+    <Content Include="Images\Controls\checked_s16.png" />
+    <Content Include="Images\Controls\checked_s24.png" />
+    <Content Include="Images\Controls\checked_s32.png" />
+    <Content Include="Images\Controls\checked_s64.png" />
+    <Content Include="Images\Controls\delete_blue.png" />
+    <Content Include="Images\Controls\elRTE\eldirtree.png" />
+    <Content Include="Images\Controls\elRTE\elrte-toolbar.png" />
+    <Content Include="Images\Controls\elRTE\google-maps.png" />
+    <Content Include="Images\Controls\elRTE\iframe.png" />
+    <Content Include="Images\Controls\elRTE\loading.gif" />
+    <Content Include="Images\Controls\elRTE\media-director.png" />
+    <Content Include="Images\Controls\elRTE\media-flash.png" />
+    <Content Include="Images\Controls\elRTE\media-quicktime.png" />
+    <Content Include="Images\Controls\elRTE\media-realaudio.png" />
+    <Content Include="Images\Controls\elRTE\media-rutube.png" />
+    <Content Include="Images\Controls\elRTE\media-vimeo.png" />
+    <Content Include="Images\Controls\elRTE\media-winmedia.png" />
+    <Content Include="Images\Controls\elRTE\media-youtube.png" />
+    <Content Include="Images\Controls\elRTE\outline-div.png" />
+    <Content Include="Images\Controls\elRTE\outline-p.png" />
+    <Content Include="Images\Controls\elRTE\pagebreak.gif" />
+    <Content Include="Images\Controls\elRTE\pixel.gif" />
+    <Content Include="Images\Controls\elRTE\smileys\evilgrin.png" />
+    <Content Include="Images\Controls\elRTE\smileys\grin.png" />
+    <Content Include="Images\Controls\elRTE\smileys\happy.png" />
+    <Content Include="Images\Controls\elRTE\smileys\smile.png" />
+    <Content Include="Images\Controls\elRTE\smileys\surprised.png" />
+    <Content Include="Images\Controls\elRTE\smileys\tongue.png" />
+    <Content Include="Images\Controls\elRTE\smileys\unhappy.png" />
+    <Content Include="Images\Controls\elRTE\smileys\waii.png" />
+    <Content Include="Images\Controls\elRTE\smileys\wink.png" />
+    <Content Include="Images\Controls\elRTE\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Images\Controls\elRTE\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Images\Controls\elRTE\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Images\Controls\elRTE\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Images\Controls\elRTE\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Images\Controls\elRTE\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Images\Controls\elRTE\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Images\Controls\elRTE\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Images\Controls\elRTE\ui-icons_222222_256x240.png" />
+    <Content Include="Images\Controls\elRTE\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Images\Controls\elRTE\ui-icons_454545_256x240.png" />
+    <Content Include="Images\Controls\elRTE\ui-icons_888888_256x240.png" />
+    <Content Include="Images\Controls\elRTE\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Images\Controls\elRTE\yandex-maps.png" />
+    <Content Include="Images\Controls\free_button.png" />
+    <Content Include="Images\Controls\gridview_csv.png" />
+    <Content Include="Images\Controls\gridview_excel.png" />
+    <Content Include="Images\Controls\gridview_formmanagers.png" />
+    <Content Include="Images\Controls\gridview_forms.png" />
+    <Content Include="Images\Controls\gridview_help.png" />
+    <Content Include="Images\Controls\gridview_pdf.png" />
+    <Content Include="Images\Controls\gridview_print.png" />
+    <Content Include="Images\Controls\gridview_refresh.png" />
+    <Content Include="Images\Controls\gridview_word.png" />
+    <Content Include="Images\Controls\gsfilemanager\application.png" />
+    <Content Include="Images\Controls\gsfilemanager\button_select.gif" />
+    <Content Include="Images\Controls\gsfilemanager\code.png" />
+    <Content Include="Images\Controls\gsfilemanager\cross.png" />
+    <Content Include="Images\Controls\gsfilemanager\css.png" />
+    <Content Include="Images\Controls\gsfilemanager\cut.png" />
+    <Content Include="Images\Controls\gsfilemanager\db.png" />
+    <Content Include="Images\Controls\gsfilemanager\directory.png" />
+    <Content Include="Images\Controls\gsfilemanager\disk.png" />
+    <Content Include="Images\Controls\gsfilemanager\doc.png" />
+    <Content Include="Images\Controls\gsfilemanager\door.png" />
+    <Content Include="Images\Controls\gsfilemanager\email.png" />
+    <Content Include="Images\Controls\gsfilemanager\file.png" />
+    <Content Include="Images\Controls\gsfilemanager\film.png" />
+    <Content Include="Images\Controls\gsfilemanager\flash.png" />
+    <Content Include="Images\Controls\gsfilemanager\folder_open.png" />
+    <Content Include="Images\Controls\gsfilemanager\html.png" />
+    <Content Include="Images\Controls\gsfilemanager\img06.gif" />
+    <Content Include="Images\Controls\gsfilemanager\img07.gif" />
+    <Content Include="Images\Controls\gsfilemanager\java.png" />
+    <Content Include="Images\Controls\gsfilemanager\Jcrop.gif" />
+    <Content Include="Images\Controls\gsfilemanager\kwrite.png" />
+    <Content Include="Images\Controls\gsfilemanager\linux.png" />
+    <Content Include="Images\Controls\gsfilemanager\loading.gif" />
+    <Content Include="Images\Controls\gsfilemanager\movement.png" />
+    <Content Include="Images\Controls\gsfilemanager\music.png" />
+    <Content Include="Images\Controls\gsfilemanager\new_dir.png" />
+    <Content Include="Images\Controls\gsfilemanager\new_file.png" />
+    <Content Include="Images\Controls\gsfilemanager\page_white_copy.png" />
+    <Content Include="Images\Controls\gsfilemanager\page_white_delete.png" />
+    <Content Include="Images\Controls\gsfilemanager\page_white_edit.png" />
+    <Content Include="Images\Controls\gsfilemanager\page_white_paste.png" />
+    <Content Include="Images\Controls\gsfilemanager\pdf.png" />
+    <Content Include="Images\Controls\gsfilemanager\php.png" />
+    <Content Include="Images\Controls\gsfilemanager\picture.png" />
+    <Content Include="Images\Controls\gsfilemanager\ppt.png" />
+    <Content Include="Images\Controls\gsfilemanager\psd.png" />
+    <Content Include="Images\Controls\gsfilemanager\ruby.png" />
+    <Content Include="Images\Controls\gsfilemanager\script.png" />
+    <Content Include="Images\Controls\gsfilemanager\selection-select.png" />
+    <Content Include="Images\Controls\gsfilemanager\spinner.gif" />
+    <Content Include="Images\Controls\gsfilemanager\toggle_minus.png" />
+    <Content Include="Images\Controls\gsfilemanager\toggle_plus.png" />
+    <Content Include="Images\Controls\gsfilemanager\txt.png" />
+    <Content Include="Images\Controls\gsfilemanager\upload_folder.png" />
+    <Content Include="Images\Controls\gsfilemanager\xls.png" />
+    <Content Include="Images\Controls\gsfilemanager\zip.png" />
+    <Content Include="Images\Controls\inbox.png" />
+    <Content Include="Images\Controls\menu_add.png" />
+    <Content Include="Images\Controls\menu_delete.png" />
+    <Content Include="Images\Controls\menu_edit.png" />
+    <Content Include="Images\Controls\new_unread.png" />
+    <Content Include="Images\Controls\nopersonimage.png" />
+    <Content Include="Images\Controls\ok.png" />
+    <Content Include="Images\Controls\ok_blue.png" />
+    <Content Include="Images\Controls\outbox.png" />
+    <Content Include="Images\Controls\read.png" />
+    <Content Include="Images\Controls\return_blue.png" />
+    <Content Include="Images\Controls\save_blue.png" />
+    <Content Include="Images\Controls\toolbar_add.png" />
+    <Content Include="Images\Controls\toolbar_delete.png" />
+    <Content Include="Images\Controls\toolbar_edit.png" />
+    <Content Include="Images\Controls\toolbar_report.png" />
+    <Content Include="Images\Controls\unchecked_s16.png" />
+    <Content Include="Images\Controls\unchecked_s24.png" />
+    <Content Include="Images\Controls\unchecked_s32.png" />
+    <Content Include="Images\Controls\unchecked_s64.png" />
+    <Content Include="Images\Controls\unread.png" />
+    <Content Include="Images\elfinder\arrows-active.png" />
+    <Content Include="Images\elfinder\arrows-normal.png" />
+    <Content Include="Images\elfinder\crop.gif" />
+    <Content Include="Images\elfinder\dialogs.png" />
+    <Content Include="Images\elfinder\icons-big.png" />
+    <Content Include="Images\elfinder\icons-small.png" />
+    <Content Include="Images\elfinder\logo.png" />
+    <Content Include="Images\elfinder\progress.gif" />
+    <Content Include="Images\elfinder\quicklook-bg.png" />
+    <Content Include="Images\elfinder\quicklook-icons.png" />
+    <Content Include="Images\elfinder\resize.png" />
+    <Content Include="Images\elfinder\spinner-mini.gif" />
+    <Content Include="Images\elfinder\toolbar.png" />
+    <Content Include="Images\fileTree\application.png" />
+    <Content Include="Images\fileTree\code.png" />
+    <Content Include="Images\fileTree\css.png" />
+    <Content Include="Images\fileTree\db.png" />
+    <Content Include="Images\fileTree\directory.png" />
+    <Content Include="Images\fileTree\doc.png" />
+    <Content Include="Images\fileTree\file.png" />
+    <Content Include="Images\fileTree\film.png" />
+    <Content Include="Images\fileTree\flash.png" />
+    <Content Include="Images\fileTree\folder_open.png" />
+    <Content Include="Images\fileTree\html.png" />
+    <Content Include="Images\fileTree\java.png" />
+    <Content Include="Images\fileTree\linux.png" />
+    <Content Include="Images\fileTree\music.png" />
+    <Content Include="Images\fileTree\pdf.png" />
+    <Content Include="Images\fileTree\php.png" />
+    <Content Include="Images\fileTree\picture.png" />
+    <Content Include="Images\fileTree\ppt.png" />
+    <Content Include="Images\fileTree\psd.png" />
+    <Content Include="Images\fileTree\ruby.png" />
+    <Content Include="Images\fileTree\script.png" />
+    <Content Include="Images\fileTree\spinner.gif" />
+    <Content Include="Images\fileTree\txt.png" />
+    <Content Include="Images\fileTree\xls.png" />
+    <Content Include="Images\fileTree\zip.png" />
+    <Content Include="Images\FileTypes\bmp.png" />
+    <Content Include="Images\FileTypes\doc.png" />
+    <Content Include="Images\FileTypes\docx.png" />
+    <Content Include="Images\FileTypes\gif.png" />
+    <Content Include="Images\FileTypes\jpeg.png" />
+    <Content Include="Images\FileTypes\jpg.png" />
+    <Content Include="Images\FileTypes\mdb.png" />
+    <Content Include="Images\FileTypes\pdf.png" />
+    <Content Include="Images\FileTypes\png.png" />
+    <Content Include="Images\FileTypes\ppt.png" />
+    <Content Include="Images\FileTypes\pptx.png" />
+    <Content Include="Images\FileTypes\rar.png" />
+    <Content Include="Images\FileTypes\tif.png" />
+    <Content Include="Images\FileTypes\txt.png" />
+    <Content Include="Images\FileTypes\xls.png" />
+    <Content Include="Images\FileTypes\xlsx.png" />
+    <Content Include="Images\FileTypes\zip.png" />
+    <Content Include="Images\greyBg.png" />
+    <Content Include="Images\ico.facebook.png" />
+    <Content Include="Images\ico.linkedin.png" />
+    <Content Include="Images\ico.twitter.png" />
+    <Content Include="Images\ico.youtube.png" />
+    <Content Include="Images\images.jpg" />
+    <Content Include="Images\images2.jpg" />
+    <Content Include="Images\inputText_bg.png" />
+    <Content Include="Images\JMenu\base-select.gif" />
+    <Content Include="Images\JMenu\base.gif" />
+    <Content Include="Images\JMenu\base.png" />
+    <Content Include="Images\JMenu\lavalamp.gif" />
+    <Content Include="Images\JMenu\pix.gif" />
+    <Content Include="Images\JMenu\sub-select.gif" />
+    <Content Include="Images\JMenu\sub.gif" />
+    <Content Include="Images\JMenu\sub.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loading_s128.png" />
+    <Content Include="Images\loading_s32.png" />
+    <Content Include="Images\loading_s48.png" />
+    <Content Include="Images\Logos\Logo.png" />
+    <Content Include="Images\Logos\Naft.png" />
+    <Content Include="Images\Logos\tabriz_bus.png" />
+    <Content Include="Images\Logos\tabriz_bus2.png" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\MainMenu\bus-icon.png" />
+    <Content Include="Images\MainMenu\BusLine-icon.png" />
+    <Content Include="Images\MainMenu\BusStation-icon.png" />
+    <Content Include="Images\MainMenu\define-icon.png" />
+    <Content Include="Images\MainMenu\fleet-icon.png" />
+    <Content Include="Images\MainMenu\logout.png" />
+    <Content Include="Images\MainMenu\Map-icon.png" />
+    <Content Include="Images\MainMenu\menu_folder.png" />
+    <Content Include="Images\MainMenu\menu_item.png" />
+    <Content Include="Images\MainMenu\Person-icon.png" />
+    <Content Include="Images\MainMenu\portal.png" />
+    <Content Include="Images\MainMenu\report-icon.png" />
+    <Content Include="Images\MainMenu\Tarrif-icon.png" />
+    <Content Include="Images\MainMenu\ticket-icon.png" />
+    <Content Include="Images\MainMenu\zone-icon.png" />
+    <Content Include="Images\Mobl\1.jpg" />
+    <Content Include="Images\Mobl\2.JPG" />
+    <Content Include="Images\Mobl\3.JPG" />
+    <Content Include="Images\Mobl\esteel\1.jpg" />
+    <Content Include="Images\Mobl\esteel\2.JPG" />
+    <Content Include="Images\Mobl\esteel\3.JPG" />
+    <Content Include="Images\Mobl\esteel\4.JPG" />
+    <Content Include="Images\Mobl\slide1.jpg" />
+    <Content Include="Images\module_bg_default.png" />
+    <Content Include="Images\module_h3_bg_default.png" />
+    <Content Include="Images\next.png" />
+    <Content Include="Images\Patterns\p1.jpg" />
+    <Content Include="Images\Patterns\p1_small.jpg" />
+    <Content Include="Images\Patterns\p2.jpg" />
+    <Content Include="Images\Patterns\p3.jpg" />
+    <Content Include="Images\Patterns\p4.jpg" />
+    <Content Include="Images\previous.png" />
+    <Content Include="Images\Saffron\f1.jpg" />
+    <Content Include="Images\Saffron\f2.jpg" />
+    <Content Include="Images\Saffron\f3.jpg" />
+    <Content Include="Images\Saffron\f4.jpg" />
+    <Content Include="Images\Shoes\s1.jpg" />
+    <Content Include="Images\Shoes\s2.jpg" />
+    <Content Include="Images\Shoes\s3.jpg" />
+    <Content Include="Images\slide1.jpg" />
+    <Content Include="Images\slide2.jpg" />
+    <Content Include="Images\slide3.jpg" />
+    <Content Include="Images\transbg.png" />
+    <Content Include="Images\ui-icons_222222_256x240.png" />
+    <Content Include="Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Images\ui-icons_454545_256x240.png" />
+    <Content Include="Images\ui-icons_888888_256x240.png" />
+    <Content Include="Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Images\WhiteLoading_s128.png" />
+    <Content Include="Index.ascx" />
+    <Content Include="Index.aspx" />
+    <Content Include="ModuleManagement\JAddModuleControl.ascx" />
+    <Content Include="Images\n.jpg" />
+    <Content Include="Script\ajaxupload.3.5.js" />
+    <Content Include="Script\ckeditor.js" />
+    <Content Include="Script\Common.js" />
+    <Content Include="Script\create.js" />
+    <Content Include="Script\elRTE\elfinder.min.js" />
+    <Content Include="Script\elRTE\elrte.full.js" />
+    <Content Include="Script\elRTE\elrte.min.js" />
+    <Content Include="Script\elRTE\jquery-1.6.1.min.js" />
+    <Content Include="Script\elRTE\jquery-ui-1.8.13.custom.min.js" />
+    <Content Include="Script\fileTree\gsFileManager.js" />
+    <Content Include="Script\fileTree\jquery.easing.js" />
+    <Content Include="Script\fileTree\jquery.Jcrop.js" />
+    <Content Include="Script\fileTree\jquery.js" />
+    <Content Include="Script\fileTree\jqueryFileTree.js" />
+    <Content Include="Script\froala_editor.min.js" />
+    <Content Include="Script\JMenu\menu.js" />
+    <Content Include="Script\jquery-1.10.2.js" />
+    <Content Include="Script\jquery-1.11.0.min.js" />
+    <Content Include="Script\jquery-1.2.6.min.js" />
+    <Content Include="Script\jquery-1.7.1.min.js" />
+    <Content Include="Script\jquery-1.8.2.js" />
+    <Content Include="Script\jquery-1.8.2.min.js" />
+    <Content Include="Script\jquery-2.0.0.js" />
+    <Content Include="Script\jquery-asyncUpload-0.1.js" />
+    <Content Include="Script\jquery-ui-1.8.24.js" />
+    <Content Include="Script\jquery-ui-1.8.24.min.js" />
+    <Content Include="Script\jquery.js" />
+    <Content Include="Script\jquery1.js" />
+    <Content Include="Script\JQueryUploader.js" />
+    <Content Include="Script\JSlider.js" />
+    <Content Include="Script\JTab\jquery.easytabs.min.js" />
+    <Content Include="Script\JTab\jquery.hashchange.min.js" />
+    <Content Include="Script\JUploader.js" />
+    <Content Include="Script\persianDatepicker.js" />
+    <Content Include="Script\persianDatepicker.min.js" />
+    <Content Include="Script\slider\bjqs-1.3.min.js" />
+    <Content Include="Script\slider\jquery.secret-source.min.js" />
+    <Content Include="Script\swfupload.js" />
+    <Content Include="Script\swfupload.swf" />
+    <Content Include="Script\Template\hide.js" />
+    <Content Include="Script\Template\md_stylechanger.js" />
+    <Content Include="Script\Template\mercury.js" />
+    <Content Include="Script\Template\respond.js" />
+    <Content Include="Script\Template\respond.src.js" />
+    <Content Include="Script\Template\template.js" />
+    <Content Include="SiteManagement\JAddSiteControl.ascx" />
+    <Content Include="Style\cms.css" />
+    <Content Include="Style\elRTE\elfinder.min.css" />
+    <Content Include="Style\elRTE\elrte-inner.css" />
+    <Content Include="Style\elRTE\elrte.full.css" />
+    <Content Include="Style\elRTE\elrte.min.css" />
+    <Content Include="Style\elRTE\jquery-ui-1.8.13.custom.css" />
+    <Content Include="Style\elRTE\theme.css" />
+    <Content Include="Style\fileTree\gsFileManager.css" />
+    <Content Include="Style\fileTree\jquery.Jcrop.css" />
+    <Content Include="Style\fileTree\jqueryFileTree.css" />
+    <Content Include="Style\font-awesome.min.css" />
+    <Content Include="Style\froala_editor.min.css" />
+    <Content Include="Style\JMenu\menu.css" />
+    <Content Include="Style\JMenu\style.css" />
+    <Content Include="Style\JMenu\verticalStyle.css" />
+    <Content Include="Style\jquery-ui.css" />
+    <Content Include="Style\jquery.ui.all.css" />
+    <Content Include="Style\jquery.ui.dialog.css" />
+    <Content Include="Style\jquery.ui.theme.css" />
+    <Content Include="Style\LoginStyleSheet.css" />
+    <Content Include="Style\MainStyleSheet.css" />
+    <Content Include="Style\PersianDateStyle.css" />
+    <Content Include="Style\redcms.css" />
+    <Content Include="Style\sample.css" />
+    <Content Include="Style\Slider.css" />
+    <Content Include="Style\slider\bjqs.css" />
+    <Content Include="Style\slider\demo.css" />
+    <Content Include="Style\style.css" />
+    <Content Include="Style\tab.css" />
+    <Content Include="TemplateManagement\JAddTemplateControl.ascx" />
+    <Content Include="TemplateManagement\JSetTemplateControl.ascx" />
+    <Content Include="TemplateManagement\Templates\Beez\index.aspx" />
+    <Content Include="TemplateManagement\Templates\Beez\index.html" />
+    <Content Include="TemplateManagement\Templates\Beez\TemplateDetails.xml" />
+    <Content Include="TemplateManagement\Templates\Default\images\n.jpg" />
+    <Content Include="TemplateManagement\Templates\Default\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base.cs" />
+    <Compile Include="ContentManagement\JAddCategoryControl.ascx.cs">
+      <DependentUpon>JAddCategoryControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentManagement\JAddCategoryControl.ascx.designer.cs">
+      <DependentUpon>JAddCategoryControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentManagement\JAddContentControl.ascx.cs">
+      <DependentUpon>JAddContentControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentManagement\JAddContentControl.ascx.designer.cs">
+      <DependentUpon>JAddContentControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ContentManagement\test.ascx.cs">
+      <DependentUpon>test.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentManagement\test.ascx.designer.cs">
+      <DependentUpon>test.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionManagement\JAddExtensionControl.ascx.cs">
+      <DependentUpon>JAddExtensionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExtensionManagement\JAddExtensionControl.ascx.designer.cs">
+      <DependentUpon>JAddExtensionControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManagement\JFileManager.ascx.cs">
+      <DependentUpon>JFileManager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManagement\JFileManager.ascx.designer.cs">
+      <DependentUpon>JFileManager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\FileManagerHandler.ashx.cs">
+      <DependentUpon>FileManagerHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler2.ashx.cs">
+      <DependentUpon>Handler2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Handler3.ashx.cs">
+      <DependentUpon>Handler3.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.ascx.cs">
+      <DependentUpon>Index.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.ascx.designer.cs">
+      <DependentUpon>Index.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JCMS.cs" />
+    <Compile Include="ModuleManagement\JAddModuleControl.ascx.cs">
+      <DependentUpon>JAddModuleControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModuleManagement\JAddModuleControl.ascx.designer.cs">
+      <DependentUpon>JAddModuleControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleManagement\JModules.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteManagement\JAddSiteControl.ascx.cs">
+      <DependentUpon>JAddSiteControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteManagement\JAddSiteControl.ascx.designer.cs">
+      <DependentUpon>JAddSiteControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteManagement\JSites.cs" />
+    <Compile Include="TemplateManagement\JAddTemplateControl.ascx.cs">
+      <DependentUpon>JAddTemplateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateManagement\JAddTemplateControl.ascx.designer.cs">
+      <DependentUpon>JAddTemplateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateManagement\JSetTemplateControl.ascx.cs">
+      <DependentUpon>JSetTemplateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateManagement\JSetTemplateControl.ascx.designer.cs">
+      <DependentUpon>JSetTemplateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateManagement\JTemplates.cs" />
+    <Compile Include="TemplateManagement\Templates\Beez\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateManagement\Templates\Beez\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\NewFolder1\" />
+    <Folder Include="Images\Rahati\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JJson\JJson\JJson.csproj">
+      <Project>{0e240839-648a-4f17-ad59-0d519b56100b}</Project>
+      <Name>JJson</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebControllers\WebControllers.csproj">
+      <Project>{e4dec70e-7841-4fd2-a5ed-c59837cad549}</Project>
+      <Name>WebControllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handler\FileManagerHandler.ashx" />
+    <Content Include="Handler\Handler1.ashx" />
+    <Content Include="Handler\Handler2.ashx" />
+    <Content Include="Handler\Handler3.ashx" />
+    <None Include="Properties\PublishProfiles\cms.pubxml" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8677</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8602/CMS</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

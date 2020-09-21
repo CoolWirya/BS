@@ -1,0 +1,53 @@
+﻿USE [avlsite_com_1]
+GO
+/****** Object:  StoredProcedure [dbo].[Sp_CheckLayer]    Script Date: 7/2/2015 9:28:32 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+ALTER PROCEDURE [dbo].[Sp_CheckLayer]
+	-- Add the parameters for the stored procedure here
+	@CarId int,
+	@Lat float,
+	@long Float,
+	@DateEntry dateTime
+AS
+BEGIN
+	BEGIN TRY
+  
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	Declare @Positions nvarchar(max)
+	Declare @LayerType bit
+	declare @LayerID int
+
+	Select top 1 @Positions = Points,@LayerType=Destination,@LayerID=LayerID from CarInLayerInfo  where CarId=[CarId] and Deleted = 0
+
+	if(@Positions is not null)
+	 begin
+       DECLARE @g geography;
+       DECLARE @h geography;
+       SET @g = geography::STGeomFromText('POLYGON(('+@Positions+'))', @CarId);
+       SET @h = geography::Point(@Lat, -@long, @CarId)
+
+	   DECLARE @Result bit
+
+       SELECT @Result = @g.STIntersects(@h)
+
+	   if(@Result <> @positions)
+	     Insert into CarsInfraction (LayerID,CarID,InfractionDetail,InfractionDateEntry)
+		   values(@LayerID,@CarId,'Exit Layer',@DateEntry)
+	 end;
+	 END TRY
+BEGIN CATCH
+    -- Execute error retrieval routine.
+   insert into ProgramLogs (LogType,LogTitle,LogText,Deleted)
+     values (1,'Sp_CheckLayer',ERROR_MESSAGE(),0)
+END CATCH; 
+END

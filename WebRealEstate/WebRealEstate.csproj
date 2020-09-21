@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E91468F-E66D-4E1D-AC9A-A74598BF5117}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebRealEstate</RootNamespace>
+    <AssemblyName>WebRealEstate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Estates">
+      <HintPath>..\..\ERP\ClassLibrary\bin\Debug\Estates.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RealEstate">
+      <HintPath>..\..\ERP\ClassLibrary\bin\Debug\RealEstate.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI, Version=2013.3.1015.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebControllers\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2013.3.1015.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebControllers\bin\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Amalkard\AmalkardControl.ascx.cs">
+      <DependentUpon>AmalkardControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Amalkard\AmalkardControl.ascx.designer.cs">
+      <DependentUpon>AmalkardControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\AnnualRental\AnnualRentalControl.ascx.cs">
+      <DependentUpon>AnnualRentalControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\AnnualRental\AnnualRentalControl.ascx.designer.cs">
+      <DependentUpon>AnnualRentalControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Construction\JConstructionControl.ascx.cs">
+      <DependentUpon>JConstructionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\Construction\JConstructionControl.ascx.designer.cs">
+      <DependentUpon>JConstructionControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Environment\EnvironmentSetPrimaryowenerControl.ascx.cs">
+      <DependentUpon>EnvironmentSetPrimaryowenerControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\Environment\EnvironmentSetPrimaryowenerControl.ascx.designer.cs">
+      <DependentUpon>EnvironmentSetPrimaryowenerControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Environment\JEnviromentFormControl.ascx.cs">
+      <DependentUpon>JEnviromentFormControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\Environment\JEnviromentFormControl.ascx.designer.cs">
+      <DependentUpon>JEnviromentFormControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Environment\JenviromentSerchFormControl.ascx.cs">
+      <DependentUpon>JenviromentSerchFormControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\Environment\JenviromentSerchFormControl.ascx.designer.cs">
+      <DependentUpon>JenviromentSerchFormControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Joint\JointFormControl.ascx.cs">
+      <DependentUpon>JointFormControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\Joint\JointFormControl.ascx.designer.cs">
+      <DependentUpon>JointFormControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Joint\JointLegalControl.ascx.cs">
+      <DependentUpon>JointLegalControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\Joint\JointLegalControl.ascx.designer.cs">
+      <DependentUpon>JointLegalControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\JUsageControl.ascx.cs">
+      <DependentUpon>JUsageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\JUsageControl.ascx.designer.cs">
+      <DependentUpon>JUsageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Report\ReportContractFromControl.ascx.cs">
+      <DependentUpon>ReportContractFromControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\Report\ReportContractFromControl.ascx.designer.cs">
+      <DependentUpon>ReportContractFromControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Aggregate\AggregateFormControl.ascx.cs">
+      <DependentUpon>AggregateFormControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Aggregate\AggregateFormControl.ascx.designer.cs">
+      <DependentUpon>AggregateFormControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Breakdown\BreakDownControl.ascx.cs">
+      <DependentUpon>BreakDownControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Breakdown\BreakDownControl.ascx.designer.cs">
+      <DependentUpon>BreakDownControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\DefaultOwners\DefaultOwnersControl.ascx.cs">
+      <DependentUpon>DefaultOwnersControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\DefaultOwners\DefaultOwnersControl.ascx.designer.cs">
+      <DependentUpon>DefaultOwnersControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\InformationUnitBuildControl.ascx.cs">
+      <DependentUpon>InformationUnitBuildControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\InformationUnitBuildControl.ascx.designer.cs">
+      <DependentUpon>InformationUnitBuildControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\JAddUsageControl.ascx.cs">
+      <DependentUpon>JAddUsageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\JAddUsageControl.ascx.designer.cs">
+      <DependentUpon>JAddUsageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\SearchUnitControl.ascx.cs">
+      <DependentUpon>SearchUnitControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\SearchUnitControl.ascx.designer.cs">
+      <DependentUpon>SearchUnitControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferConfirmControl.ascx.cs">
+      <DependentUpon>TransferConfirmControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferConfirmControl.ascx.designer.cs">
+      <DependentUpon>TransferConfirmControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferControl.ascx.cs">
+      <DependentUpon>TransferControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferControl.ascx.designer.cs">
+      <DependentUpon>TransferControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferUnitBuildControl.ascx.cs">
+      <DependentUpon>TransferUnitBuildControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferUnitBuildControl.ascx.designer.cs">
+      <DependentUpon>TransferUnitBuildControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\UnitBuildControl.ascx.cs">
+      <DependentUpon>UnitBuildControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\UnitBuildControl.ascx.designer.cs">
+      <DependentUpon>UnitBuildControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="JWebRealEstate.cs" />
+    <Compile Include="PBill\FSetCharegeControl.ascx.cs">
+      <DependentUpon>FSetCharegeControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PBill\FSetCharegeControl.ascx.designer.cs">
+      <DependentUpon>FSetCharegeControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PBill\JPrintBillFormControl.ascx.cs">
+      <DependentUpon>JPrintBillFormControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PBill\JPrintBillFormControl.ascx.designer.cs">
+      <DependentUpon>JPrintBillFormControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PBill\PrintedGhabzControl.ascx.cs">
+      <DependentUpon>PrintedGhabzControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PBill\PrintedGhabzControl.ascx.designer.cs">
+      <DependentUpon>PrintedGhabzControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JComponents\JComponents.csproj">
+      <Project>{3d8bc1e0-c793-4122-9326-1c61b83cb4b2}</Project>
+      <Name>JComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JJson\JJson\JJson.csproj">
+      <Project>{0e240839-648a-4f17-ad59-0d519b56100b}</Project>
+      <Name>JJson</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebClassLibrary\WebClassLibrary.csproj">
+      <Project>{3b0b293d-40f5-49ad-b44b-5914873d5028}</Project>
+      <Name>WebClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebControllers\WebControllers.csproj">
+      <Project>{e4dec70e-7841-4fd2-a5ed-c59837cad549}</Project>
+      <Name>WebControllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebEstate\WebEstate.csproj">
+      <Project>{070d0e85-6930-4a20-b435-9c74acfc80c2}</Project>
+      <Name>WebEstate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Amalkard\AmalkardControl.ascx" />
+    <Content Include="Building\AnnualRental\AnnualRentalControl.ascx" />
+    <Content Include="Building\Construction\JConstructionControl.ascx" />
+    <Content Include="Building\Environment\EnvironmentSetPrimaryowenerControl.ascx" />
+    <Content Include="Building\Environment\JEnviromentFormControl.ascx" />
+    <Content Include="Building\Environment\JenviromentSerchFormControl.ascx" />
+    <Content Include="Building\Joint\JointFormControl.ascx" />
+    <Content Include="Building\Joint\JointLegalControl.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Building\JUsageControl.ascx" />
+    <Content Include="Building\Report\ReportContractFromControl.ascx" />
+    <Content Include="Building\UnitBuild\Aggregate\AggregateFormControl.ascx" />
+    <Content Include="Building\UnitBuild\Breakdown\BreakDownControl.ascx" />
+    <Content Include="Building\UnitBuild\DefaultOwners\DefaultOwnersControl.ascx" />
+    <Content Include="Building\UnitBuild\InformationUnitBuildControl.ascx" />
+    <Content Include="Building\UnitBuild\JAddUsageControl.ascx" />
+    <Content Include="Building\UnitBuild\SearchUnitControl.ascx" />
+    <Content Include="Building\UnitBuild\Transfer\TransferConfirmControl.ascx" />
+    <Content Include="Building\UnitBuild\Transfer\TransferControl.ascx" />
+    <Content Include="Building\UnitBuild\Transfer\TransferUnitBuildControl.ascx" />
+    <Content Include="Building\UnitBuild\UnitBuildControl.ascx" />
+    <Content Include="PBill\FSetCharegeControl.ascx" />
+    <Content Include="PBill\JPrintBillFormControl.ascx" />
+    <Content Include="PBill\PrintedGhabzControl.ascx" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>33064</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5024/WebRealEstate</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

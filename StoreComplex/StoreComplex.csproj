@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB3C230F-8F7F-48B3-A85A-A4D7BE086E41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StoreComplex</RootNamespace>
+    <AssemblyName>StoreComplex</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClassLibrary, Version=1.1.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClassLibrary\bin\Debug\ClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Finance\bin\Debug\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Globals\bin\Debug\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Juridical\bin\Debug\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\ClassLibrary\bin\Debug\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="StoreManagement">
+      <HintPath>..\StoreManagement\bin\Debug\StoreManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllowTransfer\AllowTransfer.cs" />
+    <Compile Include="AllowTransfer\AllowTransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllowTransfer\AllowTransferForm.Designer.cs">
+      <DependentUpon>AllowTransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllowTransfer\AllowTransferTable.cs" />
+    <Compile Include="BaseDefine\BaseDefine.cs" />
+    <Compile Include="BaseDefine\StoreComplexGoods.cs" />
+    <Compile Include="BaseDefine\StoreComplexServices.cs" />
+    <Compile Include="BaseDefine\StoreComplexUnit.cs" />
+    <Compile Include="BaseDefine\StoreComplexVanTypes.cs" />
+    <Compile Include="Insurance\Insurance.cs" />
+    <Compile Include="Insurance\InsuranceEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insurance\InsuranceEditForm.Designer.cs">
+      <DependentUpon>InsuranceEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\InsuranceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insurance\InsuranceForm.Designer.cs">
+      <DependentUpon>InsuranceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\InsuranceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Insurance\InsuranceList.Designer.cs">
+      <DependentUpon>InsuranceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance\InsuranceTable.cs" />
+    <Compile Include="Nodes\ReportNodes.cs" />
+    <Compile Include="PrivateStorage\PrivateStorage.cs" />
+    <Compile Include="PrivateStorage\PrivateStorageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrivateStorage\PrivateStorageForm.Designer.cs">
+      <DependentUpon>PrivateStorageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrivateStorage\PrivateStorageTable.cs" />
+    <Compile Include="PrivateTransfer\PrivateTransfer.cs" />
+    <Compile Include="PrivateTransfer\PrivateTransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrivateTransfer\PrivateTransferForm.Designer.cs">
+      <DependentUpon>PrivateTransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrivateTransfer\PrivateTransferTable.cs" />
+    <Compile Include="ReceiptGoods\ReceiptGoods.cs" />
+    <Compile Include="ReceiptGoods\ReceiptGoodsTable.cs" />
+    <Compile Include="Receipt\ReceiptList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt\ReceiptList.Designer.cs">
+      <DependentUpon>ReceiptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenewPrivate\RenewPrivate.cs" />
+    <Compile Include="RenewPrivate\RenewPrivateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenewPrivate\RenewPrivateForm.Designer.cs">
+      <DependentUpon>RenewPrivateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenewPrivate\RenewPrivateReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenewPrivate\RenewPrivateReportForm.Designer.cs">
+      <DependentUpon>RenewPrivateReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenewPrivate\RenewPrivateTable.cs" />
+    <Compile Include="Renew\Renew.cs" />
+    <Compile Include="Renew\RenewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renew\RenewForm.Designer.cs">
+      <DependentUpon>RenewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renew\RenewReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renew\RenewReportForm.Designer.cs">
+      <DependentUpon>RenewReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renew\RenewTable.cs" />
+    <Compile Include="Reports\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SCReport.cs" />
+    <Compile Include="ServiceConvey\ConveyService.cs" />
+    <Compile Include="ServiceConvey\ConveyServiceTable.cs" />
+    <Compile Include="ServiceLoading\LoadingService.cs" />
+    <Compile Include="ServiceLoading\LoadingServiceTable.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt\Receipt.cs" />
+    <Compile Include="ReceiptGoods\ReceiptGoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceiptGoods\ReceiptGoodsForm.Designer.cs">
+      <DependentUpon>ReceiptGoodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt\ReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receipt\ReceiptForm.Designer.cs">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receipt\ReceiptTable.cs" />
+    <Compile Include="ServiceConvey\ConveyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceConvey\ConveyForm.Designer.cs">
+      <DependentUpon>ConveyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceOthers\OtherServiceTable.cs" />
+    <Compile Include="ServiceOthers\OtherService.cs" />
+    <Compile Include="ServiceOthers\OtherServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceOthers\OtherServiceForm.Designer.cs">
+      <DependentUpon>OtherServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\BillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\BillForm.Designer.cs">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\SCContract.cs" />
+    <Compile Include="Nodes\StaticNodes.cs" />
+    <Compile Include="Services\SCService.cs" />
+    <Compile Include="Services\SCServiceTable.cs" />
+    <Compile Include="Services\ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services\ServiceForm.Designer.cs">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceLoading\LoadingServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceLoading\LoadingServiceForm.Designer.cs">
+      <DependentUpon>LoadingServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Storages\SCStorage.cs" />
+    <Compile Include="Storages\SCStorageTable.cs" />
+    <Compile Include="Storages\StorageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Storages\StorageForm.Designer.cs">
+      <DependentUpon>StorageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoreComplex.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransferGoods\TransferGoodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferGoods\TransferGoodsForm.Designer.cs">
+      <DependentUpon>TransferGoodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferGoods\TransferGoods.cs" />
+    <Compile Include="TransferGoods\TransferGoodsTable.cs" />
+    <Compile Include="Transfer\Transfer.cs" />
+    <Compile Include="Transfer\TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\TransferList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer\TransferList.Designer.cs">
+      <DependentUpon>TransferList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer\TransferTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AllowTransfer\AllowTransferForm.resx">
+      <DependentUpon>AllowTransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insurance\InsuranceEditForm.resx">
+      <DependentUpon>InsuranceEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insurance\InsuranceForm.resx">
+      <DependentUpon>InsuranceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insurance\InsuranceList.resx">
+      <DependentUpon>InsuranceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrivateStorage\PrivateStorageForm.resx">
+      <DependentUpon>PrivateStorageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrivateTransfer\PrivateTransferForm.resx">
+      <DependentUpon>PrivateTransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceiptGoods\ReceiptGoodsForm.resx">
+      <DependentUpon>ReceiptGoodsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receipt\ReceiptForm.resx">
+      <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receipt\ReceiptList.resx">
+      <DependentUpon>ReceiptList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenewPrivate\RenewPrivateForm.resx">
+      <DependentUpon>RenewPrivateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenewPrivate\RenewPrivateReportForm.resx">
+      <DependentUpon>RenewPrivateReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Renew\RenewForm.resx">
+      <DependentUpon>RenewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Renew\RenewReportForm.resx">
+      <DependentUpon>RenewReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceConvey\ConveyForm.resx">
+      <DependentUpon>ConveyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceOthers\OtherServiceForm.resx">
+      <DependentUpon>OtherServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\BillForm.resx">
+      <DependentUpon>BillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\ServiceForm.resx">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceLoading\LoadingServiceForm.resx">
+      <DependentUpon>LoadingServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Storages\StorageForm.resx">
+      <DependentUpon>StorageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferGoods\TransferGoodsForm.resx">
+      <DependentUpon>TransferGoodsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer\TransferList.resx">
+      <DependentUpon>TransferList.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-edit.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

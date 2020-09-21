@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87829BF8-27F8-4589-AEC9-F7FD608737C4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebBusMaintenance</RootNamespace>
+    <AssemblyName>WebBusMaintenance</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BusManagment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebBusManagement\Bin\BusManagment.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLibrary">
+      <HintPath>..\WebClassLibrary\bin\Debug\ClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2013.3.1015.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Karamad\Tools\Telerik\2013.01.04\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2013.3.1015.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Karamad\Tools\Telerik\2013.01.04\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2013.3.1015.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Karamad\Tools\Telerik\2013.01.04\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="WebClassLibrary">
+      <HintPath>..\WebClassLibrary\bin\Debug\WebClassLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\JBusAvlFailureTransactionSendReportControl.ascx.cs">
+      <DependentUpon>JBusAvlFailureTransactionSendReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusAvlFailureTransactionSendReportControl.ascx.designer.cs">
+      <DependentUpon>JBusAvlFailureTransactionSendReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusBatteryChargeReportControl.ascx.cs">
+      <DependentUpon>JBusBatteryChargeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusBatteryChargeReportControl.ascx.designer.cs">
+      <DependentUpon>JBusBatteryChargeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusErrorDateTransactionReportControl.ascx.cs">
+      <DependentUpon>JBusErrorDateTransactionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusErrorDateTransactionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusErrorDateTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusErrorSendTransactionReportControl.ascx.cs">
+      <DependentUpon>JBusErrorSendTransactionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusErrorSendTransactionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusErrorSendTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusFailureDeviceIMEIReportControl.ascx.cs">
+      <DependentUpon>JBusFailureDeviceIMEIReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusFailureDeviceIMEIReportControl.ascx.designer.cs">
+      <DependentUpon>JBusFailureDeviceIMEIReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusFailureDoorsReportControl.ascx.cs">
+      <DependentUpon>JBusFailureDoorsReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusFailureDoorsReportControl.ascx.designer.cs">
+      <DependentUpon>JBusFailureDoorsReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusLastDataReportControl.ascx.cs">
+      <DependentUpon>JBusLastDataReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusLastDataReportControl.ascx.designer.cs">
+      <DependentUpon>JBusLastDataReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusNotActiveReportControl.ascx.cs">
+      <DependentUpon>JBusNotActiveReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusNotActiveReportControl.ascx.designer.cs">
+      <DependentUpon>JBusNotActiveReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusSendAvlTransenctionReportControl.ascx.cs">
+      <DependentUpon>JBusSendAvlTransenctionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusSendAvlTransenctionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSendAvlTransenctionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusSendTicketTransenctionReportControl.ascx.cs">
+      <DependentUpon>JBusSendTicketTransenctionReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusSendTicketTransenctionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSendTicketTransenctionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusSummaryPerformanceReportControl.ascx.cs">
+      <DependentUpon>JBusSummaryPerformanceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusSummaryPerformanceReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSummaryPerformanceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusSummaryTransactionReportControl.ascx.cs">
+      <DependentUpon>JBusSummaryTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusSummaryTransactionReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSummaryTransactionReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusTicketFailureBusNumberReportControl.ascx.cs">
+      <DependentUpon>JBusTicketFailureBusNumberReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusTicketFailureBusNumberReportControl.ascx.designer.cs">
+      <DependentUpon>JBusTicketFailureBusNumberReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusTicketFailureTransactionSendReportControl.ascx.cs">
+      <DependentUpon>JBusTicketFailureTransactionSendReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusTicketFailureTransactionSendReportControl.ascx.designer.cs">
+      <DependentUpon>JBusTicketFailureTransactionSendReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusSimCardChargeReportControl.ascx.cs">
+      <DependentUpon>JBusSimCardChargeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusSimCardChargeReportControl.ascx.designer.cs">
+      <DependentUpon>JBusSimCardChargeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JBusUsedSimCardChargeReportControl.ascx.cs">
+      <DependentUpon>JBusUsedSimCardChargeReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JBusUsedSimCardChargeReportControl.ascx.designer.cs">
+      <DependentUpon>JBusUsedSimCardChargeReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JConsulHistoryReportControl.ascx.cs">
+      <DependentUpon>JConsulHistoryReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JConsulHistoryReportControl.ascx.designer.cs">
+      <DependentUpon>JConsulHistoryReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JPortalLastDataReportControl.ascx.cs">
+      <DependentUpon>JPortalLastDataReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JPortalLastDataReportControl.ascx.designer.cs">
+      <DependentUpon>JPortalLastDataReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JTotalPerformanceReportControl.ascx.cs">
+      <DependentUpon>JTotalPerformanceReportControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JTotalPerformanceReportControl.ascx.designer.cs">
+      <DependentUpon>JTotalPerformanceReportControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="JBusMaintenance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\JBusAvlFailureTransactionSendReportControl.ascx" />
+    <Content Include="Forms\JBusBatteryChargeReportControl.ascx" />
+    <Content Include="Forms\JBusErrorDateTransactionReportControl.ascx" />
+    <Content Include="Forms\JBusErrorSendTransactionReportControl.ascx" />
+    <Content Include="Forms\JBusFailureDeviceIMEIReportControl.ascx" />
+    <Content Include="Forms\JBusFailureDoorsReportControl.ascx" />
+    <Content Include="Forms\JBusLastDataReportControl.ascx" />
+    <Content Include="Forms\JBusNotActiveReportControl.ascx" />
+    <Content Include="Forms\JBusSendAvlTransenctionReportControl.ascx" />
+    <Content Include="Forms\JBusSendTicketTransenctionReportControl.ascx" />
+    <Content Include="Forms\JBusSummaryPerformanceReportControl.ascx" />
+    <Content Include="Forms\JBusSummaryTransactionReportControl.ascx" />
+    <Content Include="Forms\JBusTicketFailureBusNumberReportControl.ascx" />
+    <Content Include="Forms\JBusTicketFailureTransactionSendReportControl.ascx" />
+    <Content Include="Forms\JBusSimCardChargeReportControl.ascx" />
+    <Content Include="Forms\JBusUsedSimCardChargeReportControl.ascx" />
+    <Content Include="Forms\JConsulHistoryReportControl.ascx" />
+    <Content Include="Forms\JPortalLastDataReportControl.ascx" />
+    <Content Include="Forms\JTotalPerformanceReportControl.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\bbb.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebControllers\WebControllers.csproj">
+      <Project>{e4dec70e-7841-4fd2-a5ed-c59837cad549}</Project>
+      <Name>WebControllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5403</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8088/WebBusMaintenance</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

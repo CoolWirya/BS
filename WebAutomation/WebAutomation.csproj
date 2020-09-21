@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BF5CE54-82B8-42F9-9E9A-B2B409D667CA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebAutomation</RootNamespace>
+    <AssemblyName>WebAutomation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments, Version=2.0.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\TSIP.IR\Dll\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Automation, Version=2.0.3.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\source\ERP-1-12-94\ERP1\Automation\bin\Debug\Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLibrary, Version=2.0.5.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\source\ERP-1-12-94\ERP1\Automation\bin\Debug\ClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Communication, Version=2.0.3.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\TSIP.IR\Dll\Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment, Version=2.0.2.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\TSIP.IR\Dll\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI, Version=2016.2.607.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\TSIP.IR\Dll\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="WebAutomation, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\source\ERP-1-12-94\ERP1\Automation\bin\Debug\WebAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebClassLibrary, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\TSIP.IR\Dll\WebClassLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\InternalLetterControl.ascx.cs">
+      <DependentUpon>InternalLetterControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InternalLetterControl.ascx.designer.cs">
+      <DependentUpon>InternalLetterControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="JAutomation.cs" />
+    <Compile Include="JAutomationManager.cs" />
+    <Compile Include="JCommunication.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refer\JARefer.cs" />
+    <Compile Include="Refer\JReferControl.ascx.cs">
+      <DependentUpon>JReferControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Refer\JReferControl.ascx.designer.cs">
+      <DependentUpon>JReferControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Refer\JReferViewControl.ascx.cs">
+      <DependentUpon>JReferViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Refer\JReferViewControl.ascx.designer.cs">
+      <DependentUpon>JReferViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JDesignWorkFlow.ascx.cs">
+      <DependentUpon>JDesignWorkFlow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JDesignWorkFlow.ascx.designer.cs">
+      <DependentUpon>JDesignWorkFlow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JEmailControl.ascx.cs">
+      <DependentUpon>JEmailControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JEmailControl.ascx.designer.cs">
+      <DependentUpon>JEmailControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JExportedLetterUpdateControl.ascx.cs">
+      <DependentUpon>JExportedLetterUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JExportedLetterUpdateControl.ascx.designer.cs">
+      <DependentUpon>JExportedLetterUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JFlowChart.ascx.cs">
+      <DependentUpon>JFlowChart.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JFlowChart.ascx.designer.cs">
+      <DependentUpon>JFlowChart.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JGetToServiceFormUserControl.ascx.cs">
+      <DependentUpon>JGetToServiceFormUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JGetToServiceFormUserControl.ascx.designer.cs">
+      <DependentUpon>JGetToServiceFormUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JImportedLetterUpdateControl.ascx.cs">
+      <DependentUpon>JImportedLetterUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JImportedLetterUpdateControl.ascx.designer.cs">
+      <DependentUpon>JImportedLetterUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JInsertPropertiesJS.ascx.cs">
+      <DependentUpon>JInsertPropertiesJS.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JInsertPropertiesJS.ascx.designer.cs">
+      <DependentUpon>JInsertPropertiesJS.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JLetterSearchControl.ascx.cs">
+      <DependentUpon>JLetterSearchControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JLetterSearchControl.ascx.designer.cs">
+      <DependentUpon>JLetterSearchControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JLetterUpdateControl.ascx.cs">
+      <DependentUpon>JLetterUpdateControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JLetterUpdateControl.ascx.designer.cs">
+      <DependentUpon>JLetterUpdateControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JLetteViewControl.ascx.cs">
+      <DependentUpon>JLetteViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JLetteViewControl.ascx.designer.cs">
+      <DependentUpon>JLetteViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JNoStorageControl.ascx.cs">
+      <DependentUpon>JNoStorageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JNoStorageControl.ascx.designer.cs">
+      <DependentUpon>JNoStorageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JSecretariatControl.ascx.cs">
+      <DependentUpon>JSecretariatControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JSecretariatControl.ascx.designer.cs">
+      <DependentUpon>JSecretariatControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JSMSControl.ascx.cs">
+      <DependentUpon>JSMSControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JSMSControl.ascx.designer.cs">
+      <DependentUpon>JSMSControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebCommunication\JWorkFlow.ascx.cs">
+      <DependentUpon>JWorkFlow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCommunication\JWorkFlow.ascx.designer.cs">
+      <DependentUpon>JWorkFlow.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\NewPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\WebAutomation.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\InternalLetterControl.ascx" />
+    <Content Include="Refer\JReferControl.ascx" />
+    <Content Include="Refer\JReferViewControl.ascx" />
+    <Content Include="WebCommunication\HtmlPage1.html" />
+    <Content Include="WebCommunication\JDesignWorkFlow.ascx" />
+    <Content Include="WebCommunication\JEmailControl.ascx" />
+    <Content Include="WebCommunication\JExportedLetterUpdateControl.ascx" />
+    <Content Include="WebCommunication\JFlowChart.ascx" />
+    <Content Include="WebCommunication\JGetToServiceFormUserControl.ascx" />
+    <Content Include="WebCommunication\JImportedLetterUpdateControl.ascx" />
+    <Content Include="WebCommunication\JInsertPropertiesJS.ascx" />
+    <Content Include="WebCommunication\JLetterSearchControl.ascx" />
+    <Content Include="WebCommunication\JLetterUpdateControl.ascx" />
+    <Content Include="WebCommunication\JLetteViewControl.ascx" />
+    <Content Include="WebCommunication\JNoStorageControl.ascx" />
+    <Content Include="WebCommunication\JSecretariatControl.ascx" />
+    <Content Include="WebCommunication\JSMSControl.ascx" />
+    <Content Include="WebCommunication\JWorkFlow.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Globals\Globals.csproj">
+      <Project>{e7cc3df6-4222-41dc-8f78-ace6e997573b}</Project>
+      <Name>Globals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JJson\JJson\JJson.csproj">
+      <Project>{0e240839-648a-4f17-ad59-0d519b56100b}</Project>
+      <Name>JJson</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JComponents\JComponents.csproj">
+      <Project>{3d8bc1e0-c793-4122-9326-1c61b83cb4b2}</Project>
+      <Name>JComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebBaseDefine\WebBaseDefine.csproj">
+      <Project>{6fb2e793-f67b-4bfa-9780-ffa946c41075}</Project>
+      <Name>WebBaseDefine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebControllers\WebControllers.csproj">
+      <Project>{e4dec70e-7841-4fd2-a5ed-c59837cad549}</Project>
+      <Name>WebControllers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>22872</DevelopmentServerPort>
+          <DevelopmentServerVPath>/erp</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5024/WebAutomation</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

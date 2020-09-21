@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Legal.Advocacy.JAdvocacy">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Advocacy\Advocacy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.Advocacy.JAdministrativeLaw" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Advocacy\Advocacy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.Advocacy.JLawWithoutDismissal" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Advocacy\Advocacy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.JLegal" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Legal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.Contract.JContract" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contract\Contract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.Decision.JDecision">
+    <Position X="16.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decision\Decision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.Gravamen.JGravamen" Collapsed="true">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gravamen\Gravamen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.Notary.JNotary" Collapsed="true">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Notary\Notary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.petition.JPetition" Collapsed="true">
+    <Position X="18.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAAAAAAA=</HashCode>
+      <FileName>petition\Petition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.probate.JProbate" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>probate\Probate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.JudicialBranch.JudicialBranch" Collapsed="true">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JudicialBranch\JudicialBranch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legal.Person.JLPerson" Collapsed="true">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAAAAAAAAAAAEAAAAAAAAAAAAUAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Person\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Legal.petition.JPetitionType" Collapsed="true">
+    <Position X="21" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>petition\Petition.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

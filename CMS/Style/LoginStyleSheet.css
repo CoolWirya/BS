@@ -1,0 +1,70 @@
+﻿html, body, form, td {
+    margin: 0px;
+    padding: 0px;
+}
+
+.LoginTable {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0px;
+}
+
+    .LoginTable td {
+        vertical-align: middle;
+    }
+
+.LoginTD {
+    background-color: #0094cc;
+    color: #FFF;
+    padding: 0px;
+    margin: 0px;
+}
+
+    .LoginTD .divLogo {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        vertical-align: bottom;
+        height: 200px;
+        color: #FFF;
+        font-size: 22px;
+        font-weight: bold;
+        display: table-cell;
+        width: 300px;
+        font-family: MyBTraffic;
+        border-bottom: 3px dotted #FFF;
+    }
+
+.rightContent {
+    background-color: rgba(0,0,0, 0.6);
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.LoginForm {
+    width: 100%;
+}
+
+    .LoginForm td {
+        padding: 10px;
+    }
+
+.loginform_footer {
+    display: table-cell;
+    width: 300px;
+    text-align: center;
+}
+
+.lblError {
+    font-weight: bold;
+    color: #f00;
+}
+
+.ContentTD {
+    vertical-align: top;
+    background-color: #0094cc;
+}

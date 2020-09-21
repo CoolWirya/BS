@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JJson", "JJson\JJson.csproj", "{0E240839-648A-4F17-AD59-0D519B56100B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{B4BD3B82-EF04-4E1D-9144-913A34D281AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E240839-648A-4F17-AD59-0D519B56100B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E240839-648A-4F17-AD59-0D519B56100B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E240839-648A-4F17-AD59-0D519B56100B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E240839-648A-4F17-AD59-0D519B56100B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4BD3B82-EF04-4E1D-9144-913A34D281AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4BD3B82-EF04-4E1D-9144-913A34D281AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4BD3B82-EF04-4E1D-9144-913A34D281AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4BD3B82-EF04-4E1D-9144-913A34D281AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

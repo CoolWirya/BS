@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F1CA0A8-E24A-465F-873D-1115C40B46A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RealEstate</RootNamespace>
+    <AssemblyName>RealEstate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/ERP/ERP/RealEstate</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://erpzarrinderafshtoos.visualstudio.com</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArchivedDocuments">
+      <HintPath>..\..\DLLs\ArchivedDocuments.dll</HintPath>
+    </Reference>
+    <Reference Include="Employment">
+      <HintPath>..\..\DLLs\Employment.dll</HintPath>
+    </Reference>
+    <Reference Include="Estates">
+      <HintPath>..\..\DLLs\Estates.dll</HintPath>
+    </Reference>
+    <Reference Include="Finance">
+      <HintPath>..\..\..\DLLs\Finance.dll</HintPath>
+    </Reference>
+    <Reference Include="Globals">
+      <HintPath>..\..\DLLs\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\ClassLibrary\bin\Debug\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\ClassLibrary\bin\Debug\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\ClassLibrary\bin\Debug\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\ClassLibrary\bin\Debug\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>..\ClassLibrary\bin\Debug\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\ClassLibrary\bin\Debug\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Legal">
+      <HintPath>..\..\DLLs\Legal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\192.168.3.38\DLLRefrence\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="OfficeWord">
+      <HintPath>..\..\DLLs\OfficeWord.dll</HintPath>
+    </Reference>
+    <Reference Include="Security, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Amlkard\AmalkardFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Amlkard\AmalkardFrm.Designer.cs">
+      <DependentUpon>AmalkardFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\AnnualRental\AnnualRental.cs" />
+    <Compile Include="Building\AnnualRental\AnnualRentalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\AnnualRental\AnnualRentalForm.Designer.cs">
+      <DependentUpon>AnnualRentalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Construction\JConstruction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\Construction\JConstruction.Designer.cs">
+      <DependentUpon>JConstruction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Construction\Market.cs" />
+    <Compile Include="Building\Construction\MarketFaz.cs" />
+    <Compile Include="Building\Construction\MarketFazTable.cs" />
+    <Compile Include="Building\Construction\MarketFloors.cs" />
+    <Compile Include="Building\Construction\MarketFloorsTable.cs" />
+    <Compile Include="Building\Construction\MarketGoodwill.cs" />
+    <Compile Include="Building\Construction\MarketGoodwillTable.cs" />
+    <Compile Include="Building\Construction\MarketLocation.cs" />
+    <Compile Include="Building\Construction\MarketLocationTable.cs" />
+    <Compile Include="Building\Construction\MarketTable.cs" />
+    <Compile Include="Building\Construction\MarketUsage.cs" />
+    <Compile Include="Building\Construction\MarketUsageTable.cs" />
+    <Compile Include="Building\Enviroment\Enviroment.cs" />
+    <Compile Include="Building\Enviroment\EnviromentSetPrimaryowenerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\Enviroment\EnviromentSetPrimaryowenerForm.designer.cs">
+      <DependentUpon>EnviromentSetPrimaryowenerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Enviroment\EnviromentTable.cs" />
+    <Compile Include="Building\Enviroment\JEnviromentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\Enviroment\JEnviromentForm.designer.cs">
+      <DependentUpon>JEnviromentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Enviroment\JenviromentSerchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\Enviroment\JenviromentSerchForm.Designer.cs">
+      <DependentUpon>JenviromentSerchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Enviroment\SetDefultEnviroment.cs" />
+    <Compile Include="Building\Enviroment\SetDefultEnviromentTable.cs" />
+    <Compile Include="Building\Joint\JointLegal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\Joint\JointLegal.Designer.cs">
+      <DependentUpon>JointLegal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Report\ReportContractFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\Report\ReportContractFrom.designer.cs">
+      <DependentUpon>ReportContractFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Report\ReportUnitBuild.cs" />
+    <Compile Include="Building\UnitBuild\Aggregate\AggregateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Aggregate\AggregateForm.Designer.cs">
+      <DependentUpon>AggregateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Aggregate\AggregateUnitBuild.cs" />
+    <Compile Include="Building\UnitBuild\Aggregate\AggregateUnitBuilds.cs" />
+    <Compile Include="Building\UnitBuild\Aggregate\AggregateUnitBuildsTable.cs" />
+    <Compile Include="Building\UnitBuild\Aggregate\AggregateUnitBuildTable.cs" />
+    <Compile Include="Building\UnitBuild\Breakdown\BreakDownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Breakdown\BreakDownForm.Designer.cs">
+      <DependentUpon>BreakDownForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Breakdown\BreakDownUnitBuild.cs" />
+    <Compile Include="Building\UnitBuild\Breakdown\BreakDownUnitBuilds.cs" />
+    <Compile Include="Building\UnitBuild\Breakdown\BreakDownUnitBuildsTable.cs" />
+    <Compile Include="Building\UnitBuild\Breakdown\BreakDownUnitBuildTable.cs" />
+    <Compile Include="Building\UnitBuild\JAddUsage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\JAddUsage.Designer.cs">
+      <DependentUpon>JAddUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Joint\Joint.cs" />
+    <Compile Include="Building\Joint\JointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\Joint\JointForm.Designer.cs">
+      <DependentUpon>JointForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\Joint\JointTable.cs" />
+    <Compile Include="Building\JUsage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\JUsage.Designer.cs">
+      <DependentUpon>JUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\DefaultOwners\DefaultOwners.cs" />
+    <Compile Include="Building\UnitBuild\DefaultOwners\DefaultOwnersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\DefaultOwners\DefaultOwnersForm.Designer.cs">
+      <DependentUpon>DefaultOwnersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\DefaultOwners\DefaultOwnersTable.cs" />
+    <Compile Include="Building\UnitBuild\InformationUnitBuild.cs" />
+    <Compile Include="Building\UnitBuild\InformationUnitBuildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\InformationUnitBuildForm.Designer.cs">
+      <DependentUpon>InformationUnitBuildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\InformationUnitBuildTable.cs" />
+    <Compile Include="Building\UnitBuild\JUnitBuildTable.cs" />
+    <Compile Include="Building\UnitBuild\PrimaryOwnerBuild.cs" />
+    <Compile Include="Building\UnitBuild\PrimaryOwnerBuildTable.cs" />
+    <Compile Include="Building\UnitBuild\SearchUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\SearchUnitForm.Designer.cs">
+      <DependentUpon>SearchUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TranferPerson.cs" />
+    <Compile Include="Building\UnitBuild\Transfer\TranferPersonTable.cs" />
+    <Compile Include="Building\UnitBuild\Transfer\TransferConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferConfirmForm.Designer.cs">
+      <DependentUpon>TransferConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferUnitBuild.cs" />
+    <Compile Include="Building\UnitBuild\Transfer\TransferUnitBuildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferUnitBuildForm.Designer.cs">
+      <DependentUpon>TransferUnitBuildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Building\UnitBuild\Transfer\TransferUnitBuildTable.cs" />
+    <Compile Include="Building\UnitBuild\UnitBuild.cs" />
+    <Compile Include="Building\UnitBuild\UnitBuildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Building\UnitBuild\UnitBuildForm.Designer.cs">
+      <DependentUpon>UnitBuildForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Define\BaseDefines.cs" />
+    <Compile Include="Define\EnviromentStatus.cs" />
+    <Compile Include="Define\EnviromentType.cs" />
+    <Compile Include="Define\JdoorBuilding.cs" />
+    <Compile Include="Nodes\BaseDefine.cs" />
+    <Compile Include="Nodes\StaticNodes.cs" />
+    <Compile Include="PBill\FSetCharege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PBill\FSetCharege.designer.cs">
+      <DependentUpon>FSetCharege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PBill\JChargeBuild.cs" />
+    <Compile Include="PBill\JChargeBuildTable.cs" />
+    <Compile Include="PBill\JPrintableGhabz.cs" />
+    <Compile Include="PBill\JPrintableGhabzTable.cs" />
+    <Compile Include="PBill\JPrintBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PBill\JPrintBillForm.designer.cs">
+      <DependentUpon>JPrintBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PBill\PrintedGhabzForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PBill\PrintedGhabzForm.Designer.cs">
+      <DependentUpon>PrintedGhabzForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealEstate.cs" />
+    <Compile Include="Define\MarketUsage.cs" />
+    <Compile Include="Define\UnitJobs.cs" />
+    <Compile Include="Define\UnitTypes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tables\TableNames.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Amlkard\AmalkardFrm.resx">
+      <DependentUpon>AmalkardFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\AnnualRental\AnnualRentalForm.resx">
+      <DependentUpon>AnnualRentalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\Construction\JConstruction.resx">
+      <DependentUpon>JConstruction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\Enviroment\EnviromentSetPrimaryowenerForm.resx">
+      <DependentUpon>EnviromentSetPrimaryowenerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\Enviroment\JEnviromentForm.resx">
+      <DependentUpon>JEnviromentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\Enviroment\JenviromentSerchForm.resx">
+      <DependentUpon>JenviromentSerchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\Joint\JointLegal.resx">
+      <DependentUpon>JointLegal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\Report\ReportContractFrom.resx">
+      <DependentUpon>ReportContractFrom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\Aggregate\AggregateForm.resx">
+      <DependentUpon>AggregateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\Breakdown\BreakDownForm.resx">
+      <DependentUpon>BreakDownForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\JAddUsage.resx">
+      <DependentUpon>JAddUsage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\Joint\JointForm.resx">
+      <DependentUpon>JointForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\JUsage.resx">
+      <DependentUpon>JUsage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\DefaultOwners\DefaultOwnersForm.resx">
+      <DependentUpon>DefaultOwnersForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\InformationUnitBuildForm.resx">
+      <DependentUpon>InformationUnitBuildForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\SearchUnitForm.resx">
+      <DependentUpon>SearchUnitForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\Transfer\TransferConfirmForm.resx">
+      <DependentUpon>TransferConfirmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\Transfer\TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\Transfer\TransferUnitBuildForm.resx">
+      <DependentUpon>TransferUnitBuildForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Building\UnitBuild\UnitBuildForm.resx">
+      <DependentUpon>UnitBuildForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PBill\FSetCharege.resx">
+      <DependentUpon>FSetCharege.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PBill\JPrintBillForm.resx">
+      <DependentUpon>JPrintBillForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PBill\PrintedGhabzForm.resx">
+      <DependentUpon>PrintedGhabzForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

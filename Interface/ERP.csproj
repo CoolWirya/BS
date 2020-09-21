@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86417C95-BBEB-4592-9584-78016389F1CC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP</RootNamespace>
+    <AssemblyName>ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ManifestCertificateThumbprint>ADE301422A17181592C4250AC9515B93A43570F3</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Interface_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>BusinessObject.ico</ApplicationIcon>
+    <StartupObject>ERP.Program</StartupObject>
+    <TargetZone>LocalIntranet</TargetZone>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\zarrin\Desktop\New folder\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\192.168.3.38\erpdll\</UpdateUrl>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Entertainment, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WebErpNewVersion_2\bin\Entertainment.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReport, Version=2015.3.2.0, Culture=neutral, PublicKeyToken=417583d16d08abed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\FastReport.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>..\..\..\Service\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3">
+      <HintPath>..\..\..\Service\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>..\..\..\Service\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>..\..\..\Service\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>..\..\..\Service\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2015.2.623.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Bin40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RichTextBox, Version=2015.2.623.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Bin40\Telerik.WinControls.RichTextBox.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2015.2.623.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Bin40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2015.2.623.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DLLs\Bin40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocketTestLangari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SocketTestLangari.Designer.cs">
+      <DependentUpon>SocketTestLangari.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SocketTestLangari.resx">
+      <DependentUpon>SocketTestLangari.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-icon.gif" />
+    <None Include="Resources\HELM_3_ErrorLogsIcon.jpg" />
+    <None Include="Resources\lock.jpg" />
+    <None Include="Resources\User-man.png" />
+    <Content Include="BusinessObject.ico" />
+    <Content Include="Windows_View_Icon.ico" />
+    <Content Include="XMLTreeMenu.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Accounting\Accounting.csproj">
+      <Project>{3429a3a8-be7d-4cd6-9c36-db63cc326a70}</Project>
+      <Name>Accounting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AndroidWebManagement\AndroidWebManagement.csproj">
+      <Project>{0fc9c3ee-14b9-42bf-a461-3b2636c33be8}</Project>
+      <Name>AndroidWebManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ArchivedDocuments\ArchivedDocuments.csproj">
+      <Project>{61bae31e-6ca8-46af-8233-531488c3f4c2}</Project>
+      <Name>ArchivedDocuments</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Automation\Automation.csproj">
+      <Project>{f931e93a-22c2-400b-9fff-cbdfd5da7184}</Project>
+      <Name>Automation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AUTOMOBILE\AUTOMOBILE.csproj">
+      <Project>{d185d248-d46e-4624-ae4d-80a36c1a3370}</Project>
+      <Name>AUTOMOBILE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AVL\AVL.csproj">
+      <Project>{9ee5f8a2-00c2-48eb-b46e-8d83d14fdc39}</Project>
+      <Name>AVL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bus\BusManagment.csproj">
+      <Project>{79d33258-a0f7-4bcb-a362-510197f1668a}</Project>
+      <Name>BusManagment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{bbac4fc5-d801-4d81-84d0-08c5baad81e0}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMSClassLibrary\CMSClassLibrary.csproj">
+      <Project>{b6864186-ef4e-40f2-9812-90ee9f38d7ab}</Project>
+      <Name>CMSClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CMS\CMS.csproj">
+      <Project>{31e6e262-735d-4936-8b77-59074ee9459b}</Project>
+      <Name>CMS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Communication\Communication.csproj">
+      <Project>{8f5056d0-bc4e-4471-a0a7-6b0e98c130b2}</Project>
+      <Name>Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Employment\Employment.csproj">
+      <Project>{573782b8-c27c-44f6-aa6b-479aa83eae48}</Project>
+      <Name>Employment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERPUpdater\ERPUpdater.csproj">
+      <Project>{a8d291e5-1733-4682-941d-d533ce926171}</Project>
+      <Name>ERPUpdater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Estates\Estates.csproj">
+      <Project>{6fd04ecb-6def-4e44-bcc3-24f76b72bc08}</Project>
+      <Name>Estates</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Finance\Finance.csproj">
+      <Project>{b53afbc9-db58-401d-b559-a683704c4e87}</Project>
+      <Name>Finance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Globals\Globals.csproj">
+      <Project>{e7cc3df6-4222-41dc-8f78-ace6e997573b}</Project>
+      <Name>Globals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JComponents\JComponents.csproj">
+      <Project>{3d8bc1e0-c793-4122-9326-1c61b83cb4b2}</Project>
+      <Name>JComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JJsonAdditionalLibrary\JJsonAdditionalLibrary.csproj">
+      <Project>{5aadac75-2dba-411d-ae54-0cfbc1f5b53b}</Project>
+      <Name>JJsonAdditionalLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JJsonService\JJsonService.csproj">
+      <Project>{e79f5bb9-c31a-4f15-915b-6d055134db98}</Project>
+      <Name>JJsonService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JJson\JJson\JJson.csproj">
+      <Project>{0e240839-648a-4f17-ad59-0d519b56100b}</Project>
+      <Name>JJson</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Juridical\Legal.csproj">
+      <Project>{506fc068-9557-4a3a-8c2e-8e5bc4374530}</Project>
+      <Name>Legal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Managementshares\ManagementShares.csproj">
+      <Project>{b9dfbad5-ad6f-4478-81c6-73fbbb102295}</Project>
+      <Name>ManagementShares</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Meeting\Meeting.csproj">
+      <Project>{9f6e3d96-f393-4e22-a766-6575c4d1508f}</Project>
+      <Name>Meeting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotificationProject\NotificationProjects\NotificationProjects.csproj">
+      <Project>{c2613a9f-56d0-48e3-8406-3515255bafbc}</Project>
+      <Name>NotificationProjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OfficeWord\OfficeWord.csproj">
+      <Project>{c11dc80b-e9c6-44bd-bee2-ff2ede7dff1d}</Project>
+      <Name>OfficeWord</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RealEstate\RealEstate.csproj">
+      <Project>{2f1ca0a8-e24a-465f-873d-1115c40b46a6}</Project>
+      <Name>RealEstate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareProfit\ShareProfit.csproj">
+      <Project>{5405b6c6-2be5-4e9c-8cab-677e4259e1b4}</Project>
+      <Name>ShareProfit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TWAIN\twaincs.csproj">
+      <Project>{e00dec90-0a85-47d5-b0e4-39940af8c141}</Project>
+      <Name>twaincs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebClassLibrary\WebClassLibrary.csproj">
+      <Project>{3b0b293d-40f5-49ad-b44b-5914873d5028}</Project>
+      <Name>WebClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebERP\Chat\Chat.csproj">
+      <Project>{50464fae-6616-45e5-9c07-b919f65f4ff1}</Project>
+      <Name>Chat</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
